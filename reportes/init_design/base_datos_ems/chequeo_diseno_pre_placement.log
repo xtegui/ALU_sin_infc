@@ -1,0 +1,43 @@
+****************************************
+ Report : check_design
+ Options: { pre_placement_stage }
+ Design : ALU_votegui
+ Version: U-2022.12
+ Date   : Mon Apr 14 06:03:27 2025
+****************************************
+
+****************************************
+Report : Data Mismatches
+Version: U-2022.12
+Date   : Mon Apr 14 06:03:27 2025
+****************************************
+No mismatches exist on the design.
+1
+1
+Information: There are no relative placement groups in the design. (NDMUI-173)
+INFO: updateGlobalOptions
+INFO: use Native GDC
+1
+1
+
+  *** EMS Message summary ***
+  ----------------------------------------------------------------------------------------------------
+  Rule         Type   Count      Message
+  ----------------------------------------------------------------------------------------------------
+  DFT-011      Info   1          The design has no scan chain defined in the scandef.
+  DMM-105      Info   16         Mismatch type %mmtype is detected on object type %objtype at obj...
+  TCK-001      Warn   3          The reported endpoint '%endpoint' is unconstrained. Reason: '%re...
+  TCK-012      Warn   68         The input port '%port' has no clock_relative delay specified. Mo...
+  ----------------------------------------------------------------------------------------------------
+  Total 88 EMS messages : 0 errors, 71 warnings, 17 info.
+  ----------------------------------------------------------------------------------------------------
+
+  *** Non-EMS message summary *** 
+  ----------------------------------------------------------------------------------------------------
+   Rule         Type   Count      Message
+  ----------------------------------------------------------------------------------------------------
+     NDMUI-173   Info          1 There are no relative placement groups in the design.
+       PVT-032   Info          2 Corner %s: no PVT mismatches.
+  ----------------------------------------------------------------------------------------------------
+  Total 3 non-EMS messages : 0 errors, 0 warnings, 3 info.
+  ----------------------------------------------------------------------------------------------------

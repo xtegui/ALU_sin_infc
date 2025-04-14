@@ -1,0 +1,27 @@
+****************************************
+ Report : check_design 
+ Options: { dp_pre_pin_placement }
+ Design : ALU_votegui
+ Version: U-2022.12
+ Date   : Mon Apr 14 04:57:33 2025
+****************************************
+
+Running atomic-check 'dp_pre_pin_placement'
+
+  *** EMS Message summary ***
+  ----------------------------------------------------------------------------------------------------
+  Total 0 EMS messages : 0 errors, 0 warnings, 0 info.
+  ----------------------------------------------------------------------------------------------------
+
+  *** Non-EMS message summary ***
+  ----------------------------------------------------------------------------------------------------
+  Rule         Type   Count      Message
+  ----------------------------------------------------------------------------------------------------
+  DPPA-268     Warn   3          Didn't find any enabled planning block for %s.
+  DPPA-465     Warn   2778       Detected range/offset overlap between net/bundle/pins constraint...
+  DPPA-475     Warn   1          Detected dimension mismatch between the boundary and bbox, for b...
+  ----------------------------------------------------------------------------------------------------
+  Total 2782 non-EMS messages : 0 errors, 2782 warnings, 0 info.
+  ----------------------------------------------------------------------------------------------------
+Information: Non-EMS messages are saved into file './reportes/design_planning/base_datos_ems/chequeo_diseno_pre_ubicacion_puertos.log'.
+1

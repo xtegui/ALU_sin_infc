@@ -1,0 +1,28 @@
+****************************************
+ Report : check_design 
+ Options: { design_mismatch }
+ Design : ALU_votegui
+ Version: U-2022.12
+ Date   : Mon Apr 14 04:57:33 2025
+****************************************
+
+Running atomic-check 'design_mismatch'
+
+  *** EMS Message summary ***
+  ----------------------------------------------------------------------------------------------------
+  Rule         Type   Count      Message
+  ----------------------------------------------------------------------------------------------------
+  DMM-105      Info   16         Mismatch type %mmtype is detected on object type %objtype at obj...
+  ----------------------------------------------------------------------------------------------------
+  Total 16 EMS messages : 0 errors, 0 warnings, 16 info.
+  ----------------------------------------------------------------------------------------------------
+
+  *** Non-EMS message summary ***
+  ----------------------------------------------------------------------------------------------------
+  Total 0 non-EMS messages : 0 errors, 0 warnings, 0 info.
+  ----------------------------------------------------------------------------------------------------
+
+Warning: EMS database "chequeo_diseno_incompatibilidades.ems" already exists, over-writing it. (EMS-040)
+
+Information: EMS database is saved to file './reportes/design_planning/base_datos_ems/chequeo_diseno_incompatibilidades.ems'.
+1

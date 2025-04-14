@@ -1,0 +1,353 @@
+****************************************
+Report : design
+        -library
+        -floorplan
+        -nosplit
+Design : ALU_votegui
+Version: U-2022.12
+Date   : Mon Apr 14 06:03:27 2025
+****************************************
+--------------------------------------------------------------------------------
+                              LIBRARY INFORMATION
+--------------------------------------------------------------------------------
+
+Search path : . scripts
+
+Units : 
+    time                : 1.000ns
+    resistance          : 1.000MOhm
+    capacitance         : 1.000fF
+    voltage             : 1.000V
+    current             : 1.000uA
+    power               : 1.000pW
+
+Tech file : /home/digitalProjects/tech/saed14nm/tf/saed14nm_1p9m_mw.tf
+
+Total number of standard cells 	= 3977
+
+Total number of dont_use lib cells 	= 84
+Total number of dont_touch lib cells 	= 84
+
+Total number of buffers 	= 364
+Total number of inverters 	= 204
+Total number of flip-flops 	= 700
+Total number of latches 	= 180
+Total number of ICGs 		= 120
+
+
+Library : saed14rvt
+  File path : /home/digitalProjects/tech/saed14nm/ndm/saed14rvt.ndm
+  Source .db libs :
+    saed14rvt_ss0p72v125c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_rvt/db_ccs/saed14rvt_ss0p72v125c.db
+    saed14rvt_ss0p72v25c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_rvt/db_ccs/saed14rvt_ss0p72v25c.db
+    saed14rvt_ss0p72vm40c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_rvt/db_ccs/saed14rvt_ss0p72vm40c.db
+    saed14rvt_ff0p88v125c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_rvt/db_ccs/saed14rvt_ff0p88v125c.db
+    saed14rvt_ff0p88v25c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_rvt/db_ccs/saed14rvt_ff0p88v25c.db
+    saed14rvt_ff0p88vm40c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_rvt/db_ccs/saed14rvt_ff0p88vm40c.db
+    saed14rvt_tt0p8v125c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_rvt/db_ccs/saed14rvt_tt0p8v125c.db
+    saed14rvt_tt0p8v25c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_rvt/db_ccs/saed14rvt_tt0p8v25c.db
+    saed14rvt_tt0p8vm40c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_rvt/db_ccs/saed14rvt_tt0p8vm40c.db
+
+Library : saed14hvt
+  File path : /home/digitalProjects/tech/saed14nm/ndm/saed14hvt.ndm
+  Source .db libs :
+    saed14hvt_ss0p72v125c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_hvt/db_ccs/saed14hvt_ss0p72v125c.db
+    saed14hvt_ss0p72v25c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_hvt/db_ccs/saed14hvt_ss0p72v25c.db
+    saed14hvt_ss0p72vm40c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_hvt/db_ccs/saed14hvt_ss0p72vm40c.db
+    saed14hvt_ff0p88v125c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_hvt/db_ccs/saed14hvt_ff0p88v125c.db
+    saed14hvt_ff0p88v25c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_hvt/db_ccs/saed14hvt_ff0p88v25c.db
+    saed14hvt_ff0p88vm40c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_hvt/db_ccs/saed14hvt_ff0p88vm40c.db
+    saed14hvt_tt0p8v125c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_hvt/db_ccs/saed14hvt_tt0p8v125c.db
+    saed14hvt_tt0p8v25c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_hvt/db_ccs/saed14hvt_tt0p8v25c.db
+    saed14hvt_tt0p8vm40c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_hvt/db_ccs/saed14hvt_tt0p8vm40c.db
+
+Library : saed14lvt
+  File path : /home/digitalProjects/tech/saed14nm/ndm/saed14lvt.ndm
+  Source .db libs :
+    saed14lvt_ss0p72v125c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_lvt/db_ccs/saed14lvt_ss0p72v125c.db
+    saed14lvt_ss0p72v25c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_lvt/db_ccs/saed14lvt_ss0p72v25c.db
+    saed14lvt_ss0p72vm40c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_lvt/db_ccs/saed14lvt_ss0p72vm40c.db
+    saed14lvt_ff0p88v125c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_lvt/db_ccs/saed14lvt_ff0p88v125c.db
+    saed14lvt_ff0p88v25c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_lvt/db_ccs/saed14lvt_ff0p88v25c.db
+    saed14lvt_ff0p88vm40c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_lvt/db_ccs/saed14lvt_ff0p88vm40c.db
+    saed14lvt_tt0p8v125c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_lvt/db_ccs/saed14lvt_tt0p8v125c.db
+    saed14lvt_tt0p8v25c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_lvt/db_ccs/saed14lvt_tt0p8v25c.db
+    saed14lvt_tt0p8vm40c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_lvt/db_ccs/saed14lvt_tt0p8vm40c.db
+
+Library : saed14slvt
+  File path : /home/digitalProjects/tech/saed14nm/ndm/saed14slvt.ndm
+  Source .db libs :
+    saed14slvt_ss0p72v125c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_slvt/db_ccs/saed14slvt_ss0p72v125c.db
+    saed14slvt_ss0p72v25c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_slvt/db_ccs/saed14slvt_ss0p72v25c.db
+    saed14slvt_ss0p72vm40c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_slvt/db_ccs/saed14slvt_ss0p72vm40c.db
+    saed14slvt_ff0p88v125c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_slvt/db_ccs/saed14slvt_ff0p88v125c.db
+    saed14slvt_ff0p88v25c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_slvt/db_ccs/saed14slvt_ff0p88v25c.db
+    saed14slvt_ff0p88vm40c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_slvt/db_ccs/saed14slvt_ff0p88vm40c.db
+    saed14slvt_tt0p8v125c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_slvt/db_ccs/saed14slvt_tt0p8v125c.db
+    saed14slvt_tt0p8v25c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_slvt/db_ccs/saed14slvt_tt0p8v25c.db
+    saed14slvt_tt0p8vm40c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_slvt/db_ccs/saed14slvt_tt0p8vm40c.db
+
+Library : saed14rvt_dlvl
+  File path : /home/digitalProjects/tech/saed14nm/ndm/saed14rvt_dlvl.ndm
+  Source .db libs :
+    saed14rvt_dlvl_ss0p72v125c_i0p6v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_rvt/db_ccs/saed14rvt_dlvl_ss0p72v125c_i0p6v.db
+    saed14rvt_dlvl_ss0p72v25c_i0p6v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_rvt/db_ccs/saed14rvt_dlvl_ss0p72v25c_i0p6v.db
+    saed14rvt_dlvl_ss0p72vm40c_i0p6v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_rvt/db_ccs/saed14rvt_dlvl_ss0p72vm40c_i0p6v.db
+    saed14rvt_dlvl_ff0p88v125c_i0p7v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_rvt/db_ccs/saed14rvt_dlvl_ff0p88v125c_i0p7v.db
+    saed14rvt_dlvl_ff0p88v25c_i0p7v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_rvt/db_ccs/saed14rvt_dlvl_ff0p88v25c_i0p7v.db
+    saed14rvt_dlvl_ff0p88vm40c_i0p7v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_rvt/db_ccs/saed14rvt_dlvl_ff0p88vm40c_i0p7v.db
+    saed14rvt_dlvl_tt0p8v125c_i0p65v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_rvt/db_ccs/saed14rvt_dlvl_tt0p8v125c_i0p65v.db
+    saed14rvt_dlvl_tt0p8v25c_i0p65v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_rvt/db_ccs/saed14rvt_dlvl_tt0p8v25c_i0p65v.db
+    saed14rvt_dlvl_tt0p8vm40c_i0p65v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_rvt/db_ccs/saed14rvt_dlvl_tt0p8vm40c_i0p65v.db
+
+Library : saed14hvt_dlvl
+  File path : /home/digitalProjects/tech/saed14nm/ndm/saed14hvt_dlvl.ndm
+  Source .db libs :
+    saed14hvt_dlvl_ss0p72v125c_i0p6v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_hvt/db_ccs/saed14hvt_dlvl_ss0p72v125c_i0p6v.db
+    saed14hvt_dlvl_ss0p72v25c_i0p6v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_hvt/db_ccs/saed14hvt_dlvl_ss0p72v25c_i0p6v.db
+    saed14hvt_dlvl_ss0p72vm40c_i0p6v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_hvt/db_ccs/saed14hvt_dlvl_ss0p72vm40c_i0p6v.db
+    saed14hvt_dlvl_ff0p88v125c_i0p7v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_hvt/db_ccs/saed14hvt_dlvl_ff0p88v125c_i0p7v.db
+    saed14hvt_dlvl_ff0p88v25c_i0p7v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_hvt/db_ccs/saed14hvt_dlvl_ff0p88v25c_i0p7v.db
+    saed14hvt_dlvl_ff0p88vm40c_i0p7v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_hvt/db_ccs/saed14hvt_dlvl_ff0p88vm40c_i0p7v.db
+    saed14hvt_dlvl_tt0p8v125c_i0p65v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_hvt/db_ccs/saed14hvt_dlvl_tt0p8v125c_i0p65v.db
+    saed14hvt_dlvl_tt0p8v25c_i0p65v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_hvt/db_ccs/saed14hvt_dlvl_tt0p8v25c_i0p65v.db
+    saed14hvt_dlvl_tt0p8vm40c_i0p65v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_hvt/db_ccs/saed14hvt_dlvl_tt0p8vm40c_i0p65v.db
+
+Library : saed14lvt_dlvl
+  File path : /home/digitalProjects/tech/saed14nm/ndm/saed14lvt_dlvl.ndm
+  Source .db libs :
+    saed14lvt_dlvl_ss0p72v125c_i0p6v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_lvt/db_ccs/saed14lvt_dlvl_ss0p72v125c_i0p6v.db
+    saed14lvt_dlvl_ss0p72v25c_i0p6v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_lvt/db_ccs/saed14lvt_dlvl_ss0p72v25c_i0p6v.db
+    saed14lvt_dlvl_ss0p72vm40c_i0p6v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_lvt/db_ccs/saed14lvt_dlvl_ss0p72vm40c_i0p6v.db
+    saed14lvt_dlvl_ff0p88v125c_i0p7v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_lvt/db_ccs/saed14lvt_dlvl_ff0p88v125c_i0p7v.db
+    saed14lvt_dlvl_ff0p88v25c_i0p7v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_lvt/db_ccs/saed14lvt_dlvl_ff0p88v25c_i0p7v.db
+    saed14lvt_dlvl_ff0p88vm40c_i0p7v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_lvt/db_ccs/saed14lvt_dlvl_ff0p88vm40c_i0p7v.db
+    saed14lvt_dlvl_tt0p8v125c_i0p65v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_lvt/db_ccs/saed14lvt_dlvl_tt0p8v125c_i0p65v.db
+    saed14lvt_dlvl_tt0p8v25c_i0p65v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_lvt/db_ccs/saed14lvt_dlvl_tt0p8v25c_i0p65v.db
+    saed14lvt_dlvl_tt0p8vm40c_i0p65v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_lvt/db_ccs/saed14lvt_dlvl_tt0p8vm40c_i0p65v.db
+
+Library : saed14slvt_dlvl
+  File path : /home/digitalProjects/tech/saed14nm/ndm/saed14slvt_dlvl.ndm
+  Source .db libs :
+    saed14slvt_dlvl_ss0p72v125c_i0p6v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_slvt/db_ccs/saed14slvt_dlvl_ss0p72v125c_i0p6v.db
+    saed14slvt_dlvl_ss0p72v25c_i0p6v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_slvt/db_ccs/saed14slvt_dlvl_ss0p72v25c_i0p6v.db
+    saed14slvt_dlvl_ss0p72vm40c_i0p6v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_slvt/db_ccs/saed14slvt_dlvl_ss0p72vm40c_i0p6v.db
+    saed14slvt_dlvl_ff0p88v125c_i0p7v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_slvt/db_ccs/saed14slvt_dlvl_ff0p88v125c_i0p7v.db
+    saed14slvt_dlvl_ff0p88v25c_i0p7v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_slvt/db_ccs/saed14slvt_dlvl_ff0p88v25c_i0p7v.db
+    saed14slvt_dlvl_ff0p88vm40c_i0p7v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_slvt/db_ccs/saed14slvt_dlvl_ff0p88vm40c_i0p7v.db
+    saed14slvt_dlvl_tt0p8v125c_i0p65v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_slvt/db_ccs/saed14slvt_dlvl_tt0p8v125c_i0p65v.db
+    saed14slvt_dlvl_tt0p8v25c_i0p65v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_slvt/db_ccs/saed14slvt_dlvl_tt0p8v25c_i0p65v.db
+    saed14slvt_dlvl_tt0p8vm40c_i0p65v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_slvt/db_ccs/saed14slvt_dlvl_tt0p8vm40c_i0p65v.db
+
+Library : saed14rvt_ulvl
+  File path : /home/digitalProjects/tech/saed14nm/ndm/saed14rvt_ulvl.ndm
+  Source .db libs :
+    saed14rvt_ulvl_ss0p72v125c_i0p6v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_rvt/db_ccs/saed14rvt_ulvl_ss0p72v125c_i0p6v.db
+    saed14rvt_ulvl_ss0p72v25c_i0p6v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_rvt/db_ccs/saed14rvt_ulvl_ss0p72v25c_i0p6v.db
+    saed14rvt_ulvl_ss0p72vm40c_i0p6v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_rvt/db_ccs/saed14rvt_ulvl_ss0p72vm40c_i0p6v.db
+    saed14rvt_ulvl_ff0p88v125c_i0p7v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_rvt/db_ccs/saed14rvt_ulvl_ff0p88v125c_i0p7v.db
+    saed14rvt_ulvl_ff0p88v25c_i0p7v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_rvt/db_ccs/saed14rvt_ulvl_ff0p88v25c_i0p7v.db
+    saed14rvt_ulvl_ff0p88vm40c_i0p7v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_rvt/db_ccs/saed14rvt_ulvl_ff0p88vm40c_i0p7v.db
+    saed14rvt_ulvl_tt0p8v125c_i0p65v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_rvt/db_ccs/saed14rvt_ulvl_tt0p8v125c_i0p65v.db
+    saed14rvt_ulvl_tt0p8v25c_i0p65v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_rvt/db_ccs/saed14rvt_ulvl_tt0p8v25c_i0p65v.db
+    saed14rvt_ulvl_tt0p8vm40c_i0p65v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_rvt/db_ccs/saed14rvt_ulvl_tt0p8vm40c_i0p65v.db
+
+Library : saed14hvt_ulvl
+  File path : /home/digitalProjects/tech/saed14nm/ndm/saed14hvt_ulvl.ndm
+  Source .db libs :
+    saed14hvt_ulvl_ss0p72v125c_i0p6v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_hvt/db_ccs/saed14hvt_ulvl_ss0p72v125c_i0p6v.db
+    saed14hvt_ulvl_ss0p72v25c_i0p6v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_hvt/db_ccs/saed14hvt_ulvl_ss0p72v25c_i0p6v.db
+    saed14hvt_ulvl_ss0p72vm40c_i0p6v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_hvt/db_ccs/saed14hvt_ulvl_ss0p72vm40c_i0p6v.db
+    saed14hvt_ulvl_ff0p88v125c_i0p7v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_hvt/db_ccs/saed14hvt_ulvl_ff0p88v125c_i0p7v.db
+    saed14hvt_ulvl_ff0p88v25c_i0p7v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_hvt/db_ccs/saed14hvt_ulvl_ff0p88v25c_i0p7v.db
+    saed14hvt_ulvl_ff0p88vm40c_i0p7v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_hvt/db_ccs/saed14hvt_ulvl_ff0p88vm40c_i0p7v.db
+    saed14hvt_ulvl_tt0p8v125c_i0p65v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_hvt/db_ccs/saed14hvt_ulvl_tt0p8v125c_i0p65v.db
+    saed14hvt_ulvl_tt0p8v25c_i0p65v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_hvt/db_ccs/saed14hvt_ulvl_tt0p8v25c_i0p65v.db
+    saed14hvt_ulvl_tt0p8vm40c_i0p65v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_hvt/db_ccs/saed14hvt_ulvl_tt0p8vm40c_i0p65v.db
+
+Library : saed14lvt_ulvl
+  File path : /home/digitalProjects/tech/saed14nm/ndm/saed14lvt_ulvl.ndm
+  Source .db libs :
+    saed14lvt_ulvl_ss0p72v125c_i0p6v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_lvt/db_ccs/saed14lvt_ulvl_ss0p72v125c_i0p6v.db
+    saed14lvt_ulvl_ss0p72v25c_i0p6v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_lvt/db_ccs/saed14lvt_ulvl_ss0p72v25c_i0p6v.db
+    saed14lvt_ulvl_ss0p72vm40c_i0p6v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_lvt/db_ccs/saed14lvt_ulvl_ss0p72vm40c_i0p6v.db
+    saed14lvt_ulvl_ff0p88v125c_i0p7v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_lvt/db_ccs/saed14lvt_ulvl_ff0p88v125c_i0p7v.db
+    saed14lvt_ulvl_ff0p88v25c_i0p7v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_lvt/db_ccs/saed14lvt_ulvl_ff0p88v25c_i0p7v.db
+    saed14lvt_ulvl_ff0p88vm40c_i0p7v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_lvt/db_ccs/saed14lvt_ulvl_ff0p88vm40c_i0p7v.db
+    saed14lvt_ulvl_tt0p8v125c_i0p65v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_lvt/db_ccs/saed14lvt_ulvl_tt0p8v125c_i0p65v.db
+    saed14lvt_ulvl_tt0p8v25c_i0p65v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_lvt/db_ccs/saed14lvt_ulvl_tt0p8v25c_i0p65v.db
+    saed14lvt_ulvl_tt0p8vm40c_i0p65v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_lvt/db_ccs/saed14lvt_ulvl_tt0p8vm40c_i0p65v.db
+
+Library : saed14slvt_ulvl
+  File path : /home/digitalProjects/tech/saed14nm/ndm/saed14slvt_ulvl.ndm
+  Source .db libs :
+    saed14slvt_ulvl_ss0p72v125c_i0p6v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_slvt/db_ccs/saed14slvt_ulvl_ss0p72v125c_i0p6v.db
+    saed14slvt_ulvl_ss0p72v25c_i0p6v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_slvt/db_ccs/saed14slvt_ulvl_ss0p72v25c_i0p6v.db
+    saed14slvt_ulvl_ss0p72vm40c_i0p6v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_slvt/db_ccs/saed14slvt_ulvl_ss0p72vm40c_i0p6v.db
+    saed14slvt_ulvl_ff0p88v125c_i0p7v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_slvt/db_ccs/saed14slvt_ulvl_ff0p88v125c_i0p7v.db
+    saed14slvt_ulvl_ff0p88v25c_i0p7v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_slvt/db_ccs/saed14slvt_ulvl_ff0p88v25c_i0p7v.db
+    saed14slvt_ulvl_ff0p88vm40c_i0p7v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_slvt/db_ccs/saed14slvt_ulvl_ff0p88vm40c_i0p7v.db
+    saed14slvt_ulvl_tt0p8v125c_i0p65v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_slvt/db_ccs/saed14slvt_ulvl_tt0p8v125c_i0p65v.db
+    saed14slvt_ulvl_tt0p8v25c_i0p65v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_slvt/db_ccs/saed14slvt_ulvl_tt0p8v25c_i0p65v.db
+    saed14slvt_ulvl_tt0p8vm40c_i0p65v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_slvt/db_ccs/saed14slvt_ulvl_tt0p8vm40c_i0p65v.db
+
+Library : saed14rvt_pg
+  File path : /home/digitalProjects/tech/saed14nm/ndm/saed14rvt_pg.ndm
+  Source .db libs :
+    saed14rvt_pg_ss0p72v125c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_rvt/db_ccs/saed14rvt_pg_ss0p72v125c.db
+    saed14rvt_pg_ss0p72v25c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_rvt/db_ccs/saed14rvt_pg_ss0p72v25c.db
+    saed14rvt_pg_ss0p72vm40c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_rvt/db_ccs/saed14rvt_pg_ss0p72vm40c.db
+    saed14rvt_pg_ff0p88v125c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_rvt/db_ccs/saed14rvt_pg_ff0p88v125c.db
+    saed14rvt_pg_ff0p88v25c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_rvt/db_ccs/saed14rvt_pg_ff0p88v25c.db
+    saed14rvt_pg_ff0p88vm40c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_rvt/db_ccs/saed14rvt_pg_ff0p88vm40c.db
+    saed14rvt_pg_tt0p8v125c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_rvt/db_ccs/saed14rvt_pg_tt0p8v125c.db
+    saed14rvt_pg_tt0p8v25c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_rvt/db_ccs/saed14rvt_pg_tt0p8v25c.db
+    saed14rvt_pg_tt0p8vm40c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_rvt/db_ccs/saed14rvt_pg_tt0p8vm40c.db
+
+Library : saed14hvt_pg
+  File path : /home/digitalProjects/tech/saed14nm/ndm/saed14hvt_pg.ndm
+  Source .db libs :
+    saed14hvt_pg_ss0p72v125c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_hvt/db_ccs/saed14hvt_pg_ss0p72v125c.db
+    saed14hvt_pg_ss0p72v25c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_hvt/db_ccs/saed14hvt_pg_ss0p72v25c.db
+    saed14hvt_pg_ss0p72vm40c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_hvt/db_ccs/saed14hvt_pg_ss0p72vm40c.db
+    saed14hvt_pg_ff0p88v125c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_hvt/db_ccs/saed14hvt_pg_ff0p88v125c.db
+    saed14hvt_pg_ff0p88v25c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_hvt/db_ccs/saed14hvt_pg_ff0p88v25c.db
+    saed14hvt_pg_ff0p88vm40c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_hvt/db_ccs/saed14hvt_pg_ff0p88vm40c.db
+    saed14hvt_pg_tt0p8v125c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_hvt/db_ccs/saed14hvt_pg_tt0p8v125c.db
+    saed14hvt_pg_tt0p8v25c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_hvt/db_ccs/saed14hvt_pg_tt0p8v25c.db
+    saed14hvt_pg_tt0p8vm40c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_hvt/db_ccs/saed14hvt_pg_tt0p8vm40c.db
+
+Library : saed14lvt_pg
+  File path : /home/digitalProjects/tech/saed14nm/ndm/saed14lvt_pg.ndm
+  Source .db libs :
+    saed14lvt_pg_ss0p72v125c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_lvt/db_ccs/saed14lvt_pg_ss0p72v125c.db
+    saed14lvt_pg_ss0p72v25c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_lvt/db_ccs/saed14lvt_pg_ss0p72v25c.db
+    saed14lvt_pg_ss0p72vm40c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_lvt/db_ccs/saed14lvt_pg_ss0p72vm40c.db
+    saed14lvt_pg_ff0p88v125c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_lvt/db_ccs/saed14lvt_pg_ff0p88v125c.db
+    saed14lvt_pg_ff0p88v25c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_lvt/db_ccs/saed14lvt_pg_ff0p88v25c.db
+    saed14lvt_pg_ff0p88vm40c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_lvt/db_ccs/saed14lvt_pg_ff0p88vm40c.db
+    saed14lvt_pg_tt0p8v125c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_lvt/db_ccs/saed14lvt_pg_tt0p8v125c.db
+    saed14lvt_pg_tt0p8v25c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_lvt/db_ccs/saed14lvt_pg_tt0p8v25c.db
+    saed14lvt_pg_tt0p8vm40c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_lvt/db_ccs/saed14lvt_pg_tt0p8vm40c.db
+
+Library : saed14slvt_pg
+  File path : /home/digitalProjects/tech/saed14nm/ndm/saed14slvt_pg.ndm
+  Source .db libs :
+    saed14slvt_pg_ss0p72v125c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_slvt/db_ccs/saed14slvt_pg_ss0p72v125c.db
+    saed14slvt_pg_ss0p72v25c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_slvt/db_ccs/saed14slvt_pg_ss0p72v25c.db
+    saed14slvt_pg_ss0p72vm40c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_slvt/db_ccs/saed14slvt_pg_ss0p72vm40c.db
+    saed14slvt_pg_ff0p88v125c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_slvt/db_ccs/saed14slvt_pg_ff0p88v125c.db
+    saed14slvt_pg_ff0p88v25c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_slvt/db_ccs/saed14slvt_pg_ff0p88v25c.db
+    saed14slvt_pg_ff0p88vm40c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_slvt/db_ccs/saed14slvt_pg_ff0p88vm40c.db
+    saed14slvt_pg_tt0p8v125c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_slvt/db_ccs/saed14slvt_pg_tt0p8v125c.db
+    saed14slvt_pg_tt0p8v25c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_slvt/db_ccs/saed14slvt_pg_tt0p8v25c.db
+    saed14slvt_pg_tt0p8vm40c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_slvt/db_ccs/saed14slvt_pg_tt0p8vm40c.db
+
+--------------------------------------------------------------------------------
+                              FLOORPLAN INFORMATION
+--------------------------------------------------------------------------------
+
+CORE AND CHIP AREA INFORMATION
+---------------------------
+Core Area is :     2258.894
+Chip Area is :     2491.195
+---------------------------
+
+SITE ROW INFORMATION
+-----------------------------------------------------------------------
+Site Name    Width    Height   Total Rows     Total Tiles          Area
+-----------------------------------------------------------------------
+unit         0.074     0.600           79           50876      2258.894
+-----------------------------------------------------------------------
+
+BLOCKAGE INFORMATION
+------------------------------------------------
+Blockage Type                Count          Area
+------------------------------------------------
+Hard placement                   0         0.000
+Soft placement                   0         0.000
+Hard macro                       0         0.000
+Partial placement                0         0.000
+Register                         0         0.000
+Placement allow Buffer Only      0         0.000
+Placement allow RP Group Only    0         0.000
+RP Group                         0         0.000
+Category                         0         0.000
+Routing                          0         0.000
+Routing for Top                  0         0.000
+Routing For Design Rule          0         0.000
+Shaping                          0         0.000
+------------------------------------------------
+
+POWER DOMAIN INFORMATION
+--------------------------------------------------------------------
+Power Domain Name    VA Name         Primary Power Net Primary Ground Net
+--------------------------------------------------------------------
+DEFAULT_POWER_DOMAIN DEFAULT_VA      VDD               VSS
+--------------------------------------------------------------------
+
+VOLTAGE AREA INFORMATION
+-------------------------------------------------------------------------------------
+VA Name          Number             Area       Target    bbox    bbox    bbox    bbox
+              of shapes                   Utilization     llx     lly     urx     ury
+-------------------------------------------------------------------------------------
+DEFAULT_VA            1         2258.894         1.000   1.184   1.200  48.840  48.600
+-------------------------------------------------------------------------------------
+
+GROUP BOUND INFORMATION
+----------------------------------------
+No Group Bound exists
+
+EXCLUSIVE MOVEBOUND INFORMATION
+----------------------------------------
+No Exclusive MoveBound exists.
+
+HARD AND SOFT MOVEBOUND INFORMATION
+----------------------------------------
+No Hard Or Soft MoveBound exists.
+
+ROUTE GUIDE INFORMATION
+------------------------------------------------
+Route Guide Type             Count          Area
+------------------------------------------------
+Extra Detour Region              0         0.000
+Over icovl CellLayers            0         0.000
+River Routing                    0         0.000
+Area Double Via                  0         0.000
+Access Preference                0         0.000
+Default                          0         0.000
+Switched Direction Only          0         0.000
+Max Patterns                     0         0.000
+Others                           0         0.000
+------------------------------------------------
+
+MULTIBIT REGISTER INFORMATION
+-----------------------------------------------
+No Multibit cells exist
+
+MULTIBIT LS/ISO CELLS INFORMATION
+-----------------------------------------------
+No Multibit cells exist
+
+RP GROUP INFORMATION
+----------------------------------------
+No RP Group exists
+
+LAYER INFORMATION
+--------------------------------------------------------------------------
+Layer Name Direction Ignored Pitch  default minWidth minSpacing    sameNet
+                                      Width                     MinSpacing
+--------------------------------------------------------------------------
+PO         Ver       YES     0.000    0.030    0.030      0.122      0.000
+M1         Ver       YES     0.074    0.034    0.034      0.026      0.000
+M2         Hor       NO      0.060    0.034    0.034      0.026      0.026
+M3         Ver       NO      0.074    0.034    0.034      0.026      0.026
+M4         Hor       NO      0.120    0.060    0.060      0.040      0.034
+M5         Ver       NO      0.120    0.060    0.060      0.040      0.034
+M6         Hor       NO      0.120    0.060    0.060      0.040      0.034
+M7         Ver       NO      0.120    0.060    0.060      0.040      0.034
+M8         Hor       NO      0.120    0.060    0.060      0.040      0.034
+M9         Ver       YES     0.120    0.060    0.060      0.040      0.000
+MRDL       Hor       YES     4.000    2.000    2.000      2.000      0.000
+--------------------------------------------------------------------------
+1

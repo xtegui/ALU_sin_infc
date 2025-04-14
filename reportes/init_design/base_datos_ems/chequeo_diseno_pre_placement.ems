@@ -1,0 +1,106 @@
+<Database>
+versionNumber:2
+Name/home/votegui/proyecto_final/place_and_route/ALU_sin_infc/fusion-compiler/reportes/init_design/base_datos_ems/chequeo_diseno_pre_placement.ems
+Creation TimeMon Apr 14 06:03:27 2025
+Modified TimeMon Apr 14 06:03:27 2025
+Design NameALU_votegui
+Library NameALU_votegui_design_planning
+</Database>
+<RuleCount>
+DFT-0111
+DMM-10516
+TCK-0013
+TCK-01268
+</RuleCount>
+<UserDefinedRules>
+</UserDefinedRules>
+<Messages>
+DMM-105Informationmmactionaccept10mmhandlerchange_lib_port_direction10mmobjnamelib_port_direction_saed14rvt/SAEDRVT14_CAPBIN13_VDD10mmtypelib_port_direction10objnameVDD (saed14rvt/SAEDRVT14_CAPBIN13)10objtypelib_pin10repairedstateaccepted10
+DMM-105Informationmmactionaccept10mmhandlerchange_lib_port_direction10mmobjnamelib_port_direction_saed14rvt/SAEDRVT14_CAPBIN13_VSS10mmtypelib_port_direction10objnameVSS (saed14rvt/SAEDRVT14_CAPBIN13)10objtypelib_pin10repairedstateaccepted10
+DMM-105Informationmmactionaccept10mmhandlerchange_lib_port_direction10mmobjnamelib_port_direction_saed14rvt/SAEDRVT14_CAPTIN13_VDD10mmtypelib_port_direction10objnameVDD (saed14rvt/SAEDRVT14_CAPTIN13)10objtypelib_pin10repairedstateaccepted10
+DMM-105Informationmmactionaccept10mmhandlerchange_lib_port_direction10mmobjnamelib_port_direction_saed14rvt/SAEDRVT14_CAPTIN13_VSS10mmtypelib_port_direction10objnameVSS (saed14rvt/SAEDRVT14_CAPTIN13)10objtypelib_pin10repairedstateaccepted10
+DMM-105Informationmmactionaccept10mmhandlerchange_lib_port_direction10mmobjnamelib_port_direction_saed14hvt/SAEDHVT14_CAPBIN13_VDD10mmtypelib_port_direction10objnameVDD (saed14hvt/SAEDHVT14_CAPBIN13)10objtypelib_pin10repairedstateaccepted10
+DMM-105Informationmmactionaccept10mmhandlerchange_lib_port_direction10mmobjnamelib_port_direction_saed14hvt/SAEDHVT14_CAPBIN13_VSS10mmtypelib_port_direction10objnameVSS (saed14hvt/SAEDHVT14_CAPBIN13)10objtypelib_pin10repairedstateaccepted10
+DMM-105Informationmmactionaccept10mmhandlerchange_lib_port_direction10mmobjnamelib_port_direction_saed14hvt/SAEDHVT14_CAPTIN13_VDD10mmtypelib_port_direction10objnameVDD (saed14hvt/SAEDHVT14_CAPTIN13)10objtypelib_pin10repairedstateaccepted10
+DMM-105Informationmmactionaccept10mmhandlerchange_lib_port_direction10mmobjnamelib_port_direction_saed14hvt/SAEDHVT14_CAPTIN13_VSS10mmtypelib_port_direction10objnameVSS (saed14hvt/SAEDHVT14_CAPTIN13)10objtypelib_pin10repairedstateaccepted10
+DMM-105Informationmmactionaccept10mmhandlerchange_lib_port_direction10mmobjnamelib_port_direction_saed14lvt/SAEDLVT14_CAPBIN13_VDD10mmtypelib_port_direction10objnameVDD (saed14lvt/SAEDLVT14_CAPBIN13)10objtypelib_pin10repairedstateaccepted10
+DMM-105Informationmmactionaccept10mmhandlerchange_lib_port_direction10mmobjnamelib_port_direction_saed14lvt/SAEDLVT14_CAPBIN13_VSS10mmtypelib_port_direction10objnameVSS (saed14lvt/SAEDLVT14_CAPBIN13)10objtypelib_pin10repairedstateaccepted10
+DMM-105Informationmmactionaccept10mmhandlerchange_lib_port_direction10mmobjnamelib_port_direction_saed14lvt/SAEDLVT14_CAPTIN13_VDD10mmtypelib_port_direction10objnameVDD (saed14lvt/SAEDLVT14_CAPTIN13)10objtypelib_pin10repairedstateaccepted10
+DMM-105Informationmmactionaccept10mmhandlerchange_lib_port_direction10mmobjnamelib_port_direction_saed14lvt/SAEDLVT14_CAPTIN13_VSS10mmtypelib_port_direction10objnameVSS (saed14lvt/SAEDLVT14_CAPTIN13)10objtypelib_pin10repairedstateaccepted10
+DMM-105Informationmmactionaccept10mmhandlerchange_lib_port_direction10mmobjnamelib_port_direction_saed14slvt/SAEDSLVT14_CAPBIN13_VDD10mmtypelib_port_direction10objnameVDD (saed14slvt/SAEDSLVT14_CAPBIN13)10objtypelib_pin10repairedstateaccepted10
+DMM-105Informationmmactionaccept10mmhandlerchange_lib_port_direction10mmobjnamelib_port_direction_saed14slvt/SAEDSLVT14_CAPBIN13_VSS10mmtypelib_port_direction10objnameVSS (saed14slvt/SAEDSLVT14_CAPBIN13)10objtypelib_pin10repairedstateaccepted10
+DMM-105Informationmmactionaccept10mmhandlerchange_lib_port_direction10mmobjnamelib_port_direction_saed14slvt/SAEDSLVT14_CAPTIN13_VDD10mmtypelib_port_direction10objnameVDD (saed14slvt/SAEDSLVT14_CAPTIN13)10objtypelib_pin10repairedstateaccepted10
+DMM-105Informationmmactionaccept10mmhandlerchange_lib_port_direction10mmobjnamelib_port_direction_saed14slvt/SAEDSLVT14_CAPTIN13_VSS10mmtypelib_port_direction10objnameVSS (saed14slvt/SAEDSLVT14_CAPTIN13)10objtypelib_pin10repairedstateaccepted10
+DFT-011Informationreason10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointq_div_2_reg/next_state1[ get_pin { q_div_2_reg/next_state } ]6modefunc1[ get_modes { func } ]39reasonfalse path10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointq_div_4_reg/next_state1[ get_pin { q_div_4_reg/next_state } ]6modefunc1[ get_modes { func } ]39reasonfalse path10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointq_div_8_reg/next_state1[ get_pin { q_div_8_reg/next_state } ]6modefunc1[ get_modes { func } ]39reasonfalse path10
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_operation[1]1[ get_port { i_operation[1] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_operation[0]1[ get_port { i_operation[0] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_enable1[ get_port { i_enable } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_a[31]1[ get_port { i_data_a[31] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_a[30]1[ get_port { i_data_a[30] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_a[29]1[ get_port { i_data_a[29] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_a[28]1[ get_port { i_data_a[28] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_a[27]1[ get_port { i_data_a[27] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_a[26]1[ get_port { i_data_a[26] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_a[25]1[ get_port { i_data_a[25] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_a[24]1[ get_port { i_data_a[24] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_a[23]1[ get_port { i_data_a[23] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_a[22]1[ get_port { i_data_a[22] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_a[21]1[ get_port { i_data_a[21] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_a[20]1[ get_port { i_data_a[20] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_a[19]1[ get_port { i_data_a[19] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_a[18]1[ get_port { i_data_a[18] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_a[17]1[ get_port { i_data_a[17] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_a[16]1[ get_port { i_data_a[16] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_a[15]1[ get_port { i_data_a[15] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_a[14]1[ get_port { i_data_a[14] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_a[13]1[ get_port { i_data_a[13] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_a[12]1[ get_port { i_data_a[12] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_a[11]1[ get_port { i_data_a[11] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_a[10]1[ get_port { i_data_a[10] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_a[9]1[ get_port { i_data_a[9] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_a[8]1[ get_port { i_data_a[8] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_a[7]1[ get_port { i_data_a[7] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_a[6]1[ get_port { i_data_a[6] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_a[5]1[ get_port { i_data_a[5] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_a[4]1[ get_port { i_data_a[4] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_a[3]1[ get_port { i_data_a[3] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_a[2]1[ get_port { i_data_a[2] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_a[1]1[ get_port { i_data_a[1] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_a[0]1[ get_port { i_data_a[0] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_b[31]1[ get_port { i_data_b[31] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_b[30]1[ get_port { i_data_b[30] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_b[29]1[ get_port { i_data_b[29] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_b[28]1[ get_port { i_data_b[28] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_b[27]1[ get_port { i_data_b[27] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_b[26]1[ get_port { i_data_b[26] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_b[25]1[ get_port { i_data_b[25] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_b[24]1[ get_port { i_data_b[24] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_b[23]1[ get_port { i_data_b[23] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_b[22]1[ get_port { i_data_b[22] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_b[21]1[ get_port { i_data_b[21] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_b[20]1[ get_port { i_data_b[20] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_b[19]1[ get_port { i_data_b[19] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_b[18]1[ get_port { i_data_b[18] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_b[17]1[ get_port { i_data_b[17] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_b[16]1[ get_port { i_data_b[16] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_b[15]1[ get_port { i_data_b[15] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_b[14]1[ get_port { i_data_b[14] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_b[13]1[ get_port { i_data_b[13] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_b[12]1[ get_port { i_data_b[12] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_b[11]1[ get_port { i_data_b[11] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_b[10]1[ get_port { i_data_b[10] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_b[9]1[ get_port { i_data_b[9] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_b[8]1[ get_port { i_data_b[8] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_b[7]1[ get_port { i_data_b[7] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_b[6]1[ get_port { i_data_b[6] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_b[5]1[ get_port { i_data_b[5] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_b[4]1[ get_port { i_data_b[4] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_b[3]1[ get_port { i_data_b[3] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_b[2]1[ get_port { i_data_b[2] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_b[1]1[ get_port { i_data_b[1] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_b[0]1[ get_port { i_data_b[0] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_valid1[ get_port { i_valid } ]7
+</Messages>

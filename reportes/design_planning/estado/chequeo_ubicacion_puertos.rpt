@@ -1,0 +1,148 @@
+Warning: Offset/location constraints ignored by place_pins for fixed pin i_data_a[0]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin i_data_a[1]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin i_data_a[2]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin i_data_a[3]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin i_data_a[4]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin i_data_a[5]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin i_data_a[6]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin i_data_a[7]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin i_data_a[8]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin i_data_a[9]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin i_data_a[10]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin i_data_a[11]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin i_data_a[12]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin i_data_a[13]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin i_data_a[14]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin i_data_a[15]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin i_data_a[16]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin i_data_a[17]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin i_data_a[18]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin i_data_a[19]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin i_data_a[20]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin i_data_a[21]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin i_data_a[22]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin i_data_a[23]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin i_data_a[24]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin i_data_a[25]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin i_data_a[26]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin i_data_a[27]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin i_data_a[28]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin i_data_a[29]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin i_data_a[30]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin i_data_a[31]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin i_data_b[31]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin i_data_b[30]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin i_data_b[29]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin i_data_b[28]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin i_data_b[27]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin i_data_b[26]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin i_data_b[25]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin i_data_b[24]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin i_data_b[23]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin i_data_b[22]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin i_data_b[21]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin i_data_b[20]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin i_data_b[19]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin i_data_b[18]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin i_data_b[17]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin i_data_b[16]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin i_data_b[15]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin i_data_b[14]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin i_data_b[13]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin i_data_b[12]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin i_data_b[11]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin i_data_b[10]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin i_data_b[9]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin i_data_b[8]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin i_data_b[7]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin i_data_b[6]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin i_data_b[5]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin i_data_b[4]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin i_data_b[3]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin i_data_b[2]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin i_data_b[1]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin i_data_b[0]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin i_operation[0]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin i_operation[1]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin i_sel_clock[0]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin i_sel_clock[1]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin i_reset. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin i_valid. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin i_enable. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin i_clock. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin o_data[31]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin o_data[30]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin o_data[29]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin o_data[28]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin o_data[27]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin o_data[26]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin o_data[25]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin o_data[24]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin o_data[23]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin o_data[22]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin o_data[21]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin o_data[20]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin o_data[19]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin o_data[18]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin o_data[17]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin o_data[16]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin o_data[15]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin o_data[14]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin o_data[13]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin o_data[12]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin o_data[11]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin o_data[10]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin o_data[9]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin o_data[8]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin o_data[7]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin o_data[6]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin o_data[5]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin o_data[4]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin o_data[3]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin o_data[2]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin o_data[1]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin o_data[0]. (DPPA-328)
+Warning: Offset/location constraints ignored by place_pins for fixed pin o_valid. (DPPA-328)
+0 total number of pre-routes loaded
+0 total number of vias loaded
+4 total number of edges loaded
+------------------------ Start Of Pin Layer Check -------------------------
+------------------------- End Of Pin Layer Check --------------------------
+
+----------------------- Start Of Missing Pin Check ------------------------
+------------------------ End Of Missing Pin Check -------------------------
+
+----------------------- Start Of Pin Spacing Check ------------------------
+------------------------ End Of Pin Spacing Check -------------------------
+
+-------------------- Start Of Technology Spacing Check --------------------
+--------------------- End Of Technology Spacing Check ---------------------
+
+------------------------- Start Of Pin Side Check -------------------------
+-------------------------- End Of Pin Side Check --------------------------
+
+----------------------- Start Of Pin Stacking Check -----------------------
+------------------------ End Of Pin Stacking Check ------------------------
+
+------------------------ Start Of Pin Short Check -------------------------
+------------------------- End Of Pin Short Check --------------------------
+
+------------------- Start Of Pin Pre-Route Short Check --------------------
+-------------------- End Of Pin Pre-Route Short Check ---------------------
+
+No violation has been found
+***Summary***
+---------------------------------------------------------------------------
+Type of Violation        |                                            Count
+-------------------------+-------------------------------------------------
+Layer Violation          |                                               0
+Missing Pins             |                                               0
+Pin PreRoute             |                                               0
+Pin Short                |                                               0
+Pin Side                 |                                               0
+Pin Spacing              |                                               0
+Stacking Violation       |                                               0
+Technology Spacing       |                                               0
+-------------------------+-------------------------------------------------
+Total Violations         |                                               0
+---------------------------------------------------------------------------
