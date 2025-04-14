@@ -1,0 +1,890 @@
+ 
+                              Fusion Compiler (TM)
+
+                  Version U-2022.12 for linux64 - Dec 11, 2022
+  This release has significant feature enhancements. Please review the Release
+                       Notes associated with this release.
+
+                    Copyright (c) 1988 - 2022 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+fc_shell> gui_start
+Load ICV ICCII menu file: /home/tools/synopsys/icvalidator/U-2022.12/etc/tcl-u/Icc2Menu.tcl
+ + VUE INFO: Please click View->IC Validator VUE in LayoutWindow menu
+            to launch VUE.
+
+ + VUE INFO: Found a usable port: 2446
+
+fc_shell> pwd
+/home/votegui/proyecto_final/place_and_route/ALU_sin_infc/fusion-compiler
+fc_shell> open_block /home/votegui/proyecto_final/place_and_route/ALU_sin_infc/fusion-compiler/ALU_votegui_design_planning:ALU_votegui/design_planning.design
+Information: Loading library file '/home/digitalProjects/tech/saed14nm/ndm/saed14rvt.ndm' (FILE-007)
+Information: Loading library file '/home/digitalProjects/tech/saed14nm/ndm/saed14hvt.ndm' (FILE-007)
+Information: Loading library file '/home/digitalProjects/tech/saed14nm/ndm/saed14lvt.ndm' (FILE-007)
+Information: Loading library file '/home/digitalProjects/tech/saed14nm/ndm/saed14slvt.ndm' (FILE-007)
+Information: Loading library file '/home/digitalProjects/tech/saed14nm/ndm/saed14rvt_dlvl.ndm' (FILE-007)
+Information: Loading library file '/home/digitalProjects/tech/saed14nm/ndm/saed14hvt_dlvl.ndm' (FILE-007)
+Information: Loading library file '/home/digitalProjects/tech/saed14nm/ndm/saed14lvt_dlvl.ndm' (FILE-007)
+Information: Loading library file '/home/digitalProjects/tech/saed14nm/ndm/saed14slvt_dlvl.ndm' (FILE-007)
+Information: Loading library file '/home/digitalProjects/tech/saed14nm/ndm/saed14rvt_ulvl.ndm' (FILE-007)
+Information: Loading library file '/home/digitalProjects/tech/saed14nm/ndm/saed14hvt_ulvl.ndm' (FILE-007)
+Information: Loading library file '/home/digitalProjects/tech/saed14nm/ndm/saed14lvt_ulvl.ndm' (FILE-007)
+Information: Loading library file '/home/digitalProjects/tech/saed14nm/ndm/saed14slvt_ulvl.ndm' (FILE-007)
+Information: Loading library file '/home/digitalProjects/tech/saed14nm/ndm/saed14rvt_pg.ndm' (FILE-007)
+Information: Loading library file '/home/digitalProjects/tech/saed14nm/ndm/saed14hvt_pg.ndm' (FILE-007)
+Information: Loading library file '/home/digitalProjects/tech/saed14nm/ndm/saed14lvt_pg.ndm' (FILE-007)
+Information: Loading library file '/home/digitalProjects/tech/saed14nm/ndm/saed14slvt_pg.ndm' (FILE-007)
+Information: User units loaded from library 'saed14rvt' (LNK-040)
+Opening block 'ALU_votegui_design_planning:ALU_votegui/design_planning.design' in edit mode
+fc_shell> open_block /home/votegui/proyecto_final/place_and_route/ALU_sin_infc/fusion-compiler/ALU_votegui_design_planning:ALU_votegui/design_planning.design
+Information: Incrementing open_count of block 'ALU_votegui_design_planning:ALU_votegui/design_planning.design' to 2. (DES-021)
+fc_shell> 
+fc_shell> link_block
+Using libraries: ALU_votegui_design_planning saed14rvt saed14hvt saed14lvt saed14slvt saed14rvt_dlvl saed14hvt_dlvl saed14lvt_dlvl saed14slvt_dlvl saed14rvt_ulvl saed14hvt_ulvl saed14lvt_ulvl saed14slvt_ulvl saed14rvt_pg saed14hvt_pg saed14lvt_pg saed14slvt_pg
+Warning: In library ALU_votegui_design_planning, no block views exist for block ALU_votegui. (LNK-064)
+Visiting block ALU_votegui_design_planning:ALU_votegui/design_planning.design
+Design 'ALU_votegui' was successfully linked.
+1
+fc_shell> 
+Configuracion del directorio de busqueda de scripts
+Error: unknown command 'Configuracion' (CMD-005)
+Information: script '/tmp/fc_shell-be-2.TEyCPF'
+                stopped at line 1 due to error. (CMD-081)
+Extended error info:
+
+    while executing
+"Configuracion del directorio de busqueda de scripts"
+    (file "/tmp/fc_shell-be-2.TEyCPF" line 1)
+ -- End Extended Error Info
+# Configuracion del directorio de busqueda de scripts
+set search_path ". scripts"
+. scripts
+# Variables y procs que son utilizados en todo el flujo
+source "config_tecnologia.tcl"
+source "config_herramienta.tcl"
+0.1
+source "config_design.tcl"
+source "procs.tcl"# Separador de mensajes
+set sep [string repeat = 100]
+====================================================================================================
+# Numero de procesadores, digitos significativos y unidades
+set_host_options -max_cores $num_procesadores
+1
+set_app_options -name shell.common.report_default_significant_digits -value 3 ; # Por defecto 2
+shell.common.report_default_significant_digits 3
+set_user_units -type power -value 1mW
+1
+set_user_units -type capacitance -value 1pF
+1
+# Directorios para archivos de salida
+if !{[file exists $dir_reportes]} {file mkdir $dir_reportes}
+if !{[file exists $dir_salidas]} {file mkdir $dir_salidas}
+if !{[file exists $dir_logs]} {file mkdir $dir_logs}
+# Manejo de mensajes de la herramienta
+suppress_message ATTR-11 ; # Surpime la informacion que hay valores de atributos que prevalecen sobre los valores en las librerias
+# set_message_info -id ATTR-11 -limit 1 ; # Limita el mensaje a 1 ocurrencia
+set_message_info -id PVT-012 -limit 1
+1
+set_message_info -id PVT-013 -limit 11
+# Informacion de la ejecucion en el log
+puts "INFO: Informacion de la ejecucion"
+INFO: Informacion de la ejecucion
+puts " - Maquina: [sh hostname]"
+ - Maquina: laurenz
+puts " - Fecha: [date]"
+ - Fecha: Mon Apr 14 05:18:05 2025
+puts " - ID proceso: [pid]"
+ - ID proceso: 9926
+puts " - Directorio: [pwd]"
+ - Directorio: /home/votegui/proyecto_final/place_and_route/ALU_sin_infc/fusion-compiler
+set etapa_anterior "design_planning"
+design_planning
+set etapa_actual "init_design"
+init_design
+puts "\nINFO: Etapa actual: ${etapa_actual}\n"
+
+INFO: Etapa actual: init_design
+
+file mkdir ${dir_reportes}/${etapa_actual}# Directorios para categoria de reportes
+set dir_estado "estado"
+estado
+file mkdir ${dir_reportes}/${etapa_actual}/${dir_estado}
+set dir_escenarios "escenarios"
+escenarios
+file mkdir ${dir_reportes}/${etapa_actual}/${dir_escenarios}
+set dir_ems "base_datos_ems"
+base_datos_ems
+file mkdir ${dir_reportes}/${etapa_actual}/${dir_ems}
+set dir_clocks "clocks"
+clocks
+file mkdir ${dir_reportes}/${etapa_actual}/${dir_clocks}
+set dir_configuraciones "configuraciones"
+configuraciones
+file mkdir ${dir_reportes}/${etapa_actual}/${dir_configuraciones}# Informacion de comienzo
+set tiempo_comienzo [clock seconds]
+1744618769
+puts "\nINFO: Comienzo: [clock format $tiempo_comienzo -format {%H:%M:%S - %d %b %Y}]\n"
+INFO: Comienzo: 05:19:29 - 14 Apr 2025
+
+# Creacion de la libreria del disenoif {[file exists $nombre_design]} {
+    file delete -force $nombre_design
+}puts "\nINFO: create_lib $nombre_design -tech $techfile -ref_libs ${librerias_referencia}\n"
+
+INFO: create_lib ALU_votegui -tech /home/digitalProjects/tech/saed14nm/tf/saed14nm_1p9m_mw.tf -ref_libs /home/digitalProjects/tech/saed14nm/ndm/saed14rvt.ndm /home/digitalProjects/tech/saed14nm/ndm/saed14hvt.ndm /home/digitalProjects/tech/saed14nm/ndm/saed14lvt.ndm /home/digitalProjects/tech/saed14nm/ndm/saed14slvt.ndm /home/digitalProjects/tech/saed14nm/ndm/saed14rvt_dlvl.ndm /home/digitalProjects/tech/saed14nm/ndm/saed14hvt_dlvl.ndm /home/digitalProjects/tech/saed14nm/ndm/saed14lvt_dlvl.ndm /home/digitalProjects/tech/saed14nm/ndm/saed14slvt_dlvl.ndm /home/digitalProjects/tech/saed14nm/ndm/saed14rvt_ulvl.ndm /home/digitalProjects/tech/saed14nm/ndm/saed14hvt_ulvl.ndm /home/digitalProjects/tech/saed14nm/ndm/saed14lvt_ulvl.ndm /home/digitalProjects/tech/saed14nm/ndm/saed14slvt_ulvl.ndm /home/digitalProjects/tech/saed14nm/ndm/saed14rvt_pg.ndm /home/digitalProjects/tech/saed14nm/ndm/saed14hvt_pg.ndm /home/digitalProjects/tech/saed14nm/ndm/saed14lvt_pg.ndm /home/digitalProjects/tech/saed14nm/ndm/saed14slvt_pg.ndm
+
+create_lib $nombre_design -tech $techfile -ref_libs $librerias_referencia
+Information: Loading technology file '/home/digitalProjects/tech/saed14nm/tf/saed14nm_1p9m_mw.tf' (FILE-007)
+{ALU_votegui}
+redirect -file ${dir_reportes}/${etapa_actual}/${dir_estado}/ref_libs.rpt {report_ref_libs}# Configuraciones de lectura del RTLset_app_options -as_user_default -name design.bus_delimiters -value {[]} ; # Especifica los delimitadores de buses de datos. Ejemplo: i_datos[4]
+design.bus_delimiters {[]}
+set_app_var bus_extraction_style {%s[%d:%d]} ; # Especifica el estilo de buses como nombre[num:num]. Ejemplo: i_datos[0:7]
+Error: Variable 'bus_extraction_style' is not an application variable. Using Tcl global variable. (CMD-104)
+%s[%d:%d]
+set synthetic_design_naming_style {%s_%d} ; #
+%s_%d
+set_app_var change_names_update_inst_tree true ; #
+Error: Variable 'change_names_update_inst_tree' is not an application variable. Using Tcl global variable. (CMD-104)
+true
+set_app_options -as_user_default -name hdlin.elaborate.preserve_sequential -value all ; # Todos los secuenciales sin carga son preservados
+Warning: Ignoring -as_user_default option since application option <hdlin.elaborate.preserve_sequential> is global scoped. (NDMUI-1004)
+hdlin.elaborate.preserve_sequential all
+set_app_options -as_user_default -name hdlin.report.check_no_latch -value true ; # Imprime un mensaje de advertencia cuando se infiere in latch en el diseno
+Warning: Ignoring -as_user_default option since application option <hdlin.report.check_no_latch> is global scoped. (NDMUI-1004)
+hdlin.report.check_no_latch true
+set_app_var enable_analysis_info false ; # 
+Error: Variable 'enable_analysis_info' is not an application variable. Using Tcl global variable. (CMD-104)
+false
+set_app_options -as_user_default -name time.disable_case_analysis -value false ; # Evita que se deshabiliten los constraints de case_analysis
+time.disable_case_analysis false
+set_app_options -as_user_default -name hdlin.elaborate.ff_infer_sync_set_reset -value true ; # Permite usar flip-flops con set/reset sincronos
+Warning: Ignoring -as_user_default option since application option <hdlin.elaborate.ff_infer_sync_set_reset> is global scoped. (NDMUI-1004)
+hdlin.elaborate.ff_infer_sync_set_reset true
+set hdlin_force_template_style true ; #
+true
+set_app_options -as_user_default -name hdlin.naming.template_naming_style -value "%s" ; # Cambio de %s_%p a %s (remueve par??metros de los nombres)
+Warning: Ignoring -as_user_default option since application option <hdlin.naming.template_naming_style> is global scoped. (NDMUI-1004)
+hdlin.naming.template_naming_style %s
+set_app_options -as_user_default -name hdlin.report.sequential_pruning -value true ; # Emite un mensaje cuando un registro es removido
+Warning: Ignoring -as_user_default option since application option <hdlin.report.sequential_pruning> is global scoped. (NDMUI-1004)
+hdlin.report.sequential_pruning true
+set_app_options -as_user_default -name link.bit_blast_naming_style -value "%s\[%d\] %s(%d) %s_%d" ; # Permite interpretar disenos con diferentes estilos de nombres de buses. Ejemplo: i_datos\[4\] , i_datos(4) o i_datos_4
+link.bit_blast_naming_style {{%s[%d]} %s(%d) %s_%d}
+set_app_var hdlin_enable_hier_map true ; #
+Error: Variable 'hdlin_enable_hier_map' is not an application variable. Using Tcl global variable. (CMD-104)
+true
+Lectura del diseno RTL
+Error: unknown command 'Lectura' (CMD-005)
+Information: script '/tmp/fc_shell-2.wSXWRw'
+                stopped at line 1 due to error. (CMD-081)
+Extended error info:
+
+    while executing
+"Lectura del diseno RTL"
+    (file "/tmp/fc_shell-2.wSXWRw" line 1)
+ -- End Extended Error Info
+set_svf ${dir_salidas}/${etapa_actual}.svf1
+# Lectura de lista de directorios include
+if {[file exist ${dir_lista_rtl}/include_dir_list.lst]} {
+    puts "\nINFO: Leyendo lista de directorios include desde '${dir_lista_rtl}/include_dir_list.lst' ...\n"
+    set f [open "${dir_lista_rtl}/include_dir_list.lst"]
+    set search_path "$search_path [subst [join [split [read $f] \n]]]"
+    close $f
+} else {
+    puts "\nINFO: El archivo '${dir_lista_rtl}/include_dir_list.lst' no existe. No se usara ningun directorio de includes.\n"
+}
+
+INFO: El archivo '/home/votegui/proyecto_final/place_and_route/ALU_sin_infc/RTL_sin_infc/include_dir_list.lst' no existe. No se usara ningun directorio de includes.
+
+# Lectura de lista de archivos RTL
+if {[file exist ${dir_lista_rtl}/verilog_list.lst]} {
+    puts "\nINFO: Leyendo lista de archivos RTL desde '${dir_lista_rtl}/verilog_list.lst' ...\n"
+    set f [open "${dir_lista_rtl}/verilog_list.lst"]
+    set archivos_rtl [subst [join [split [read $f] \n]]]
+    close $f
+} else {
+    puts "\nINFO: El archivo '${dir_lista_rtl}/verilog_list.lst' no existe. Por favor chequear.\n"
+}
+INFO: Leyendo lista de archivos RTL desde '/home/votegui/proyecto_final/place_and_route/ALU_sin_infc/RTL_sin_infc/verilog_list.lst' ...
+
+fc_shell> set_working_design_stack ALU_votegui_design_planning:ALU_votegui/design_planning.design
+fc_shell> 
+# Analisis y elaboracion del diseno
+analyze -format sverilog ${archivos_rtl}
+Information: By default, the HDL template library is 'WORK' (LBR-??).
+Running PRESTO HDLC
+Compiling source file /home/votegui/proyecto_final/place_and_route/ALU_sin_infc/RTL_sin_infc/ALU_no_infc.v
+Compiling source file /home/votegui/proyecto_final/override/and_op.v
+Compiling source file /home/votegui/proyecto_final/override/clock_mux.v
+Compiling source file /home/votegui/proyecto_final/override/op_mux.v
+Compiling source file /home/votegui/proyecto_final/override/or_op.v
+Compiling source file /home/votegui/proyecto_final/override/sum_op.v
+Compiling source file /home/votegui/proyecto_final/override/xor_op.v
+Presto compilation completed successfully.
+Elapsed = 00:00:00.02, CPU = 00:00:00.01
+1
+puts "INFO votegui: el diseno ya se elaboro en la etapa anterior: design planning. Omitiendo comando de elaboracion"
+INFO votegui: el diseno ya se elaboro en la etapa anterior: design planning. Omitiendo comando de elaboracion
+#elaborate ${nombre_design}set_top_module ${nombre_design}
+Warning: Block 'ALU_votegui' is already linked. (LNK-067)
+Elapsed = 00:00:00.00, CPU = 00:00:00.00
+0
+# Guarda el diseno elaborado
+save_block -as ${nombre_design}/${etapa_actual}_elaborated
+Information: Saving 'ALU_votegui_design_planning:ALU_votegui/design_planning.design' to 'ALU_votegui_design_planning:ALU_votegui/init_design_elaborated.design'. (DES-028)
+1
+# Nombres de modulos unicos
+set_app_option -name design.uniquify_naming_style -value ${nombre_design}_%s_%d
+design.uniquify_naming_style ALU_votegui_%s_%d
+puts "\nINFO: Haciendo modulos unicos: uniquify -force\n"
+
+INFO: Haciendo modulos unicos: uniquify -force
+
+uniquify -force6
+# Cambio de nombres de senales para usar solo caracteres permitidos
+define_name_rules verilog -allowed "A-Z a-z 0-9 _" -replacement_char "_"
+1
+change_names -rules verilog -hierarchy Information: Using name rules 'verilog'.
+ Information: no objects changed in design 'ALU_votegui'.
+1
+# Reportes de chequeo del diseno
+redirect -file ${dir_reportes}/${etapa_actual}/${dir_estado}/chequeo_diseno_incompatibilidades.rpt {check_design -ems_database ${dir_reportes}/${etapa_actual}/${dir_ems}/chequeo_diseno_incompatibilidades.ems -log_file ${dir_reportes}/${etapa_actual}/${dir_ems}/chequeo_diseno_incompatibilidades.log -checks design_mismatch}
+redirect -file ${dir_reportes}/${etapa_actual}/${dir_estado}/incompatibiliades_diseno.rpt {report_design_mismatch -verbose}
+redirect -file ${dir_reportes}/${etapa_actual}/${dir_estado}/unbound.rpt {report_unbound}# Comienza mapeo de SAIF
+saif_map -start
+1
+# Configuracion de la tecnologiaif {$nodo != ""} {
+    set_technology -node $nodo
+}
+Information: The command 'set_technology' cleared the undo history. (UNDO-016)
+set_technology s14.03
+Executing: set_extraction_options -honor_mask_constraints true -late_ccap_threshold 0.0005 -late_ccap_ratio 0.03 -early_ccap_threshold 0.0005 -early_ccap_ratio 0.03
+Executing: set_app_options -name route.common.via_array_mode -value swap 
+Executing: set_app_options -name route.detail.insert_redundant_vias_layer_order_low_to_high -value true 
+Executing: set_app_options -name plan.pgroute.honor_signal_route_drc -value true 
+Executing: set_app_options -name plan.pgroute.honor_std_cell_drc -value true 
+technology_node=s14
+puts "INFO votegui: La creacion del floorplan se realizo en design planning. Omitiendo."INFO votegui: La creacion del floorplan se realizo en design planning. Omitiendo.
+# Configuracion de la tecnologia# Configuracion de routing_direction y track_offset
+if {$layer_direccion_offset != ""} {
+    foreach par_direccion_offset $layer_direccion_offset {
+        set layer [lindex $par_direccion_offset 0]
+        set direccion [lindex $par_direccion_offset 1]
+        set offset [lindex $par_direccion_offset 2]
+        set_attribute [get_layers $layer] routing_direction $direccion
+        if {$offset != ""} {
+            set_attribute [get_layers $layer] track_offset $offset
+        }
+    }
+} else {
+    puts "\nADVERTENCIA: layer_direccion_offset no fue especificado. Debes configurar manualmente routing_directions y track_offsets\n"
+}
+Information: The design specific attribute override for layer 'PO' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for layer 'PO' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for layer 'M1' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for layer 'M1' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for layer 'M2' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for layer 'M2' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for layer 'M3' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for layer 'M3' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for layer 'M4' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for layer 'M4' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for layer 'M5' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for layer 'M5' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for layer 'M6' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for layer 'M6' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for layer 'M7' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for layer 'M7' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for layer 'M8' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for layer 'M8' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for layer 'M9' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for layer 'M9' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for layer 'MRDL' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for layer 'MRDL' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+# Configuracion de site_default
+if {$site_default != ""} {
+    set_attribute [get_site_defs] is_default false
+    set_attribute [get_site_defs $site_default] is_default true
+}
+{unit}
+# Configuracion de site_symmetry
+if {$site_simetria != ""} {
+    foreach par_site_simetria $site_simetria {
+        set nombre_site [lindex $par_site_simetria 0]
+        set simetria [lindex $par_site_simetria 1]
+        set_attribute [get_site_defs $nombre_site] symmetry $simetria
+    }
+}# Configuracion de capas multi-mascaras
+foreach capa_mm $capas_multi_mascara {
+    puts "\nINFO: Configurando capa [lindex $capa_mm 0] con numero de mascaras [lindex $capa_mm 1].\n"
+    set_attribute [get_layers [lindex $capa_mm 0]] number_of_masks [lindex $capa_mm 1]
+}
+
+INFO: Configurando capa M1 con numero de mascaras 2.
+
+
+INFO: Configurando capa M2 con numero de mascaras 2.
+
+# Conexion de la red de PGconnect_pg_net
+Information: Power and ground nets will be connected to mapped cells only. Unmapped instances and switch placeholder cells in the design are skipped. (MV-341)
+****************************************
+Report : Power/Ground Connection Summary
+Design : ALU_votegui
+Version: U-2022.12
+Date   : Mon Apr 14 05:30:09 2025
+****************************************
+P/G net name                  P/G pin count(previous/current)
+--------------------------------------------------------------------------------
+Power net VDD                 531/531
+Ground net VSS                531/531
+--------------------------------------------------------------------------------
+Information: connections of 0 power/ground pin(s) are created or changed.
+1
+# Chequeo basico de floorplanif {[flow_check_design -step init_design]} {
+    puts "\nERROR: El floorplan tiene problemas constructivos. Arreglalos antes de continuar. Saliendo de la herramienta...\n"
+          #  exit
+}flow_check_design -step init_design0
+# Timing y constraints del disenoLectura de los archivos de parasitos
+Error: unknown command 'Lectura' (CMD-005)
+Information: script '/tmp/fc_shell-be-2.JsuJkK'
+                stopped at line 1 due to error. (CMD-081)
+Extended error info:
+
+    while executing
+"Lectura de los archivos de parasitos"
+    (file "/tmp/fc_shell-be-2.JsuJkK" line 1)
+ -- End Extended Error Info
+# Lectura de los archivos de parasitos
+# Estos modelos seran referenciados en los constraints de corners
+foreach p [array name tluplus] {
+    puts "\nINFO: \"read_parasitic_tech -tlup $tluplus($p) -layermap $itf_tlu_map($p) -name ${p}\"\n"
+    read_parasitic_tech -tlup $tluplus($p) -layermap $itf_tlu_map($p) -name $p
+}
+INFO: "read_parasitic_tech -tlup /home/tools/synopsys/tech_kits/SAED14nm_EDK/tech/star_rc/max/saed14nm_1p9m_Cmax.tluplus -layermap /home/tools/synopsys/tech_kits/SAED14nm_EDK/tech/star_rc/saed14nm_tf_itf_tluplus.map -name Cmax"
+
+Information: The command 'read_parasitic_tech' cleared the undo history. (UNDO-016)
+WARNING: Layer mapping file warning. Tech layer 'M1_3' mapped in layer mapping file cannot be found in technology section.
+WARNING: Layer mapping file warning. Tech layer 'M2_3' mapped in layer mapping file cannot be found in technology section.
+WARNING: Layer mapping file warning. Tech layer 'M3_3' mapped in layer mapping file cannot be found in technology section.
+
+INFO: "read_parasitic_tech -tlup /home/tools/synopsys/tech_kits/SAED14nm_EDK/tech/star_rc/min/saed14nm_1p9m_Cmin.tluplus -layermap /home/tools/synopsys/tech_kits/SAED14nm_EDK/tech/star_rc/saed14nm_tf_itf_tluplus.map -name Cmin"
+
+WARNING: Layer mapping file warning. Tech layer 'M1_3' mapped in layer mapping file cannot be found in technology section.
+WARNING: Layer mapping file warning. Tech layer 'M2_3' mapped in layer mapping file cannot be found in technology section.
+WARNING: Layer mapping file warning. Tech layer 'M3_3' mapped in layer mapping file cannot be found in technology section.
+# Escenarios multi-corner y multi-modo
+source "mcmm_setup.tcl"
+INFO: create_corner setup_ss0p72v125c
+
+
+INFO: create_corner hold_ff0p88v125c
+
+
+INFO: create_mode func
+
+
+INFO: create_scenario func::setup_ss0p72v125c
+
+Created scenario func::setup_ss0p72v125c for mode func and corner setup_ss0p72v125c
+All analysis types are activated.
+
+INFO: create_scenario func::hold_ff0p88v125c
+
+Created scenario func::hold_ff0p88v125c for mode func and corner hold_ff0p88v125c
+All analysis types are activated.
+
+INFO: set_parasitics_parameters -early_spec Cmax -late_spec Cmax -corners setup_ss0p72v125c
+
+
+INFO: set_parasitics_parameters -early_spec Cmin -late_spec Cmin -corners hold_ff0p88v125c
+
+
+INFO: current_mode func
+
+INFO: Definiendo clocks
+INFO: Definiendo clocks virtuales para la definicion de input y output delays
+Warning: Creating virtual clock named 'vir_CLOCK_MAIN' with no sources. (UIC-021)
+INFO: Definiendo clocks generados
+Warning: No pin objects matched 'q_reg/clocked_on' (SEL-004)
+Warning: No pin objects matched 'q_reg/Q' (SEL-004)
+Error: Nothing matched for -source (SEL-005)
+Error: bad value specified for option -source
+        Use error_info for more info. (CMD-013)
+Information: script '/home/votegui/proyecto_final/override/constraints/clocks.tcl'
+                stopped at line 17 due to error. (CMD-081)
+Extended error info:
+bad value specified for option -source
+    while executing
+"create_generated_clock -name gen_clk_div2 -divide_by 2 -source [get_flat_pins  {q_reg/clocked_on}] -master_clock CLOCK_MAIN [get_pins {q_reg/Q}] -add"
+    (file "/home/votegui/proyecto_final/override/constraints/clocks.tcl" line 17)
+ -- End Extended Error Info
+Information: script '/home/votegui/proyecto_final/place_and_route/ALU_sin_infc/fusion-compiler/scripts/mcmm_setup.tcl'
+                stopped at line 52 due to error. (CMD-081)
+Extended error info:
+bad value specified for option -source
+    while executing
+"create_generated_clock -name gen_clk_div2 -divide_by 2 -source [get_flat_pins  {q_reg/clocked_on}] -master_clock CLOCK_MAIN [get_pins {q_reg/Q}] -add"
+    (file "/home/votegui/proyecto_final/override/constraints/clocks.tcl" line 17)
+    invoked from within
+"source $cnstr"
+    ("foreach" body line 2)
+    invoked from within
+"foreach cnstr $modo_constraints($m) {
+        source $cnstr
+    }"
+    ("foreach" body line 6)
+    invoked from within
+"foreach m [array name modo_constraints] {
+    current_mode $m
+    current_scenario [index_collection [get_scenarios -mode $m] 0]
+    # ensures a curre..."
+    (file "/home/votegui/proyecto_final/place_and_route/ALU_sin_infc/fusion-compiler/scripts/mcmm_setup.tcl" line 52)
+ -- End Extended Error Info
+Information: script '/tmp/fc_shell-be-2.lEQeod'
+                stopped at line 2 due to error. (CMD-081)
+Extended error info:
+bad value specified for option -source
+    while executing
+"create_generated_clock -name gen_clk_div2 -divide_by 2 -source [get_flat_pins  {q_reg/clocked_on}] -master_clock CLOCK_MAIN [get_pins {q_reg/Q}] -add"
+    (file "/home/votegui/proyecto_final/override/constraints/clocks.tcl" line 17)
+    invoked from within
+"source $cnstr"
+    ("foreach" body line 2)
+    invoked from within
+"foreach cnstr $modo_constraints($m) {
+        source $cnstr
+    }"
+    ("foreach" body line 6)
+    invoked from within
+"foreach m [array name modo_constraints] {
+    current_mode $m
+    current_scenario [index_collection [get_scenarios -mode $m] 0]
+    # ensures a curre..."
+    (file "/home/votegui/proyecto_final/place_and_route/ALU_sin_infc/fusion-compiler/scripts/mcmm_setup.tcl" line 52)
+    invoked from within
+"source "mcmm_setup.tcl""
+    (file "/tmp/fc_shell-be-2.lEQeod" line 2)
+ -- End Extended Error Info
+fc_shell> get_selection
+{q_div_2_reg/clocked_on}
+fc_shell> get_selection
+{u_clock_mux/C23}
+fc_shell> get_selection
+{C103}
+fc_shell> get_selection
+{{u_clock_mux/C23/DATA1[0]}}
+fc_shell> get_selection
+{{u_clock_mux/C23/Z[0]}}
+fc_shell> 
+# Escenarios multi-corner y multi-modo
+source "mcmm_setup.tcl"
+INFO: create_corner setup_ss0p72v125c
+
+
+INFO: create_corner hold_ff0p88v125c
+
+
+INFO: create_mode func
+
+
+INFO: create_scenario func::setup_ss0p72v125c
+
+Created scenario func::setup_ss0p72v125c for mode func and corner setup_ss0p72v125c
+All analysis types are activated.
+
+INFO: create_scenario func::hold_ff0p88v125c
+
+Created scenario func::hold_ff0p88v125c for mode func and corner hold_ff0p88v125c
+All analysis types are activated.
+
+INFO: set_parasitics_parameters -early_spec Cmax -late_spec Cmax -corners setup_ss0p72v125c
+
+
+INFO: set_parasitics_parameters -early_spec Cmin -late_spec Cmin -corners hold_ff0p88v125c
+
+
+INFO: current_mode func
+
+INFO: Definiendo clocks
+INFO: Definiendo clocks virtuales para la definicion de input y output delays
+Warning: Creating virtual clock named 'vir_CLOCK_MAIN' with no sources. (UIC-021)
+INFO: Definiendo clocks generados
+Warning: No pin objects matched 'q_div_2_reg/clocked_on/Q' (SEL-004)
+Error: Nothing matched for source_objects (SEL-005)
+Error: bad value specified for option source_objects
+        Use error_info for more info. (CMD-013)
+Information: script '/home/votegui/proyecto_final/override/constraints/clocks.tcl'
+                stopped at line 17 due to error. (CMD-081)
+Extended error info:
+bad value specified for option source_objects
+    while executing
+"create_generated_clock -name gen_clk_div2 -divide_by 2 -source [get_flat_pins  {q_div_2_reg/clocked_on}] -master_clock CLOCK_MAIN [get_pins {q_div_2_r..."
+    (file "/home/votegui/proyecto_final/override/constraints/clocks.tcl" line 17)
+ -- End Extended Error Info
+Information: script '/home/votegui/proyecto_final/place_and_route/ALU_sin_infc/fusion-compiler/scripts/mcmm_setup.tcl'
+                stopped at line 52 due to error. (CMD-081)
+Extended error info:
+bad value specified for option source_objects
+    while executing
+"create_generated_clock -name gen_clk_div2 -divide_by 2 -source [get_flat_pins  {q_div_2_reg/clocked_on}] -master_clock CLOCK_MAIN [get_pins {q_div_2_r..."
+    (file "/home/votegui/proyecto_final/override/constraints/clocks.tcl" line 17)
+    invoked from within
+"source $cnstr"
+    ("foreach" body line 2)
+    invoked from within
+"foreach cnstr $modo_constraints($m) {
+        source $cnstr
+    }"
+    ("foreach" body line 6)
+    invoked from within
+"foreach m [array name modo_constraints] {
+    current_mode $m
+    current_scenario [index_collection [get_scenarios -mode $m] 0]
+    # ensures a curre..."
+    (file "/home/votegui/proyecto_final/place_and_route/ALU_sin_infc/fusion-compiler/scripts/mcmm_setup.tcl" line 52)
+ -- End Extended Error Info
+Information: script '/tmp/fc_shell-be-2.OLcHQr'
+                stopped at line 3 due to error. (CMD-081)
+Extended error info:
+bad value specified for option source_objects
+    while executing
+"create_generated_clock -name gen_clk_div2 -divide_by 2 -source [get_flat_pins  {q_div_2_reg/clocked_on}] -master_clock CLOCK_MAIN [get_pins {q_div_2_r..."
+    (file "/home/votegui/proyecto_final/override/constraints/clocks.tcl" line 17)
+    invoked from within
+"source $cnstr"
+    ("foreach" body line 2)
+    invoked from within
+"foreach cnstr $modo_constraints($m) {
+        source $cnstr
+    }"
+    ("foreach" body line 6)
+    invoked from within
+"foreach m [array name modo_constraints] {
+    current_mode $m
+    current_scenario [index_collection [get_scenarios -mode $m] 0]
+    # ensures a curre..."
+    (file "/home/votegui/proyecto_final/place_and_route/ALU_sin_infc/fusion-compiler/scripts/mcmm_setup.tcl" line 52)
+    invoked from within
+"source "mcmm_setup.tcl""
+    (file "/tmp/fc_shell-be-2.OLcHQr" line 3)
+ -- End Extended Error Info
+fc_shell> # Escenarios multi-corner y multi-modo
+fc_shell> source "mcmm_setup.tcl"
+
+INFO: create_corner setup_ss0p72v125c
+
+
+INFO: create_corner hold_ff0p88v125c
+
+
+INFO: create_mode func
+
+
+INFO: create_scenario func::setup_ss0p72v125c
+
+Created scenario func::setup_ss0p72v125c for mode func and corner setup_ss0p72v125c
+All analysis types are activated.
+
+INFO: create_scenario func::hold_ff0p88v125c
+
+Created scenario func::hold_ff0p88v125c for mode func and corner hold_ff0p88v125c
+All analysis types are activated.
+
+INFO: set_parasitics_parameters -early_spec Cmax -late_spec Cmax -corners setup_ss0p72v125c
+
+
+INFO: set_parasitics_parameters -early_spec Cmin -late_spec Cmin -corners hold_ff0p88v125c
+
+
+INFO: current_mode func
+
+INFO: Definiendo clocks
+INFO: Definiendo clocks virtuales para la definicion de input y output delays
+Warning: Creating virtual clock named 'vir_CLOCK_MAIN' with no sources. (UIC-021)
+INFO: Definiendo clocks generados
+Information: Timer using 8 threads
+INFO: Configurando false paths para senales estaticas o reset asincrono
+Scenario func::setup_ss0p72v125c (mode func corner setup_ss0p72v125c) is active for setup/leakage_power/dynamic_power/max_transition/max_capacitance analysis.
+Scenario func::hold_ff0p88v125c (mode func corner hold_ff0p88v125c) is active for hold/leakage_power/max_transition/min_capacitance analysis.
+1
+fc_shell> 
+# Driving cell de entrada y carga maxima de salida
+set puertos_clock [filter_collection [get_attribute [get_clocks] sources] object_class==port]
+Warning: Attribute 'sources' does not exist on clock vir_CLOCK_MAIN (ATTR-3)
+{i_clock}
+set puertos_datos_entrada [remove_from_collection [all_inputs] $puertos_clock]
+{{i_operation[1]} {i_operation[0]} {i_sel_clock[1]} {i_sel_clock[0]} i_enable {i_data_a[31]} {i_data_a[30]} {i_data_a[29]} {i_data_a[28]} {i_data_a[27]} {i_data_a[26]} {i_data_a[25]} {i_data_a[24]} {i_data_a[23]} {i_data_a[22]} {i_data_a[21]} {i_data_a[20]} {i_data_a[19]} {i_data_a[18]} {i_data_a[17]} {i_data_a[16]} {i_data_a[15]} {i_data_a[14]} {i_data_a[13]} {i_data_a[12]} {i_data_a[11]} {i_data_a[10]} {i_data_a[9]} {i_data_a[8]} {i_data_a[7]} {i_data_a[6]} {i_data_a[5]} {i_data_a[4]} {i_data_a[3]} {i_data_a[2]} {i_data_a[1]} {i_data_a[0]} {i_data_b[31]} {i_data_b[30]} {i_data_b[29]} {i_data_b[28]} {i_data_b[27]} {i_data_b[26]} {i_data_b[25]} {i_data_b[24]} {i_data_b[23]} {i_data_b[22]} {i_data_b[21]} {i_data_b[20]} {i_data_b[19]} {i_data_b[18]} {i_data_b[17]} {i_data_b[16]} {i_data_b[15]} {i_data_b[14]} {i_data_b[13]} {i_data_b[12]} {i_data_b[11]} {i_data_b[10]} {i_data_b[9]} {i_data_b[8]} {i_data_b[7]} {i_data_b[6]} {i_data_b[5]} {i_data_b[4]} {i_data_b[3]} {i_data_b[2]} {i_data_b[1]} {i_data_b[0]} i_valid i_reset}
+puts "\nINFO: Estableciendo driving cell de entrada $driving_cell con transicion de subida $transicion_entrada_subida_max y transicion de bajada $transicion_entrada_bajada_max para todos los puertos de datos de entrada.\n"
+
+INFO: Estableciendo driving cell de entrada SAEDRVT14_BUF_S_8 con transicion de subida 0.200 y transicion de bajada 0.200 para todos los puertos de datos de entrada.
+
+set_driving_cell -lib_cell $driving_cell -from_pin A -pin X -input_transition_rise $transicion_entrada_subida_max -input_transition_fall $transicion_entrada_bajada_max [get_ports $puertos_datos_entrada]
+1
+puts "\nINFO: Estableciendo carga maxima $carga_max a todas las salidas.\n"
+
+INFO: Estableciendo carga maxima 0.030 a todas las salidas.
+
+set_load $carga_max [all_outputs]1
+# False path de hold en los IOs
+set escenarios_activos [get_scenarios -filter active]
+{func::hold_ff0p88v125c func::setup_ss0p72v125c}
+set_scenario_status -active true [get_scenarios -filter hold]
+Scenario func::hold_ff0p88v125c (mode func corner hold_ff0p88v125c) is active for hold/leakage_power/max_transition/min_capacitance analysis.
+1
+puts "\nINFO: Deshabilitando el analisis de timing de hold para todas las entradas y salidas.\n"
+
+INFO: Deshabilitando el analisis de timing de hold para todas las entradas y salidas.
+
+foreach escenario [get_object_name [get_scenarios -filter hold]] {
+    current_scenario $escenario
+    set_false_path -hold -from [all_inputs]
+    set_false_path -hold -to [all_outputs]
+}
+set_scenario_status -active false [get_scenarios -filter active]
+Scenario func::hold_ff0p88v125c (mode func corner hold_ff0p88v125c) is configured for hold/leakage_power/max_transition/min_capacitance, but is inactive.
+Scenario func::setup_ss0p72v125c (mode func corner setup_ss0p72v125c) is configured for setup/leakage_power/dynamic_power/max_transition/max_capacitance, but is inactive.
+1
+set_scenario_status -active true $escenarios_activos
+Scenario func::hold_ff0p88v125c (mode func corner hold_ff0p88v125c) is active for hold/leakage_power/max_transition/min_capacitance analysis.
+Scenario func::setup_ss0p72v125c (mode func corner setup_ss0p72v125c) is active for setup/leakage_power/dynamic_power/max_transition/max_capacitance analysis.
+1
+# Creacion de grupos de clock
+set modo_actual [current_mode]
+{func}
+puts "\nINFO: Creando grupos de clock \"reg2out in2reg in2out\".\n"
+
+INFO: Creando grupos de clock "reg2out in2reg in2out".
+
+foreach modo [get_object_name [all_modes]] {
+    current_mode $modo
+    group_path -name reg2out -to [all_outputs] ; # -weight 0.1
+    group_path -name in2reg -from [remove_from_collection [all_inputs] [get_ports [get_attribute -quiet [all_clocks -mode $modo] sources]]] ; # -weight 0.1
+    group_path -name in2out -from [remove_from_collection [all_inputs] [get_ports [get_attribute -quiet [all_clocks -mode $modo] sources]]] -to [all_outputs] ; # -weight 0.1
+}
+Warning: Some objects from '_sel24888' were of the incorrect class. (SEL-010)
+Warning: Some objects from '_sel24901' were of the incorrect class. (SEL-010)
+current_mode $modo_actual{func}
+# Transicion, capacidad, fanout y largo de net maximos del disenoset escenario_actual [current_scenario]{func::hold_ff0p88v125c}
+# Transicion maxima
+puts "\nINFO: Configurando transicion maxima del diseno ${transicion_max}.\n"
+
+INFO: Configurando transicion maxima del diseno 0.300.
+
+set_max_transition $transicion_max [current_design]
+1
+foreach $modo [get_object_name [all_modes]] {
+    current_mode $modo
+    set_max_transition $transicion_max [current_design] -mode $modo
+    set_max_transition -data_path $transicion_max -mode $modo *
+    set_max_transition -data_path $transicion_max [get_clocks *] -mode $modo
+    set_max_transition -clock_path $clock_transicion_max [get_clocks *] -mode $modo
+}
+# Capacidad maxima
+if {$capacidad_max != ""} {
+    puts "\nINFO: Configurando capacidad maxima del diseno ${capacidad_max}.\n"
+    set_max_capacitance $capacidad_max [current_design]
+    foreach $modo [get_object_name [all_modes]] {
+        current_mode $modo
+        set_max_capacitance $capacidad_max [current_design] -moce $modo
+        set_max_capacitance -data_path $capacidad_max [get_clocks *] -mode $modo
+    }
+}# Fanout maximo
+if {$fanout_max != ""} {
+    puts "\nINFO: Cofigurando fanout maximo del diseno ${fanout_max}.\n"
+    set_app_options -name opt.common.max_fanout -value $fanout_max
+}
+INFO: Cofigurando fanout maximo del diseno 40.
+
+opt.common.max_fanout 40
+# Fanout maximo de tie cells
+if {$tie_fanout_max != ""} {
+    puts "\nINFO: Configurando fanout maximo de tie cells del diseno ${tie_fanout_max}.\n"
+    set_app_options -name opt.tie_cell.max_fanout -value $tie_fanout_max
+}
+
+INFO: Configurando fanout maximo de tie cells del diseno 50.
+
+opt.tie_cell.max_fanout 50
+# Largo maximo de nets
+if {$largo_net_max != ""} {
+    puts "\nINFO: Configurando largo maximo de nets del diseno ${largo_net_max}.\n"
+    set_app_options -name opt.common.max_net_length -value $largo_net_max
+}
+current_scenario $escenario_actual{func::hold_ff0p88v125c}
+# Configuraciones adicionales# Configuracion de capas de ruteo max/min
+if {$maxima_capa_routeo != ""} {set_ignored_layers -max_routing_layer $maxima_capa_routeo}
+1
+if {$minima_capa_routeo != ""} {set_ignored_layers -min_routing_layer $minima_capa_routeo}
+1
+# Reglas de ruteo de clock (NDRs)
+source "cts_ndr.tcl"
+INFO: set_clock_routing_rules -net_type root -rule ndr_2w2s -min_routing_layer M5 -max_routing_layer M8
+
+Information: The command 'set_clock_routing_rules' cleared the undo history. (UNDO-016)
+
+INFO: nombre_ndr_internal(ndr_2w2s) ya existe. Se omitio la creacion de la regla.
+
+
+INFO: set_clock_routing_rules -net_type internal -rule ndr_2w2s -min_routing_layer M5 -max_routing_layer M8
+
+
+INFO: set_clock_routing_rules -net_type sink -rule ndr_leaf -min_routing_layer M5 -max_routing_layer M8
+
+Information: The command 'set_clock_routing_rules' cleared the undo history. (UNDO-016)
+1
+# Restricciones de uso de celdas estandar (set_lib_cell_purpose: Dont use, tie cells, arreglos de hold y CTS)
+source "set_lib_cell_purpose.tcl"
+Information: The design specific attribute override for lib_cell 'saed14rvt:SAEDRVT14_TIE1_4.timing' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for lib_cell 'saed14rvt:SAEDRVT14_TIE1_V1_2.timing' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for lib_cell 'saed14rvt:SAEDRVT14_TIE1_V1ECO_1.timing' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for lib_cell 'saed14rvt:SAEDRVT14_TIE1_PV1ECO_1.timing' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for lib_cell 'saed14rvt:SAEDRVT14_TIE0_4.timing' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for lib_cell 'saed14rvt:SAEDRVT14_TIE0_V1_2.timing' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for lib_cell 'saed14rvt:SAEDRVT14_TIE0_PV1ECO_1.timing' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for lib_cell 'saed14rvt:SAEDRVT14_ADDF_V1_0P5.timing' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for lib_cell 'saed14rvt:SAEDRVT14_ADDF_V1_1.timing' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for lib_cell 'saed14rvt:SAEDRVT14_ADDF_V1_2.timing' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for lib_cell 'saed14rvt:SAEDRVT14_ADDF_V2_0P5.timing' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for lib_cell 'saed14rvt:SAEDRVT14_ADDF_V2_1.timing' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for lib_cell 'saed14rvt:SAEDRVT14_ADDF_V2_2.timing' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for lib_cell 'saed14rvt:SAEDRVT14_ADDH_0P5.timing' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for lib_cell 'saed14rvt:SAEDRVT14_ADDH_1.timing' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for lib_cell 'saed14rvt:SAEDRVT14_ADDH_2.timing' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for lib_cell 'saed14rvt:SAEDRVT14_ADDH_4.timing' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for lib_cell 'saed14rvt:SAEDRVT14_DEL_L4D100_1.timing' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for lib_cell 'saed14rvt:SAEDRVT14_DEL_L4D100_2.timing' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for lib_cell 'saed14rvt:SAEDRVT14_DEL_R2V1_1.timing' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for lib_cell 'saed14rvt:SAEDRVT14_DEL_R2V1_2.timing' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for lib_cell 'saed14rvt:SAEDRVT14_DEL_R2V2_1.timing' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for lib_cell 'saed14rvt:SAEDRVT14_DEL_R2V2_2.timing' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for lib_cell 'saed14rvt:SAEDRVT14_DEL_R2V3_1.timing' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for lib_cell 'saed14rvt:SAEDRVT14_DEL_R2V3_2.timing' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for lib_cell 'saed14rvt:SAEDRVT14_DEL_PR2V2_1.timing' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for lib_cell 'saed14rvt:SAEDRVT14_ADDF_V1_0P5.timing' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for lib_cell 'saed14rvt:SAEDRVT14_ADDF_V1_1.timing' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for lib_cell 'saed14rvt:SAEDRVT14_ADDF_V1_2.timing' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for lib_cell 'saed14rvt:SAEDRVT14_ADDF_V2_0P5.timing' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for lib_cell 'saed14rvt:SAEDRVT14_ADDF_V2_1.timing' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for lib_cell 'saed14rvt:SAEDRVT14_ADDF_V2_2.timing' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for lib_cell 'saed14rvt:SAEDRVT14_ADDH_0P5.timing' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for lib_cell 'saed14rvt:SAEDRVT14_ADDH_1.timing' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for lib_cell 'saed14rvt:SAEDRVT14_ADDH_2.timing' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for lib_cell 'saed14rvt:SAEDRVT14_ADDH_4.timing' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for lib_cell 'saed14slvt:SAEDSLVT14_INV_S_0P5.timing' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for lib_cell 'saed14slvt:SAEDSLVT14_INV_S_0P75.timing' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for lib_cell 'saed14slvt:SAEDSLVT14_INV_S_10.timing' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for lib_cell 'saed14slvt:SAEDSLVT14_INV_S_12.timing' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for lib_cell 'saed14slvt:SAEDSLVT14_INV_S_16.timing' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for lib_cell 'saed14slvt:SAEDSLVT14_INV_S_1P5.timing' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for lib_cell 'saed14slvt:SAEDSLVT14_INV_S_1.timing' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for lib_cell 'saed14slvt:SAEDSLVT14_INV_S_20.timing' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for lib_cell 'saed14slvt:SAEDSLVT14_INV_S_2.timing' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for lib_cell 'saed14slvt:SAEDSLVT14_INV_S_3.timing' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+# Chequea y remueve shapes duplicadas en el diseno
+set shapes_duplicadas [check_duplicates -return_as_collection]
+****************************************
+Report : Reporting Duplicates
+Design : ALU_votegui
+Version: U-2022.12
+Date   : Mon Apr 14 06:00:45 2025
+****************************************
+if {[sizeof_collection $shapes_duplicadas] > 0} {
+   remove_shapes -force $shapes_duplicadas
+}# Guarda el bloque para la etapa actual
+save_block -as ${nombre_design}/${etapa_actual}
+Information: The command 'save_block' cleared the undo history. (UNDO-016)
+Information: Saving 'ALU_votegui_design_planning:ALU_votegui/design_planning.design' to 'ALU_votegui_design_planning:ALU_votegui/init_design.design'. (DES-028)
+1
+# Chequeos y reportes de QoRset reportar_etapa init_design
+init_design
+set reportar_escenarios_activos $escenarios_activos_init_design
+func::setup_ss0p72v125c
+source "report_qor.tcl"
+INFO: Etapa a reportar init_design
+
+Scenario func::hold_ff0p88v125c (mode func corner hold_ff0p88v125c) is configured for hold/leakage_power/max_transition/min_capacitance, but is inactive.
+Scenario func::setup_ss0p72v125c (mode func corner setup_ss0p72v125c) is configured for setup/leakage_power/dynamic_power/max_transition/max_capacitance, but is inactive.
+Scenario func::setup_ss0p72v125c (mode func corner setup_ss0p72v125c) is active for setup/leakage_power/dynamic_power/max_transition/max_capacitance analysis.
+
+INFO: Reportando timing y QoR ...
+
+
+INFO: Analizando violaciones del diseno ...
+
+
+INFO: Ejecutando timing constraints ...
+
+Dispatching command : 'report_modes -nosplit' > ${dir_reportes}/${etapa_actual}/${dir_escenarios}/modos.rpt
+Dispatching command : 'report_pvt -nosplit' > ${dir_reportes}/${etapa_actual}/${dir_escenarios}/pvt.rpt
+Dispatching command : 'report_corners [all_corners]' > ${dir_reportes}/${etapa_actual}/${dir_escenarios}/corners.rpt
+Waiting for all dispatched commands to complete ...
+Done.
+
+All command runs are done. Below is the status.
+
+Completed 'report_modes -nosplit' successfully.
+Output is in log '${dir_reportes}/${etapa_actual}/${dir_escenarios}/modos.rpt'
+
+Completed 'report_pvt -nosplit' successfully.
+Output is in log '${dir_reportes}/${etapa_actual}/${dir_escenarios}/pvt.rpt'
+
+Completed 'report_corners [all_corners]' successfully.
+Output is in log '${dir_reportes}/${etapa_actual}/${dir_escenarios}/corners.rpt'
+
+
+INFO: Reportando informacion del diseno ...
+
+
+INFO: Chequeando problemas del diseno ...
+
+
+INFO: Reportando unidades ...
+
+
+INFO: Reportando configuraciones que no estan por defecto ...
+
+
+INFO: Reportando informacion de redes ideales ...
+
+# Finalizacion de la ejecucion# Informacion de la ejecucion
+set tiempo_final [clock seconds]
+1744621422
+set runtime [expr $tiempo_final - $tiempo_comienzo]
+2653
+set runtime [expr $runtime/60]
+44
+set memKB [get_mem]
+1194804
+set memGB [expr ($memKB * 1.0)/(1024*1024)]
+1.13945388794
+puts "INFO: Informacion de la ejecucion:"
+INFO: Informacion de la ejecucion:
+puts " - Comienzo: [clock format $tiempo_comienzo -format {%H:%M:%S - %d %b %Y}]"
+ - Comienzo: 05:19:29 - 14 Apr 2025
+puts " - Final: [clock format $tiempo_final -format {%H:%M:%S - %d %b %Y}]"
+ - Final: 06:03:42 - 14 Apr 2025
+puts " - Runtime: $runtime min"
+ - Runtime: 44 min
+puts " - Memoria usada: [format "%.3f" $memGB] GB" - Memoria usada: 1.139 GB
+# Reportes de QoR
+write_qor_data -report_list "performance host_machine report_app_options" -label $etapa_actual -output $dir_qor
+Information: write_qor_data is capturing data for label init_design to the ./datos_qor directory.  (RPT-180)
+Information: Running write_qor_data for label 'init_design' and report 'report_app_options'  (RPT-190)
+Information: Running write_qor_data for label 'init_design' and report 'host_machine'  (RPT-190)
+Information: Running write_qor_data for label 'init_design' and report 'performance'  (RPT-190)
+if {[file exists ${etapa_actual}.log]} {
+    exec gzip ${etapa_actual}.log
+    file rename -force ${etapa_actual}.log.gz $dir_logs
+}
