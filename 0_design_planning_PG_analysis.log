@@ -1,0 +1,113 @@
+ 
+                              Fusion Compiler (TM)
+
+                  Version U-2022.12 for linux64 - Dec 11, 2022
+  This release has significant feature enhancements. Please review the Release
+                       Notes associated with this release.
+
+                    Copyright (c) 1988 - 2022 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+fc_shell> gui_start
+Load ICV ICCII menu file: /home/tools/synopsys/icvalidator/U-2022.12/etc/tcl-u/Icc2Menu.tcl
+ + VUE INFO: Please click View->IC Validator VUE in LayoutWindow menu
+            to launch VUE.
+
+ + VUE INFO: Found a usable port: 2446
+
+fc_shell> open_block /home/votegui/proyecto_final/place_and_route/ALU_sin_infc/fusion-compiler/ALU_votegui:ALU_votegui/design_planning.design
+Information: User units loaded from library 'saed14rvt' (LNK-040)
+Opening block 'ALU_votegui:ALU_votegui/design_planning.design' in edit mode
+fc_shell> link_block
+Using libraries: ALU_votegui saed14rvt saed14hvt saed14lvt saed14slvt saed14rvt_dlvl saed14hvt_dlvl saed14lvt_dlvl saed14slvt_dlvl saed14rvt_ulvl saed14hvt_ulvl saed14lvt_ulvl saed14slvt_ulvl saed14rvt_pg saed14hvt_pg saed14lvt_pg saed14slvt_pg
+Warning: In library ALU_votegui, no block views exist for block ALU_votegui. (LNK-064)
+Visiting block ALU_votegui:ALU_votegui/design_planning.design
+Design 'ALU_votegui' was successfully linked.
+1
+fc_shell> gui_mouse_tool -window [gui_get_current_window -types Layout -mru] -start RulerTool
+fc_shell> gui_mouse_tool -window [gui_get_current_window -types Layout -mru] -drag {{45.896 47.685} {46.518 47.712}} -scale 0.0055
+fc_shell> gui_mouse_tool -window [gui_get_current_window -types Layout -mru] -drag {{46.490 47.933} {46.535 47.437}} -scale 0.0055
+fc_shell> gui_mouse_tool -window [gui_get_current_window -types Layout -mru] -reset
+fc_shell> open_block /home/votegui/proyecto_final/place_and_route/ALU_sin_infc/fusion-compiler/ALU_votegui:ALU_votegui/design_planning_pg.design
+Opening block 'ALU_votegui:ALU_votegui/design_planning_pg.design' in edit mode
+fc_shell> link_block
+Using libraries: ALU_votegui saed14rvt saed14hvt saed14lvt saed14slvt saed14rvt_dlvl saed14hvt_dlvl saed14lvt_dlvl saed14slvt_dlvl saed14rvt_ulvl saed14hvt_ulvl saed14lvt_ulvl saed14slvt_ulvl saed14rvt_pg saed14hvt_pg saed14lvt_pg saed14slvt_pg
+Warning: In library ALU_votegui, no block views exist for block ALU_votegui. (LNK-064)
+Visiting block ALU_votegui:ALU_votegui/design_planning_pg.design
+Design 'ALU_votegui' was successfully linked.
+1
+fc_shell> set_working_design_stack ALU_votegui:ALU_votegui/design_planning.design
+fc_shell> set_working_design_stack ALU_votegui:ALU_votegui/design_planning_pg.design
+fc_shell> get_selection
+{PATH_35_33}
+fc_shell> get_path_group PATH_35_33
+Warning: No path_group objects matched 'PATH_35_33' (SEL-004)
+fc_shell> get_nets * -filter net_type=~power
+{VDD}
+fc_shell> get_nets * -filter net_type=~power*
+{VDD}
+fc_shell> change_selection [get_nets * -filter net_type=~power*]
+fc_shell> 
+Warning: No valid clocks available in design 'ALU_votegui'. Setting clock frequency to 1 GHz. (POW-034)
+Warning: No valid clocks available in design 'ALU_votegui'. Setting clock frequency to 1 GHz. (POW-034)
+Warning: No valid clocks available in design 'ALU_votegui'. Setting clock frequency to 1 GHz. (POW-034)
+Warning: No valid clocks available in design 'ALU_votegui'. Setting clock frequency to 1 GHz. (POW-034)
+Warning: No valid clocks available in design 'ALU_votegui'. Setting clock frequency to 1 GHz. (POW-034)
+Warning: No valid clocks available in design 'ALU_votegui'. Setting clock frequency to 1 GHz. (POW-034)
+Warning: No valid clocks available in design 'ALU_votegui'. Setting clock frequency to 1 GHz. (POW-034)
+Warning: No valid clocks available in design 'ALU_votegui'. Setting clock frequency to 1 GHz. (POW-034)
+Warning: No valid clocks available in design 'ALU_votegui'. Setting clock frequency to 1 GHz. (POW-034)
+Warning: No valid clocks available in design 'ALU_votegui'. Setting clock frequency to 1 GHz. (POW-034)
+Note - message 'POW-034' limit (10) exceeded. Remainder will be suppressed.
+fc_shell> gui_set_highlight_options -current_color yellow
+fc_shell> get_shapes * -filter shape_use=~*stripe*
+{RECT_35_0 RECT_35_1 RECT_35_2 RECT_35_3 RECT_35_4 RECT_35_5 RECT_35_6 RECT_35_7 RECT_35_8 RECT_35_9 RECT_35_10 RECT_35_11 RECT_35_12 RECT_35_13 RECT_35_14 RECT_35_15 RECT_35_16 RECT_35_17 RECT_35_18 RECT_35_19 RECT_35_20 RECT_35_21 RECT_35_22 RECT_35_23 RECT_35_24 RECT_35_25 RECT_35_26 RECT_35_27 RECT_35_28 RECT_35_29 PATH_35_30 PATH_35_31 PATH_35_32 PATH_35_33 PATH_35_34 PATH_35_35 PATH_35_36 PATH_35_37 PATH_35_38 PATH_35_39 PATH_35_40 PATH_35_41 PATH_35_42 PATH_35_43 PATH_35_44}
+fc_shell> get_selection [get_shapes * -filter shape_use=~*stripe*]
+Error: extra positional option '_sel10450' (CMD-012)
+fc_shell> change_selection [get_shapes * -filter shape_use=~*stripe*]
+fc_shell> change_selection [get_shapes * -filter "shape_use=~*stripe* && net_type=~*power*"]
+fc_shell> get_nets * -filter net_type=~*ground*
+{VSS}
+fc_shell> change_selection [get_nets * -filter net_type=~*ground*]
+fc_shell> gui_set_highlight_options -current_color red
+fc_shell> change_selection [get_shapes * -filter "shape_use=~*stripe* && net_type=~*ground*"]
+fc_shell> gui_set_highlight_options -current_color yellow
+fc_shell> gui_set_highlight_options -current_color red
+fc_shell> gui_mouse_tool -window [gui_get_current_window -types Layout -mru] -start RulerTool
+fc_shell> gui_mouse_tool -window [gui_get_current_window -types Layout -mru] -drag {{1.435 40.815} {1.441 40.216}} -scale 0.0028
+fc_shell> gui_mouse_tool -window [gui_get_current_window -types Layout -mru] -reset
+fc_shell> gui_mouse_tool -window [gui_get_current_window -types Layout -mru] -drag {{7.197 40.590} {4.170 40.551}} -scale 0.0055
+fc_shell> gui_mouse_tool -window [gui_get_current_window -types Layout -mru] -reset
+fc_shell> gui_change_highlight -remove -all_colors
+fc_shell> gui_remove_all_rulers -window [gui_get_current_window -types Layout -mru];  gui_remove_all_rulers -window global
+1
+fc_shell> get_flat_cells tapfiller_SAEDRVT14_TAPPN_136
+Warning: No cell objects matched 'tapfiller_SAEDRVT14_TAPPN_136' (SEL-004)
+fc_shell> get_flat_cells *tapfiller*
+Warning: No cell objects matched '*tapfiller*' (SEL-004)
+fc_shell> gui_mouse_tool -window [gui_get_current_window -types Layout -mru] -start RulerTool
+fc_shell> gui_mouse_tool -window [gui_get_current_window -types Layout -mru] -drag {{-0.248 27.302} {49.954 27.743}} -scale 0.0882
+fc_shell> gui_set_mouse_tool_option -tool RulerTool -option {Attach} -value {true}
+fc_shell> gui_mouse_tool -window [gui_get_current_window -types Layout -mru] -drag {{27.456 50.241} {27.103 -0.314}} -scale 0.0882
+fc_shell> gui_mouse_tool -window [gui_get_current_window -types Layout -mru] -reset
+fc_shell> set_working_design_stack ALU_votegui:ALU_votegui/design_planning.design
+fc_shell> quit!
+Maximum memory usage for this session: 1206.36 MB
+Maximum memory usage for this session including child processes: 1206.36 MB
+CPU usage for this session:  21237 seconds (  5.90 hours)
+Elapsed time for this session: 249942 seconds ( 69.43 hours)
+Thank you for using Fusion Compiler.
+
