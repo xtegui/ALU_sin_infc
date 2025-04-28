@@ -1,0 +1,3272 @@
+ 
+                              Fusion Compiler (TM)
+
+                  Version U-2022.12 for linux64 - Dec 11, 2022
+  This release has significant feature enhancements. Please review the Release
+                       Notes associated with this release.
+
+                    Copyright (c) 1988 - 2022 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+fc_shell> gui_start
+Load ICV ICCII menu file: /home/tools/synopsys/icvalidator/U-2022.12/etc/tcl-u/Icc2Menu.tcl
+ + VUE INFO: Please click View->IC Validator VUE in LayoutWindow menu
+            to launch VUE.
+
+ + VUE INFO: Found a usable port: 2446
+
+fc_shell> open_block /home/votegui/proyecto_final/place_and_route/ALU_sin_infc/fusion-compiler/ALU_votegui_init_design:ALU_votegui/clock_opt_opto.design
+Information: User units loaded from library 'saed14rvt' (LNK-040)
+Opening block 'ALU_votegui_init_design:ALU_votegui/clock_opt_opto.design' in edit mode
+fc_shell> link_block
+Using libraries: ALU_votegui_init_design saed14rvt saed14hvt saed14lvt saed14slvt saed14rvt_dlvl saed14hvt_dlvl saed14lvt_dlvl saed14slvt_dlvl saed14rvt_ulvl saed14hvt_ulvl saed14lvt_ulvl saed14slvt_ulvl saed14rvt_pg saed14hvt_pg saed14lvt_pg saed14slvt_pg
+Warning: In library ALU_votegui_init_design, no block views exist for block ALU_votegui. (LNK-064)
+Visiting block ALU_votegui_init_design:ALU_votegui/clock_opt_opto.design
+Design 'ALU_votegui' was successfully linked.
+1
+fc_shell> 
+# Inicializacion de la ejecucion
+####################################################################################################
+# Configuracion del directorio de busqueda de scripts
+set search_path ". scripts"
+. scripts
+# Variables y procs que son utilizados en todo el flujo
+source "config_tecnologia.tcl"
+source "config_herramienta.tcl"
+0.1
+source "config_design.tcl"
+source "procs.tcl"
+# Separador de mensajes
+set sep [string repeat = 100]
+====================================================================================================
+# Numero de procesadores, digitos significativos y unidades
+set_host_options -max_cores $num_procesadores
+1
+set_app_options -name shell.common.report_default_significant_digits -value 3 ; # Por defecto 2
+shell.common.report_default_significant_digits 3
+set_user_units -type power -value 1mW
+1
+set_user_units -type capacitance -value 1pF
+1
+# Directorios para archivos de salida
+if !{[file exists $dir_reportes]} {file mkdir $dir_reportes}
+if !{[file exists $dir_salidas]} {file mkdir $dir_salidas}
+if !{[file exists $dir_logs]} {file mkdir $dir_logs}
+# Informacion de la ejecucion en el log
+puts "INFO: Informacion de la ejecucion"
+INFO: Informacion de la ejecucion
+puts " - Maquina: [sh hostname]"
+ - Maquina: laurenz
+puts " - Fecha: [date]"
+ - Fecha: Mon Apr 28 07:55:09 2025
+puts " - ID proceso: [pid]"
+ - ID proceso: 3769
+puts " - Directorio: [pwd]"
+ - Directorio: /home/votegui/proyecto_final/place_and_route/ALU_sin_infc/fusion-compiler
+set etapa_anterior "clock_opt_opto"
+clock_opt_opto
+set etapa_actual "route_auto"
+route_auto
+puts "\nINFO: Etapa actual: ${etapa_actual}\n"
+INFO: Etapa actual: route_auto
+
+file mkdir ${dir_reportes}/${etapa_actual}
+# Directorios para categoria de reportes
+set dir_estado "estado"
+estado
+file mkdir ${dir_reportes}/${etapa_actual}/${dir_estado}
+set dir_escenarios "escenarios"
+escenarios
+file mkdir ${dir_reportes}/${etapa_actual}/${dir_escenarios}
+set dir_clocks "clocks"
+clocks
+file mkdir ${dir_reportes}/${etapa_actual}/${dir_clocks}
+set dir_configuraciones "configuraciones"
+configuraciones
+file mkdir ${dir_reportes}/${etapa_actual}/${dir_configuraciones}
+set dir_timing "timing"
+timing
+file mkdir ${dir_reportes}/${etapa_actual}/${dir_timing}
+set dir_potencia "power"
+power
+file mkdir ${dir_reportes}/${etapa_actual}/${dir_potencia}
+# Informacion de comienzo
+set tiempo_comienzo [clock seconds]
+1745837721
+puts "\nINFO: Comienzo: [clock format $tiempo_comienzo -format {%H:%M:%S - %d %b %Y}]\n"
+INFO: Comienzo: 07:55:21 - 28 Apr 2025
+
+# Apertura de la libreria del diseno
+####################################################################################################
+set_svf ${dir_salidas}/${etapa_actual}.svf
+1
+#Ya esta abierta la libreria
+#open_lib $nombre_design
+copy_block -from ${nombre_design}/${etapa_anterior} -to ${nombre_design}/${etapa_actual}
+{ALU_votegui_init_design:ALU_votegui/route_auto.design}
+current_block ${nombre_design}/${etapa_actual}
+{ALU_votegui_init_design:ALU_votegui/route_auto.design}
+link_block
+Using libraries: ALU_votegui_init_design saed14rvt saed14hvt saed14lvt saed14slvt saed14rvt_dlvl saed14hvt_dlvl saed14lvt_dlvl saed14slvt_dlvl saed14rvt_ulvl saed14hvt_ulvl saed14lvt_ulvl saed14slvt_ulvl saed14rvt_pg saed14hvt_pg saed14lvt_pg saed14slvt_pg
+Warning: In library ALU_votegui_init_design, no block views exist for block ALU_votegui. (LNK-064)
+Visiting block ALU_votegui_init_design:ALU_votegui/route_auto.design
+Design 'ALU_votegui' was successfully linked.
+1
+####################################################################################################
+# Descripcion: Script para rutear las senales de un diseno
+# Autores: Pablo Sosa - David Sosa
+####################################################################################################
+####################################################################################################
+# Inicializacion de la ejecucion
+####################################################################################################
+# Configuracion del directorio de busqueda de scripts
+set search_path ". scripts"
+. scripts
+# Variables y procs que son utilizados en todo el flujo
+source "config_tecnologia.tcl"
+source "config_herramienta.tcl"
+0.1
+source "config_design.tcl"
+source "procs.tcl"
+# Separador de mensajes
+set sep [string repeat = 100]
+====================================================================================================
+# Numero de procesadores, digitos significativos y unidades
+set_host_options -max_cores $num_procesadores
+1
+set_app_options -name shell.common.report_default_significant_digits -value 3 ; # Por defecto 2
+shell.common.report_default_significant_digits 3
+set_user_units -type power -value 1mW
+1
+set_user_units -type capacitance -value 1pF
+1
+# Directorios para archivos de salida
+if !{[file exists $dir_reportes]} {file mkdir $dir_reportes}
+if !{[file exists $dir_salidas]} {file mkdir $dir_salidas}
+if !{[file exists $dir_logs]} {file mkdir $dir_logs}
+# Informacion de la ejecucion en el log
+puts "INFO: Informacion de la ejecucion"
+INFO: Informacion de la ejecucion
+puts " - Maquina: [sh hostname]"
+ - Maquina: laurenz
+puts " - Fecha: [date]"
+ - Fecha: Mon Apr 28 07:56:03 2025
+puts " - ID proceso: [pid]"
+ - ID proceso: 3769
+puts " - Directorio: [pwd]"
+ - Directorio: /home/votegui/proyecto_final/place_and_route/ALU_sin_infc/fusion-compiler
+set etapa_anterior "clock_opt_opto"
+clock_opt_opto
+set etapa_actual "route_auto"
+route_auto
+puts "\nINFO: Etapa actual: ${etapa_actual}\n"
+
+INFO: Etapa actual: route_auto
+
+file mkdir ${dir_reportes}/${etapa_actual}
+# Directorios para categoria de reportes
+set dir_estado "estado"
+estado
+file mkdir ${dir_reportes}/${etapa_actual}/${dir_estado}
+set dir_escenarios "escenarios"
+escenarios
+file mkdir ${dir_reportes}/${etapa_actual}/${dir_escenarios}
+set dir_clocks "clocks"
+clocks
+file mkdir ${dir_reportes}/${etapa_actual}/${dir_clocks}
+set dir_configuraciones "configuraciones"
+configuraciones
+file mkdir ${dir_reportes}/${etapa_actual}/${dir_configuraciones}
+set dir_timing "timing"
+timing
+file mkdir ${dir_reportes}/${etapa_actual}/${dir_timing}
+set dir_potencia "power"
+power
+file mkdir ${dir_reportes}/${etapa_actual}/${dir_potencia}
+# Informacion de comienzo
+set tiempo_comienzo [clock seconds]
+1745837763
+puts "\nINFO: Comienzo: [clock format $tiempo_comienzo -format {%H:%M:%S - %d %b %Y}]\n"
+
+INFO: Comienzo: 07:56:03 - 28 Apr 2025
+
+####################################################################################################
+# Apertura de la libreria del diseno
+####################################################################################################
+set_svf ${dir_salidas}/${etapa_actual}.svf
+1
+#Ya esta abierta la libreria
+#open_lib $nombre_design
+copy_block -from ${nombre_design}/${etapa_anterior} -to ${nombre_design}/${etapa_actual}
+Error: copy_block failed. Block 'ALU_votegui/route_auto.design' in library 'ALU_votegui_init_design' is modified. (DES-018)
+Information: script '/tmp/fc_shell-be-2.SmXrUt'
+                stopped at line 72 due to error. (CMD-081)
+Extended error info:
+
+    while executing
+"copy_block -from ${nombre_design}/${etapa_anterior} -to ${nombre_design}/${etapa_actual}"
+    (file "/tmp/fc_shell-be-2.SmXrUt" line 72)
+ -- End Extended Error Info
+####################################################################################################
+# Descripcion: Script para rutear las senales de un diseno
+# Autores: Pablo Sosa - David Sosa
+####################################################################################################
+####################################################################################################
+# Inicializacion de la ejecucion
+####################################################################################################
+# Configuracion del directorio de busqueda de scripts
+set search_path ". scripts"
+. scripts
+# Variables y procs que son utilizados en todo el flujo
+source "config_tecnologia.tcl"
+source "config_herramienta.tcl"
+0.1
+source "config_design.tcl"
+source "procs.tcl"
+# Separador de mensajes
+set sep [string repeat = 100]
+====================================================================================================
+# Numero de procesadores, digitos significativos y unidades
+set_host_options -max_cores $num_procesadores
+1
+set_app_options -name shell.common.report_default_significant_digits -value 3 ; # Por defecto 2
+shell.common.report_default_significant_digits 3
+set_user_units -type power -value 1mW
+1
+set_user_units -type capacitance -value 1pF
+1
+# Directorios para archivos de salida
+if !{[file exists $dir_reportes]} {file mkdir $dir_reportes}
+if !{[file exists $dir_salidas]} {file mkdir $dir_salidas}
+if !{[file exists $dir_logs]} {file mkdir $dir_logs}
+# Informacion de la ejecucion en el log
+puts "INFO: Informacion de la ejecucion"
+INFO: Informacion de la ejecucion
+puts " - Maquina: [sh hostname]"
+ - Maquina: laurenz
+puts " - Fecha: [date]"
+ - Fecha: Mon Apr 28 07:56:43 2025
+puts " - ID proceso: [pid]"
+ - ID proceso: 3769
+puts " - Directorio: [pwd]"
+ - Directorio: /home/votegui/proyecto_final/place_and_route/ALU_sin_infc/fusion-compiler
+set etapa_anterior "clock_opt_opto"
+clock_opt_opto
+set etapa_actual "route_auto"
+route_auto
+puts "\nINFO: Etapa actual: ${etapa_actual}\n"
+
+INFO: Etapa actual: route_auto
+
+file mkdir ${dir_reportes}/${etapa_actual}
+# Directorios para categoria de reportes
+set dir_estado "estado"
+estado
+file mkdir ${dir_reportes}/${etapa_actual}/${dir_estado}
+set dir_escenarios "escenarios"
+escenarios
+file mkdir ${dir_reportes}/${etapa_actual}/${dir_escenarios}
+set dir_clocks "clocks"
+clocks
+file mkdir ${dir_reportes}/${etapa_actual}/${dir_clocks}
+set dir_configuraciones "configuraciones"
+configuraciones
+file mkdir ${dir_reportes}/${etapa_actual}/${dir_configuraciones}
+set dir_timing "timing"
+timing
+file mkdir ${dir_reportes}/${etapa_actual}/${dir_timing}
+set dir_potencia "power"
+power
+file mkdir ${dir_reportes}/${etapa_actual}/${dir_potencia}
+# Informacion de comienzo
+set tiempo_comienzo [clock seconds]
+1745837803
+puts "\nINFO: Comienzo: [clock format $tiempo_comienzo -format {%H:%M:%S - %d %b %Y}]\n"
+
+INFO: Comienzo: 07:56:43 - 28 Apr 2025
+
+####################################################################################################
+# Apertura de la libreria del diseno
+####################################################################################################
+set_svf ${dir_salidas}/${etapa_actual}.svf
+1
+#Ya esta abierta la libreria
+#open_lib $nombre_design
+copy_block -from ${nombre_design}/${etapa_anterior} -to ${nombre_design}/${etapa_actual}
+Error: copy_block failed. Block 'ALU_votegui/route_auto.design' in library 'ALU_votegui_init_design' is modified. (DES-018)
+Information: script '/tmp/fc_shell-be-2.FOzQTo'
+                stopped at line 72 due to error. (CMD-081)
+Extended error info:
+
+    while executing
+"copy_block -from ${nombre_design}/${etapa_anterior} -to ${nombre_design}/${etapa_actual}"
+    (file "/tmp/fc_shell-be-2.FOzQTo" line 72)
+ -- End Extended Error Info
+copy_block -from ${nombre_design}/${etapa_anterior} -to ${nombre_design}/${etapa_actual}
+Error: copy_block failed. Block 'ALU_votegui/route_auto.design' in library 'ALU_votegui_init_design' is modified. (DES-018)
+Information: script '/tmp/fc_shell-be-2.elcRfd'
+                stopped at line 1 due to error. (CMD-081)
+Extended error info:
+
+    while executing
+"copy_block -from ${nombre_design}/${etapa_anterior} -to ${nombre_design}/${etapa_actual}"
+    (file "/tmp/fc_shell-be-2.elcRfd" line 1)
+ -- End Extended Error Info
+current_block ${nombre_design}/${etapa_actual}{ALU_votegui_init_design:ALU_votegui/route_auto.design}
+link_block
+Warning: Block 'ALU_votegui_init_design:ALU_votegui/route_auto.design' is already linked. (LNK-067)
+0
+# Escenarios y tipos de celdas
+####################################################################################################
+# Activa los escenarios elegidos para esta etapa
+if {$escenarios_activos_route_auto != ""} {
+    set_scenario_status -active false [get_scenarios -filter active]
+    set_scenario_status -active true $escenarios_activos_route_auto
+}
+Scenario func::hold_ff0p88v125c (mode func corner hold_ff0p88v125c) is configured for hold/leakage_power/max_transition/min_capacitance, but is inactive.
+Scenario func::setup_ss0p72v125c (mode func corner setup_ss0p72v125c) is configured for setup/leakage_power/dynamic_power/max_transition/max_capacitance, but is inactive.
+Scenario func::setup_ss0p72v125c (mode func corner setup_ss0p72v125c) is active for setup/leakage_power/dynamic_power/max_transition/max_capacitance analysis.
+Scenario func::hold_ff0p88v125c (mode func corner hold_ff0p88v125c) is active for hold/leakage_power/max_transition/min_capacitance analysis.
+1
+# Restricciones de uso de celdas estandar (set_lib_cell_purpose: Dont use, tie cells, arreglos de hold y CTS)
+source "set_lib_cell_purpose.tcl"
+Information: The design specific attribute override for lib_cell 'saed14rvt:SAEDRVT14_TIE1_4.timing' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for lib_cell 'saed14rvt:SAEDRVT14_TIE1_V1_2.timing' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for lib_cell 'saed14rvt:SAEDRVT14_TIE1_V1ECO_1.timing' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for lib_cell 'saed14rvt:SAEDRVT14_TIE1_PV1ECO_1.timing' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for lib_cell 'saed14rvt:SAEDRVT14_TIE0_4.timing' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for lib_cell 'saed14rvt:SAEDRVT14_TIE0_V1_2.timing' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for lib_cell 'saed14rvt:SAEDRVT14_TIE0_PV1ECO_1.timing' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for lib_cell 'saed14rvt:SAEDRVT14_ADDF_V1_0P5.timing' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for lib_cell 'saed14rvt:SAEDRVT14_ADDF_V1_1.timing' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for lib_cell 'saed14rvt:SAEDRVT14_ADDF_V1_2.timing' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for lib_cell 'saed14rvt:SAEDRVT14_ADDF_V2_0P5.timing' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for lib_cell 'saed14rvt:SAEDRVT14_ADDF_V2_1.timing' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for lib_cell 'saed14rvt:SAEDRVT14_ADDF_V2_2.timing' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for lib_cell 'saed14rvt:SAEDRVT14_ADDH_0P5.timing' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for lib_cell 'saed14rvt:SAEDRVT14_ADDH_1.timing' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for lib_cell 'saed14rvt:SAEDRVT14_ADDH_2.timing' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for lib_cell 'saed14rvt:SAEDRVT14_ADDH_4.timing' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for lib_cell 'saed14rvt:SAEDRVT14_DEL_L4D100_1.timing' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for lib_cell 'saed14rvt:SAEDRVT14_DEL_L4D100_2.timing' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for lib_cell 'saed14rvt:SAEDRVT14_DEL_R2V1_1.timing' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for lib_cell 'saed14rvt:SAEDRVT14_DEL_R2V1_2.timing' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for lib_cell 'saed14rvt:SAEDRVT14_DEL_R2V2_1.timing' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for lib_cell 'saed14rvt:SAEDRVT14_DEL_R2V2_2.timing' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for lib_cell 'saed14rvt:SAEDRVT14_DEL_R2V3_1.timing' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for lib_cell 'saed14rvt:SAEDRVT14_DEL_R2V3_2.timing' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for lib_cell 'saed14rvt:SAEDRVT14_DEL_PR2V2_1.timing' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for lib_cell 'saed14rvt:SAEDRVT14_ADDF_V1_0P5.timing' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for lib_cell 'saed14rvt:SAEDRVT14_ADDF_V1_1.timing' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for lib_cell 'saed14rvt:SAEDRVT14_ADDF_V1_2.timing' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for lib_cell 'saed14rvt:SAEDRVT14_ADDF_V2_0P5.timing' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for lib_cell 'saed14rvt:SAEDRVT14_ADDF_V2_1.timing' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for lib_cell 'saed14rvt:SAEDRVT14_ADDF_V2_2.timing' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for lib_cell 'saed14rvt:SAEDRVT14_ADDH_0P5.timing' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for lib_cell 'saed14rvt:SAEDRVT14_ADDH_1.timing' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for lib_cell 'saed14rvt:SAEDRVT14_ADDH_2.timing' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for lib_cell 'saed14rvt:SAEDRVT14_ADDH_4.timing' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for lib_cell 'saed14slvt:SAEDSLVT14_INV_S_0P5.timing' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for lib_cell 'saed14slvt:SAEDSLVT14_INV_S_0P75.timing' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for lib_cell 'saed14slvt:SAEDSLVT14_INV_S_10.timing' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for lib_cell 'saed14slvt:SAEDSLVT14_INV_S_12.timing' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for lib_cell 'saed14slvt:SAEDSLVT14_INV_S_16.timing' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for lib_cell 'saed14slvt:SAEDSLVT14_INV_S_1P5.timing' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for lib_cell 'saed14slvt:SAEDSLVT14_INV_S_1.timing' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for lib_cell 'saed14slvt:SAEDSLVT14_INV_S_20.timing' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for lib_cell 'saed14slvt:SAEDSLVT14_INV_S_2.timing' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for lib_cell 'saed14slvt:SAEDSLVT14_INV_S_3.timing' is set in the current block 'ALU_votegui', because the actual library setting may not be overwritten. (ATTR-12)
+# Carga archivo con restricciones de uso de VT
+source "multi_vt_constraints.tcl"
+Information: The command 'set_threshold_voltage_group_type' cleared the undo history. (UNDO-016)
+# Configuraciones de route_auto
+####################################################################################################
+# set_stage: Comando para aplicar configuraciones por etapa
+# Configuraciones de set_stage -step route
+set_app_options -name time.remove_clock_reconvergence_pessimism -value true
+time.remove_clock_reconvergence_pessimism true
+set_app_options -name route.detail.eco_route_use_soft_spacing_for_timing_optimization -value false
+route.detail.eco_route_use_soft_spacing_for_timing_optimization false
+set_app_options -name time.si_enable_analysis -value truetime.si_enable_analysis true
+if {$habilitar_insercion_vias_redundantes} {
+    # Reserva espacio para las vias redundantes
+    set_app_options -name route.common.concurrent_redundant_via_mode -value reserve_space
+    set_app_options -name route.common.eco_route_concurrent_redundant_via_mode -value reserve_space
+}
+route.common.eco_route_concurrent_redundant_via_mode reserve_space
+# Prefijos
+set_app_options -name opt.common.user_instance_name_prefix -value route_auto_opt.common.user_instance_name_prefix route_auto_
+# Chequeos y reportes intermediosredirect -tee -file ${dir_reportes}/${etapa_actual}/${dir_configuraciones}/app_options_inicio.rpt {report_app_options -non_default *}Information: option 'dft.scan.connect_clock_gate_test_enables' cannot be set to false by user (DFT-3161)
+****************************************
+Report : app_option
+           -non_default
+Design : ALU_votegui
+Version: U-2022.12
+Date   : Mon Apr 28 07:57:41 2025
+****************************************
+Name                                                            Type       Value               User-value          User-default System-default Scope      Status     Source
+--------------------------------------------------------------- ---------- ------------------- ------------------- ------------ -------------- ---------- ---------- ----------------------------
+ccd.fmax_optimization_effort                                    enum       high                high                --           low            block      normal     --
+ccd.post_route_buffer_removal                                   bool       true                true                --           false          block      normal     --
+ccd.timing_effort                                               enum       high                high                --           medium         block      normal     --
+clock_opt.flow.enable_clock_power_recovery                      string     none                none                --           auto           block      normal     --
+clock_opt.flow.enable_power                                     bool       false               false               --           true           block      normal     --
+clock_opt.place.effort                                          enum       high                high                --           medium         block      normal     --
+compile.clockgate.physically_aware                              bool       true                true                --           false          block      normal     --
+compile.final_place.effort                                      enum       high                high                --           medium         block      normal     --
+compile.flow.autoungroup                                        bool       false               false               --           true           block      normal     --
+compile.flow.enable_multibit                                    bool       true                true                --           false          block      normal     --
+compile.seqmap.enable_register_merging                          bool       false               false               --           true           block      normal     --
+compile.seqmap.enable_register_merging_across_bus               bool       false               false               --           true           block      normal     --
+compile.seqmap.identify_shift_registers                         bool       false               false               --           true           block      normal     --
+cts.common.user_instance_name_prefix                            string     clock_opt_opto_cts_ clock_opt_opto_cts_ --           --             block      normal     --
+design.uniquify_naming_style                                    string     ALU_votegui_%s_%d   ALU_votegui_%s_%d   --           %s_%d          block      normal     --
+gui.graphics_system                                             enum       native              native              native       auto           global     normal     --
+multibit.common.ignore_cell_with_sdc                            bool       true                true                --           false          block      normal     --
+opt.area.effort                                                 enum       high                high                --           low            block      normal     --
+opt.common.user_instance_name_prefix                            string     route_auto_         route_auto_         --           --             block      normal     /tmp/fc_shell-be-2.uRBanH:2
+opt.tie_cell.max_fanout                                         integer    50                  50                  --           999            block      normal     --
+place.coarse.continue_on_missing_scandef                        bool       true                true                --           false          block      normal     --
+place.coarse.enhanced_low_power_effort                          enum       none                none                --           low            block      normal     --
+place.common.use_placement_model                                bool       true                true                --           false          block      normal     --
+place_opt.final_place.effort                                    enum       high                high                --           medium         block      normal     --
+place_opt.flow.enable_multibit_banking                          bool       true                true                --           false          block      normal     --
+place_opt.flow.enable_multibit_debanking                        bool       true                true                --           false          block      normal     --
+place_opt.flow.enable_power                                     bool       false               false               --           true           block      normal     --
+place_opt.place.congestion_effort                               enum       high                high                --           medium         block      normal     --
+plan.pgroute.honor_signal_route_drc                             bool       true                true                --           false          block      normal     --
+plan.pgroute.honor_std_cell_drc                                 bool       true                true                --           false          block      normal     --
+power.enable_activity_persistency                               enum       on                  on                  --           lazy           block      normal     --
+power.power_annotation_persistency                              bool       true                true                --           false          block      normal     --
+power.report_user_power_groups                                  enum       inclusive           inclusive           --           exclusive      block      normal     --
+route.common.concurrent_redundant_via_mode                      enum       reserve_space       reserve_space       --           off            block      normal     /tmp/fc_shell-be-2.LfDBsb:5
+route.common.eco_route_concurrent_redundant_via_mode            enum       reserve_space       reserve_space       --           off            block      normal     /tmp/fc_shell-be-2.LfDBsb:5
+route.common.via_array_mode                                     enum       swap                swap                --           all            block      normal     --
+route.detail.eco_max_number_of_iterations                       integer    10                  10                  --           -1             block      normal     --
+route.detail.eco_route_use_soft_spacing_for_timing_optimization bool       false               false               --           true           block      normal     /tmp/fc_shell-be-2.yJDRrP:7
+route.detail.insert_redundant_vias_layer_order_low_to_high      bool       true                true                --           false          block      normal     --
+route.detail.timing_driven                                      bool       true                true                --           false          block      normal     --
+route.global.timing_driven                                      bool       true                true                --           false          block      normal     --
+route.track.crosstalk_driven                                    bool       true                true                --           false          block      normal     --
+route.track.timing_driven                                       bool       true                true                --           false          block      normal     --
+route_opt.flow.enable_power                                     bool       false               false               --           true           block      normal     --
+shell.common.report_default_significant_digits                  integer    3                   3                   3            2              global     normal     /tmp/fc_shell-be-2.FOzQTo:24
+time.case_analysis_propagate_through_icg                        bool       true                true                --           false          block      normal     --
+time.enable_clock_to_data_analysis                              bool       true                true                --           false          block      normal     --
+time.remove_clock_reconvergence_pessimism                       bool       true                true                --           false          block      normal     /tmp/fc_shell-be-2.yJDRrP:6
+time.si_enable_analysis                                         bool       true                true                --           false          block      normal     /tmp/fc_shell-be-2.yJDRrP:8
+--------------------------------------------------------------- ---------- ------------------- ------------------- ------------ -------------- ---------- ---------- ----------------------------
+
+There are additional internal differences with no available TBC source.
+1
+# Reportes de QoR y timing
+if {$reportar_qor_intermedio} {
+   redirect -file ${dir_reportes}/${etapa_actual}/${dir_estado}/reporte_qor_inicio.rpt {report_qor -scenarios [all_scenarios] -pba_mode [get_app_option_value -name time.pba_optimization_mode] -nosplit}
+   redirect -append -file ${dir_reportes}/${etapa_actual}/${dir_estado}/reporte_qor_inicio.rpt {report_qor -summary -pba_mode [get_app_option_value -name time.pba_optimization_mode] -nosplit}
+   redirect -tee -file ${dir_reportes}/${etapa_actual}/${dir_timing}/timing_global_inicio.rpt {report_global_timing -pba_mode [get_app_option_value -name time.pba_optimization_mode] -nosplit}
+}
+Information: Timer using 'SI, Timing Window Analysis, CRPR'. (TIM-050)
+****************************************
+Report : global timing
+        -format { narrow }
+        -report_by design
+Design : ALU_votegui
+Version: U-2022.12
+Date   : Mon Apr 28 07:57:49 2025
+****************************************
+
+No setup violations found.
+
+
+No hold violations found.
+
+
+1
+# Chequeo de configuraciones de la etapa route_auto
+redirect -file ${dir_reportes}/${etapa_actual}/${dir_configuraciones}/chequeo_configuraciones.rpt {check_stage_settings -stage pnr -metric ${metrica_estrategia_qor} -step route}
+# Flujo de ruteo
+####################################################################################################
+puts "\nINFO: Ejecutando route_auto\n"
+
+INFO: Ejecutando route_auto
+
+route_auto
+Information: Starting 'route_auto' (FLW-8000)
+Information: Time: 2025-04-28 07:58:10 / Session: 0.11 hr / Command: 0.00 hr / Memory: 1329 MB (FLW-8100)
+Generating Timing information  
+Design  Scenario func::setup_ss0p72v125c (Mode func Corner setup_ss0p72v125c)
+Generating Timing information  ... Done
+Information: The net parasitics of block ALU_votegui are cleared. (TIM-123)
+[End of Generating Timing Information] Elapsed real time: 0:00:00 
+[End of Generating Timing Information] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+Cell Min-Routing-Layer = M2
+Cell Max-Routing-Layer = M8
+Turn off antenna since no rule is specified
+Information: Option route.detail.force_end_on_preferred_grid will be ignored since none of the layers have preferred grid. (ZRT-703)
+rule ndr_leaf equivalent to default rule
+Info: number of net_type_blockage: 0 
+Information: Via ladder engine would be activated for pattern must join connection in certain commands. Please refer to man-page for the command list. (ZRT-619)
+Via on layer (VIA1) needs more than one tracks
+Warning: Layer M1 pitch 0.074 may be too small: wire/via-down 0.074, wire/via-up 0.098. (ZRT-026)
+Via on layer (VIA1) needs more than one tracks
+Warning: Layer M2 pitch 0.060 may be too small: wire/via-down 0.098, wire/via-up 0.060. (ZRT-026)
+Via on layer (VIA3) needs more than one tracks
+Warning: Layer M3 pitch 0.074 may be too small: wire/via-down 0.060, wire/via-up 0.080. (ZRT-026)
+Via on layer (VIA4) needs more than one tracks
+Warning: Layer M5 pitch 0.120 may be too small: wire/via-down 0.135, wire/via-up 0.107. (ZRT-026)
+Via on layer (VIA8) needs more than one tracks
+Warning: Layer M8 pitch 0.120 may be too small: wire/via-down 0.107, wire/via-up 0.135. (ZRT-026)
+Wire on layer (M9) needs more than one tracks
+Via on layer (VIA8) needs more than one tracks
+Via on layer (VIARDL) needs more than one tracks
+Warning: Layer M9 pitch 0.120 may be too small: wire/via-down 0.135, wire/via-up 1.570. (ZRT-026)
+Via on layer (VIARDL) needs more than one tracks
+Warning: Layer MRDL pitch 4.000 may be too small: wire/via-down 4.500, wire/via-up 4.000. (ZRT-026)
+Transition layer name: M3(2)
+Information: When applicable Min-max layer allow_pin_connection mode will allow paths of length 1.04 outside the layer range. (ZRT-707)
+Information: When applicable Min-max layer allow_pin_connection mode will allow paths of length 1.04 outside the layer range on clock nets. (ZRT-718)
+Information: When applicable layer based tapering will taper up to 0.00 in distance from the pin. (ZRT-706)
+Warning: Standard cell pin SAEDRVT14_ADDH_0P5/CO has no valid via regions. (ZRT-044)
+
+    Found 0 via ladders to verify.
+
+VIA LADDER INFO: found 0 via ladder DRCs across 0 nets.
+Updating the database ...
+
+    Via ladders will be inserted on 0 of 0 ports with via ladder constraints.
+
+Updating the database ...
+Information: Skipping global routing as it has already been run in the global_route_opt stage of clock_opt. (ZRT-607)
+
+Start track assignment
+
+Warning: Found 1 glinks either patially or fully outside the congestion map
+Printing options for 'route.common.*'
+common.concurrent_redundant_via_mode                    :        reserve_space       
+common.eco_route_concurrent_redundant_via_mode          :        reserve_space       
+common.via_array_mode                                   :        swap                
+
+Printing options for 'route.track.*'
+track.crosstalk_driven                                  :        true                
+track.timing_driven                                     :        true                
+
+Loading timing information to the router from design
+Timing information loaded to the router.
+Information: Using 8 threads for routing. (ZRT-444)
+Information: RC layer preference is turned on for this design. (ZRT-613)
+
+[Track Assign: TA init] Elapsed real time: 0:00:00 
+[Track Assign: TA init] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[Track Assign: TA init] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[Track Assign: TA init] Total (MB): Used   32  Alloctr   33  Proc 7053 
+
+Start initial assignment
+
+Assign Horizontal partitions, iteration 0 
+Routed partition 1/42       
+Routed partition 2/42       
+Routed partition 3/42       
+Routed partition 4/42       
+Routed partition 5/42       
+Routed partition 6/42       
+Routed partition 7/42       
+Routed partition 8/42       
+Routed partition 9/42       
+Routed partition 10/42      
+Routed partition 11/42      
+Routed partition 12/42      
+Routed partition 13/42      
+Routed partition 14/42      
+Routed partition 15/42      
+Routed partition 16/42      
+Routed partition 17/42      
+Routed partition 18/42      
+Routed partition 19/42      
+Routed partition 20/42      
+Routed partition 21/42      
+Routed partition 22/42      
+Routed partition 23/42      
+Routed partition 24/42      
+Routed partition 25/42      
+Routed partition 26/42      
+Routed partition 27/42      
+Routed partition 28/42      
+Routed partition 29/42      
+Routed partition 30/42      
+Routed partition 31/42      
+Routed partition 32/42      
+Routed partition 33/42      
+Routed partition 34/42      
+Routed partition 35/42      
+Routed partition 36/42      
+Routed partition 37/42      
+Routed partition 38/42      
+Routed partition 39/42      
+Routed partition 40/42      
+Routed partition 41/42      
+Routed partition 42/42      
+
+Assign Vertical partitions, iteration 0 
+Routed partition 1/42       
+Routed partition 2/42       
+Routed partition 3/42       
+Routed partition 4/42       
+Routed partition 5/42       
+Routed partition 6/42       
+Routed partition 7/42       
+Routed partition 8/42       
+Routed partition 9/42       
+Routed partition 10/42      
+Routed partition 11/42      
+Routed partition 12/42      
+Routed partition 13/42      
+Routed partition 14/42      
+Routed partition 15/42      
+Routed partition 16/42      
+Routed partition 17/42      
+Routed partition 18/42      
+Routed partition 19/42      
+Routed partition 21/42      
+Routed partition 20/42      
+Routed partition 22/42      
+Routed partition 23/42      
+Routed partition 24/42      
+Routed partition 25/42      
+Routed partition 26/42      
+Routed partition 27/42      
+Routed partition 28/42      
+Routed partition 29/42      
+Routed partition 30/42      
+Routed partition 31/42      
+Routed partition 32/42      
+Routed partition 33/42      
+Routed partition 34/42      
+Routed partition 35/42      
+Routed partition 36/42      
+Routed partition 37/42      
+Routed partition 38/42      
+Routed partition 39/42      
+Routed partition 40/42      
+Routed partition 41/42      
+Routed partition 42/42      
+
+Number of wires with overlap after iteration 0 = 2561 of 4238
+
+
+[Track Assign: Iteration 0] Elapsed real time: 0:00:00 
+[Track Assign: Iteration 0] Elapsed cpu  time: sys=0:00:00 usr=0:00:03 total=0:00:03
+[Track Assign: Iteration 0] Stage (MB): Used    1  Alloctr    1  Proc  280 
+[Track Assign: Iteration 0] Total (MB): Used   33  Alloctr   34  Proc 7333 
+
+Reroute to fix overlaps (iter = 1)
+
+Assign Horizontal partitions, iteration 1 
+Routed partition 1/42       
+Routed partition 2/42       
+Routed partition 3/42       
+Routed partition 4/42       
+Routed partition 5/42       
+Routed partition 6/42       
+Routed partition 7/42       
+Routed partition 8/42       
+Routed partition 9/42       
+Routed partition 10/42      
+Routed partition 11/42      
+Routed partition 12/42      
+Routed partition 13/42      
+Routed partition 14/42      
+Routed partition 15/42      
+Routed partition 16/42      
+Routed partition 17/42      
+Routed partition 18/42      
+Routed partition 19/42      
+Routed partition 20/42      
+Routed partition 21/42      
+Routed partition 22/42      
+Routed partition 23/42      
+Routed partition 24/42      
+Routed partition 25/42      
+Routed partition 26/42      
+Routed partition 27/42      
+Routed partition 28/42      
+Routed partition 29/42      
+Routed partition 30/42      
+Routed partition 31/42      
+Routed partition 32/42      
+Routed partition 33/42      
+Routed partition 34/42      
+Routed partition 35/42      
+Routed partition 36/42      
+Routed partition 37/42      
+Routed partition 38/42      
+Routed partition 39/42      
+Routed partition 40/42      
+Routed partition 41/42      
+Routed partition 42/42      
+
+Assign Vertical partitions, iteration 1 
+Routed partition 1/42       
+Routed partition 2/42       
+Routed partition 3/42       
+Routed partition 4/42       
+Routed partition 5/42       
+Routed partition 6/42       
+Routed partition 7/42       
+Routed partition 8/42       
+Routed partition 9/42       
+Routed partition 10/42      
+Routed partition 11/42      
+Routed partition 12/42      
+Routed partition 13/42      
+Routed partition 14/42      
+Routed partition 15/42      
+Routed partition 16/42      
+Routed partition 17/42      
+Routed partition 18/42      
+Routed partition 19/42      
+Routed partition 20/42      
+Routed partition 21/42      
+Routed partition 22/42      
+Routed partition 23/42      
+Routed partition 24/42      
+Routed partition 25/42      
+Routed partition 26/42      
+Routed partition 27/42      
+Routed partition 28/42      
+Routed partition 29/42      
+Routed partition 30/42      
+Routed partition 31/42      
+Routed partition 32/42      
+Routed partition 33/42      
+Routed partition 34/42      
+Routed partition 35/42      
+Routed partition 36/42      
+Routed partition 37/42      
+Routed partition 38/42      
+Routed partition 39/42      
+Routed partition 40/42      
+Routed partition 41/42      
+Routed partition 42/42      
+
+[Track Assign: Iteration 1] Elapsed real time: 0:00:01 
+[Track Assign: Iteration 1] Elapsed cpu  time: sys=0:00:00 usr=0:00:07 total=0:00:07
+[Track Assign: Iteration 1] Stage (MB): Used    1  Alloctr    1  Proc  296 
+[Track Assign: Iteration 1] Total (MB): Used   33  Alloctr   34  Proc 7349 
+
+Number of wires with overlap after iteration 1 = 1512 of 2700
+
+
+Wire length and via report:
+---------------------------
+Number of M1 wires: 8             : 0
+Number of M2 wires: 1341                 VIA12SQ_C: 838
+Number of M3 wires: 897                  VIA23SQ_C: 1358
+Number of M4 wires: 213                  VIA34SQ_C: 231
+Number of M5 wires: 131                  VIA45SQ: 196
+Number of M6 wires: 107                  VIA56SQ: 132
+Number of M7 wires: 3            VIA67SQ_C: 6
+Number of M8 wires: 0            VIA78SQ_C: 0
+Number of M9 wires: 0            VIA89_C: 0
+Number of MRDL wires: 0                  VIA9RDL: 0
+Total number of wires: 2700              vias: 2761
+
+Total M1 wire length: 0.6
+Total M2 wire length: 734.0
+Total M3 wire length: 1228.4
+Total M4 wire length: 1047.8
+Total M5 wire length: 588.8
+Total M6 wire length: 429.3
+Total M7 wire length: 45.8
+Total M8 wire length: 0.0
+Total M9 wire length: 0.0
+Total MRDL wire length: 0.0
+Total wire length: 4074.7
+
+Longest M1 wire length: 0.1
+Longest M2 wire length: 16.0
+Longest M3 wire length: 43.7
+Longest M4 wire length: 41.5
+Longest M5 wire length: 27.8
+Longest M6 wire length: 40.2
+Longest M7 wire length: 28.1
+Longest M8 wire length: 0.0
+Longest M9 wire length: 0.0
+Longest MRDL wire length: 0.0
+
+
+[Track Assign: Done] Elapsed real time: 0:00:01 
+[Track Assign: Done] Elapsed cpu  time: sys=0:00:00 usr=0:00:07 total=0:00:07
+[Track Assign: Done] Stage (MB): Used    0  Alloctr    0  Proc  296 
+[Track Assign: Done] Total (MB): Used   32  Alloctr   33  Proc 7349 
+Printing options for 'route.common.*'
+common.concurrent_redundant_via_mode                    :        reserve_space       
+common.eco_route_concurrent_redundant_via_mode          :        reserve_space       
+common.via_array_mode                                   :        swap                
+
+Printing options for 'route.detail.*'
+detail.antenna                                          :        true                
+detail.eco_max_number_of_iterations                     :        10                  
+detail.eco_route_use_soft_spacing_for_timing_optimization:       false               
+detail.insert_redundant_vias_layer_order_low_to_high    :        true                
+detail.timing_driven                                    :        true                
+
+Printing options for 'route.auto_via_ladder.*'
+
+Information: RC layer preference is turned on for this design. (ZRT-613)
+[Dr init] Elapsed real time: 0:00:00 
+[Dr init] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[Dr init] Stage (MB): Used   11  Alloctr   11  Proc    0 
+[Dr init] Total (MB): Used   43  Alloctr   45  Proc 7349 
+Total number of nets = 469, of which 0 are not extracted
+Total number of open nets = 0, of which 0 are frozen
+Information: Using 8 threads for routing. (ZRT-444)
+Region based early termination has 81 candidate regions.
+
+Switch to reduced partition bloat for speedup (DRC report is not accurate)
+Start DR iteration 0: uniform partition
+Routed  4/81 Partitions, Violations =   0
+Routed  5/81 Partitions, Violations =   4
+Routed  6/81 Partitions, Violations =   4
+Routed  7/81 Partitions, Violations =   4
+Routed  8/81 Partitions, Violations =   4
+Routed  9/81 Partitions, Violations =   8
+Routed  10/81 Partitions, Violations =  23
+Routed  11/81 Partitions, Violations =  23
+Routed  12/81 Partitions, Violations =  23
+Routed  13/81 Partitions, Violations =  30
+Routed  14/81 Partitions, Violations =  30
+Routed  15/81 Partitions, Violations =  51
+Routed  16/81 Partitions, Violations =  58
+Routed  17/81 Partitions, Violations =  58
+Routed  18/81 Partitions, Violations =  58
+Routed  19/81 Partitions, Violations =  58
+Routed  20/81 Partitions, Violations =  58
+Routed  21/81 Partitions, Violations =  58
+Routed  22/81 Partitions, Violations =  46
+Routed  23/81 Partitions, Violations =  79
+Routed  24/81 Partitions, Violations =  86
+Routed  25/81 Partitions, Violations =  86
+Routed  26/81 Partitions, Violations =  86
+Routed  27/81 Partitions, Violations =  86
+Routed  28/81 Partitions, Violations =  86
+Routed  29/81 Partitions, Violations =  86
+Routed  30/81 Partitions, Violations =  80
+Routed  31/81 Partitions, Violations =  80
+Routed  32/81 Partitions, Violations =  80
+Routed  33/81 Partitions, Violations =  39
+Routed  34/81 Partitions, Violations =  39
+Routed  35/81 Partitions, Violations =  46
+Routed  36/81 Partitions, Violations =  61
+Routed  37/81 Partitions, Violations =  58
+Routed  38/81 Partitions, Violations =  58
+Routed  39/81 Partitions, Violations =  58
+Routed  40/81 Partitions, Violations =  29
+Routed  41/81 Partitions, Violations =  43
+Routed  42/81 Partitions, Violations =  43
+Routed  43/81 Partitions, Violations =  43
+Routed  44/81 Partitions, Violations =  36
+Routed  45/81 Partitions, Violations =  33
+Routed  46/81 Partitions, Violations =  36
+Routed  47/81 Partitions, Violations =  38
+Routed  48/81 Partitions, Violations =  38
+Routed  49/81 Partitions, Violations =  38
+Routed  50/81 Partitions, Violations =  38
+Routed  51/81 Partitions, Violations =  24
+Routed  52/81 Partitions, Violations =  41
+Routed  53/81 Partitions, Violations =  41
+Routed  54/81 Partitions, Violations =  41
+Routed  55/81 Partitions, Violations =  24
+Routed  56/81 Partitions, Violations =  24
+Routed  57/81 Partitions, Violations =  29
+Routed  58/81 Partitions, Violations =  19
+Routed  59/81 Partitions, Violations =  19
+Routed  60/81 Partitions, Violations =  19
+Routed  61/81 Partitions, Violations =  19
+Routed  62/81 Partitions, Violations =  19
+Routed  63/81 Partitions, Violations =  19
+Routed  64/81 Partitions, Violations =  19
+Routed  65/81 Partitions, Violations =  19
+Routed  66/81 Partitions, Violations =  19
+Routed  67/81 Partitions, Violations =  21
+Routed  68/81 Partitions, Violations =  21
+Routed  69/81 Partitions, Violations =  15
+Routed  70/81 Partitions, Violations =  17
+Routed  71/81 Partitions, Violations =  20
+Routed  72/81 Partitions, Violations =  20
+Routed  73/81 Partitions, Violations =  20
+Routed  74/81 Partitions, Violations =  21
+Routed  75/81 Partitions, Violations =  23
+Routed  76/81 Partitions, Violations =  23
+Routed  77/81 Partitions, Violations =  13
+Routed  78/81 Partitions, Violations =  13
+Routed  79/81 Partitions, Violations =  13
+Routed  80/81 Partitions, Violations =  13
+Routed  81/81 Partitions, Violations =  13
+
+DRC-SUMMARY:
+        @@@@@@@ TOTAL VIOLATIONS =      13
+        Less than minimum area : 1
+        Off-grid : 1
+        Same net via-cut spacing : 8
+        Short : 3
+
+[Iter 0] Elapsed real time: 0:00:01 
+[Iter 0] Elapsed cpu  time: sys=0:00:00 usr=0:00:02 total=0:00:02
+[Iter 0] Stage (MB): Used   70  Alloctr   70  Proc  335 
+[Iter 0] Total (MB): Used  102  Alloctr  104  Proc 7685 
+
+End DR iteration 0 with 81 parts
+
+Start DR iteration 1: non-uniform partition
+Routed  1/11 Partitions, Violations =   12
+Routed  2/11 Partitions, Violations =   12
+Routed  3/11 Partitions, Violations =   12
+Routed  4/11 Partitions, Violations =   10
+Routed  5/11 Partitions, Violations =   9
+Routed  6/11 Partitions, Violations =   9
+Routed  7/11 Partitions, Violations =   6
+Routed  8/11 Partitions, Violations =   5
+Routed  9/11 Partitions, Violations =   2
+Routed  10/11 Partitions, Violations =  1
+Routed  11/11 Partitions, Violations =  0
+
+DRC-SUMMARY:
+        @@@@@@@ TOTAL VIOLATIONS =      0
+
+[Iter 1] Elapsed real time: 0:00:02 
+[Iter 1] Elapsed cpu  time: sys=0:00:00 usr=0:00:03 total=0:00:03
+[Iter 1] Stage (MB): Used   70  Alloctr   70  Proc  335 
+[Iter 1] Total (MB): Used  102  Alloctr  104  Proc 7685 
+
+End DR iteration 1 with 11 parts
+
+
+Switch back to normal partition bloat and recalculate DRC:
+
+Begin full DRC check ...
+
+Information: Using 8 threads for routing. (ZRT-444)
+Checked 2/9 Partitions, Violations =    0
+Checked 3/9 Partitions, Violations =    0
+Checked 4/9 Partitions, Violations =    0
+Checked 5/9 Partitions, Violations =    0
+Checked 6/9 Partitions, Violations =    0
+Checked 7/9 Partitions, Violations =    0
+Checked 8/9 Partitions, Violations =    0
+Checked 9/9 Partitions, Violations =    0
+[DRC CHECK] Elapsed real time: 0:00:02 
+[DRC CHECK] Elapsed cpu  time: sys=0:00:00 usr=0:00:04 total=0:00:04
+[DRC CHECK] Stage (MB): Used   70  Alloctr   70  Proc  335 
+[DRC CHECK] Total (MB): Used  102  Alloctr  104  Proc 7685 
+Finish DR since reached 0 DRC
+
+[DR] Elapsed real time: 0:00:02 
+[DR] Elapsed cpu  time: sys=0:00:00 usr=0:00:04 total=0:00:04
+[DR] Stage (MB): Used    0  Alloctr    0  Proc  335 
+[DR] Total (MB): Used   32  Alloctr   34  Proc 7685 
+[DR: Done] Elapsed real time: 0:00:02 
+[DR: Done] Elapsed cpu  time: sys=0:00:00 usr=0:00:04 total=0:00:04
+[DR: Done] Stage (MB): Used    0  Alloctr    0  Proc  335 
+[DR: Done] Total (MB): Used   32  Alloctr   34  Proc 7685 
+
+DR finished with 0 open nets, of which 0 are frozen
+
+DR finished with 0 violations
+
+DRC-SUMMARY:
+        @@@@@@@ TOTAL VIOLATIONS =      0
+
+
+
+Total Wire Length =                    4306 micron
+Total Number of Contacts =             2699
+Total Number of Wires =                2997
+Total Number of PtConns =              135
+Total Number of Routed Wires =       2997
+Total Routed Wire Length =           4292 micron
+Total Number of Routed Contacts =       2699
+        Layer                 M1 :          1 micron
+        Layer                 M2 :        851 micron
+        Layer                 M3 :       1193 micron
+        Layer                 M4 :        996 micron
+        Layer                 M5 :        692 micron
+        Layer                 M6 :        510 micron
+        Layer                 M7 :         54 micron
+        Layer                 M8 :         10 micron
+        Layer                 M9 :          0 micron
+        Layer               MRDL :          0 micron
+        Via       VIA78SQ_C(rot) :          2
+        Via   VIA78SQ_C(rot)_2x1 :          6
+        Via            VIA67SQ_C :         10
+        Via        VIA67SQ_C_2x1 :          4
+        Via              VIA56SQ :        146
+        Via          VIA56SQ_1x2 :          3
+        Via          VIA56SQ_2x1 :         22
+        Via              VIA45SQ :         15
+        Via         VIA45SQ(rot) :        197
+        Via     VIA45SQ(rot)_1x2 :          3
+        Via     VIA45SQ(rot)_2x1 :          2
+        Via          VIA45SQ_1x2 :          6
+        Via          VIA45SQ_2x1 :         17
+        Via       VIA34SQ_C(rot) :        244
+        Via         VIA34SQ(rot) :         12
+        Via   VIA34SQ_C(rot)_1x2 :         23
+        Via   VIA34SQ_C(rot)_2x1 :          5
+        Via            VIA23SQ_C :       1113
+        Via         VIA23SQ(rot) :          1
+        Via          VIA2_33SQ_C :         10
+        Via        VIA23SQ_C_1x2 :          3
+        Via        VIA23SQ_C_2x1 :          1
+        Via      VIA23BAR2_C_2x1 :         27
+        Via       VIA12SQ_C(rot) :        801
+        Via     VIA12BAR1_C(rot) :          1
+        Via     VIA12BAR2_C(rot) :          2
+        Via              VIA12SQ :          1
+        Via         VIA12SQ(rot) :          9
+        Via            VIA12BAR2 :          1
+        Via     VIA1_32SQ_C(rot) :         12
+
+ 
+Redundant via conversion report:
+--------------------------------
+
+  Total optimized via conversion rate =  4.52% (122 / 2699 vias)
+ 
+    Layer VIA1       =  0.00% (0      / 827     vias)
+        Un-optimized =  0.00% (0       vias)
+        Un-mapped    = 100.00% (827     vias)
+    Layer VIA2       =  2.68% (31     / 1155    vias)
+        Weight 1     =  2.68% (31      vias)
+        Un-optimized =  0.00% (0       vias)
+        Un-mapped    = 97.32% (1124    vias)
+    Layer VIA3       =  9.86% (28     / 284     vias)
+        Weight 1     =  9.86% (28      vias)
+        Un-optimized =  0.00% (0       vias)
+        Un-mapped    = 90.14% (256     vias)
+    Layer VIA4       = 11.67% (28     / 240     vias)
+        Weight 1     = 11.67% (28      vias)
+        Un-optimized =  0.00% (0       vias)
+        Un-mapped    = 88.33% (212     vias)
+    Layer VIA5       = 14.62% (25     / 171     vias)
+        Weight 1     = 14.62% (25      vias)
+        Un-optimized =  0.00% (0       vias)
+        Un-mapped    = 85.38% (146     vias)
+    Layer VIA6       = 28.57% (4      / 14      vias)
+        Weight 1     = 28.57% (4       vias)
+        Un-optimized =  0.00% (0       vias)
+        Un-mapped    = 71.43% (10      vias)
+    Layer VIA7       = 75.00% (6      / 8       vias)
+        Weight 1     = 75.00% (6       vias)
+        Un-optimized =  0.00% (0       vias)
+        Un-mapped    = 25.00% (2       vias)
+ 
+  Total double via conversion rate    =  4.52% (122 / 2699 vias)
+ 
+    Layer VIA1       =  0.00% (0      / 827     vias)
+    Layer VIA2       =  2.68% (31     / 1155    vias)
+    Layer VIA3       =  9.86% (28     / 284     vias)
+    Layer VIA4       = 11.67% (28     / 240     vias)
+    Layer VIA5       = 14.62% (25     / 171     vias)
+    Layer VIA6       = 28.57% (4      / 14      vias)
+    Layer VIA7       = 75.00% (6      / 8       vias)
+ 
+  The optimized via conversion rate based on total routed via count =  4.52% (122 / 2699 vias)
+ 
+    Layer VIA1       =  0.00% (0      / 827     vias)
+        Un-optimized =  0.00% (0       vias)
+        Un-mapped    = 100.00% (827     vias)
+    Layer VIA2       =  2.68% (31     / 1155    vias)
+        Weight 1     =  2.68% (31      vias)
+        Un-optimized =  0.00% (0       vias)
+        Un-mapped    = 97.32% (1124    vias)
+    Layer VIA3       =  9.86% (28     / 284     vias)
+        Weight 1     =  9.86% (28      vias)
+        Un-optimized =  0.00% (0       vias)
+        Un-mapped    = 90.14% (256     vias)
+    Layer VIA4       = 11.67% (28     / 240     vias)
+        Weight 1     = 11.67% (28      vias)
+        Un-optimized =  0.00% (0       vias)
+        Un-mapped    = 88.33% (212     vias)
+    Layer VIA5       = 14.62% (25     / 171     vias)
+        Weight 1     = 14.62% (25      vias)
+        Un-optimized =  0.00% (0       vias)
+        Un-mapped    = 85.38% (146     vias)
+    Layer VIA6       = 28.57% (4      / 14      vias)
+        Weight 1     = 28.57% (4       vias)
+        Un-optimized =  0.00% (0       vias)
+        Un-mapped    = 71.43% (10      vias)
+    Layer VIA7       = 75.00% (6      / 8       vias)
+        Weight 1     = 75.00% (6       vias)
+        Un-optimized =  0.00% (0       vias)
+        Un-mapped    = 25.00% (2       vias)
+ 
+
+Total number of nets = 469
+0 open nets, of which 0 are frozen
+Total number of excluded ports = 0 ports of 0 unplaced cells connected to 0 nets
+                                 0 ports without pins of 0 cells connected to 0 nets
+                                 0 ports of 0 cover cells connected to 0 non-pg nets
+Total number of DRCs = 0
+Total number of antenna violations = antenna checking not active
+Information: Routes in non-preferred voltage areas = 0 (ZRT-559)
+
+Topology ECO not run, no qualifying violations or in frozen nets.
+Updating the database ...
+Information: Extraction observers are detached as design net change threshold is reached.
+Information: Ending 'route_auto' (FLW-8001)
+Information: Time: 2025-04-28 07:58:13 / Session: 0.11 hr / Command: 0.00 hr / Memory: 2022 MB (FLW-8100)
+# Insercion de vias redundantes
+if {$habilitar_insercion_vias_redundantes} {
+    add_redundant_vias
+}Cell Min-Routing-Layer = M2
+Cell Max-Routing-Layer = M8
+Turn off antenna since no rule is specified
+Information: Option route.detail.force_end_on_preferred_grid will be ignored since none of the layers have preferred grid. (ZRT-703)
+rule ndr_leaf equivalent to default rule
+Info: number of net_type_blockage: 0 
+Information: Via ladder engine would be activated for pattern must join connection in certain commands. Please refer to man-page for the command list. (ZRT-619)
+Via on layer (VIA1) needs more than one tracks
+Warning: Layer M1 pitch 0.074 may be too small: wire/via-down 0.074, wire/via-up 0.098. (ZRT-026)
+Via on layer (VIA1) needs more than one tracks
+Warning: Layer M2 pitch 0.060 may be too small: wire/via-down 0.098, wire/via-up 0.060. (ZRT-026)
+Via on layer (VIA3) needs more than one tracks
+Warning: Layer M3 pitch 0.074 may be too small: wire/via-down 0.060, wire/via-up 0.080. (ZRT-026)
+Via on layer (VIA4) needs more than one tracks
+Warning: Layer M5 pitch 0.120 may be too small: wire/via-down 0.135, wire/via-up 0.107. (ZRT-026)
+Via on layer (VIA8) needs more than one tracks
+Warning: Layer M8 pitch 0.120 may be too small: wire/via-down 0.107, wire/via-up 0.135. (ZRT-026)
+Wire on layer (M9) needs more than one tracks
+Via on layer (VIA8) needs more than one tracks
+Via on layer (VIARDL) needs more than one tracks
+Warning: Layer M9 pitch 0.120 may be too small: wire/via-down 0.135, wire/via-up 1.570. (ZRT-026)
+Via on layer (VIARDL) needs more than one tracks
+Warning: Layer MRDL pitch 4.000 may be too small: wire/via-down 4.500, wire/via-up 4.000. (ZRT-026)
+Transition layer name: M3(2)
+Information: When applicable Min-max layer allow_pin_connection mode will allow paths of length 1.04 outside the layer range. (ZRT-707)
+Information: When applicable Min-max layer allow_pin_connection mode will allow paths of length 1.04 outside the layer range on clock nets. (ZRT-718)
+Information: When applicable layer based tapering will taper up to 0.00 in distance from the pin. (ZRT-706)
+Warning: Standard cell pin SAEDRVT14_ADDH_0P5/CO has no valid via regions. (ZRT-044)
+Printing options for 'route.common.*'
+common.concurrent_redundant_via_mode                    :        reserve_space       
+common.eco_route_concurrent_redundant_via_mode          :        reserve_space       
+common.via_array_mode                                   :        swap                
+
+Printing options for 'route.detail.*'
+detail.antenna                                          :        true                
+detail.eco_max_number_of_iterations                     :        10                  
+detail.eco_route_use_soft_spacing_for_timing_optimization:       false               
+detail.insert_redundant_vias_layer_order_low_to_high    :        true                
+detail.timing_driven                                    :        true                
+
+Printing options for 'route.auto_via_ladder.*'
+
+[Dr init] Elapsed real time: 0:00:00 
+[Dr init] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[Dr init] Stage (MB): Used   11  Alloctr   11  Proc    0 
+[Dr init] Total (MB): Used   43  Alloctr   44  Proc 7685 
+
+Redundant via optimization will attempt to replace the following vias: 
+
+   VIA12SQ_C    -> VIA12SQ_C_1x2(r) VIA12BAR2_C_1x2(r) VIA12SQ_1x2(r) VIA12LG_C_1x2   
+                   VIA12BAR1_C_1x2    VIA12SQ_C_1x2    VIA12SQ_1x2    VIA12BAR2_C_1x2   
+                   VIA12SQ_C_2x1(r) VIA12BAR2_C_2x1(r) VIA12BAR1_C_2x1    VIA12SQ_2x1(r)
+                   VIA12BAR1_C_2x1(r) VIA12LG_C_2x1(r) VIA12SQ_C_2x1    VIA12SQ_2x1   
+                   VIA12BAR2_C_2x1   
+
+   VIA12SQ_C(r) -> VIA12SQ_C_1x2(r) VIA12BAR2_C_1x2(r) VIA12SQ_1x2(r) VIA12LG_C_1x2   
+                   VIA12BAR1_C_1x2    VIA12SQ_C_1x2    VIA12SQ_1x2    VIA12BAR2_C_1x2   
+                   VIA12SQ_C_2x1(r) VIA12BAR2_C_2x1(r) VIA12BAR1_C_2x1    VIA12SQ_2x1(r)
+                   VIA12BAR1_C_2x1(r) VIA12LG_C_2x1(r) VIA12SQ_C_2x1    VIA12SQ_2x1   
+                   VIA12BAR2_C_2x1   
+
+  VIA12BAR1_C    -> VIA12SQ_C_1x2(r) VIA12BAR2_C_1x2(r) VIA12SQ_1x2(r) VIA12LG_C_1x2   
+                   VIA12BAR1_C_1x2    VIA12SQ_C_1x2    VIA12SQ_1x2    VIA12BAR2_C_1x2   
+                   VIA12SQ_C_2x1(r) VIA12BAR2_C_2x1(r) VIA12BAR1_C_2x1    VIA12SQ_2x1(r)
+                   VIA12BAR1_C_2x1(r) VIA12LG_C_2x1(r) VIA12SQ_C_2x1    VIA12SQ_2x1   
+                   VIA12BAR2_C_2x1   
+
+  VIA12BAR1_C(r) -> VIA12SQ_C_1x2(r) VIA12BAR2_C_1x2(r) VIA12SQ_1x2(r) VIA12LG_C_1x2   
+                   VIA12BAR1_C_1x2    VIA12SQ_C_1x2    VIA12SQ_1x2    VIA12BAR2_C_1x2   
+                   VIA12SQ_C_2x1(r) VIA12BAR2_C_2x1(r) VIA12BAR1_C_2x1    VIA12SQ_2x1(r)
+                   VIA12BAR1_C_2x1(r) VIA12LG_C_2x1(r) VIA12SQ_C_2x1    VIA12SQ_2x1   
+                   VIA12BAR2_C_2x1   
+
+  VIA12BAR2_C    -> VIA12SQ_C_1x2(r) VIA12BAR2_C_1x2(r) VIA12SQ_1x2(r) VIA12LG_C_1x2   
+                   VIA12BAR1_C_1x2    VIA12SQ_C_1x2    VIA12SQ_1x2    VIA12BAR2_C_1x2   
+                   VIA12SQ_C_2x1(r) VIA12BAR2_C_2x1(r) VIA12BAR1_C_2x1    VIA12SQ_2x1(r)
+                   VIA12BAR1_C_2x1(r) VIA12LG_C_2x1(r) VIA12SQ_C_2x1    VIA12SQ_2x1   
+                   VIA12BAR2_C_2x1   
+
+  VIA12BAR2_C(r) -> VIA12SQ_C_1x2(r) VIA12BAR2_C_1x2(r) VIA12SQ_1x2(r) VIA12LG_C_1x2   
+                   VIA12BAR1_C_1x2    VIA12SQ_C_1x2    VIA12SQ_1x2    VIA12BAR2_C_1x2   
+                   VIA12SQ_C_2x1(r) VIA12BAR2_C_2x1(r) VIA12BAR1_C_2x1    VIA12SQ_2x1(r)
+                   VIA12BAR1_C_2x1(r) VIA12LG_C_2x1(r) VIA12SQ_C_2x1    VIA12SQ_2x1   
+                   VIA12BAR2_C_2x1   
+
+   VIA12LG_C    -> VIA12SQ_C_1x2(r) VIA12BAR2_C_1x2(r) VIA12SQ_1x2(r) VIA12LG_C_1x2   
+                   VIA12BAR1_C_1x2    VIA12SQ_C_1x2    VIA12SQ_1x2    VIA12BAR2_C_1x2   
+                   VIA12SQ_C_2x1(r) VIA12BAR2_C_2x1(r) VIA12BAR1_C_2x1    VIA12SQ_2x1(r)
+                   VIA12BAR1_C_2x1(r) VIA12LG_C_2x1(r) VIA12SQ_C_2x1    VIA12SQ_2x1   
+                   VIA12BAR2_C_2x1   
+
+   VIA12LG_C(r) -> VIA12SQ_C_1x2(r) VIA12BAR2_C_1x2(r) VIA12SQ_1x2(r) VIA12LG_C_1x2   
+                   VIA12BAR1_C_1x2    VIA12SQ_C_1x2    VIA12SQ_1x2    VIA12BAR2_C_1x2   
+                   VIA12SQ_C_2x1(r) VIA12BAR2_C_2x1(r) VIA12BAR1_C_2x1    VIA12SQ_2x1(r)
+                   VIA12BAR1_C_2x1(r) VIA12LG_C_2x1(r) VIA12SQ_C_2x1    VIA12SQ_2x1   
+                   VIA12BAR2_C_2x1   
+
+     VIA12SQ    -> VIA12SQ_C_1x2(r) VIA12BAR2_C_1x2(r) VIA12SQ_1x2(r) VIA12LG_C_1x2   
+                   VIA12BAR1_C_1x2    VIA12SQ_C_1x2    VIA12SQ_1x2    VIA12BAR2_C_1x2   
+                   VIA12SQ_C_2x1(r) VIA12BAR2_C_2x1(r) VIA12BAR1_C_2x1    VIA12SQ_2x1(r)
+                   VIA12BAR1_C_2x1(r) VIA12LG_C_2x1(r) VIA12SQ_C_2x1    VIA12SQ_2x1   
+                   VIA12BAR2_C_2x1   
+
+     VIA12SQ(r) -> VIA12SQ_C_1x2(r) VIA12BAR2_C_1x2(r) VIA12SQ_1x2(r) VIA12LG_C_1x2   
+                   VIA12BAR1_C_1x2    VIA12SQ_C_1x2    VIA12SQ_1x2    VIA12BAR2_C_1x2   
+                   VIA12SQ_C_2x1(r) VIA12BAR2_C_2x1(r) VIA12BAR1_C_2x1    VIA12SQ_2x1(r)
+                   VIA12BAR1_C_2x1(r) VIA12LG_C_2x1(r) VIA12SQ_C_2x1    VIA12SQ_2x1   
+                   VIA12BAR2_C_2x1   
+
+   VIA12BAR1    -> VIA12SQ_C_1x2(r) VIA12BAR2_C_1x2(r) VIA12SQ_1x2(r) VIA12LG_C_1x2   
+                   VIA12BAR1_C_1x2    VIA12SQ_C_1x2    VIA12SQ_1x2    VIA12BAR2_C_1x2   
+                   VIA12SQ_C_2x1(r) VIA12BAR2_C_2x1(r) VIA12BAR1_C_2x1    VIA12SQ_2x1(r)
+                   VIA12BAR1_C_2x1(r) VIA12LG_C_2x1(r) VIA12SQ_C_2x1    VIA12SQ_2x1   
+                   VIA12BAR2_C_2x1   
+
+   VIA12BAR1(r) -> VIA12SQ_C_1x2(r) VIA12BAR2_C_1x2(r) VIA12SQ_1x2(r) VIA12LG_C_1x2   
+                   VIA12BAR1_C_1x2    VIA12SQ_C_1x2    VIA12SQ_1x2    VIA12BAR2_C_1x2   
+                   VIA12SQ_C_2x1(r) VIA12BAR2_C_2x1(r) VIA12BAR1_C_2x1    VIA12SQ_2x1(r)
+                   VIA12BAR1_C_2x1(r) VIA12LG_C_2x1(r) VIA12SQ_C_2x1    VIA12SQ_2x1   
+                   VIA12BAR2_C_2x1   
+
+   VIA12BAR2    -> VIA12SQ_C_1x2(r) VIA12BAR2_C_1x2(r) VIA12SQ_1x2(r) VIA12LG_C_1x2   
+                   VIA12BAR1_C_1x2    VIA12SQ_C_1x2    VIA12SQ_1x2    VIA12BAR2_C_1x2   
+                   VIA12SQ_C_2x1(r) VIA12BAR2_C_2x1(r) VIA12BAR1_C_2x1    VIA12SQ_2x1(r)
+                   VIA12BAR1_C_2x1(r) VIA12LG_C_2x1(r) VIA12SQ_C_2x1    VIA12SQ_2x1   
+                   VIA12BAR2_C_2x1   
+
+   VIA12BAR2(r) -> VIA12SQ_C_1x2(r) VIA12BAR2_C_1x2(r) VIA12SQ_1x2(r) VIA12LG_C_1x2   
+                   VIA12BAR1_C_1x2    VIA12SQ_C_1x2    VIA12SQ_1x2    VIA12BAR2_C_1x2   
+                   VIA12SQ_C_2x1(r) VIA12BAR2_C_2x1(r) VIA12BAR1_C_2x1    VIA12SQ_2x1(r)
+                   VIA12BAR1_C_2x1(r) VIA12LG_C_2x1(r) VIA12SQ_C_2x1    VIA12SQ_2x1   
+                   VIA12BAR2_C_2x1   
+
+     VIA12LG    -> VIA12SQ_C_1x2(r) VIA12BAR2_C_1x2(r) VIA12SQ_1x2(r) VIA12LG_C_1x2   
+                   VIA12BAR1_C_1x2    VIA12SQ_C_1x2    VIA12SQ_1x2    VIA12BAR2_C_1x2   
+                   VIA12SQ_C_2x1(r) VIA12BAR2_C_2x1(r) VIA12BAR1_C_2x1    VIA12SQ_2x1(r)
+                   VIA12BAR1_C_2x1(r) VIA12LG_C_2x1(r) VIA12SQ_C_2x1    VIA12SQ_2x1   
+                   VIA12BAR2_C_2x1   
+
+     VIA12LG(r) -> VIA12SQ_C_1x2(r) VIA12BAR2_C_1x2(r) VIA12SQ_1x2(r) VIA12LG_C_1x2   
+                   VIA12BAR1_C_1x2    VIA12SQ_C_1x2    VIA12SQ_1x2    VIA12BAR2_C_1x2   
+                   VIA12SQ_C_2x1(r) VIA12BAR2_C_2x1(r) VIA12BAR1_C_2x1    VIA12SQ_2x1(r)
+                   VIA12BAR1_C_2x1(r) VIA12LG_C_2x1(r) VIA12SQ_C_2x1    VIA12SQ_2x1   
+                   VIA12BAR2_C_2x1   
+
+  VIA1_32SQ_C    -> VIA12SQ_C_1x2(r) VIA12BAR2_C_1x2(r) VIA12SQ_1x2(r) VIA12LG_C_1x2   
+                   VIA12BAR1_C_1x2    VIA12SQ_C_1x2    VIA12SQ_1x2    VIA12BAR2_C_1x2   
+                   VIA12SQ_C_2x1(r) VIA12BAR2_C_2x1(r) VIA12BAR1_C_2x1    VIA12SQ_2x1(r)
+                   VIA12BAR1_C_2x1(r) VIA12LG_C_2x1(r) VIA12SQ_C_2x1    VIA12SQ_2x1   
+                   VIA12BAR2_C_2x1   
+
+  VIA1_32SQ_C(r) -> VIA12SQ_C_1x2(r) VIA12BAR2_C_1x2(r) VIA12SQ_1x2(r) VIA12LG_C_1x2   
+                   VIA12BAR1_C_1x2    VIA12SQ_C_1x2    VIA12SQ_1x2    VIA12BAR2_C_1x2   
+                   VIA12SQ_C_2x1(r) VIA12BAR2_C_2x1(r) VIA12BAR1_C_2x1    VIA12SQ_2x1(r)
+                   VIA12BAR1_C_2x1(r) VIA12LG_C_2x1(r) VIA12SQ_C_2x1    VIA12SQ_2x1   
+                   VIA12BAR2_C_2x1   
+
+  VIA1_32BAR1_C    -> VIA12SQ_C_1x2(r) VIA12BAR2_C_1x2(r) VIA12SQ_1x2(r) VIA12LG_C_1x2   
+                   VIA12BAR1_C_1x2    VIA12SQ_C_1x2    VIA12SQ_1x2    VIA12BAR2_C_1x2   
+                   VIA12SQ_C_2x1(r) VIA12BAR2_C_2x1(r) VIA12BAR1_C_2x1    VIA12SQ_2x1(r)
+                   VIA12BAR1_C_2x1(r) VIA12LG_C_2x1(r) VIA12SQ_C_2x1    VIA12SQ_2x1   
+                   VIA12BAR2_C_2x1   
+
+  VIA1_32BAR1_C(r) -> VIA12SQ_C_1x2(r) VIA12BAR2_C_1x2(r) VIA12SQ_1x2(r) VIA12LG_C_1x2   
+                   VIA12BAR1_C_1x2    VIA12SQ_C_1x2    VIA12SQ_1x2    VIA12BAR2_C_1x2   
+                   VIA12SQ_C_2x1(r) VIA12BAR2_C_2x1(r) VIA12BAR1_C_2x1    VIA12SQ_2x1(r)
+                   VIA12BAR1_C_2x1(r) VIA12LG_C_2x1(r) VIA12SQ_C_2x1    VIA12SQ_2x1   
+                   VIA12BAR2_C_2x1   
+
+  VIA1_32BAR2_C    -> VIA12SQ_C_1x2(r) VIA12BAR2_C_1x2(r) VIA12SQ_1x2(r) VIA12LG_C_1x2   
+                   VIA12BAR1_C_1x2    VIA12SQ_C_1x2    VIA12SQ_1x2    VIA12BAR2_C_1x2   
+                   VIA12SQ_C_2x1(r) VIA12BAR2_C_2x1(r) VIA12BAR1_C_2x1    VIA12SQ_2x1(r)
+                   VIA12BAR1_C_2x1(r) VIA12LG_C_2x1(r) VIA12SQ_C_2x1    VIA12SQ_2x1   
+                   VIA12BAR2_C_2x1   
+
+  VIA1_32BAR2_C(r) -> VIA12SQ_C_1x2(r) VIA12BAR2_C_1x2(r) VIA12SQ_1x2(r) VIA12LG_C_1x2   
+                   VIA12BAR1_C_1x2    VIA12SQ_C_1x2    VIA12SQ_1x2    VIA12BAR2_C_1x2   
+                   VIA12SQ_C_2x1(r) VIA12BAR2_C_2x1(r) VIA12BAR1_C_2x1    VIA12SQ_2x1(r)
+                   VIA12BAR1_C_2x1(r) VIA12LG_C_2x1(r) VIA12SQ_C_2x1    VIA12SQ_2x1   
+                   VIA12BAR2_C_2x1   
+
+  VIA1_32LG_C    -> VIA12SQ_C_1x2(r) VIA12BAR2_C_1x2(r) VIA12SQ_1x2(r) VIA12LG_C_1x2   
+                   VIA12BAR1_C_1x2    VIA12SQ_C_1x2    VIA12SQ_1x2    VIA12BAR2_C_1x2   
+                   VIA12SQ_C_2x1(r) VIA12BAR2_C_2x1(r) VIA12BAR1_C_2x1    VIA12SQ_2x1(r)
+                   VIA12BAR1_C_2x1(r) VIA12LG_C_2x1(r) VIA12SQ_C_2x1    VIA12SQ_2x1   
+                   VIA12BAR2_C_2x1   
+
+  VIA1_32LG_C(r) -> VIA12SQ_C_1x2(r) VIA12BAR2_C_1x2(r) VIA12SQ_1x2(r) VIA12LG_C_1x2   
+                   VIA12BAR1_C_1x2    VIA12SQ_C_1x2    VIA12SQ_1x2    VIA12BAR2_C_1x2   
+                   VIA12SQ_C_2x1(r) VIA12BAR2_C_2x1(r) VIA12BAR1_C_2x1    VIA12SQ_2x1(r)
+                   VIA12BAR1_C_2x1(r) VIA12LG_C_2x1(r) VIA12SQ_C_2x1    VIA12SQ_2x1   
+                   VIA12BAR2_C_2x1   
+
+   VIA1_32SQ    -> VIA12SQ_C_1x2(r) VIA12BAR2_C_1x2(r) VIA12SQ_1x2(r) VIA12LG_C_1x2   
+                   VIA12BAR1_C_1x2    VIA12SQ_C_1x2    VIA12SQ_1x2    VIA12BAR2_C_1x2   
+                   VIA12SQ_C_2x1(r) VIA12BAR2_C_2x1(r) VIA12BAR1_C_2x1    VIA12SQ_2x1(r)
+                   VIA12BAR1_C_2x1(r) VIA12LG_C_2x1(r) VIA12SQ_C_2x1    VIA12SQ_2x1   
+                   VIA12BAR2_C_2x1   
+
+   VIA1_32SQ(r) -> VIA12SQ_C_1x2(r) VIA12BAR2_C_1x2(r) VIA12SQ_1x2(r) VIA12LG_C_1x2   
+                   VIA12BAR1_C_1x2    VIA12SQ_C_1x2    VIA12SQ_1x2    VIA12BAR2_C_1x2   
+                   VIA12SQ_C_2x1(r) VIA12BAR2_C_2x1(r) VIA12BAR1_C_2x1    VIA12SQ_2x1(r)
+                   VIA12BAR1_C_2x1(r) VIA12LG_C_2x1(r) VIA12SQ_C_2x1    VIA12SQ_2x1   
+                   VIA12BAR2_C_2x1   
+
+  VIA1_32BAR1    -> VIA12SQ_C_1x2(r) VIA12BAR2_C_1x2(r) VIA12SQ_1x2(r) VIA12LG_C_1x2   
+                   VIA12BAR1_C_1x2    VIA12SQ_C_1x2    VIA12SQ_1x2    VIA12BAR2_C_1x2   
+                   VIA12SQ_C_2x1(r) VIA12BAR2_C_2x1(r) VIA12BAR1_C_2x1    VIA12SQ_2x1(r)
+                   VIA12BAR1_C_2x1(r) VIA12LG_C_2x1(r) VIA12SQ_C_2x1    VIA12SQ_2x1   
+                   VIA12BAR2_C_2x1   
+
+  VIA1_32BAR1(r) -> VIA12SQ_C_1x2(r) VIA12BAR2_C_1x2(r) VIA12SQ_1x2(r) VIA12LG_C_1x2   
+                   VIA12BAR1_C_1x2    VIA12SQ_C_1x2    VIA12SQ_1x2    VIA12BAR2_C_1x2   
+                   VIA12SQ_C_2x1(r) VIA12BAR2_C_2x1(r) VIA12BAR1_C_2x1    VIA12SQ_2x1(r)
+                   VIA12BAR1_C_2x1(r) VIA12LG_C_2x1(r) VIA12SQ_C_2x1    VIA12SQ_2x1   
+                   VIA12BAR2_C_2x1   
+
+  VIA1_32BAR2    -> VIA12SQ_C_1x2(r) VIA12BAR2_C_1x2(r) VIA12SQ_1x2(r) VIA12LG_C_1x2   
+                   VIA12BAR1_C_1x2    VIA12SQ_C_1x2    VIA12SQ_1x2    VIA12BAR2_C_1x2   
+                   VIA12SQ_C_2x1(r) VIA12BAR2_C_2x1(r) VIA12BAR1_C_2x1    VIA12SQ_2x1(r)
+                   VIA12BAR1_C_2x1(r) VIA12LG_C_2x1(r) VIA12SQ_C_2x1    VIA12SQ_2x1   
+                   VIA12BAR2_C_2x1   
+
+  VIA1_32BAR2(r) -> VIA12SQ_C_1x2(r) VIA12BAR2_C_1x2(r) VIA12SQ_1x2(r) VIA12LG_C_1x2   
+                   VIA12BAR1_C_1x2    VIA12SQ_C_1x2    VIA12SQ_1x2    VIA12BAR2_C_1x2   
+                   VIA12SQ_C_2x1(r) VIA12BAR2_C_2x1(r) VIA12BAR1_C_2x1    VIA12SQ_2x1(r)
+                   VIA12BAR1_C_2x1(r) VIA12LG_C_2x1(r) VIA12SQ_C_2x1    VIA12SQ_2x1   
+                   VIA12BAR2_C_2x1   
+
+   VIA1_32LG    -> VIA12SQ_C_1x2(r) VIA12BAR2_C_1x2(r) VIA12SQ_1x2(r) VIA12LG_C_1x2   
+                   VIA12BAR1_C_1x2    VIA12SQ_C_1x2    VIA12SQ_1x2    VIA12BAR2_C_1x2   
+                   VIA12SQ_C_2x1(r) VIA12BAR2_C_2x1(r) VIA12BAR1_C_2x1    VIA12SQ_2x1(r)
+                   VIA12BAR1_C_2x1(r) VIA12LG_C_2x1(r) VIA12SQ_C_2x1    VIA12SQ_2x1   
+                   VIA12BAR2_C_2x1   
+
+   VIA1_32LG(r) -> VIA12SQ_C_1x2(r) VIA12BAR2_C_1x2(r) VIA12SQ_1x2(r) VIA12LG_C_1x2   
+                   VIA12BAR1_C_1x2    VIA12SQ_C_1x2    VIA12SQ_1x2    VIA12BAR2_C_1x2   
+                   VIA12SQ_C_2x1(r) VIA12BAR2_C_2x1(r) VIA12BAR1_C_2x1    VIA12SQ_2x1(r)
+                   VIA12BAR1_C_2x1(r) VIA12LG_C_2x1(r) VIA12SQ_C_2x1    VIA12SQ_2x1   
+                   VIA12BAR2_C_2x1   
+
+  VIA12_3SQ_C    -> VIA12SQ_C_1x2(r) VIA12BAR2_C_1x2(r) VIA12SQ_1x2(r) VIA12LG_C_1x2   
+                   VIA12BAR1_C_1x2    VIA12SQ_C_1x2    VIA12SQ_1x2    VIA12BAR2_C_1x2   
+                   VIA12SQ_C_2x1(r) VIA12BAR2_C_2x1(r) VIA12BAR1_C_2x1    VIA12SQ_2x1(r)
+                   VIA12BAR1_C_2x1(r) VIA12LG_C_2x1(r) VIA12SQ_C_2x1    VIA12SQ_2x1   
+                   VIA12BAR2_C_2x1   
+
+  VIA12_3SQ_C(r) -> VIA12SQ_C_1x2(r) VIA12BAR2_C_1x2(r) VIA12SQ_1x2(r) VIA12LG_C_1x2   
+                   VIA12BAR1_C_1x2    VIA12SQ_C_1x2    VIA12SQ_1x2    VIA12BAR2_C_1x2   
+                   VIA12SQ_C_2x1(r) VIA12BAR2_C_2x1(r) VIA12BAR1_C_2x1    VIA12SQ_2x1(r)
+                   VIA12BAR1_C_2x1(r) VIA12LG_C_2x1(r) VIA12SQ_C_2x1    VIA12SQ_2x1   
+                   VIA12BAR2_C_2x1   
+
+  VIA12_3BAR1_C    -> VIA12SQ_C_1x2(r) VIA12BAR2_C_1x2(r) VIA12SQ_1x2(r) VIA12LG_C_1x2   
+                   VIA12BAR1_C_1x2    VIA12SQ_C_1x2    VIA12SQ_1x2    VIA12BAR2_C_1x2   
+                   VIA12SQ_C_2x1(r) VIA12BAR2_C_2x1(r) VIA12BAR1_C_2x1    VIA12SQ_2x1(r)
+                   VIA12BAR1_C_2x1(r) VIA12LG_C_2x1(r) VIA12SQ_C_2x1    VIA12SQ_2x1   
+                   VIA12BAR2_C_2x1   
+
+  VIA12_3BAR1_C(r) -> VIA12SQ_C_1x2(r) VIA12BAR2_C_1x2(r) VIA12SQ_1x2(r) VIA12LG_C_1x2   
+                   VIA12BAR1_C_1x2    VIA12SQ_C_1x2    VIA12SQ_1x2    VIA12BAR2_C_1x2   
+                   VIA12SQ_C_2x1(r) VIA12BAR2_C_2x1(r) VIA12BAR1_C_2x1    VIA12SQ_2x1(r)
+                   VIA12BAR1_C_2x1(r) VIA12LG_C_2x1(r) VIA12SQ_C_2x1    VIA12SQ_2x1   
+                   VIA12BAR2_C_2x1   
+
+  VIA12_3BAR2_C    -> VIA12SQ_C_1x2(r) VIA12BAR2_C_1x2(r) VIA12SQ_1x2(r) VIA12LG_C_1x2   
+                   VIA12BAR1_C_1x2    VIA12SQ_C_1x2    VIA12SQ_1x2    VIA12BAR2_C_1x2   
+                   VIA12SQ_C_2x1(r) VIA12BAR2_C_2x1(r) VIA12BAR1_C_2x1    VIA12SQ_2x1(r)
+                   VIA12BAR1_C_2x1(r) VIA12LG_C_2x1(r) VIA12SQ_C_2x1    VIA12SQ_2x1   
+                   VIA12BAR2_C_2x1   
+
+  VIA12_3BAR2_C(r) -> VIA12SQ_C_1x2(r) VIA12BAR2_C_1x2(r) VIA12SQ_1x2(r) VIA12LG_C_1x2   
+                   VIA12BAR1_C_1x2    VIA12SQ_C_1x2    VIA12SQ_1x2    VIA12BAR2_C_1x2   
+                   VIA12SQ_C_2x1(r) VIA12BAR2_C_2x1(r) VIA12BAR1_C_2x1    VIA12SQ_2x1(r)
+                   VIA12BAR1_C_2x1(r) VIA12LG_C_2x1(r) VIA12SQ_C_2x1    VIA12SQ_2x1   
+                   VIA12BAR2_C_2x1   
+
+  VIA12_3LG_C    -> VIA12SQ_C_1x2(r) VIA12BAR2_C_1x2(r) VIA12SQ_1x2(r) VIA12LG_C_1x2   
+                   VIA12BAR1_C_1x2    VIA12SQ_C_1x2    VIA12SQ_1x2    VIA12BAR2_C_1x2   
+                   VIA12SQ_C_2x1(r) VIA12BAR2_C_2x1(r) VIA12BAR1_C_2x1    VIA12SQ_2x1(r)
+                   VIA12BAR1_C_2x1(r) VIA12LG_C_2x1(r) VIA12SQ_C_2x1    VIA12SQ_2x1   
+                   VIA12BAR2_C_2x1   
+
+  VIA12_3LG_C(r) -> VIA12SQ_C_1x2(r) VIA12BAR2_C_1x2(r) VIA12SQ_1x2(r) VIA12LG_C_1x2   
+                   VIA12BAR1_C_1x2    VIA12SQ_C_1x2    VIA12SQ_1x2    VIA12BAR2_C_1x2   
+                   VIA12SQ_C_2x1(r) VIA12BAR2_C_2x1(r) VIA12BAR1_C_2x1    VIA12SQ_2x1(r)
+                   VIA12BAR1_C_2x1(r) VIA12LG_C_2x1(r) VIA12SQ_C_2x1    VIA12SQ_2x1   
+                   VIA12BAR2_C_2x1   
+
+   VIA12_3SQ    -> VIA12SQ_C_1x2(r) VIA12BAR2_C_1x2(r) VIA12SQ_1x2(r) VIA12LG_C_1x2   
+                   VIA12BAR1_C_1x2    VIA12SQ_C_1x2    VIA12SQ_1x2    VIA12BAR2_C_1x2   
+                   VIA12SQ_C_2x1(r) VIA12BAR2_C_2x1(r) VIA12BAR1_C_2x1    VIA12SQ_2x1(r)
+                   VIA12BAR1_C_2x1(r) VIA12LG_C_2x1(r) VIA12SQ_C_2x1    VIA12SQ_2x1   
+                   VIA12BAR2_C_2x1   
+
+   VIA12_3SQ(r) -> VIA12SQ_C_1x2(r) VIA12BAR2_C_1x2(r) VIA12SQ_1x2(r) VIA12LG_C_1x2   
+                   VIA12BAR1_C_1x2    VIA12SQ_C_1x2    VIA12SQ_1x2    VIA12BAR2_C_1x2   
+                   VIA12SQ_C_2x1(r) VIA12BAR2_C_2x1(r) VIA12BAR1_C_2x1    VIA12SQ_2x1(r)
+                   VIA12BAR1_C_2x1(r) VIA12LG_C_2x1(r) VIA12SQ_C_2x1    VIA12SQ_2x1   
+                   VIA12BAR2_C_2x1   
+
+  VIA12_3BAR1    -> VIA12SQ_C_1x2(r) VIA12BAR2_C_1x2(r) VIA12SQ_1x2(r) VIA12LG_C_1x2   
+                   VIA12BAR1_C_1x2    VIA12SQ_C_1x2    VIA12SQ_1x2    VIA12BAR2_C_1x2   
+                   VIA12SQ_C_2x1(r) VIA12BAR2_C_2x1(r) VIA12BAR1_C_2x1    VIA12SQ_2x1(r)
+                   VIA12BAR1_C_2x1(r) VIA12LG_C_2x1(r) VIA12SQ_C_2x1    VIA12SQ_2x1   
+                   VIA12BAR2_C_2x1   
+
+  VIA12_3BAR1(r) -> VIA12SQ_C_1x2(r) VIA12BAR2_C_1x2(r) VIA12SQ_1x2(r) VIA12LG_C_1x2   
+                   VIA12BAR1_C_1x2    VIA12SQ_C_1x2    VIA12SQ_1x2    VIA12BAR2_C_1x2   
+                   VIA12SQ_C_2x1(r) VIA12BAR2_C_2x1(r) VIA12BAR1_C_2x1    VIA12SQ_2x1(r)
+                   VIA12BAR1_C_2x1(r) VIA12LG_C_2x1(r) VIA12SQ_C_2x1    VIA12SQ_2x1   
+                   VIA12BAR2_C_2x1   
+
+  VIA12_3BAR2    -> VIA12SQ_C_1x2(r) VIA12BAR2_C_1x2(r) VIA12SQ_1x2(r) VIA12LG_C_1x2   
+                   VIA12BAR1_C_1x2    VIA12SQ_C_1x2    VIA12SQ_1x2    VIA12BAR2_C_1x2   
+                   VIA12SQ_C_2x1(r) VIA12BAR2_C_2x1(r) VIA12BAR1_C_2x1    VIA12SQ_2x1(r)
+                   VIA12BAR1_C_2x1(r) VIA12LG_C_2x1(r) VIA12SQ_C_2x1    VIA12SQ_2x1   
+                   VIA12BAR2_C_2x1   
+
+  VIA12_3BAR2(r) -> VIA12SQ_C_1x2(r) VIA12BAR2_C_1x2(r) VIA12SQ_1x2(r) VIA12LG_C_1x2   
+                   VIA12BAR1_C_1x2    VIA12SQ_C_1x2    VIA12SQ_1x2    VIA12BAR2_C_1x2   
+                   VIA12SQ_C_2x1(r) VIA12BAR2_C_2x1(r) VIA12BAR1_C_2x1    VIA12SQ_2x1(r)
+                   VIA12BAR1_C_2x1(r) VIA12LG_C_2x1(r) VIA12SQ_C_2x1    VIA12SQ_2x1   
+                   VIA12BAR2_C_2x1   
+
+   VIA12_3LG    -> VIA12SQ_C_1x2(r) VIA12BAR2_C_1x2(r) VIA12SQ_1x2(r) VIA12LG_C_1x2   
+                   VIA12BAR1_C_1x2    VIA12SQ_C_1x2    VIA12SQ_1x2    VIA12BAR2_C_1x2   
+                   VIA12SQ_C_2x1(r) VIA12BAR2_C_2x1(r) VIA12BAR1_C_2x1    VIA12SQ_2x1(r)
+                   VIA12BAR1_C_2x1(r) VIA12LG_C_2x1(r) VIA12SQ_C_2x1    VIA12SQ_2x1   
+                   VIA12BAR2_C_2x1   
+
+   VIA12_3LG(r) -> VIA12SQ_C_1x2(r) VIA12BAR2_C_1x2(r) VIA12SQ_1x2(r) VIA12LG_C_1x2   
+                   VIA12BAR1_C_1x2    VIA12SQ_C_1x2    VIA12SQ_1x2    VIA12BAR2_C_1x2   
+                   VIA12SQ_C_2x1(r) VIA12BAR2_C_2x1(r) VIA12BAR1_C_2x1    VIA12SQ_2x1(r)
+                   VIA12BAR1_C_2x1(r) VIA12LG_C_2x1(r) VIA12SQ_C_2x1    VIA12SQ_2x1   
+                   VIA12BAR2_C_2x1   
+
+  VIA1_32_3SQ_C    -> VIA12SQ_C_1x2(r) VIA12BAR2_C_1x2(r) VIA12SQ_1x2(r) VIA12LG_C_1x2   
+                   VIA12BAR1_C_1x2    VIA12SQ_C_1x2    VIA12SQ_1x2    VIA12BAR2_C_1x2   
+                   VIA12SQ_C_2x1(r) VIA12BAR2_C_2x1(r) VIA12BAR1_C_2x1    VIA12SQ_2x1(r)
+                   VIA12BAR1_C_2x1(r) VIA12LG_C_2x1(r) VIA12SQ_C_2x1    VIA12SQ_2x1   
+                   VIA12BAR2_C_2x1   
+
+  VIA1_32_3SQ_C(r) -> VIA12SQ_C_1x2(r) VIA12BAR2_C_1x2(r) VIA12SQ_1x2(r) VIA12LG_C_1x2   
+                   VIA12BAR1_C_1x2    VIA12SQ_C_1x2    VIA12SQ_1x2    VIA12BAR2_C_1x2   
+                   VIA12SQ_C_2x1(r) VIA12BAR2_C_2x1(r) VIA12BAR1_C_2x1    VIA12SQ_2x1(r)
+                   VIA12BAR1_C_2x1(r) VIA12LG_C_2x1(r) VIA12SQ_C_2x1    VIA12SQ_2x1   
+                   VIA12BAR2_C_2x1   
+
+  VIA1_32_3BAR1_C    -> VIA12SQ_C_1x2(r) VIA12BAR2_C_1x2(r) VIA12SQ_1x2(r) VIA12LG_C_1x2   
+                   VIA12BAR1_C_1x2    VIA12SQ_C_1x2    VIA12SQ_1x2    VIA12BAR2_C_1x2   
+                   VIA12SQ_C_2x1(r) VIA12BAR2_C_2x1(r) VIA12BAR1_C_2x1    VIA12SQ_2x1(r)
+                   VIA12BAR1_C_2x1(r) VIA12LG_C_2x1(r) VIA12SQ_C_2x1    VIA12SQ_2x1   
+                   VIA12BAR2_C_2x1   
+
+  VIA1_32_3BAR1_C(r) -> VIA12SQ_C_1x2(r) VIA12BAR2_C_1x2(r) VIA12SQ_1x2(r) VIA12LG_C_1x2   
+                   VIA12BAR1_C_1x2    VIA12SQ_C_1x2    VIA12SQ_1x2    VIA12BAR2_C_1x2   
+                   VIA12SQ_C_2x1(r) VIA12BAR2_C_2x1(r) VIA12BAR1_C_2x1    VIA12SQ_2x1(r)
+                   VIA12BAR1_C_2x1(r) VIA12LG_C_2x1(r) VIA12SQ_C_2x1    VIA12SQ_2x1   
+                   VIA12BAR2_C_2x1   
+
+  VIA1_32_3BAR2_C    -> VIA12SQ_C_1x2(r) VIA12BAR2_C_1x2(r) VIA12SQ_1x2(r) VIA12LG_C_1x2   
+                   VIA12BAR1_C_1x2    VIA12SQ_C_1x2    VIA12SQ_1x2    VIA12BAR2_C_1x2   
+                   VIA12SQ_C_2x1(r) VIA12BAR2_C_2x1(r) VIA12BAR1_C_2x1    VIA12SQ_2x1(r)
+                   VIA12BAR1_C_2x1(r) VIA12LG_C_2x1(r) VIA12SQ_C_2x1    VIA12SQ_2x1   
+                   VIA12BAR2_C_2x1   
+
+  VIA1_32_3BAR2_C(r) -> VIA12SQ_C_1x2(r) VIA12BAR2_C_1x2(r) VIA12SQ_1x2(r) VIA12LG_C_1x2   
+                   VIA12BAR1_C_1x2    VIA12SQ_C_1x2    VIA12SQ_1x2    VIA12BAR2_C_1x2   
+                   VIA12SQ_C_2x1(r) VIA12BAR2_C_2x1(r) VIA12BAR1_C_2x1    VIA12SQ_2x1(r)
+                   VIA12BAR1_C_2x1(r) VIA12LG_C_2x1(r) VIA12SQ_C_2x1    VIA12SQ_2x1   
+                   VIA12BAR2_C_2x1   
+
+  VIA1_32_3LG_C    -> VIA12SQ_C_1x2(r) VIA12BAR2_C_1x2(r) VIA12SQ_1x2(r) VIA12LG_C_1x2   
+                   VIA12BAR1_C_1x2    VIA12SQ_C_1x2    VIA12SQ_1x2    VIA12BAR2_C_1x2   
+                   VIA12SQ_C_2x1(r) VIA12BAR2_C_2x1(r) VIA12BAR1_C_2x1    VIA12SQ_2x1(r)
+                   VIA12BAR1_C_2x1(r) VIA12LG_C_2x1(r) VIA12SQ_C_2x1    VIA12SQ_2x1   
+                   VIA12BAR2_C_2x1   
+
+  VIA1_32_3LG_C(r) -> VIA12SQ_C_1x2(r) VIA12BAR2_C_1x2(r) VIA12SQ_1x2(r) VIA12LG_C_1x2   
+                   VIA12BAR1_C_1x2    VIA12SQ_C_1x2    VIA12SQ_1x2    VIA12BAR2_C_1x2   
+                   VIA12SQ_C_2x1(r) VIA12BAR2_C_2x1(r) VIA12BAR1_C_2x1    VIA12SQ_2x1(r)
+                   VIA12BAR1_C_2x1(r) VIA12LG_C_2x1(r) VIA12SQ_C_2x1    VIA12SQ_2x1   
+                   VIA12BAR2_C_2x1   
+
+  VIA1_32_3SQ    -> VIA12SQ_C_1x2(r) VIA12BAR2_C_1x2(r) VIA12SQ_1x2(r) VIA12LG_C_1x2   
+                   VIA12BAR1_C_1x2    VIA12SQ_C_1x2    VIA12SQ_1x2    VIA12BAR2_C_1x2   
+                   VIA12SQ_C_2x1(r) VIA12BAR2_C_2x1(r) VIA12BAR1_C_2x1    VIA12SQ_2x1(r)
+                   VIA12BAR1_C_2x1(r) VIA12LG_C_2x1(r) VIA12SQ_C_2x1    VIA12SQ_2x1   
+                   VIA12BAR2_C_2x1   
+
+  VIA1_32_3SQ(r) -> VIA12SQ_C_1x2(r) VIA12BAR2_C_1x2(r) VIA12SQ_1x2(r) VIA12LG_C_1x2   
+                   VIA12BAR1_C_1x2    VIA12SQ_C_1x2    VIA12SQ_1x2    VIA12BAR2_C_1x2   
+                   VIA12SQ_C_2x1(r) VIA12BAR2_C_2x1(r) VIA12BAR1_C_2x1    VIA12SQ_2x1(r)
+                   VIA12BAR1_C_2x1(r) VIA12LG_C_2x1(r) VIA12SQ_C_2x1    VIA12SQ_2x1   
+                   VIA12BAR2_C_2x1   
+
+  VIA1_32_3BAR1    -> VIA12SQ_C_1x2(r) VIA12BAR2_C_1x2(r) VIA12SQ_1x2(r) VIA12LG_C_1x2   
+                   VIA12BAR1_C_1x2    VIA12SQ_C_1x2    VIA12SQ_1x2    VIA12BAR2_C_1x2   
+                   VIA12SQ_C_2x1(r) VIA12BAR2_C_2x1(r) VIA12BAR1_C_2x1    VIA12SQ_2x1(r)
+                   VIA12BAR1_C_2x1(r) VIA12LG_C_2x1(r) VIA12SQ_C_2x1    VIA12SQ_2x1   
+                   VIA12BAR2_C_2x1   
+
+  VIA1_32_3BAR1(r) -> VIA12SQ_C_1x2(r) VIA12BAR2_C_1x2(r) VIA12SQ_1x2(r) VIA12LG_C_1x2   
+                   VIA12BAR1_C_1x2    VIA12SQ_C_1x2    VIA12SQ_1x2    VIA12BAR2_C_1x2   
+                   VIA12SQ_C_2x1(r) VIA12BAR2_C_2x1(r) VIA12BAR1_C_2x1    VIA12SQ_2x1(r)
+                   VIA12BAR1_C_2x1(r) VIA12LG_C_2x1(r) VIA12SQ_C_2x1    VIA12SQ_2x1   
+                   VIA12BAR2_C_2x1   
+
+  VIA1_32_3BAR2    -> VIA12SQ_C_1x2(r) VIA12BAR2_C_1x2(r) VIA12SQ_1x2(r) VIA12LG_C_1x2   
+                   VIA12BAR1_C_1x2    VIA12SQ_C_1x2    VIA12SQ_1x2    VIA12BAR2_C_1x2   
+                   VIA12SQ_C_2x1(r) VIA12BAR2_C_2x1(r) VIA12BAR1_C_2x1    VIA12SQ_2x1(r)
+                   VIA12BAR1_C_2x1(r) VIA12LG_C_2x1(r) VIA12SQ_C_2x1    VIA12SQ_2x1   
+                   VIA12BAR2_C_2x1   
+
+  VIA1_32_3BAR2(r) -> VIA12SQ_C_1x2(r) VIA12BAR2_C_1x2(r) VIA12SQ_1x2(r) VIA12LG_C_1x2   
+                   VIA12BAR1_C_1x2    VIA12SQ_C_1x2    VIA12SQ_1x2    VIA12BAR2_C_1x2   
+                   VIA12SQ_C_2x1(r) VIA12BAR2_C_2x1(r) VIA12BAR1_C_2x1    VIA12SQ_2x1(r)
+                   VIA12BAR1_C_2x1(r) VIA12LG_C_2x1(r) VIA12SQ_C_2x1    VIA12SQ_2x1   
+                   VIA12BAR2_C_2x1   
+
+  VIA1_32_3LG    -> VIA12SQ_C_1x2(r) VIA12BAR2_C_1x2(r) VIA12SQ_1x2(r) VIA12LG_C_1x2   
+                   VIA12BAR1_C_1x2    VIA12SQ_C_1x2    VIA12SQ_1x2    VIA12BAR2_C_1x2   
+                   VIA12SQ_C_2x1(r) VIA12BAR2_C_2x1(r) VIA12BAR1_C_2x1    VIA12SQ_2x1(r)
+                   VIA12BAR1_C_2x1(r) VIA12LG_C_2x1(r) VIA12SQ_C_2x1    VIA12SQ_2x1   
+                   VIA12BAR2_C_2x1   
+
+  VIA1_32_3LG(r) -> VIA12SQ_C_1x2(r) VIA12BAR2_C_1x2(r) VIA12SQ_1x2(r) VIA12LG_C_1x2   
+                   VIA12BAR1_C_1x2    VIA12SQ_C_1x2    VIA12SQ_1x2    VIA12BAR2_C_1x2   
+                   VIA12SQ_C_2x1(r) VIA12BAR2_C_2x1(r) VIA12BAR1_C_2x1    VIA12SQ_2x1(r)
+                   VIA12BAR1_C_2x1(r) VIA12LG_C_2x1(r) VIA12SQ_C_2x1    VIA12SQ_2x1   
+                   VIA12BAR2_C_2x1   
+
+   VIA23SQ_C    -> VIA23SQ_C_2x1    VIA23BAR2_C_2x1    VIA23SQ_2x1    VIA23BAR1_C_2x1   
+                   VIA23LG_C_2x1    VIA23LG_C_2x1(r) VIA23BAR1_C_2x1(r) VIA23SQ_C_2x1(r)
+                   VIA23SQ_C_1x2    VIA23BAR2_C_1x2    VIA23SQ_1x2    VIA23SQ_2x1(r)
+                   VIA23BAR2_C_2x1(r) VIA23BAR1_C_1x2(r) VIA23BAR1_C_1x2    VIA23LG_C_1x2   
+                   VIA23LG_C_1x2(r) VIA23SQ_C_1x2(r) VIA23SQ_1x2(r) VIA23BAR2_C_1x2(r)
+
+   VIA23SQ_C(r) -> VIA23SQ_C_2x1    VIA23BAR2_C_2x1    VIA23SQ_2x1    VIA23BAR1_C_2x1   
+                   VIA23LG_C_2x1    VIA23LG_C_2x1(r) VIA23BAR1_C_2x1(r) VIA23SQ_C_2x1(r)
+                   VIA23SQ_C_1x2    VIA23BAR2_C_1x2    VIA23SQ_1x2    VIA23SQ_2x1(r)
+                   VIA23BAR2_C_2x1(r) VIA23BAR1_C_1x2(r) VIA23BAR1_C_1x2    VIA23LG_C_1x2   
+                   VIA23LG_C_1x2(r) VIA23SQ_C_1x2(r) VIA23SQ_1x2(r) VIA23BAR2_C_1x2(r)
+
+  VIA23BAR1_C    -> VIA23SQ_C_2x1    VIA23BAR2_C_2x1    VIA23SQ_2x1    VIA23BAR1_C_2x1   
+                   VIA23LG_C_2x1    VIA23LG_C_2x1(r) VIA23BAR1_C_2x1(r) VIA23SQ_C_2x1(r)
+                   VIA23SQ_C_1x2    VIA23BAR2_C_1x2    VIA23SQ_1x2    VIA23SQ_2x1(r)
+                   VIA23BAR2_C_2x1(r) VIA23BAR1_C_1x2(r) VIA23BAR1_C_1x2    VIA23LG_C_1x2   
+                   VIA23LG_C_1x2(r) VIA23SQ_C_1x2(r) VIA23SQ_1x2(r) VIA23BAR2_C_1x2(r)
+
+  VIA23BAR1_C(r) -> VIA23SQ_C_2x1    VIA23BAR2_C_2x1    VIA23SQ_2x1    VIA23BAR1_C_2x1   
+                   VIA23LG_C_2x1    VIA23LG_C_2x1(r) VIA23BAR1_C_2x1(r) VIA23SQ_C_2x1(r)
+                   VIA23SQ_C_1x2    VIA23BAR2_C_1x2    VIA23SQ_1x2    VIA23SQ_2x1(r)
+                   VIA23BAR2_C_2x1(r) VIA23BAR1_C_1x2(r) VIA23BAR1_C_1x2    VIA23LG_C_1x2   
+                   VIA23LG_C_1x2(r) VIA23SQ_C_1x2(r) VIA23SQ_1x2(r) VIA23BAR2_C_1x2(r)
+
+  VIA23BAR2_C    -> VIA23SQ_C_2x1    VIA23BAR2_C_2x1    VIA23SQ_2x1    VIA23BAR1_C_2x1   
+                   VIA23LG_C_2x1    VIA23LG_C_2x1(r) VIA23BAR1_C_2x1(r) VIA23SQ_C_2x1(r)
+                   VIA23SQ_C_1x2    VIA23BAR2_C_1x2    VIA23SQ_1x2    VIA23SQ_2x1(r)
+                   VIA23BAR2_C_2x1(r) VIA23BAR1_C_1x2(r) VIA23BAR1_C_1x2    VIA23LG_C_1x2   
+                   VIA23LG_C_1x2(r) VIA23SQ_C_1x2(r) VIA23SQ_1x2(r) VIA23BAR2_C_1x2(r)
+
+  VIA23BAR2_C(r) -> VIA23SQ_C_2x1    VIA23BAR2_C_2x1    VIA23SQ_2x1    VIA23BAR1_C_2x1   
+                   VIA23LG_C_2x1    VIA23LG_C_2x1(r) VIA23BAR1_C_2x1(r) VIA23SQ_C_2x1(r)
+                   VIA23SQ_C_1x2    VIA23BAR2_C_1x2    VIA23SQ_1x2    VIA23SQ_2x1(r)
+                   VIA23BAR2_C_2x1(r) VIA23BAR1_C_1x2(r) VIA23BAR1_C_1x2    VIA23LG_C_1x2   
+                   VIA23LG_C_1x2(r) VIA23SQ_C_1x2(r) VIA23SQ_1x2(r) VIA23BAR2_C_1x2(r)
+
+   VIA23LG_C    -> VIA23SQ_C_2x1    VIA23BAR2_C_2x1    VIA23SQ_2x1    VIA23BAR1_C_2x1   
+                   VIA23LG_C_2x1    VIA23LG_C_2x1(r) VIA23BAR1_C_2x1(r) VIA23SQ_C_2x1(r)
+                   VIA23SQ_C_1x2    VIA23BAR2_C_1x2    VIA23SQ_1x2    VIA23SQ_2x1(r)
+                   VIA23BAR2_C_2x1(r) VIA23BAR1_C_1x2(r) VIA23BAR1_C_1x2    VIA23LG_C_1x2   
+                   VIA23LG_C_1x2(r) VIA23SQ_C_1x2(r) VIA23SQ_1x2(r) VIA23BAR2_C_1x2(r)
+
+   VIA23LG_C(r) -> VIA23SQ_C_2x1    VIA23BAR2_C_2x1    VIA23SQ_2x1    VIA23BAR1_C_2x1   
+                   VIA23LG_C_2x1    VIA23LG_C_2x1(r) VIA23BAR1_C_2x1(r) VIA23SQ_C_2x1(r)
+                   VIA23SQ_C_1x2    VIA23BAR2_C_1x2    VIA23SQ_1x2    VIA23SQ_2x1(r)
+                   VIA23BAR2_C_2x1(r) VIA23BAR1_C_1x2(r) VIA23BAR1_C_1x2    VIA23LG_C_1x2   
+                   VIA23LG_C_1x2(r) VIA23SQ_C_1x2(r) VIA23SQ_1x2(r) VIA23BAR2_C_1x2(r)
+
+     VIA23SQ    -> VIA23SQ_C_2x1    VIA23BAR2_C_2x1    VIA23SQ_2x1    VIA23BAR1_C_2x1   
+                   VIA23LG_C_2x1    VIA23LG_C_2x1(r) VIA23BAR1_C_2x1(r) VIA23SQ_C_2x1(r)
+                   VIA23SQ_C_1x2    VIA23BAR2_C_1x2    VIA23SQ_1x2    VIA23SQ_2x1(r)
+                   VIA23BAR2_C_2x1(r) VIA23BAR1_C_1x2(r) VIA23BAR1_C_1x2    VIA23LG_C_1x2   
+                   VIA23LG_C_1x2(r) VIA23SQ_C_1x2(r) VIA23SQ_1x2(r) VIA23BAR2_C_1x2(r)
+
+     VIA23SQ(r) -> VIA23SQ_C_2x1    VIA23BAR2_C_2x1    VIA23SQ_2x1    VIA23BAR1_C_2x1   
+                   VIA23LG_C_2x1    VIA23LG_C_2x1(r) VIA23BAR1_C_2x1(r) VIA23SQ_C_2x1(r)
+                   VIA23SQ_C_1x2    VIA23BAR2_C_1x2    VIA23SQ_1x2    VIA23SQ_2x1(r)
+                   VIA23BAR2_C_2x1(r) VIA23BAR1_C_1x2(r) VIA23BAR1_C_1x2    VIA23LG_C_1x2   
+                   VIA23LG_C_1x2(r) VIA23SQ_C_1x2(r) VIA23SQ_1x2(r) VIA23BAR2_C_1x2(r)
+
+   VIA23BAR1    -> VIA23SQ_C_2x1    VIA23BAR2_C_2x1    VIA23SQ_2x1    VIA23BAR1_C_2x1   
+                   VIA23LG_C_2x1    VIA23LG_C_2x1(r) VIA23BAR1_C_2x1(r) VIA23SQ_C_2x1(r)
+                   VIA23SQ_C_1x2    VIA23BAR2_C_1x2    VIA23SQ_1x2    VIA23SQ_2x1(r)
+                   VIA23BAR2_C_2x1(r) VIA23BAR1_C_1x2(r) VIA23BAR1_C_1x2    VIA23LG_C_1x2   
+                   VIA23LG_C_1x2(r) VIA23SQ_C_1x2(r) VIA23SQ_1x2(r) VIA23BAR2_C_1x2(r)
+
+   VIA23BAR1(r) -> VIA23SQ_C_2x1    VIA23BAR2_C_2x1    VIA23SQ_2x1    VIA23BAR1_C_2x1   
+                   VIA23LG_C_2x1    VIA23LG_C_2x1(r) VIA23BAR1_C_2x1(r) VIA23SQ_C_2x1(r)
+                   VIA23SQ_C_1x2    VIA23BAR2_C_1x2    VIA23SQ_1x2    VIA23SQ_2x1(r)
+                   VIA23BAR2_C_2x1(r) VIA23BAR1_C_1x2(r) VIA23BAR1_C_1x2    VIA23LG_C_1x2   
+                   VIA23LG_C_1x2(r) VIA23SQ_C_1x2(r) VIA23SQ_1x2(r) VIA23BAR2_C_1x2(r)
+
+   VIA23BAR2    -> VIA23SQ_C_2x1    VIA23BAR2_C_2x1    VIA23SQ_2x1    VIA23BAR1_C_2x1   
+                   VIA23LG_C_2x1    VIA23LG_C_2x1(r) VIA23BAR1_C_2x1(r) VIA23SQ_C_2x1(r)
+                   VIA23SQ_C_1x2    VIA23BAR2_C_1x2    VIA23SQ_1x2    VIA23SQ_2x1(r)
+                   VIA23BAR2_C_2x1(r) VIA23BAR1_C_1x2(r) VIA23BAR1_C_1x2    VIA23LG_C_1x2   
+                   VIA23LG_C_1x2(r) VIA23SQ_C_1x2(r) VIA23SQ_1x2(r) VIA23BAR2_C_1x2(r)
+
+   VIA23BAR2(r) -> VIA23SQ_C_2x1    VIA23BAR2_C_2x1    VIA23SQ_2x1    VIA23BAR1_C_2x1   
+                   VIA23LG_C_2x1    VIA23LG_C_2x1(r) VIA23BAR1_C_2x1(r) VIA23SQ_C_2x1(r)
+                   VIA23SQ_C_1x2    VIA23BAR2_C_1x2    VIA23SQ_1x2    VIA23SQ_2x1(r)
+                   VIA23BAR2_C_2x1(r) VIA23BAR1_C_1x2(r) VIA23BAR1_C_1x2    VIA23LG_C_1x2   
+                   VIA23LG_C_1x2(r) VIA23SQ_C_1x2(r) VIA23SQ_1x2(r) VIA23BAR2_C_1x2(r)
+
+     VIA23LG    -> VIA23SQ_C_2x1    VIA23BAR2_C_2x1    VIA23SQ_2x1    VIA23BAR1_C_2x1   
+                   VIA23LG_C_2x1    VIA23LG_C_2x1(r) VIA23BAR1_C_2x1(r) VIA23SQ_C_2x1(r)
+                   VIA23SQ_C_1x2    VIA23BAR2_C_1x2    VIA23SQ_1x2    VIA23SQ_2x1(r)
+                   VIA23BAR2_C_2x1(r) VIA23BAR1_C_1x2(r) VIA23BAR1_C_1x2    VIA23LG_C_1x2   
+                   VIA23LG_C_1x2(r) VIA23SQ_C_1x2(r) VIA23SQ_1x2(r) VIA23BAR2_C_1x2(r)
+
+     VIA23LG(r) -> VIA23SQ_C_2x1    VIA23BAR2_C_2x1    VIA23SQ_2x1    VIA23BAR1_C_2x1   
+                   VIA23LG_C_2x1    VIA23LG_C_2x1(r) VIA23BAR1_C_2x1(r) VIA23SQ_C_2x1(r)
+                   VIA23SQ_C_1x2    VIA23BAR2_C_1x2    VIA23SQ_1x2    VIA23SQ_2x1(r)
+                   VIA23BAR2_C_2x1(r) VIA23BAR1_C_1x2(r) VIA23BAR1_C_1x2    VIA23LG_C_1x2   
+                   VIA23LG_C_1x2(r) VIA23SQ_C_1x2(r) VIA23SQ_1x2(r) VIA23BAR2_C_1x2(r)
+
+  VIA2_33SQ_C    -> VIA23SQ_C_2x1    VIA23BAR2_C_2x1    VIA23SQ_2x1    VIA23BAR1_C_2x1   
+                   VIA23LG_C_2x1    VIA23LG_C_2x1(r) VIA23BAR1_C_2x1(r) VIA23SQ_C_2x1(r)
+                   VIA23SQ_C_1x2    VIA23BAR2_C_1x2    VIA23SQ_1x2    VIA23SQ_2x1(r)
+                   VIA23BAR2_C_2x1(r) VIA23BAR1_C_1x2(r) VIA23BAR1_C_1x2    VIA23LG_C_1x2   
+                   VIA23LG_C_1x2(r) VIA23SQ_C_1x2(r) VIA23SQ_1x2(r) VIA23BAR2_C_1x2(r)
+
+  VIA2_33SQ_C(r) -> VIA23SQ_C_2x1    VIA23BAR2_C_2x1    VIA23SQ_2x1    VIA23BAR1_C_2x1   
+                   VIA23LG_C_2x1    VIA23LG_C_2x1(r) VIA23BAR1_C_2x1(r) VIA23SQ_C_2x1(r)
+                   VIA23SQ_C_1x2    VIA23BAR2_C_1x2    VIA23SQ_1x2    VIA23SQ_2x1(r)
+                   VIA23BAR2_C_2x1(r) VIA23BAR1_C_1x2(r) VIA23BAR1_C_1x2    VIA23LG_C_1x2   
+                   VIA23LG_C_1x2(r) VIA23SQ_C_1x2(r) VIA23SQ_1x2(r) VIA23BAR2_C_1x2(r)
+
+  VIA2_33BAR1_C    -> VIA23SQ_C_2x1    VIA23BAR2_C_2x1    VIA23SQ_2x1    VIA23BAR1_C_2x1   
+                   VIA23LG_C_2x1    VIA23LG_C_2x1(r) VIA23BAR1_C_2x1(r) VIA23SQ_C_2x1(r)
+                   VIA23SQ_C_1x2    VIA23BAR2_C_1x2    VIA23SQ_1x2    VIA23SQ_2x1(r)
+                   VIA23BAR2_C_2x1(r) VIA23BAR1_C_1x2(r) VIA23BAR1_C_1x2    VIA23LG_C_1x2   
+                   VIA23LG_C_1x2(r) VIA23SQ_C_1x2(r) VIA23SQ_1x2(r) VIA23BAR2_C_1x2(r)
+
+  VIA2_33BAR1_C(r) -> VIA23SQ_C_2x1    VIA23BAR2_C_2x1    VIA23SQ_2x1    VIA23BAR1_C_2x1   
+                   VIA23LG_C_2x1    VIA23LG_C_2x1(r) VIA23BAR1_C_2x1(r) VIA23SQ_C_2x1(r)
+                   VIA23SQ_C_1x2    VIA23BAR2_C_1x2    VIA23SQ_1x2    VIA23SQ_2x1(r)
+                   VIA23BAR2_C_2x1(r) VIA23BAR1_C_1x2(r) VIA23BAR1_C_1x2    VIA23LG_C_1x2   
+                   VIA23LG_C_1x2(r) VIA23SQ_C_1x2(r) VIA23SQ_1x2(r) VIA23BAR2_C_1x2(r)
+
+  VIA2_33BAR2_C    -> VIA23SQ_C_2x1    VIA23BAR2_C_2x1    VIA23SQ_2x1    VIA23BAR1_C_2x1   
+                   VIA23LG_C_2x1    VIA23LG_C_2x1(r) VIA23BAR1_C_2x1(r) VIA23SQ_C_2x1(r)
+                   VIA23SQ_C_1x2    VIA23BAR2_C_1x2    VIA23SQ_1x2    VIA23SQ_2x1(r)
+                   VIA23BAR2_C_2x1(r) VIA23BAR1_C_1x2(r) VIA23BAR1_C_1x2    VIA23LG_C_1x2   
+                   VIA23LG_C_1x2(r) VIA23SQ_C_1x2(r) VIA23SQ_1x2(r) VIA23BAR2_C_1x2(r)
+
+  VIA2_33BAR2_C(r) -> VIA23SQ_C_2x1    VIA23BAR2_C_2x1    VIA23SQ_2x1    VIA23BAR1_C_2x1   
+                   VIA23LG_C_2x1    VIA23LG_C_2x1(r) VIA23BAR1_C_2x1(r) VIA23SQ_C_2x1(r)
+                   VIA23SQ_C_1x2    VIA23BAR2_C_1x2    VIA23SQ_1x2    VIA23SQ_2x1(r)
+                   VIA23BAR2_C_2x1(r) VIA23BAR1_C_1x2(r) VIA23BAR1_C_1x2    VIA23LG_C_1x2   
+                   VIA23LG_C_1x2(r) VIA23SQ_C_1x2(r) VIA23SQ_1x2(r) VIA23BAR2_C_1x2(r)
+
+  VIA2_33LG_C    -> VIA23SQ_C_2x1    VIA23BAR2_C_2x1    VIA23SQ_2x1    VIA23BAR1_C_2x1   
+                   VIA23LG_C_2x1    VIA23LG_C_2x1(r) VIA23BAR1_C_2x1(r) VIA23SQ_C_2x1(r)
+                   VIA23SQ_C_1x2    VIA23BAR2_C_1x2    VIA23SQ_1x2    VIA23SQ_2x1(r)
+                   VIA23BAR2_C_2x1(r) VIA23BAR1_C_1x2(r) VIA23BAR1_C_1x2    VIA23LG_C_1x2   
+                   VIA23LG_C_1x2(r) VIA23SQ_C_1x2(r) VIA23SQ_1x2(r) VIA23BAR2_C_1x2(r)
+
+  VIA2_33LG_C(r) -> VIA23SQ_C_2x1    VIA23BAR2_C_2x1    VIA23SQ_2x1    VIA23BAR1_C_2x1   
+                   VIA23LG_C_2x1    VIA23LG_C_2x1(r) VIA23BAR1_C_2x1(r) VIA23SQ_C_2x1(r)
+                   VIA23SQ_C_1x2    VIA23BAR2_C_1x2    VIA23SQ_1x2    VIA23SQ_2x1(r)
+                   VIA23BAR2_C_2x1(r) VIA23BAR1_C_1x2(r) VIA23BAR1_C_1x2    VIA23LG_C_1x2   
+                   VIA23LG_C_1x2(r) VIA23SQ_C_1x2(r) VIA23SQ_1x2(r) VIA23BAR2_C_1x2(r)
+
+   VIA2_33SQ    -> VIA23SQ_C_2x1    VIA23BAR2_C_2x1    VIA23SQ_2x1    VIA23BAR1_C_2x1   
+                   VIA23LG_C_2x1    VIA23LG_C_2x1(r) VIA23BAR1_C_2x1(r) VIA23SQ_C_2x1(r)
+                   VIA23SQ_C_1x2    VIA23BAR2_C_1x2    VIA23SQ_1x2    VIA23SQ_2x1(r)
+                   VIA23BAR2_C_2x1(r) VIA23BAR1_C_1x2(r) VIA23BAR1_C_1x2    VIA23LG_C_1x2   
+                   VIA23LG_C_1x2(r) VIA23SQ_C_1x2(r) VIA23SQ_1x2(r) VIA23BAR2_C_1x2(r)
+
+   VIA2_33SQ(r) -> VIA23SQ_C_2x1    VIA23BAR2_C_2x1    VIA23SQ_2x1    VIA23BAR1_C_2x1   
+                   VIA23LG_C_2x1    VIA23LG_C_2x1(r) VIA23BAR1_C_2x1(r) VIA23SQ_C_2x1(r)
+                   VIA23SQ_C_1x2    VIA23BAR2_C_1x2    VIA23SQ_1x2    VIA23SQ_2x1(r)
+                   VIA23BAR2_C_2x1(r) VIA23BAR1_C_1x2(r) VIA23BAR1_C_1x2    VIA23LG_C_1x2   
+                   VIA23LG_C_1x2(r) VIA23SQ_C_1x2(r) VIA23SQ_1x2(r) VIA23BAR2_C_1x2(r)
+
+  VIA2_33BAR1    -> VIA23SQ_C_2x1    VIA23BAR2_C_2x1    VIA23SQ_2x1    VIA23BAR1_C_2x1   
+                   VIA23LG_C_2x1    VIA23LG_C_2x1(r) VIA23BAR1_C_2x1(r) VIA23SQ_C_2x1(r)
+                   VIA23SQ_C_1x2    VIA23BAR2_C_1x2    VIA23SQ_1x2    VIA23SQ_2x1(r)
+                   VIA23BAR2_C_2x1(r) VIA23BAR1_C_1x2(r) VIA23BAR1_C_1x2    VIA23LG_C_1x2   
+                   VIA23LG_C_1x2(r) VIA23SQ_C_1x2(r) VIA23SQ_1x2(r) VIA23BAR2_C_1x2(r)
+
+  VIA2_33BAR1(r) -> VIA23SQ_C_2x1    VIA23BAR2_C_2x1    VIA23SQ_2x1    VIA23BAR1_C_2x1   
+                   VIA23LG_C_2x1    VIA23LG_C_2x1(r) VIA23BAR1_C_2x1(r) VIA23SQ_C_2x1(r)
+                   VIA23SQ_C_1x2    VIA23BAR2_C_1x2    VIA23SQ_1x2    VIA23SQ_2x1(r)
+                   VIA23BAR2_C_2x1(r) VIA23BAR1_C_1x2(r) VIA23BAR1_C_1x2    VIA23LG_C_1x2   
+                   VIA23LG_C_1x2(r) VIA23SQ_C_1x2(r) VIA23SQ_1x2(r) VIA23BAR2_C_1x2(r)
+
+  VIA2_33BAR2    -> VIA23SQ_C_2x1    VIA23BAR2_C_2x1    VIA23SQ_2x1    VIA23BAR1_C_2x1   
+                   VIA23LG_C_2x1    VIA23LG_C_2x1(r) VIA23BAR1_C_2x1(r) VIA23SQ_C_2x1(r)
+                   VIA23SQ_C_1x2    VIA23BAR2_C_1x2    VIA23SQ_1x2    VIA23SQ_2x1(r)
+                   VIA23BAR2_C_2x1(r) VIA23BAR1_C_1x2(r) VIA23BAR1_C_1x2    VIA23LG_C_1x2   
+                   VIA23LG_C_1x2(r) VIA23SQ_C_1x2(r) VIA23SQ_1x2(r) VIA23BAR2_C_1x2(r)
+
+  VIA2_33BAR2(r) -> VIA23SQ_C_2x1    VIA23BAR2_C_2x1    VIA23SQ_2x1    VIA23BAR1_C_2x1   
+                   VIA23LG_C_2x1    VIA23LG_C_2x1(r) VIA23BAR1_C_2x1(r) VIA23SQ_C_2x1(r)
+                   VIA23SQ_C_1x2    VIA23BAR2_C_1x2    VIA23SQ_1x2    VIA23SQ_2x1(r)
+                   VIA23BAR2_C_2x1(r) VIA23BAR1_C_1x2(r) VIA23BAR1_C_1x2    VIA23LG_C_1x2   
+                   VIA23LG_C_1x2(r) VIA23SQ_C_1x2(r) VIA23SQ_1x2(r) VIA23BAR2_C_1x2(r)
+
+   VIA2_33LG    -> VIA23SQ_C_2x1    VIA23BAR2_C_2x1    VIA23SQ_2x1    VIA23BAR1_C_2x1   
+                   VIA23LG_C_2x1    VIA23LG_C_2x1(r) VIA23BAR1_C_2x1(r) VIA23SQ_C_2x1(r)
+                   VIA23SQ_C_1x2    VIA23BAR2_C_1x2    VIA23SQ_1x2    VIA23SQ_2x1(r)
+                   VIA23BAR2_C_2x1(r) VIA23BAR1_C_1x2(r) VIA23BAR1_C_1x2    VIA23LG_C_1x2   
+                   VIA23LG_C_1x2(r) VIA23SQ_C_1x2(r) VIA23SQ_1x2(r) VIA23BAR2_C_1x2(r)
+
+   VIA2_33LG(r) -> VIA23SQ_C_2x1    VIA23BAR2_C_2x1    VIA23SQ_2x1    VIA23BAR1_C_2x1   
+                   VIA23LG_C_2x1    VIA23LG_C_2x1(r) VIA23BAR1_C_2x1(r) VIA23SQ_C_2x1(r)
+                   VIA23SQ_C_1x2    VIA23BAR2_C_1x2    VIA23SQ_1x2    VIA23SQ_2x1(r)
+                   VIA23BAR2_C_2x1(r) VIA23BAR1_C_1x2(r) VIA23BAR1_C_1x2    VIA23LG_C_1x2   
+                   VIA23LG_C_1x2(r) VIA23SQ_C_1x2(r) VIA23SQ_1x2(r) VIA23BAR2_C_1x2(r)
+
+  VIA23_3SQ_C    -> VIA23SQ_C_2x1    VIA23BAR2_C_2x1    VIA23SQ_2x1    VIA23BAR1_C_2x1   
+                   VIA23LG_C_2x1    VIA23LG_C_2x1(r) VIA23BAR1_C_2x1(r) VIA23SQ_C_2x1(r)
+                   VIA23SQ_C_1x2    VIA23BAR2_C_1x2    VIA23SQ_1x2    VIA23SQ_2x1(r)
+                   VIA23BAR2_C_2x1(r) VIA23BAR1_C_1x2(r) VIA23BAR1_C_1x2    VIA23LG_C_1x2   
+                   VIA23LG_C_1x2(r) VIA23SQ_C_1x2(r) VIA23SQ_1x2(r) VIA23BAR2_C_1x2(r)
+
+  VIA23_3SQ_C(r) -> VIA23SQ_C_2x1    VIA23BAR2_C_2x1    VIA23SQ_2x1    VIA23BAR1_C_2x1   
+                   VIA23LG_C_2x1    VIA23LG_C_2x1(r) VIA23BAR1_C_2x1(r) VIA23SQ_C_2x1(r)
+                   VIA23SQ_C_1x2    VIA23BAR2_C_1x2    VIA23SQ_1x2    VIA23SQ_2x1(r)
+                   VIA23BAR2_C_2x1(r) VIA23BAR1_C_1x2(r) VIA23BAR1_C_1x2    VIA23LG_C_1x2   
+                   VIA23LG_C_1x2(r) VIA23SQ_C_1x2(r) VIA23SQ_1x2(r) VIA23BAR2_C_1x2(r)
+
+  VIA23_3BAR1_C    -> VIA23SQ_C_2x1    VIA23BAR2_C_2x1    VIA23SQ_2x1    VIA23BAR1_C_2x1   
+                   VIA23LG_C_2x1    VIA23LG_C_2x1(r) VIA23BAR1_C_2x1(r) VIA23SQ_C_2x1(r)
+                   VIA23SQ_C_1x2    VIA23BAR2_C_1x2    VIA23SQ_1x2    VIA23SQ_2x1(r)
+                   VIA23BAR2_C_2x1(r) VIA23BAR1_C_1x2(r) VIA23BAR1_C_1x2    VIA23LG_C_1x2   
+                   VIA23LG_C_1x2(r) VIA23SQ_C_1x2(r) VIA23SQ_1x2(r) VIA23BAR2_C_1x2(r)
+
+  VIA23_3BAR1_C(r) -> VIA23SQ_C_2x1    VIA23BAR2_C_2x1    VIA23SQ_2x1    VIA23BAR1_C_2x1   
+                   VIA23LG_C_2x1    VIA23LG_C_2x1(r) VIA23BAR1_C_2x1(r) VIA23SQ_C_2x1(r)
+                   VIA23SQ_C_1x2    VIA23BAR2_C_1x2    VIA23SQ_1x2    VIA23SQ_2x1(r)
+                   VIA23BAR2_C_2x1(r) VIA23BAR1_C_1x2(r) VIA23BAR1_C_1x2    VIA23LG_C_1x2   
+                   VIA23LG_C_1x2(r) VIA23SQ_C_1x2(r) VIA23SQ_1x2(r) VIA23BAR2_C_1x2(r)
+
+  VIA23_3BAR2_C    -> VIA23SQ_C_2x1    VIA23BAR2_C_2x1    VIA23SQ_2x1    VIA23BAR1_C_2x1   
+                   VIA23LG_C_2x1    VIA23LG_C_2x1(r) VIA23BAR1_C_2x1(r) VIA23SQ_C_2x1(r)
+                   VIA23SQ_C_1x2    VIA23BAR2_C_1x2    VIA23SQ_1x2    VIA23SQ_2x1(r)
+                   VIA23BAR2_C_2x1(r) VIA23BAR1_C_1x2(r) VIA23BAR1_C_1x2    VIA23LG_C_1x2   
+                   VIA23LG_C_1x2(r) VIA23SQ_C_1x2(r) VIA23SQ_1x2(r) VIA23BAR2_C_1x2(r)
+
+  VIA23_3BAR2_C(r) -> VIA23SQ_C_2x1    VIA23BAR2_C_2x1    VIA23SQ_2x1    VIA23BAR1_C_2x1   
+                   VIA23LG_C_2x1    VIA23LG_C_2x1(r) VIA23BAR1_C_2x1(r) VIA23SQ_C_2x1(r)
+                   VIA23SQ_C_1x2    VIA23BAR2_C_1x2    VIA23SQ_1x2    VIA23SQ_2x1(r)
+                   VIA23BAR2_C_2x1(r) VIA23BAR1_C_1x2(r) VIA23BAR1_C_1x2    VIA23LG_C_1x2   
+                   VIA23LG_C_1x2(r) VIA23SQ_C_1x2(r) VIA23SQ_1x2(r) VIA23BAR2_C_1x2(r)
+
+  VIA23_3LG_C    -> VIA23SQ_C_2x1    VIA23BAR2_C_2x1    VIA23SQ_2x1    VIA23BAR1_C_2x1   
+                   VIA23LG_C_2x1    VIA23LG_C_2x1(r) VIA23BAR1_C_2x1(r) VIA23SQ_C_2x1(r)
+                   VIA23SQ_C_1x2    VIA23BAR2_C_1x2    VIA23SQ_1x2    VIA23SQ_2x1(r)
+                   VIA23BAR2_C_2x1(r) VIA23BAR1_C_1x2(r) VIA23BAR1_C_1x2    VIA23LG_C_1x2   
+                   VIA23LG_C_1x2(r) VIA23SQ_C_1x2(r) VIA23SQ_1x2(r) VIA23BAR2_C_1x2(r)
+
+  VIA23_3LG_C(r) -> VIA23SQ_C_2x1    VIA23BAR2_C_2x1    VIA23SQ_2x1    VIA23BAR1_C_2x1   
+                   VIA23LG_C_2x1    VIA23LG_C_2x1(r) VIA23BAR1_C_2x1(r) VIA23SQ_C_2x1(r)
+                   VIA23SQ_C_1x2    VIA23BAR2_C_1x2    VIA23SQ_1x2    VIA23SQ_2x1(r)
+                   VIA23BAR2_C_2x1(r) VIA23BAR1_C_1x2(r) VIA23BAR1_C_1x2    VIA23LG_C_1x2   
+                   VIA23LG_C_1x2(r) VIA23SQ_C_1x2(r) VIA23SQ_1x2(r) VIA23BAR2_C_1x2(r)
+
+   VIA23_3SQ    -> VIA23SQ_C_2x1    VIA23BAR2_C_2x1    VIA23SQ_2x1    VIA23BAR1_C_2x1   
+                   VIA23LG_C_2x1    VIA23LG_C_2x1(r) VIA23BAR1_C_2x1(r) VIA23SQ_C_2x1(r)
+                   VIA23SQ_C_1x2    VIA23BAR2_C_1x2    VIA23SQ_1x2    VIA23SQ_2x1(r)
+                   VIA23BAR2_C_2x1(r) VIA23BAR1_C_1x2(r) VIA23BAR1_C_1x2    VIA23LG_C_1x2   
+                   VIA23LG_C_1x2(r) VIA23SQ_C_1x2(r) VIA23SQ_1x2(r) VIA23BAR2_C_1x2(r)
+
+   VIA23_3SQ(r) -> VIA23SQ_C_2x1    VIA23BAR2_C_2x1    VIA23SQ_2x1    VIA23BAR1_C_2x1   
+                   VIA23LG_C_2x1    VIA23LG_C_2x1(r) VIA23BAR1_C_2x1(r) VIA23SQ_C_2x1(r)
+                   VIA23SQ_C_1x2    VIA23BAR2_C_1x2    VIA23SQ_1x2    VIA23SQ_2x1(r)
+                   VIA23BAR2_C_2x1(r) VIA23BAR1_C_1x2(r) VIA23BAR1_C_1x2    VIA23LG_C_1x2   
+                   VIA23LG_C_1x2(r) VIA23SQ_C_1x2(r) VIA23SQ_1x2(r) VIA23BAR2_C_1x2(r)
+
+  VIA23_3BAR1    -> VIA23SQ_C_2x1    VIA23BAR2_C_2x1    VIA23SQ_2x1    VIA23BAR1_C_2x1   
+                   VIA23LG_C_2x1    VIA23LG_C_2x1(r) VIA23BAR1_C_2x1(r) VIA23SQ_C_2x1(r)
+                   VIA23SQ_C_1x2    VIA23BAR2_C_1x2    VIA23SQ_1x2    VIA23SQ_2x1(r)
+                   VIA23BAR2_C_2x1(r) VIA23BAR1_C_1x2(r) VIA23BAR1_C_1x2    VIA23LG_C_1x2   
+                   VIA23LG_C_1x2(r) VIA23SQ_C_1x2(r) VIA23SQ_1x2(r) VIA23BAR2_C_1x2(r)
+
+  VIA23_3BAR1(r) -> VIA23SQ_C_2x1    VIA23BAR2_C_2x1    VIA23SQ_2x1    VIA23BAR1_C_2x1   
+                   VIA23LG_C_2x1    VIA23LG_C_2x1(r) VIA23BAR1_C_2x1(r) VIA23SQ_C_2x1(r)
+                   VIA23SQ_C_1x2    VIA23BAR2_C_1x2    VIA23SQ_1x2    VIA23SQ_2x1(r)
+                   VIA23BAR2_C_2x1(r) VIA23BAR1_C_1x2(r) VIA23BAR1_C_1x2    VIA23LG_C_1x2   
+                   VIA23LG_C_1x2(r) VIA23SQ_C_1x2(r) VIA23SQ_1x2(r) VIA23BAR2_C_1x2(r)
+
+  VIA23_3BAR2    -> VIA23SQ_C_2x1    VIA23BAR2_C_2x1    VIA23SQ_2x1    VIA23BAR1_C_2x1   
+                   VIA23LG_C_2x1    VIA23LG_C_2x1(r) VIA23BAR1_C_2x1(r) VIA23SQ_C_2x1(r)
+                   VIA23SQ_C_1x2    VIA23BAR2_C_1x2    VIA23SQ_1x2    VIA23SQ_2x1(r)
+                   VIA23BAR2_C_2x1(r) VIA23BAR1_C_1x2(r) VIA23BAR1_C_1x2    VIA23LG_C_1x2   
+                   VIA23LG_C_1x2(r) VIA23SQ_C_1x2(r) VIA23SQ_1x2(r) VIA23BAR2_C_1x2(r)
+
+  VIA23_3BAR2(r) -> VIA23SQ_C_2x1    VIA23BAR2_C_2x1    VIA23SQ_2x1    VIA23BAR1_C_2x1   
+                   VIA23LG_C_2x1    VIA23LG_C_2x1(r) VIA23BAR1_C_2x1(r) VIA23SQ_C_2x1(r)
+                   VIA23SQ_C_1x2    VIA23BAR2_C_1x2    VIA23SQ_1x2    VIA23SQ_2x1(r)
+                   VIA23BAR2_C_2x1(r) VIA23BAR1_C_1x2(r) VIA23BAR1_C_1x2    VIA23LG_C_1x2   
+                   VIA23LG_C_1x2(r) VIA23SQ_C_1x2(r) VIA23SQ_1x2(r) VIA23BAR2_C_1x2(r)
+
+   VIA23_3LG    -> VIA23SQ_C_2x1    VIA23BAR2_C_2x1    VIA23SQ_2x1    VIA23BAR1_C_2x1   
+                   VIA23LG_C_2x1    VIA23LG_C_2x1(r) VIA23BAR1_C_2x1(r) VIA23SQ_C_2x1(r)
+                   VIA23SQ_C_1x2    VIA23BAR2_C_1x2    VIA23SQ_1x2    VIA23SQ_2x1(r)
+                   VIA23BAR2_C_2x1(r) VIA23BAR1_C_1x2(r) VIA23BAR1_C_1x2    VIA23LG_C_1x2   
+                   VIA23LG_C_1x2(r) VIA23SQ_C_1x2(r) VIA23SQ_1x2(r) VIA23BAR2_C_1x2(r)
+
+   VIA23_3LG(r) -> VIA23SQ_C_2x1    VIA23BAR2_C_2x1    VIA23SQ_2x1    VIA23BAR1_C_2x1   
+                   VIA23LG_C_2x1    VIA23LG_C_2x1(r) VIA23BAR1_C_2x1(r) VIA23SQ_C_2x1(r)
+                   VIA23SQ_C_1x2    VIA23BAR2_C_1x2    VIA23SQ_1x2    VIA23SQ_2x1(r)
+                   VIA23BAR2_C_2x1(r) VIA23BAR1_C_1x2(r) VIA23BAR1_C_1x2    VIA23LG_C_1x2   
+                   VIA23LG_C_1x2(r) VIA23SQ_C_1x2(r) VIA23SQ_1x2(r) VIA23BAR2_C_1x2(r)
+
+  VIA2_33_3SQ_C    -> VIA23SQ_C_2x1    VIA23BAR2_C_2x1    VIA23SQ_2x1    VIA23BAR1_C_2x1   
+                   VIA23LG_C_2x1    VIA23LG_C_2x1(r) VIA23BAR1_C_2x1(r) VIA23SQ_C_2x1(r)
+                   VIA23SQ_C_1x2    VIA23BAR2_C_1x2    VIA23SQ_1x2    VIA23SQ_2x1(r)
+                   VIA23BAR2_C_2x1(r) VIA23BAR1_C_1x2(r) VIA23BAR1_C_1x2    VIA23LG_C_1x2   
+                   VIA23LG_C_1x2(r) VIA23SQ_C_1x2(r) VIA23SQ_1x2(r) VIA23BAR2_C_1x2(r)
+
+  VIA2_33_3SQ_C(r) -> VIA23SQ_C_2x1    VIA23BAR2_C_2x1    VIA23SQ_2x1    VIA23BAR1_C_2x1   
+                   VIA23LG_C_2x1    VIA23LG_C_2x1(r) VIA23BAR1_C_2x1(r) VIA23SQ_C_2x1(r)
+                   VIA23SQ_C_1x2    VIA23BAR2_C_1x2    VIA23SQ_1x2    VIA23SQ_2x1(r)
+                   VIA23BAR2_C_2x1(r) VIA23BAR1_C_1x2(r) VIA23BAR1_C_1x2    VIA23LG_C_1x2   
+                   VIA23LG_C_1x2(r) VIA23SQ_C_1x2(r) VIA23SQ_1x2(r) VIA23BAR2_C_1x2(r)
+
+  VIA2_33_3BAR1_C    -> VIA23SQ_C_2x1    VIA23BAR2_C_2x1    VIA23SQ_2x1    VIA23BAR1_C_2x1   
+                   VIA23LG_C_2x1    VIA23LG_C_2x1(r) VIA23BAR1_C_2x1(r) VIA23SQ_C_2x1(r)
+                   VIA23SQ_C_1x2    VIA23BAR2_C_1x2    VIA23SQ_1x2    VIA23SQ_2x1(r)
+                   VIA23BAR2_C_2x1(r) VIA23BAR1_C_1x2(r) VIA23BAR1_C_1x2    VIA23LG_C_1x2   
+                   VIA23LG_C_1x2(r) VIA23SQ_C_1x2(r) VIA23SQ_1x2(r) VIA23BAR2_C_1x2(r)
+
+  VIA2_33_3BAR1_C(r) -> VIA23SQ_C_2x1    VIA23BAR2_C_2x1    VIA23SQ_2x1    VIA23BAR1_C_2x1   
+                   VIA23LG_C_2x1    VIA23LG_C_2x1(r) VIA23BAR1_C_2x1(r) VIA23SQ_C_2x1(r)
+                   VIA23SQ_C_1x2    VIA23BAR2_C_1x2    VIA23SQ_1x2    VIA23SQ_2x1(r)
+                   VIA23BAR2_C_2x1(r) VIA23BAR1_C_1x2(r) VIA23BAR1_C_1x2    VIA23LG_C_1x2   
+                   VIA23LG_C_1x2(r) VIA23SQ_C_1x2(r) VIA23SQ_1x2(r) VIA23BAR2_C_1x2(r)
+
+  VIA2_33_3BAR2_C    -> VIA23SQ_C_2x1    VIA23BAR2_C_2x1    VIA23SQ_2x1    VIA23BAR1_C_2x1   
+                   VIA23LG_C_2x1    VIA23LG_C_2x1(r) VIA23BAR1_C_2x1(r) VIA23SQ_C_2x1(r)
+                   VIA23SQ_C_1x2    VIA23BAR2_C_1x2    VIA23SQ_1x2    VIA23SQ_2x1(r)
+                   VIA23BAR2_C_2x1(r) VIA23BAR1_C_1x2(r) VIA23BAR1_C_1x2    VIA23LG_C_1x2   
+                   VIA23LG_C_1x2(r) VIA23SQ_C_1x2(r) VIA23SQ_1x2(r) VIA23BAR2_C_1x2(r)
+
+  VIA2_33_3BAR2_C(r) -> VIA23SQ_C_2x1    VIA23BAR2_C_2x1    VIA23SQ_2x1    VIA23BAR1_C_2x1   
+                   VIA23LG_C_2x1    VIA23LG_C_2x1(r) VIA23BAR1_C_2x1(r) VIA23SQ_C_2x1(r)
+                   VIA23SQ_C_1x2    VIA23BAR2_C_1x2    VIA23SQ_1x2    VIA23SQ_2x1(r)
+                   VIA23BAR2_C_2x1(r) VIA23BAR1_C_1x2(r) VIA23BAR1_C_1x2    VIA23LG_C_1x2   
+                   VIA23LG_C_1x2(r) VIA23SQ_C_1x2(r) VIA23SQ_1x2(r) VIA23BAR2_C_1x2(r)
+
+  VIA2_33_3LG_C    -> VIA23SQ_C_2x1    VIA23BAR2_C_2x1    VIA23SQ_2x1    VIA23BAR1_C_2x1   
+                   VIA23LG_C_2x1    VIA23LG_C_2x1(r) VIA23BAR1_C_2x1(r) VIA23SQ_C_2x1(r)
+                   VIA23SQ_C_1x2    VIA23BAR2_C_1x2    VIA23SQ_1x2    VIA23SQ_2x1(r)
+                   VIA23BAR2_C_2x1(r) VIA23BAR1_C_1x2(r) VIA23BAR1_C_1x2    VIA23LG_C_1x2   
+                   VIA23LG_C_1x2(r) VIA23SQ_C_1x2(r) VIA23SQ_1x2(r) VIA23BAR2_C_1x2(r)
+
+  VIA2_33_3LG_C(r) -> VIA23SQ_C_2x1    VIA23BAR2_C_2x1    VIA23SQ_2x1    VIA23BAR1_C_2x1   
+                   VIA23LG_C_2x1    VIA23LG_C_2x1(r) VIA23BAR1_C_2x1(r) VIA23SQ_C_2x1(r)
+                   VIA23SQ_C_1x2    VIA23BAR2_C_1x2    VIA23SQ_1x2    VIA23SQ_2x1(r)
+                   VIA23BAR2_C_2x1(r) VIA23BAR1_C_1x2(r) VIA23BAR1_C_1x2    VIA23LG_C_1x2   
+                   VIA23LG_C_1x2(r) VIA23SQ_C_1x2(r) VIA23SQ_1x2(r) VIA23BAR2_C_1x2(r)
+
+  VIA2_33_3SQ    -> VIA23SQ_C_2x1    VIA23BAR2_C_2x1    VIA23SQ_2x1    VIA23BAR1_C_2x1   
+                   VIA23LG_C_2x1    VIA23LG_C_2x1(r) VIA23BAR1_C_2x1(r) VIA23SQ_C_2x1(r)
+                   VIA23SQ_C_1x2    VIA23BAR2_C_1x2    VIA23SQ_1x2    VIA23SQ_2x1(r)
+                   VIA23BAR2_C_2x1(r) VIA23BAR1_C_1x2(r) VIA23BAR1_C_1x2    VIA23LG_C_1x2   
+                   VIA23LG_C_1x2(r) VIA23SQ_C_1x2(r) VIA23SQ_1x2(r) VIA23BAR2_C_1x2(r)
+
+  VIA2_33_3SQ(r) -> VIA23SQ_C_2x1    VIA23BAR2_C_2x1    VIA23SQ_2x1    VIA23BAR1_C_2x1   
+                   VIA23LG_C_2x1    VIA23LG_C_2x1(r) VIA23BAR1_C_2x1(r) VIA23SQ_C_2x1(r)
+                   VIA23SQ_C_1x2    VIA23BAR2_C_1x2    VIA23SQ_1x2    VIA23SQ_2x1(r)
+                   VIA23BAR2_C_2x1(r) VIA23BAR1_C_1x2(r) VIA23BAR1_C_1x2    VIA23LG_C_1x2   
+                   VIA23LG_C_1x2(r) VIA23SQ_C_1x2(r) VIA23SQ_1x2(r) VIA23BAR2_C_1x2(r)
+
+  VIA2_33_3BAR1    -> VIA23SQ_C_2x1    VIA23BAR2_C_2x1    VIA23SQ_2x1    VIA23BAR1_C_2x1   
+                   VIA23LG_C_2x1    VIA23LG_C_2x1(r) VIA23BAR1_C_2x1(r) VIA23SQ_C_2x1(r)
+                   VIA23SQ_C_1x2    VIA23BAR2_C_1x2    VIA23SQ_1x2    VIA23SQ_2x1(r)
+                   VIA23BAR2_C_2x1(r) VIA23BAR1_C_1x2(r) VIA23BAR1_C_1x2    VIA23LG_C_1x2   
+                   VIA23LG_C_1x2(r) VIA23SQ_C_1x2(r) VIA23SQ_1x2(r) VIA23BAR2_C_1x2(r)
+
+  VIA2_33_3BAR1(r) -> VIA23SQ_C_2x1    VIA23BAR2_C_2x1    VIA23SQ_2x1    VIA23BAR1_C_2x1   
+                   VIA23LG_C_2x1    VIA23LG_C_2x1(r) VIA23BAR1_C_2x1(r) VIA23SQ_C_2x1(r)
+                   VIA23SQ_C_1x2    VIA23BAR2_C_1x2    VIA23SQ_1x2    VIA23SQ_2x1(r)
+                   VIA23BAR2_C_2x1(r) VIA23BAR1_C_1x2(r) VIA23BAR1_C_1x2    VIA23LG_C_1x2   
+                   VIA23LG_C_1x2(r) VIA23SQ_C_1x2(r) VIA23SQ_1x2(r) VIA23BAR2_C_1x2(r)
+
+  VIA2_33_3BAR2    -> VIA23SQ_C_2x1    VIA23BAR2_C_2x1    VIA23SQ_2x1    VIA23BAR1_C_2x1   
+                   VIA23LG_C_2x1    VIA23LG_C_2x1(r) VIA23BAR1_C_2x1(r) VIA23SQ_C_2x1(r)
+                   VIA23SQ_C_1x2    VIA23BAR2_C_1x2    VIA23SQ_1x2    VIA23SQ_2x1(r)
+                   VIA23BAR2_C_2x1(r) VIA23BAR1_C_1x2(r) VIA23BAR1_C_1x2    VIA23LG_C_1x2   
+                   VIA23LG_C_1x2(r) VIA23SQ_C_1x2(r) VIA23SQ_1x2(r) VIA23BAR2_C_1x2(r)
+
+  VIA2_33_3BAR2(r) -> VIA23SQ_C_2x1    VIA23BAR2_C_2x1    VIA23SQ_2x1    VIA23BAR1_C_2x1   
+                   VIA23LG_C_2x1    VIA23LG_C_2x1(r) VIA23BAR1_C_2x1(r) VIA23SQ_C_2x1(r)
+                   VIA23SQ_C_1x2    VIA23BAR2_C_1x2    VIA23SQ_1x2    VIA23SQ_2x1(r)
+                   VIA23BAR2_C_2x1(r) VIA23BAR1_C_1x2(r) VIA23BAR1_C_1x2    VIA23LG_C_1x2   
+                   VIA23LG_C_1x2(r) VIA23SQ_C_1x2(r) VIA23SQ_1x2(r) VIA23BAR2_C_1x2(r)
+
+  VIA2_33_3LG    -> VIA23SQ_C_2x1    VIA23BAR2_C_2x1    VIA23SQ_2x1    VIA23BAR1_C_2x1   
+                   VIA23LG_C_2x1    VIA23LG_C_2x1(r) VIA23BAR1_C_2x1(r) VIA23SQ_C_2x1(r)
+                   VIA23SQ_C_1x2    VIA23BAR2_C_1x2    VIA23SQ_1x2    VIA23SQ_2x1(r)
+                   VIA23BAR2_C_2x1(r) VIA23BAR1_C_1x2(r) VIA23BAR1_C_1x2    VIA23LG_C_1x2   
+                   VIA23LG_C_1x2(r) VIA23SQ_C_1x2(r) VIA23SQ_1x2(r) VIA23BAR2_C_1x2(r)
+
+  VIA2_33_3LG(r) -> VIA23SQ_C_2x1    VIA23BAR2_C_2x1    VIA23SQ_2x1    VIA23BAR1_C_2x1   
+                   VIA23LG_C_2x1    VIA23LG_C_2x1(r) VIA23BAR1_C_2x1(r) VIA23SQ_C_2x1(r)
+                   VIA23SQ_C_1x2    VIA23BAR2_C_1x2    VIA23SQ_1x2    VIA23SQ_2x1(r)
+                   VIA23BAR2_C_2x1(r) VIA23BAR1_C_1x2(r) VIA23BAR1_C_1x2    VIA23LG_C_1x2   
+                   VIA23LG_C_1x2(r) VIA23SQ_C_1x2(r) VIA23SQ_1x2(r) VIA23BAR2_C_1x2(r)
+
+   VIA34SQ_C    -> VIA34SQ_C_1x2(r) VIA34SQ_1x2(r) VIA34SQ_1x2    VIA34SQ_C_1x2   
+                   VIA34SQ_C_2x1(r) VIA34SQ_2x1(r) VIA34SQ_2x1    VIA34SQ_C_2x1   
+
+   VIA34SQ_C(r) -> VIA34SQ_C_1x2(r) VIA34SQ_1x2(r) VIA34SQ_1x2    VIA34SQ_C_1x2   
+                   VIA34SQ_C_2x1(r) VIA34SQ_2x1(r) VIA34SQ_2x1    VIA34SQ_C_2x1   
+
+  VIA34BAR1_C    -> VIA34SQ_C_1x2(r) VIA34SQ_1x2(r) VIA34SQ_1x2    VIA34SQ_C_1x2   
+                   VIA34SQ_C_2x1(r) VIA34SQ_2x1(r) VIA34SQ_2x1    VIA34SQ_C_2x1   
+
+  VIA34BAR1_C(r) -> VIA34SQ_C_1x2(r) VIA34SQ_1x2(r) VIA34SQ_1x2    VIA34SQ_C_1x2   
+                   VIA34SQ_C_2x1(r) VIA34SQ_2x1(r) VIA34SQ_2x1    VIA34SQ_C_2x1   
+
+  VIA34BAR2_C    -> VIA34SQ_C_1x2(r) VIA34SQ_1x2(r) VIA34SQ_1x2    VIA34SQ_C_1x2   
+                   VIA34SQ_C_2x1(r) VIA34SQ_2x1(r) VIA34SQ_2x1    VIA34SQ_C_2x1   
+
+  VIA34BAR2_C(r) -> VIA34SQ_C_1x2(r) VIA34SQ_1x2(r) VIA34SQ_1x2    VIA34SQ_C_1x2   
+                   VIA34SQ_C_2x1(r) VIA34SQ_2x1(r) VIA34SQ_2x1    VIA34SQ_C_2x1   
+
+   VIA34LG_C    -> VIA34SQ_C_1x2(r) VIA34SQ_1x2(r) VIA34SQ_1x2    VIA34SQ_C_1x2   
+                   VIA34SQ_C_2x1(r) VIA34SQ_2x1(r) VIA34SQ_2x1    VIA34SQ_C_2x1   
+
+     VIA34SQ    -> VIA34SQ_C_1x2(r) VIA34SQ_1x2(r) VIA34SQ_1x2    VIA34SQ_C_1x2   
+                   VIA34SQ_C_2x1(r) VIA34SQ_2x1(r) VIA34SQ_2x1    VIA34SQ_C_2x1   
+
+     VIA34SQ(r) -> VIA34SQ_C_1x2(r) VIA34SQ_1x2(r) VIA34SQ_1x2    VIA34SQ_C_1x2   
+                   VIA34SQ_C_2x1(r) VIA34SQ_2x1(r) VIA34SQ_2x1    VIA34SQ_C_2x1   
+
+   VIA34BAR1    -> VIA34SQ_C_1x2(r) VIA34SQ_1x2(r) VIA34SQ_1x2    VIA34SQ_C_1x2   
+                   VIA34SQ_C_2x1(r) VIA34SQ_2x1(r) VIA34SQ_2x1    VIA34SQ_C_2x1   
+
+   VIA34BAR1(r) -> VIA34SQ_C_1x2(r) VIA34SQ_1x2(r) VIA34SQ_1x2    VIA34SQ_C_1x2   
+                   VIA34SQ_C_2x1(r) VIA34SQ_2x1(r) VIA34SQ_2x1    VIA34SQ_C_2x1   
+
+   VIA34BAR2    -> VIA34SQ_C_1x2(r) VIA34SQ_1x2(r) VIA34SQ_1x2    VIA34SQ_C_1x2   
+                   VIA34SQ_C_2x1(r) VIA34SQ_2x1(r) VIA34SQ_2x1    VIA34SQ_C_2x1   
+
+   VIA34BAR2(r) -> VIA34SQ_C_1x2(r) VIA34SQ_1x2(r) VIA34SQ_1x2    VIA34SQ_C_1x2   
+                   VIA34SQ_C_2x1(r) VIA34SQ_2x1(r) VIA34SQ_2x1    VIA34SQ_C_2x1   
+
+     VIA34LG    -> VIA34SQ_C_1x2(r) VIA34SQ_1x2(r) VIA34SQ_1x2    VIA34SQ_C_1x2   
+                   VIA34SQ_C_2x1(r) VIA34SQ_2x1(r) VIA34SQ_2x1    VIA34SQ_C_2x1   
+
+  VIA3_34SQ_C    -> VIA34SQ_C_1x2(r) VIA34SQ_1x2(r) VIA34SQ_1x2    VIA34SQ_C_1x2   
+                   VIA34SQ_C_2x1(r) VIA34SQ_2x1(r) VIA34SQ_2x1    VIA34SQ_C_2x1   
+
+  VIA3_34SQ_C(r) -> VIA34SQ_C_1x2(r) VIA34SQ_1x2(r) VIA34SQ_1x2    VIA34SQ_C_1x2   
+                   VIA34SQ_C_2x1(r) VIA34SQ_2x1(r) VIA34SQ_2x1    VIA34SQ_C_2x1   
+
+  VIA3_34BAR1_C    -> VIA34SQ_C_1x2(r) VIA34SQ_1x2(r) VIA34SQ_1x2    VIA34SQ_C_1x2   
+                   VIA34SQ_C_2x1(r) VIA34SQ_2x1(r) VIA34SQ_2x1    VIA34SQ_C_2x1   
+
+  VIA3_34BAR1_C(r) -> VIA34SQ_C_1x2(r) VIA34SQ_1x2(r) VIA34SQ_1x2    VIA34SQ_C_1x2   
+                   VIA34SQ_C_2x1(r) VIA34SQ_2x1(r) VIA34SQ_2x1    VIA34SQ_C_2x1   
+
+  VIA3_34BAR2_C    -> VIA34SQ_C_1x2(r) VIA34SQ_1x2(r) VIA34SQ_1x2    VIA34SQ_C_1x2   
+                   VIA34SQ_C_2x1(r) VIA34SQ_2x1(r) VIA34SQ_2x1    VIA34SQ_C_2x1   
+
+  VIA3_34BAR2_C(r) -> VIA34SQ_C_1x2(r) VIA34SQ_1x2(r) VIA34SQ_1x2    VIA34SQ_C_1x2   
+                   VIA34SQ_C_2x1(r) VIA34SQ_2x1(r) VIA34SQ_2x1    VIA34SQ_C_2x1   
+
+  VIA3_34LG_C    -> VIA34SQ_C_1x2(r) VIA34SQ_1x2(r) VIA34SQ_1x2    VIA34SQ_C_1x2   
+                   VIA34SQ_C_2x1(r) VIA34SQ_2x1(r) VIA34SQ_2x1    VIA34SQ_C_2x1   
+
+   VIA3_34SQ    -> VIA34SQ_C_1x2(r) VIA34SQ_1x2(r) VIA34SQ_1x2    VIA34SQ_C_1x2   
+                   VIA34SQ_C_2x1(r) VIA34SQ_2x1(r) VIA34SQ_2x1    VIA34SQ_C_2x1   
+
+   VIA3_34SQ(r) -> VIA34SQ_C_1x2(r) VIA34SQ_1x2(r) VIA34SQ_1x2    VIA34SQ_C_1x2   
+                   VIA34SQ_C_2x1(r) VIA34SQ_2x1(r) VIA34SQ_2x1    VIA34SQ_C_2x1   
+
+  VIA3_34BAR1    -> VIA34SQ_C_1x2(r) VIA34SQ_1x2(r) VIA34SQ_1x2    VIA34SQ_C_1x2   
+                   VIA34SQ_C_2x1(r) VIA34SQ_2x1(r) VIA34SQ_2x1    VIA34SQ_C_2x1   
+
+  VIA3_34BAR1(r) -> VIA34SQ_C_1x2(r) VIA34SQ_1x2(r) VIA34SQ_1x2    VIA34SQ_C_1x2   
+                   VIA34SQ_C_2x1(r) VIA34SQ_2x1(r) VIA34SQ_2x1    VIA34SQ_C_2x1   
+
+  VIA3_34BAR2    -> VIA34SQ_C_1x2(r) VIA34SQ_1x2(r) VIA34SQ_1x2    VIA34SQ_C_1x2   
+                   VIA34SQ_C_2x1(r) VIA34SQ_2x1(r) VIA34SQ_2x1    VIA34SQ_C_2x1   
+
+  VIA3_34BAR2(r) -> VIA34SQ_C_1x2(r) VIA34SQ_1x2(r) VIA34SQ_1x2    VIA34SQ_C_1x2   
+                   VIA34SQ_C_2x1(r) VIA34SQ_2x1(r) VIA34SQ_2x1    VIA34SQ_C_2x1   
+
+    VIA3_4LG    -> VIA34SQ_C_1x2(r) VIA34SQ_1x2(r) VIA34SQ_1x2    VIA34SQ_C_1x2   
+                   VIA34SQ_C_2x1(r) VIA34SQ_2x1(r) VIA34SQ_2x1    VIA34SQ_C_2x1   
+
+  VIA45BAR1_C    -> VIA45SQ_2x1    VIA45SQ_2x1(r) VIA45SQ_1x2    VIA45SQ_1x2(r)
+
+  VIA45BAR1_C(r) -> VIA45SQ_2x1    VIA45SQ_2x1(r) VIA45SQ_1x2    VIA45SQ_1x2(r)
+
+  VIA45BAR2_C    -> VIA45SQ_2x1    VIA45SQ_2x1(r) VIA45SQ_1x2    VIA45SQ_1x2(r)
+
+  VIA45BAR2_C(r) -> VIA45SQ_2x1    VIA45SQ_2x1(r) VIA45SQ_1x2    VIA45SQ_1x2(r)
+
+   VIA45LG_C    -> VIA45SQ_2x1    VIA45SQ_2x1(r) VIA45SQ_1x2    VIA45SQ_1x2(r)
+
+     VIA45SQ    -> VIA45SQ_2x1    VIA45SQ_2x1(r) VIA45SQ_1x2    VIA45SQ_1x2(r)
+
+     VIA45SQ(r) -> VIA45SQ_2x1    VIA45SQ_2x1(r) VIA45SQ_1x2    VIA45SQ_1x2(r)
+
+   VIA45BAR1    -> VIA45SQ_2x1    VIA45SQ_2x1(r) VIA45SQ_1x2    VIA45SQ_1x2(r)
+
+   VIA45BAR1(r) -> VIA45SQ_2x1    VIA45SQ_2x1(r) VIA45SQ_1x2    VIA45SQ_1x2(r)
+
+   VIA45BAR2    -> VIA45SQ_2x1    VIA45SQ_2x1(r) VIA45SQ_1x2    VIA45SQ_1x2(r)
+
+   VIA45BAR2(r) -> VIA45SQ_2x1    VIA45SQ_2x1(r) VIA45SQ_1x2    VIA45SQ_1x2(r)
+
+     VIA45LG    -> VIA45SQ_2x1    VIA45SQ_2x1(r) VIA45SQ_1x2    VIA45SQ_1x2(r)
+
+   VIA56SQ_C    -> VIA56SQ_1x2    VIA56SQ_2x1   
+
+   VIA56SQ_C(r) -> VIA56SQ_1x2    VIA56SQ_2x1   
+
+  VIA56BAR1_C    -> VIA56SQ_1x2    VIA56SQ_2x1   
+
+  VIA56BAR1_C(r) -> VIA56SQ_1x2    VIA56SQ_2x1   
+
+  VIA56BAR2_C    -> VIA56SQ_1x2    VIA56SQ_2x1   
+
+  VIA56BAR2_C(r) -> VIA56SQ_1x2    VIA56SQ_2x1   
+
+   VIA56LG_C    -> VIA56SQ_1x2    VIA56SQ_2x1   
+
+   VIA56LG_C(r) -> VIA56SQ_1x2    VIA56SQ_2x1   
+
+     VIA56SQ    -> VIA56SQ_1x2    VIA56SQ_2x1   
+
+   VIA56BAR1    -> VIA56SQ_1x2    VIA56SQ_2x1   
+
+   VIA56BAR1(r) -> VIA56SQ_1x2    VIA56SQ_2x1   
+
+   VIA56BAR2    -> VIA56SQ_1x2    VIA56SQ_2x1   
+
+   VIA56BAR2(r) -> VIA56SQ_1x2    VIA56SQ_2x1   
+
+     VIA56LG    -> VIA56SQ_1x2    VIA56SQ_2x1   
+
+   VIA67SQ_C    -> VIA67SQ_C_2x1    VIA67SQ_2x1    VIA67SQ_2x1(r) VIA67SQ_C_2x1(r)
+                   VIA67SQ_C_1x2    VIA67SQ_1x2    VIA67SQ_1x2(r) VIA67SQ_C_1x2(r)
+
+   VIA67SQ_C(r) -> VIA67SQ_C_2x1    VIA67SQ_2x1    VIA67SQ_2x1(r) VIA67SQ_C_2x1(r)
+                   VIA67SQ_C_1x2    VIA67SQ_1x2    VIA67SQ_1x2(r) VIA67SQ_C_1x2(r)
+
+  VIA67BAR1_C    -> VIA67SQ_C_2x1    VIA67SQ_2x1    VIA67SQ_2x1(r) VIA67SQ_C_2x1(r)
+                   VIA67SQ_C_1x2    VIA67SQ_1x2    VIA67SQ_1x2(r) VIA67SQ_C_1x2(r)
+
+  VIA67BAR1_C(r) -> VIA67SQ_C_2x1    VIA67SQ_2x1    VIA67SQ_2x1(r) VIA67SQ_C_2x1(r)
+                   VIA67SQ_C_1x2    VIA67SQ_1x2    VIA67SQ_1x2(r) VIA67SQ_C_1x2(r)
+
+     VIA67SQ    -> VIA67SQ_C_2x1    VIA67SQ_2x1    VIA67SQ_2x1(r) VIA67SQ_C_2x1(r)
+                   VIA67SQ_C_1x2    VIA67SQ_1x2    VIA67SQ_1x2(r) VIA67SQ_C_1x2(r)
+
+     VIA67SQ(r) -> VIA67SQ_C_2x1    VIA67SQ_2x1    VIA67SQ_2x1(r) VIA67SQ_C_2x1(r)
+                   VIA67SQ_C_1x2    VIA67SQ_1x2    VIA67SQ_1x2(r) VIA67SQ_C_1x2(r)
+
+   VIA67BAR1    -> VIA67SQ_C_2x1    VIA67SQ_2x1    VIA67SQ_2x1(r) VIA67SQ_C_2x1(r)
+                   VIA67SQ_C_1x2    VIA67SQ_1x2    VIA67SQ_1x2(r) VIA67SQ_C_1x2(r)
+
+   VIA67BAR1(r) -> VIA67SQ_C_2x1    VIA67SQ_2x1    VIA67SQ_2x1(r) VIA67SQ_C_2x1(r)
+                   VIA67SQ_C_1x2    VIA67SQ_1x2    VIA67SQ_1x2(r) VIA67SQ_C_1x2(r)
+
+   VIA67BAR2    -> VIA67SQ_C_2x1    VIA67SQ_2x1    VIA67SQ_2x1(r) VIA67SQ_C_2x1(r)
+                   VIA67SQ_C_1x2    VIA67SQ_1x2    VIA67SQ_1x2(r) VIA67SQ_C_1x2(r)
+
+   VIA67BAR2(r) -> VIA67SQ_C_2x1    VIA67SQ_2x1    VIA67SQ_2x1(r) VIA67SQ_C_2x1(r)
+                   VIA67SQ_C_1x2    VIA67SQ_1x2    VIA67SQ_1x2(r) VIA67SQ_C_1x2(r)
+
+     VIA67LG    -> VIA67SQ_C_2x1    VIA67SQ_2x1    VIA67SQ_2x1(r) VIA67SQ_C_2x1(r)
+                   VIA67SQ_C_1x2    VIA67SQ_1x2    VIA67SQ_1x2(r) VIA67SQ_C_1x2(r)
+
+   VIA78SQ_C    -> VIA78SQ_C_1x2(r) VIA78SQ_1x2(r) VIA78SQ_1x2    VIA78SQ_C_1x2   
+                   VIA78SQ_C_2x1(r) VIA78SQ_2x1(r) VIA78SQ_2x1    VIA78SQ_C_2x1   
+
+   VIA78SQ_C(r) -> VIA78SQ_C_1x2(r) VIA78SQ_1x2(r) VIA78SQ_1x2    VIA78SQ_C_1x2   
+                   VIA78SQ_C_2x1(r) VIA78SQ_2x1(r) VIA78SQ_2x1    VIA78SQ_C_2x1   
+
+  VIA78BAR1_C    -> VIA78SQ_C_1x2(r) VIA78SQ_1x2(r) VIA78SQ_1x2    VIA78SQ_C_1x2   
+                   VIA78SQ_C_2x1(r) VIA78SQ_2x1(r) VIA78SQ_2x1    VIA78SQ_C_2x1   
+
+  VIA78BAR1_C(r) -> VIA78SQ_C_1x2(r) VIA78SQ_1x2(r) VIA78SQ_1x2    VIA78SQ_C_1x2   
+                   VIA78SQ_C_2x1(r) VIA78SQ_2x1(r) VIA78SQ_2x1    VIA78SQ_C_2x1   
+
+  VIA78BAR2_C    -> VIA78SQ_C_1x2(r) VIA78SQ_1x2(r) VIA78SQ_1x2    VIA78SQ_C_1x2   
+                   VIA78SQ_C_2x1(r) VIA78SQ_2x1(r) VIA78SQ_2x1    VIA78SQ_C_2x1   
+
+  VIA78BAR2_C(r) -> VIA78SQ_C_1x2(r) VIA78SQ_1x2(r) VIA78SQ_1x2    VIA78SQ_C_1x2   
+                   VIA78SQ_C_2x1(r) VIA78SQ_2x1(r) VIA78SQ_2x1    VIA78SQ_C_2x1   
+
+   VIA78LG_C    -> VIA78SQ_C_1x2(r) VIA78SQ_1x2(r) VIA78SQ_1x2    VIA78SQ_C_1x2   
+                   VIA78SQ_C_2x1(r) VIA78SQ_2x1(r) VIA78SQ_2x1    VIA78SQ_C_2x1   
+
+     VIA78SQ    -> VIA78SQ_C_1x2(r) VIA78SQ_1x2(r) VIA78SQ_1x2    VIA78SQ_C_1x2   
+                   VIA78SQ_C_2x1(r) VIA78SQ_2x1(r) VIA78SQ_2x1    VIA78SQ_C_2x1   
+
+     VIA78SQ(r) -> VIA78SQ_C_1x2(r) VIA78SQ_1x2(r) VIA78SQ_1x2    VIA78SQ_C_1x2   
+                   VIA78SQ_C_2x1(r) VIA78SQ_2x1(r) VIA78SQ_2x1    VIA78SQ_C_2x1   
+
+   VIA78BAR1    -> VIA78SQ_C_1x2(r) VIA78SQ_1x2(r) VIA78SQ_1x2    VIA78SQ_C_1x2   
+                   VIA78SQ_C_2x1(r) VIA78SQ_2x1(r) VIA78SQ_2x1    VIA78SQ_C_2x1   
+
+   VIA78BAR1(r) -> VIA78SQ_C_1x2(r) VIA78SQ_1x2(r) VIA78SQ_1x2    VIA78SQ_C_1x2   
+                   VIA78SQ_C_2x1(r) VIA78SQ_2x1(r) VIA78SQ_2x1    VIA78SQ_C_2x1   
+
+   VIA78BAR2    -> VIA78SQ_C_1x2(r) VIA78SQ_1x2(r) VIA78SQ_1x2    VIA78SQ_C_1x2   
+                   VIA78SQ_C_2x1(r) VIA78SQ_2x1(r) VIA78SQ_2x1    VIA78SQ_C_2x1   
+
+   VIA78BAR2(r) -> VIA78SQ_C_1x2(r) VIA78SQ_1x2(r) VIA78SQ_1x2    VIA78SQ_C_1x2   
+                   VIA78SQ_C_2x1(r) VIA78SQ_2x1(r) VIA78SQ_2x1    VIA78SQ_C_2x1   
+
+     VIA78LG    -> VIA78SQ_C_1x2(r) VIA78SQ_1x2(r) VIA78SQ_1x2    VIA78SQ_C_1x2   
+                   VIA78SQ_C_2x1(r) VIA78SQ_2x1(r) VIA78SQ_2x1    VIA78SQ_C_2x1   
+
+     VIA89_C    -> VIA89_C_2x1    VIA89_C_1x2   
+
+       VIA89    -> VIA89_C_2x1    VIA89_C_1x2   
+
+     VIA9RDL    -> VIA9RDL_1x2    VIA9RDL_2x1   
+
+
+
+        There were 0 out of 1294 pins with no spots.
+
+[Technology Processing] Elapsed real time: 0:00:00 
+[Technology Processing] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[Technology Processing] Stage (MB): Used   14  Alloctr   13  Proc    0 
+[Technology Processing] Total (MB): Used   46  Alloctr   47  Proc 7685 
+
+Begin Redundant via insertion ...
+
+Routed  2/9 Partitions, Violations =    0
+Routed  3/9 Partitions, Violations =    0
+Routed  4/9 Partitions, Violations =    0
+Routed  5/9 Partitions, Violations =    0
+Routed  6/9 Partitions, Violations =    1
+Routed  7/9 Partitions, Violations =    3
+Routed  8/9 Partitions, Violations =    5
+Routed  9/9 Partitions, Violations =    4
+
+RedundantVia finished with 4 violations
+
+
+DRC-SUMMARY:
+        @@@@@@@ TOTAL VIOLATIONS =      4
+        Edge-line via spacing : 2
+        Less than minimum enclosed area : 1
+        Off-grid : 1
+
+
+Total Wire Length =                    4278 micron
+Total Number of Contacts =             2698
+Total Number of Wires =                2880
+Total Number of PtConns =              117
+Total Number of Routed Wires =       2880
+Total Routed Wire Length =           4267 micron
+Total Number of Routed Contacts =       2698
+        Layer                   M1 :          1 micron
+        Layer                   M2 :        849 micron
+        Layer                   M3 :       1187 micron
+        Layer                   M4 :        984 micron
+        Layer                   M5 :        685 micron
+        Layer                   M6 :        507 micron
+        Layer                   M7 :         54 micron
+        Layer                   M8 :         10 micron
+        Layer                   M9 :          0 micron
+        Layer                 MRDL :          0 micron
+        Via     VIA78SQ_C(rot)_1x2 :          1
+        Via     VIA78SQ_C(rot)_2x1 :          7
+        Via              VIA67SQ_C :          1
+        Via          VIA67SQ_C_1x2 :          2
+        Via          VIA67SQ_C_2x1 :          9
+        Via            VIA67SQ_2x1 :          1
+        Via       VIA67SQ(rot)_2x1 :          1
+        Via                VIA56SQ :          6
+        Via            VIA56SQ_1x2 :         25
+        Via            VIA56SQ_2x1 :        140
+        Via           VIA45SQ(rot) :          5
+        Via       VIA45SQ(rot)_1x2 :         29
+        Via       VIA45SQ(rot)_2x1 :         21
+        Via            VIA45SQ_1x2 :         29
+        Via            VIA45SQ_2x1 :        156
+        Via         VIA34SQ_C(rot) :          2
+        Via     VIA34SQ_C(rot)_1x2 :        201
+        Via     VIA34SQ_C(rot)_2x1 :         73
+        Via          VIA34SQ_C_1x2 :          1
+        Via            VIA34SQ_1x2 :          2
+        Via            VIA34SQ_2x1 :          1
+        Via       VIA34SQ(rot)_1x2 :          3
+        Via       VIA34SQ(rot)_2x1 :          1
+        Via              VIA23SQ_C :        102
+        Via            VIA2_33SQ_C :          2
+        Via          VIA23SQ_C_1x2 :         97
+        Via          VIA23SQ_C_2x1 :        383
+        Via        VIA23BAR2_C_1x2 :          2
+        Via        VIA23BAR2_C_2x1 :        238
+        Via     VIA23SQ_C(rot)_1x2 :         11
+        Via     VIA23SQ_C(rot)_2x1 :          2
+        Via        VIA23BAR1_C_1x2 :         87
+        Via        VIA23BAR1_C_2x1 :          2
+        Via   VIA23BAR1_C(rot)_1x2 :          2
+        Via   VIA23BAR1_C(rot)_2x1 :          2
+        Via   VIA23BAR2_C(rot)_1x2 :          3
+        Via   VIA23BAR2_C(rot)_2x1 :          7
+        Via          VIA23LG_C_2x1 :          2
+        Via            VIA23SQ_1x2 :          1
+        Via            VIA23SQ_2x1 :        122
+        Via       VIA23SQ(rot)_1x2 :         85
+        Via       VIA23SQ(rot)_2x1 :          5
+        Via         VIA12SQ_C(rot) :        697
+        Via       VIA12BAR2_C(rot) :          2
+        Via                VIA12SQ :          1
+        Via           VIA12SQ(rot) :          9
+        Via              VIA12BAR2 :          1
+        Via       VIA1_32SQ_C(rot) :         12
+        Via          VIA12SQ_C_1x2 :          1
+        Via          VIA12SQ_C_2x1 :          4
+        Via        VIA12BAR1_C_1x2 :         35
+        Via        VIA12BAR1_C_2x1 :          8
+        Via        VIA12BAR2_C_1x2 :          1
+        Via        VIA12BAR2_C_2x1 :          1
+        Via          VIA12LG_C_1x2 :          7
+        Via            VIA12SQ_1x2 :         17
+        Via            VIA12SQ_2x1 :         30
+
+ 
+Redundant via conversion report:
+--------------------------------
+
+  Total optimized via conversion rate = 68.87% (1858 / 2698 vias)
+ 
+    Layer VIA1       = 12.59% (104    / 826     vias)
+        Weight 1     = 12.59% (104     vias)
+        Un-optimized =  0.00% (0       vias)
+        Un-mapped    = 87.41% (722     vias)
+    Layer VIA2       = 91.00% (1051   / 1155    vias)
+        Weight 1     = 91.00% (1051    vias)
+        Un-optimized =  0.00% (0       vias)
+        Un-mapped    =  9.00% (104     vias)
+    Layer VIA3       = 99.30% (282    / 284     vias)
+        Weight 1     = 99.30% (282     vias)
+        Un-optimized =  0.00% (0       vias)
+        Un-mapped    =  0.70% (2       vias)
+    Layer VIA4       = 97.92% (235    / 240     vias)
+        Weight 1     = 97.92% (235     vias)
+        Un-optimized =  0.00% (0       vias)
+        Un-mapped    =  2.08% (5       vias)
+    Layer VIA5       = 96.49% (165    / 171     vias)
+        Weight 1     = 96.49% (165     vias)
+        Un-optimized =  0.00% (0       vias)
+        Un-mapped    =  3.51% (6       vias)
+    Layer VIA6       = 92.86% (13     / 14      vias)
+        Weight 1     = 92.86% (13      vias)
+        Un-optimized =  0.00% (0       vias)
+        Un-mapped    =  7.14% (1       vias)
+    Layer VIA7       = 100.00% (8      / 8       vias)
+        Weight 1     = 100.00% (8       vias)
+        Un-optimized =  0.00% (0       vias)
+        Un-mapped    =  0.00% (0       vias)
+ 
+  Total double via conversion rate    = 68.87% (1858 / 2698 vias)
+ 
+    Layer VIA1       = 12.59% (104    / 826     vias)
+    Layer VIA2       = 91.00% (1051   / 1155    vias)
+    Layer VIA3       = 99.30% (282    / 284     vias)
+    Layer VIA4       = 97.92% (235    / 240     vias)
+    Layer VIA5       = 96.49% (165    / 171     vias)
+    Layer VIA6       = 92.86% (13     / 14      vias)
+    Layer VIA7       = 100.00% (8      / 8       vias)
+ 
+  The optimized via conversion rate based on total routed via count = 68.87% (1858 / 2698 vias)
+ 
+    Layer VIA1       = 12.59% (104    / 826     vias)
+        Weight 1     = 12.59% (104     vias)
+        Un-optimized =  0.00% (0       vias)
+        Un-mapped    = 87.41% (722     vias)
+    Layer VIA2       = 91.00% (1051   / 1155    vias)
+        Weight 1     = 91.00% (1051    vias)
+        Un-optimized =  0.00% (0       vias)
+        Un-mapped    =  9.00% (104     vias)
+    Layer VIA3       = 99.30% (282    / 284     vias)
+        Weight 1     = 99.30% (282     vias)
+        Un-optimized =  0.00% (0       vias)
+        Un-mapped    =  0.70% (2       vias)
+    Layer VIA4       = 97.92% (235    / 240     vias)
+        Weight 1     = 97.92% (235     vias)
+        Un-optimized =  0.00% (0       vias)
+        Un-mapped    =  2.08% (5       vias)
+    Layer VIA5       = 96.49% (165    / 171     vias)
+        Weight 1     = 96.49% (165     vias)
+        Un-optimized =  0.00% (0       vias)
+        Un-mapped    =  3.51% (6       vias)
+    Layer VIA6       = 92.86% (13     / 14      vias)
+        Weight 1     = 92.86% (13      vias)
+        Un-optimized =  0.00% (0       vias)
+        Un-mapped    =  7.14% (1       vias)
+    Layer VIA7       = 100.00% (8      / 8       vias)
+        Weight 1     = 100.00% (8       vias)
+        Un-optimized =  0.00% (0       vias)
+        Un-mapped    =  0.00% (0       vias)
+ 
+
+[RedundantVia] Elapsed real time: 0:00:06 
+[RedundantVia] Elapsed cpu  time: sys=0:00:00 usr=0:00:07 total=0:00:07
+[RedundantVia] Stage (MB): Used   72  Alloctr   72  Proc    0 
+[RedundantVia] Total (MB): Used  104  Alloctr  106  Proc 7685 
+
+Begin DRC fixing ...
+
+[Dr init] Elapsed real time: 0:00:06 
+[Dr init] Elapsed cpu  time: sys=0:00:00 usr=0:00:07 total=0:00:07
+[Dr init] Stage (MB): Used   72  Alloctr   72  Proc    0 
+[Dr init] Total (MB): Used  104  Alloctr  106  Proc 7685 
+Total number of nets = 469, of which 0 are not extracted
+Total number of open nets = 0, of which 0 are frozen
+Information: Using 8 threads for routing. (ZRT-444)
+Region based early termination has 81 candidate regions.
+Start DR iteration 1: non-uniform partition
+Routed  1/3 Partitions, Violations =    3
+Routed  2/3 Partitions, Violations =    1
+Routed  3/3 Partitions, Violations =    0
+
+DRC-SUMMARY:
+        @@@@@@@ TOTAL VIOLATIONS =      0
+
+[Iter 1] Elapsed real time: 0:00:06 
+[Iter 1] Elapsed cpu  time: sys=0:00:00 usr=0:00:07 total=0:00:08
+[Iter 1] Stage (MB): Used  131  Alloctr  131  Proc    5 
+[Iter 1] Total (MB): Used  163  Alloctr  164  Proc 7690 
+
+End DR iteration 1 with 3 parts
+
+Finish DR since reached 0 DRC
+
+[DR] Elapsed real time: 0:00:06 
+[DR] Elapsed cpu  time: sys=0:00:00 usr=0:00:07 total=0:00:08
+[DR] Stage (MB): Used   61  Alloctr   61  Proc    5 
+[DR] Total (MB): Used   93  Alloctr   94  Proc 7690 
+
+Redundant via insertion finished with 0 open nets, of which 0 are frozen
+
+Redundant via insertion finished with 0 violations
+
+DRC-SUMMARY:
+        @@@@@@@ TOTAL VIOLATIONS =      0
+
+
+
+Total Wire Length =                    4278 micron
+Total Number of Contacts =             2698
+Total Number of Wires =                2881
+Total Number of PtConns =              117
+Total Number of Routed Wires =       2881
+Total Routed Wire Length =           4267 micron
+Total Number of Routed Contacts =       2698
+        Layer                   M1 :          1 micron
+        Layer                   M2 :        849 micron
+        Layer                   M3 :       1188 micron
+        Layer                   M4 :        984 micron
+        Layer                   M5 :        685 micron
+        Layer                   M6 :        507 micron
+        Layer                   M7 :         54 micron
+        Layer                   M8 :         10 micron
+        Layer                   M9 :          0 micron
+        Layer                 MRDL :          0 micron
+        Via     VIA78SQ_C(rot)_1x2 :          1
+        Via     VIA78SQ_C(rot)_2x1 :          7
+        Via              VIA67SQ_C :          1
+        Via          VIA67SQ_C_1x2 :          2
+        Via          VIA67SQ_C_2x1 :          9
+        Via            VIA67SQ_2x1 :          1
+        Via       VIA67SQ(rot)_2x1 :          1
+        Via                VIA56SQ :          6
+        Via            VIA56SQ_1x2 :         25
+        Via            VIA56SQ_2x1 :        140
+        Via           VIA45SQ(rot) :          5
+        Via       VIA45SQ(rot)_1x2 :         29
+        Via       VIA45SQ(rot)_2x1 :         21
+        Via            VIA45SQ_1x2 :         29
+        Via            VIA45SQ_2x1 :        156
+        Via         VIA34SQ_C(rot) :          2
+        Via     VIA34SQ_C(rot)_1x2 :        201
+        Via     VIA34SQ_C(rot)_2x1 :         73
+        Via          VIA34SQ_C_1x2 :          1
+        Via            VIA34SQ_1x2 :          2
+        Via            VIA34SQ_2x1 :          1
+        Via       VIA34SQ(rot)_1x2 :          3
+        Via       VIA34SQ(rot)_2x1 :          1
+        Via              VIA23SQ_C :        104
+        Via            VIA2_33SQ_C :          2
+        Via          VIA23SQ_C_1x2 :         96
+        Via          VIA23SQ_C_2x1 :        383
+        Via        VIA23BAR2_C_1x2 :          2
+        Via        VIA23BAR2_C_2x1 :        238
+        Via     VIA23SQ_C(rot)_1x2 :         10
+        Via     VIA23SQ_C(rot)_2x1 :          2
+        Via        VIA23BAR1_C_1x2 :         87
+        Via        VIA23BAR1_C_2x1 :          2
+        Via   VIA23BAR1_C(rot)_1x2 :          2
+        Via   VIA23BAR1_C(rot)_2x1 :          2
+        Via   VIA23BAR2_C(rot)_1x2 :          3
+        Via   VIA23BAR2_C(rot)_2x1 :          7
+        Via          VIA23LG_C_2x1 :          2
+        Via            VIA23SQ_1x2 :          1
+        Via            VIA23SQ_2x1 :        122
+        Via       VIA23SQ(rot)_1x2 :         85
+        Via       VIA23SQ(rot)_2x1 :          5
+        Via         VIA12SQ_C(rot) :        698
+        Via       VIA12BAR2_C(rot) :          2
+        Via                VIA12SQ :          1
+        Via           VIA12SQ(rot) :          9
+        Via              VIA12BAR2 :          1
+        Via       VIA1_32SQ_C(rot) :         12
+        Via          VIA12SQ_C_1x2 :          1
+        Via          VIA12SQ_C_2x1 :          4
+        Via        VIA12BAR1_C_1x2 :         35
+        Via        VIA12BAR1_C_2x1 :          7
+        Via        VIA12BAR2_C_1x2 :          1
+        Via        VIA12BAR2_C_2x1 :          1
+        Via          VIA12LG_C_1x2 :          7
+        Via            VIA12SQ_1x2 :         17
+        Via            VIA12SQ_2x1 :         30
+
+ 
+Redundant via conversion report:
+--------------------------------
+
+  Total optimized via conversion rate = 68.75% (1855 / 2698 vias)
+ 
+    Layer VIA1       = 12.47% (103    / 826     vias)
+        Weight 1     = 12.47% (103     vias)
+        Un-optimized =  0.00% (0       vias)
+        Un-mapped    = 87.53% (723     vias)
+    Layer VIA2       = 90.82% (1049   / 1155    vias)
+        Weight 1     = 90.82% (1049    vias)
+        Un-optimized =  0.00% (0       vias)
+        Un-mapped    =  9.18% (106     vias)
+    Layer VIA3       = 99.30% (282    / 284     vias)
+        Weight 1     = 99.30% (282     vias)
+        Un-optimized =  0.00% (0       vias)
+        Un-mapped    =  0.70% (2       vias)
+    Layer VIA4       = 97.92% (235    / 240     vias)
+        Weight 1     = 97.92% (235     vias)
+        Un-optimized =  0.00% (0       vias)
+        Un-mapped    =  2.08% (5       vias)
+    Layer VIA5       = 96.49% (165    / 171     vias)
+        Weight 1     = 96.49% (165     vias)
+        Un-optimized =  0.00% (0       vias)
+        Un-mapped    =  3.51% (6       vias)
+    Layer VIA6       = 92.86% (13     / 14      vias)
+        Weight 1     = 92.86% (13      vias)
+        Un-optimized =  0.00% (0       vias)
+        Un-mapped    =  7.14% (1       vias)
+    Layer VIA7       = 100.00% (8      / 8       vias)
+        Weight 1     = 100.00% (8       vias)
+        Un-optimized =  0.00% (0       vias)
+        Un-mapped    =  0.00% (0       vias)
+ 
+  Total double via conversion rate    = 68.75% (1855 / 2698 vias)
+ 
+    Layer VIA1       = 12.47% (103    / 826     vias)
+    Layer VIA2       = 90.82% (1049   / 1155    vias)
+    Layer VIA3       = 99.30% (282    / 284     vias)
+    Layer VIA4       = 97.92% (235    / 240     vias)
+    Layer VIA5       = 96.49% (165    / 171     vias)
+    Layer VIA6       = 92.86% (13     / 14      vias)
+    Layer VIA7       = 100.00% (8      / 8       vias)
+ 
+  The optimized via conversion rate based on total routed via count = 68.75% (1855 / 2698 vias)
+ 
+    Layer VIA1       = 12.47% (103    / 826     vias)
+        Weight 1     = 12.47% (103     vias)
+        Un-optimized =  0.00% (0       vias)
+        Un-mapped    = 87.53% (723     vias)
+    Layer VIA2       = 90.82% (1049   / 1155    vias)
+        Weight 1     = 90.82% (1049    vias)
+        Un-optimized =  0.00% (0       vias)
+        Un-mapped    =  9.18% (106     vias)
+    Layer VIA3       = 99.30% (282    / 284     vias)
+        Weight 1     = 99.30% (282     vias)
+        Un-optimized =  0.00% (0       vias)
+        Un-mapped    =  0.70% (2       vias)
+    Layer VIA4       = 97.92% (235    / 240     vias)
+        Weight 1     = 97.92% (235     vias)
+        Un-optimized =  0.00% (0       vias)
+        Un-mapped    =  2.08% (5       vias)
+    Layer VIA5       = 96.49% (165    / 171     vias)
+        Weight 1     = 96.49% (165     vias)
+        Un-optimized =  0.00% (0       vias)
+        Un-mapped    =  3.51% (6       vias)
+    Layer VIA6       = 92.86% (13     / 14      vias)
+        Weight 1     = 92.86% (13      vias)
+        Un-optimized =  0.00% (0       vias)
+        Un-mapped    =  7.14% (1       vias)
+    Layer VIA7       = 100.00% (8      / 8       vias)
+        Weight 1     = 100.00% (8       vias)
+        Un-optimized =  0.00% (0       vias)
+        Un-mapped    =  0.00% (0       vias)
+ 
+
+Total number of nets = 469
+0 open nets, of which 0 are frozen
+Total number of excluded ports = 0 ports of 0 unplaced cells connected to 0 nets
+                                 0 ports without pins of 0 cells connected to 0 nets
+                                 0 ports of 0 cover cells connected to 0 non-pg nets
+Total number of DRCs = 0
+Total number of antenna violations = antenna checking not active
+Information: Routes in non-preferred voltage areas = 0 (ZRT-559)
+
+Updating the database ...
+# Creacion de blindaje
+if {$habilitar_creacion_blindaje} {
+    create_shields -shielding_mode reshield
+    set_extraction_options -virtual_shield_extraction false
+}
+Cell Min-Routing-Layer = M2
+Cell Max-Routing-Layer = M8
+Turn off antenna since no rule is specified
+Information: Option route.detail.force_end_on_preferred_grid will be ignored since none of the layers have preferred grid. (ZRT-703)
+rule ndr_leaf equivalent to default rule
+Info: number of net_type_blockage: 0 
+Information: Via ladder engine would be activated for pattern must join connection in certain commands. Please refer to man-page for the command list. (ZRT-619)
+Via on layer (VIA1) needs more than one tracks
+Warning: Layer M1 pitch 0.074 may be too small: wire/via-down 0.074, wire/via-up 0.098. (ZRT-026)
+Via on layer (VIA1) needs more than one tracks
+Warning: Layer M2 pitch 0.060 may be too small: wire/via-down 0.098, wire/via-up 0.060. (ZRT-026)
+Via on layer (VIA3) needs more than one tracks
+Warning: Layer M3 pitch 0.074 may be too small: wire/via-down 0.060, wire/via-up 0.080. (ZRT-026)
+Via on layer (VIA4) needs more than one tracks
+Warning: Layer M5 pitch 0.120 may be too small: wire/via-down 0.135, wire/via-up 0.107. (ZRT-026)
+Via on layer (VIA8) needs more than one tracks
+Warning: Layer M8 pitch 0.120 may be too small: wire/via-down 0.107, wire/via-up 0.135. (ZRT-026)
+Wire on layer (M9) needs more than one tracks
+Via on layer (VIA8) needs more than one tracks
+Via on layer (VIARDL) needs more than one tracks
+Warning: Layer M9 pitch 0.120 may be too small: wire/via-down 0.135, wire/via-up 1.570. (ZRT-026)
+Via on layer (VIARDL) needs more than one tracks
+Warning: Layer MRDL pitch 4.000 may be too small: wire/via-down 4.500, wire/via-up 4.000. (ZRT-026)
+Transition layer name: M3(2)
+Information: When applicable Min-max layer allow_pin_connection mode will allow paths of length 1.04 outside the layer range. (ZRT-707)
+Information: When applicable Min-max layer allow_pin_connection mode will allow paths of length 1.04 outside the layer range on clock nets. (ZRT-718)
+Information: When applicable layer based tapering will taper up to 0.00 in distance from the pin. (ZRT-706)
+Warning: Standard cell pin SAEDRVT14_ADDH_0P5/CO has no valid via regions. (ZRT-044)
+[Shielding: Start] Elapsed real time: 0:00:00 
+[Shielding: Start] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[Shielding: Start] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[Shielding: Start] Total (MB): Used   31  Alloctr   32  Proc 7690 
+[Shielding: End] Elapsed real time: 0:00:00 
+[Shielding: End] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[Shielding: End] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[Shielding: End] Total (MB): Used   32  Alloctr   33  Proc 7690 
+[Shielding: Start] Elapsed real time: 0:00:00 
+[Shielding: Start] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[Shielding: Start] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[Shielding: Start] Total (MB): Used   32  Alloctr   33  Proc 7690 
+[Shielding: End] Elapsed real time: 0:00:00 
+[Shielding: End] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[Shielding: End] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[Shielding: End] Total (MB): Used   32  Alloctr   33  Proc 7690 
+1
+# Conexion de power y ground
+####################################################################################################
+connect_pg_net****************************************
+Report : Power/Ground Connection Summary
+Design : ALU_votegui
+Version: U-2022.12
+Date   : Mon Apr 28 07:58:55 2025
+****************************************
+P/G net name                  P/G pin count(previous/current)
+--------------------------------------------------------------------------------
+Power net VDD                 910/910
+Ground net VSS                909/909
+--------------------------------------------------------------------------------
+Information: connections of 0 power/ground pin(s) are created or changed.
+1
+# Ejecutar check_routes para guardar las violaciones de DRC en la DB
+redirect -tee -file ${dir_reportes}/${etapa_actual}/${dir_estado}/chequeo_ruteos.rpt {check_routes}
+Information: The command 'check_routes' cleared the undo history. (UNDO-016)
+Cell Min-Routing-Layer = M2
+Cell Max-Routing-Layer = M8
+Turn off antenna since no rule is specified
+Information: Option route.detail.force_end_on_preferred_grid will be ignored since none of the layers have preferred grid. (ZRT-703)
+rule ndr_leaf equivalent to default rule
+Info: number of net_type_blockage: 0 
+Information: Via ladder engine would be activated for pattern must join connection in certain commands. Please refer to man-page for the command list. (ZRT-619)
+Via on layer (VIA1) needs more than one tracks
+Warning: Layer M1 pitch 0.074 may be too small: wire/via-down 0.074, wire/via-up 0.098. (ZRT-026)
+Via on layer (VIA1) needs more than one tracks
+Warning: Layer M2 pitch 0.060 may be too small: wire/via-down 0.098, wire/via-up 0.060. (ZRT-026)
+Via on layer (VIA3) needs more than one tracks
+Warning: Layer M3 pitch 0.074 may be too small: wire/via-down 0.060, wire/via-up 0.080. (ZRT-026)
+Via on layer (VIA4) needs more than one tracks
+Warning: Layer M5 pitch 0.120 may be too small: wire/via-down 0.135, wire/via-up 0.107. (ZRT-026)
+Via on layer (VIA8) needs more than one tracks
+Warning: Layer M8 pitch 0.120 may be too small: wire/via-down 0.107, wire/via-up 0.135. (ZRT-026)
+Wire on layer (M9) needs more than one tracks
+Via on layer (VIA8) needs more than one tracks
+Via on layer (VIARDL) needs more than one tracks
+Warning: Layer M9 pitch 0.120 may be too small: wire/via-down 0.135, wire/via-up 1.570. (ZRT-026)
+Via on layer (VIARDL) needs more than one tracks
+Warning: Layer MRDL pitch 4.000 may be too small: wire/via-down 4.500, wire/via-up 4.000. (ZRT-026)
+Transition layer name: M3(2)
+Information: When applicable Min-max layer allow_pin_connection mode will allow paths of length 1.56 outside the layer range. (ZRT-707)
+Information: When applicable Min-max layer allow_pin_connection mode will allow paths of length 1.56 outside the layer range on clock nets. (ZRT-718)
+Information: When applicable layer based tapering will taper up to 0.00 in distance from the pin. (ZRT-706)
+Warning: Standard cell pin SAEDRVT14_ADDH_0P5/CO has no valid via regions. (ZRT-044)
+
+
+Start checking for open nets ... 
+
+Total number of nets = 469, of which 0 are not extracted
+Total number of open nets = 0, of which 0 are frozen
+
+Check 469 nets, 0 have Errors
+
+[CHECK OPEN NETS] Elapsed real time: 0:00:00 
+[CHECK OPEN NETS] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[CHECK OPEN NETS] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[CHECK OPEN NETS] Total (MB): Used   32  Alloctr   33  Proc 7690 
+Printing options for 'route.common.*'
+common.advance_node_timing_driven_mode                  :        false               
+common.concurrent_redundant_via_mode                    :        reserve_space       
+common.eco_route_concurrent_redundant_via_mode          :        reserve_space       
+common.via_array_mode                                   :        swap                
+
+Printing options for 'route.detail.*'
+detail.antenna                                          :        true                
+detail.eco_max_number_of_iterations                     :        10                  
+detail.eco_route_use_soft_spacing_for_timing_optimization:       false               
+detail.enable_timing_driven_patch                       :        false               
+detail.insert_diodes_during_routing                     :        false               
+detail.insert_redundant_vias_layer_order_low_to_high    :        true                
+detail.timing_driven                                    :        true                
+
+Printing options for 'route.auto_via_ladder.*'
+
+
+Begin full DRC check ...
+
+Information: Using 8 threads for routing. (ZRT-444)
+Checked 2/9 Partitions, Violations =    0
+Checked 3/9 Partitions, Violations =    0
+Checked 4/9 Partitions, Violations =    0
+Checked 5/9 Partitions, Violations =    0
+Checked 6/9 Partitions, Violations =    0
+Checked 7/9 Partitions, Violations =    0
+Checked 8/9 Partitions, Violations =    0
+Checked 9/9 Partitions, Violations =    0
+[DRC CHECK] Elapsed real time: 0:00:00 
+[DRC CHECK] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[DRC CHECK] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[DRC CHECK] Total (MB): Used  102  Alloctr  103  Proc 7690 
+Warning: No antenna rules defined, Skip antenna analysis. (ZRT-309)
+
+DRC-SUMMARY:
+        @@@@@@@ TOTAL VIOLATIONS =      0
+
+
+Total Wire Length =                    4278 micron
+Total Number of Contacts =             2698
+Total Number of Wires =                2877
+Total Number of PtConns =              122
+Total Number of Routed Wires =       2877
+Total Routed Wire Length =           4267 micron
+Total Number of Routed Contacts =       2698
+        Layer                   M1 :          1 micron
+        Layer                   M2 :        849 micron
+        Layer                   M3 :       1188 micron
+        Layer                   M4 :        984 micron
+        Layer                   M5 :        685 micron
+        Layer                   M6 :        507 micron
+        Layer                   M7 :         54 micron
+        Layer                   M8 :         10 micron
+        Layer                   M9 :          0 micron
+        Layer                 MRDL :          0 micron
+        Via     VIA78SQ_C(rot)_1x2 :          1
+        Via     VIA78SQ_C(rot)_2x1 :          7
+        Via              VIA67SQ_C :          1
+        Via          VIA67SQ_C_1x2 :          2
+        Via          VIA67SQ_C_2x1 :          9
+        Via       VIA67SQ(rot)_2x1 :          1
+        Via            VIA67SQ_2x1 :          1
+        Via                VIA56SQ :          6
+        Via            VIA56SQ_1x2 :         25
+        Via            VIA56SQ_2x1 :        140
+        Via           VIA45SQ(rot) :          5
+        Via       VIA45SQ(rot)_1x2 :         29
+        Via       VIA45SQ(rot)_2x1 :         21
+        Via            VIA45SQ_1x2 :         29
+        Via            VIA45SQ_2x1 :        156
+        Via         VIA34SQ_C(rot) :          2
+        Via     VIA34SQ_C(rot)_1x2 :        201
+        Via     VIA34SQ_C(rot)_2x1 :         73
+        Via          VIA34SQ_C_1x2 :          1
+        Via       VIA34SQ(rot)_1x2 :          3
+        Via       VIA34SQ(rot)_2x1 :          1
+        Via            VIA34SQ_1x2 :          2
+        Via            VIA34SQ_2x1 :          1
+        Via              VIA23SQ_C :        104
+        Via            VIA2_33SQ_C :          2
+        Via     VIA23SQ_C(rot)_1x2 :         10
+        Via     VIA23SQ_C(rot)_2x1 :          2
+        Via          VIA23SQ_C_1x2 :         96
+        Via          VIA23SQ_C_2x1 :        383
+        Via   VIA23BAR1_C(rot)_1x2 :          2
+        Via   VIA23BAR1_C(rot)_2x1 :          2
+        Via        VIA23BAR1_C_1x2 :         87
+        Via        VIA23BAR1_C_2x1 :          2
+        Via   VIA23BAR2_C(rot)_1x2 :          3
+        Via   VIA23BAR2_C(rot)_2x1 :          7
+        Via        VIA23BAR2_C_1x2 :          2
+        Via        VIA23BAR2_C_2x1 :        238
+        Via          VIA23LG_C_2x1 :          2
+        Via       VIA23SQ(rot)_1x2 :         85
+        Via       VIA23SQ(rot)_2x1 :          5
+        Via            VIA23SQ_1x2 :          1
+        Via            VIA23SQ_2x1 :        122
+        Via         VIA12SQ_C(rot) :        698
+        Via       VIA12BAR2_C(rot) :          2
+        Via                VIA12SQ :          1
+        Via           VIA12SQ(rot) :          9
+        Via              VIA12BAR2 :          1
+        Via       VIA1_32SQ_C(rot) :         12
+        Via          VIA12SQ_C_1x2 :          1
+        Via          VIA12SQ_C_2x1 :          4
+        Via        VIA12BAR1_C_1x2 :         35
+        Via        VIA12BAR1_C_2x1 :          7
+        Via        VIA12BAR2_C_1x2 :          1
+        Via        VIA12BAR2_C_2x1 :          1
+        Via          VIA12LG_C_1x2 :          7
+        Via            VIA12SQ_1x2 :         17
+        Via            VIA12SQ_2x1 :         30
+
+ 
+Redundant via conversion report:
+--------------------------------
+
+  Total optimized via conversion rate = 68.75% (1855 / 2698 vias)
+ 
+    Layer VIA1       = 12.47% (103    / 826     vias)
+        Weight 1     = 12.47% (103     vias)
+        Un-optimized =  0.00% (0       vias)
+        Un-mapped    = 87.53% (723     vias)
+    Layer VIA2       = 90.82% (1049   / 1155    vias)
+        Weight 1     = 90.82% (1049    vias)
+        Un-optimized =  0.00% (0       vias)
+        Un-mapped    =  9.18% (106     vias)
+    Layer VIA3       = 99.30% (282    / 284     vias)
+        Weight 1     = 99.30% (282     vias)
+        Un-optimized =  0.00% (0       vias)
+        Un-mapped    =  0.70% (2       vias)
+    Layer VIA4       = 97.92% (235    / 240     vias)
+        Weight 1     = 97.92% (235     vias)
+        Un-optimized =  0.00% (0       vias)
+        Un-mapped    =  2.08% (5       vias)
+    Layer VIA5       = 96.49% (165    / 171     vias)
+        Weight 1     = 96.49% (165     vias)
+        Un-optimized =  0.00% (0       vias)
+        Un-mapped    =  3.51% (6       vias)
+    Layer VIA6       = 92.86% (13     / 14      vias)
+        Weight 1     = 92.86% (13      vias)
+        Un-optimized =  0.00% (0       vias)
+        Un-mapped    =  7.14% (1       vias)
+    Layer VIA7       = 100.00% (8      / 8       vias)
+        Weight 1     = 100.00% (8       vias)
+        Un-optimized =  0.00% (0       vias)
+        Un-mapped    =  0.00% (0       vias)
+ 
+  Total double via conversion rate    = 68.75% (1855 / 2698 vias)
+ 
+    Layer VIA1       = 12.47% (103    / 826     vias)
+    Layer VIA2       = 90.82% (1049   / 1155    vias)
+    Layer VIA3       = 99.30% (282    / 284     vias)
+    Layer VIA4       = 97.92% (235    / 240     vias)
+    Layer VIA5       = 96.49% (165    / 171     vias)
+    Layer VIA6       = 92.86% (13     / 14      vias)
+    Layer VIA7       = 100.00% (8      / 8       vias)
+ 
+  The optimized via conversion rate based on total routed via count = 68.75% (1855 / 2698 vias)
+ 
+    Layer VIA1       = 12.47% (103    / 826     vias)
+        Weight 1     = 12.47% (103     vias)
+        Un-optimized =  0.00% (0       vias)
+        Un-mapped    = 87.53% (723     vias)
+    Layer VIA2       = 90.82% (1049   / 1155    vias)
+        Weight 1     = 90.82% (1049    vias)
+        Un-optimized =  0.00% (0       vias)
+        Un-mapped    =  9.18% (106     vias)
+    Layer VIA3       = 99.30% (282    / 284     vias)
+        Weight 1     = 99.30% (282     vias)
+        Un-optimized =  0.00% (0       vias)
+        Un-mapped    =  0.70% (2       vias)
+    Layer VIA4       = 97.92% (235    / 240     vias)
+        Weight 1     = 97.92% (235     vias)
+        Un-optimized =  0.00% (0       vias)
+        Un-mapped    =  2.08% (5       vias)
+    Layer VIA5       = 96.49% (165    / 171     vias)
+        Weight 1     = 96.49% (165     vias)
+        Un-optimized =  0.00% (0       vias)
+        Un-mapped    =  3.51% (6       vias)
+    Layer VIA6       = 92.86% (13     / 14      vias)
+        Weight 1     = 92.86% (13      vias)
+        Un-optimized =  0.00% (0       vias)
+        Un-mapped    =  7.14% (1       vias)
+    Layer VIA7       = 100.00% (8      / 8       vias)
+        Weight 1     = 100.00% (8       vias)
+        Un-optimized =  0.00% (0       vias)
+        Un-mapped    =  0.00% (0       vias)
+ 
+
+
+Verify Summary:
+
+Total number of nets = 469, of which 0 are not extracted
+Total number of open nets = 0, of which 0 are frozen
+Total number of excluded ports = 0 ports of 0 unplaced cells connected to 0 nets
+                                 0 ports without pins of 0 cells connected to 0 nets
+                                 0 ports of 0 cover cells connected to 0 non-pg nets
+Total number of DRCs = 0
+Total number of antenna violations = no antenna rules defined
+Total number of tie to rail violations = not checked
+Total number of tie to rail directly violations = not checked
+
+
+# Guarda el bloque
+save_block
+Information: Saving block 'ALU_votegui_init_design:ALU_votegui/route_auto.design'
+1
+# Reportes y archivos de salida
+####################################################################################################
+# Configuraciones de timing recomendadas para reportar disenos ruteados
+set_app_options -name time.delay_calc_waveform_analysis_mode -value full_design ;# deshabilitado por defecto; habilita AWP
+time.delay_calc_waveform_analysis_mode full_design
+set_app_options -name time.enable_ccs_rcv_cap -value true ;# por defecto en falso; habilita CCS receiver model; requerido
+time.enable_ccs_rcv_cap true
+# Reportes de QoR
+####################################################################################################
+set reportar_etapa route
+route
+set reportar_escenarios_activos $escenarios_activos_route_auto
+func::setup_ss0p72v125c func::hold_ff0p88v125c
+source "report_qor.tcl"
+INFO: Etapa a reportar route
+
+Scenario func::hold_ff0p88v125c (mode func corner hold_ff0p88v125c) is configured for hold/leakage_power/max_transition/min_capacitance, but is inactive.
+Scenario func::setup_ss0p72v125c (mode func corner setup_ss0p72v125c) is configured for setup/leakage_power/dynamic_power/max_transition/max_capacitance, but is inactive.
+Scenario func::setup_ss0p72v125c (mode func corner setup_ss0p72v125c) is active for setup/leakage_power/dynamic_power/max_transition/max_capacitance analysis.
+Scenario func::hold_ff0p88v125c (mode func corner hold_ff0p88v125c) is active for hold/leakage_power/max_transition/min_capacitance analysis.
+
+INFO: Reportando timing y QoR ...
+
+****************************************
+Report : qor
+        -summary
+Design : ALU_votegui
+Version: U-2022.12
+Date   : Mon Apr 28 07:59:34 2025
+****************************************
+Information: Timer using 'PrimeTime Delay Calculation, SI, Timing Window Analysis, AWP, CRPR'. (TIM-050)
+
+Timing
+---------------------------------------------------------------------------
+Context                                 WNS            TNS            NVE
+---------------------------------------------------------------------------
+func::setup_ss0p72v125c (Setup)             --          0.000              0
+Design             (Setup)               --          0.000              0
+
+func::hold_ff0p88v125c (Hold)             --          0.000              0
+Design             (Hold)                --          0.000              0
+---------------------------------------------------------------------------
+
+Miscellaneous
+---------------------------------------------------------------------------
+Cell Area (netlist):                           210.722
+Cell Area (netlist and physical only):         318.215
+Nets with DRC Violations:        2
+1
+Information: Timer using 'PrimeTime Delay Calculation, SI, Timing Window Analysis, AWP, CRPR'. (TIM-050)
+****************************************
+Report : global timing
+        -format { narrow }
+        -report_by design
+Design : ALU_votegui
+Version: U-2022.12
+Date   : Mon Apr 28 07:59:34 2025
+****************************************
+
+No setup violations found.
+
+
+No hold violations found.
+
+
+1
+
+INFO: Analizando violaciones del diseno ...
+
+
+INFO: Reportando informacion de las redes de clock y QoR ...
+
+ Info: Initializing timer in CLOCK_SYN_REPORT_MODE
+Information: The value of option cts.compile.enable_cell_relocation has been overridden to "leaf_only" to support latency-driven placement. (CTS-973)
+Warning: time.si_enable_analysis is on, it could increase the runtime and memory usage. 
+Warning: The scenario func::hold_ff0p88v125c has max capacitance DRC fixing disabled using the set_scenario_status command.  High DRC count may be expected.
+****************************************
+Report : clock qor
+        -type summary
+        -nosplit
+Design : ALU_votegui
+Version: U-2022.12
+Date   : Mon Apr 28 07:59:35 2025
+****************************************
+
+Attributes
+===========
+M Master Clock
+G Generated Clock
+& Internal Generated Clock
+U User Defined Skew Group
+D Default Skew Group
+* Generated Clock Balanced Separately
+
+=======================================================
+==== Summary Reporting for Corner hold_ff0p88v125c ====
+=======================================================
+
+====================================================== Summary Table for Corner hold_ff0p88v125c =======================================================
+Clock /                               Attrs     Sinks Levels    Clock     Clock     Clock       Max    Global  Trans DRC  Cap DRC      Wire
+Skew Group                                                   Repeater  Repeater   Stdcell   Latency      Skew     Count     Count    Length
+                                                                Count      Area      Area
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+### Mode: func, Scenario: func::hold_ff0p88v125c
+CLOCK_MAIN                              M,D        33     11        9     2.220     8.081     0.093     0.057         0         0   216.730
+ gen_clk_div2                             G        33      9        9     2.220     6.127     0.075     0.040         0         0   179.107
+  gen_clk_div4                            G        33      8        8     2.042     4.662     0.061     0.020         0         0   165.730
+   gen_clk_div8                           G        33      7        7     1.865     3.197     0.048     0.007         0         0   158.746
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+All Clocks                                         33     11        9     2.220     8.081     0.093     0.057         0         0   216.730
+
+
+Warning: Please use -largest / -smallest / -all switches with -show_verbose_paths / -show_paths to report the clock paths. (CTS-956)
+========================================================
+==== Summary Reporting for Corner setup_ss0p72v125c ====
+========================================================
+
+====================================================== Summary Table for Corner setup_ss0p72v125c ======================================================
+Clock /                               Attrs     Sinks Levels    Clock     Clock     Clock       Max    Global  Trans DRC  Cap DRC      Wire
+Skew Group                                                   Repeater  Repeater   Stdcell   Latency      Skew     Count     Count    Length
+                                                                Count      Area      Area
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+### Mode: func, Scenario: func::setup_ss0p72v125c
+CLOCK_MAIN                              M,D        33     11        9     2.220     8.081     0.155     0.093         0         0   216.730
+ gen_clk_div2                             G        33      9        9     2.220     6.127     0.130     0.065         0         0   179.107
+  gen_clk_div4                            G        33      8        8     2.042     4.662     0.109     0.035         0         0   165.730
+   gen_clk_div8                           G        33      7        7     1.865     3.197     0.088     0.013         0         0   158.746
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+All Clocks                                         33     11        9     2.220     8.081     0.155     0.093         0         0   216.730
+
+
+Warning: Please use -largest / -smallest / -all switches with -show_verbose_paths / -show_paths to report the clock paths. (CTS-956)
+1
+Dispatching command : 'report_clock_qor -type latency -show_paths -nosplit' > ${dir_reportes}/${etapa_actual}/${dir_clocks}/latencia_clocks.rpt
+Dispatching command : 'report_clock_qor -type area -nosplit' > ${dir_reportes}/${etapa_actual}/${dir_clocks}/area_celdas_clock.rpt
+Dispatching command : 'report_clock_qor -type structure -nosplit' > ${dir_reportes}/${etapa_actual}/${dir_clocks}/estructura_clocks.rpt
+Dispatching command : 'report_clock_qor -type drc_violators -all -nosplit' > ${dir_reportes}/${etapa_actual}/${dir_clocks}/drc_clocks.rpt
+Dispatching command : 'report_clock_timing -type summary -clock_synthesis_view -scenarios [get_scenarios -filter active] -nosplit' > ${dir_reportes}/${etapa_actual}/${dir_clocks}/resumen_timing_clocks.rpt
+Dispatching command : 'report_clock_timing -type skew -clock_synthesis_view -scenarios [get_scenarios -filter active] -nosplit' > ${dir_reportes}/${etapa_actual}/${dir_clocks}/skew_clocks.rpt
+Dispatching command : 'report_clock_timing -type latency -clock_synthesis_view -scenarios [get_scenarios -filter active] -nosplit' > ${dir_reportes}/${etapa_actual}/${dir_clocks}/latencia_timing_clocks.rpt
+Waiting for all dispatched commands to complete ...
+Done.
+
+All command runs are done. Below is the status.
+
+Completed 'report_clock_qor -type latency -show_paths -nosplit' successfully.
+Output is in log '${dir_reportes}/${etapa_actual}/${dir_clocks}/latencia_clocks.rpt'
+
+Completed 'report_clock_qor -type area -nosplit' successfully.
+Output is in log '${dir_reportes}/${etapa_actual}/${dir_clocks}/area_celdas_clock.rpt'
+
+Completed 'report_clock_qor -type structure -nosplit' successfully.
+Output is in log '${dir_reportes}/${etapa_actual}/${dir_clocks}/estructura_clocks.rpt'
+
+Completed 'report_clock_qor -type drc_violators -all -nosplit' successfully.
+Output is in log '${dir_reportes}/${etapa_actual}/${dir_clocks}/drc_clocks.rpt'
+
+Completed 'report_clock_timing -type summary -clock_synthesis_view -scenarios [get_scenarios -filter active] -nosplit' successfully.
+Output is in log '${dir_reportes}/${etapa_actual}/${dir_clocks}/resumen_timing_clocks.rpt'
+
+Completed 'report_clock_timing -type skew -clock_synthesis_view -scenarios [get_scenarios -filter active] -nosplit' successfully.
+Output is in log '${dir_reportes}/${etapa_actual}/${dir_clocks}/skew_clocks.rpt'
+
+Completed 'report_clock_timing -type latency -clock_synthesis_view -scenarios [get_scenarios -filter active] -nosplit' successfully.
+Output is in log '${dir_reportes}/${etapa_actual}/${dir_clocks}/latencia_timing_clocks.rpt'
+
+
+INFO: Ejecutando report_power ...
+
+
+INFO: Ejecutando report_power ...
+
+****************************************
+Report : power
+        -significant_digits 3
+Design : ALU_votegui
+Version: U-2022.12
+Date   : Mon Apr 28 07:59:45 2025
+****************************************
+Information: Activity for scenario func::setup_ss0p72v125c was cached, no propagation required. (POW-005)
+Information: Activity for scenario func::hold_ff0p88v125c was cached, no propagation required. (POW-005)
+Mode: func
+Corner: hold_ff0p88v125c
+Scenario: func::hold_ff0p88v125c
+Voltage: 0.880
+Temperature: 125.000
+
+Voltage Unit         : 1V
+Capacitance Unit     : 1pF
+Time Unit            : 1ns
+Temperature Unit     : 1C
+Dynamic Power Unit   : 1mW
+Leakage Power Unit   : 1mW
+
+Switched supply net power scaling:
+scaling for leakage power
+
+Supply nets:
+VDD (power) probability 1.000 (default)
+VSS (ground) probability 1.000 (default)
+
+  Cell Internal Power    = N/A ( N/A )
+  Net Switching Power    = N/A ( N/A )
+Total Dynamic Power      = N/A (  0.0%)
+
+Cell Leakage Power       = 2.370e-02 mW
+
+
+  Attributes
+  ----------
+      u  -  User defined power group
+      i  -  Includes clock pin internal power
+
+Power Group         Internal Power        Switching Power          Leakage Power            Total Power    (   %  )    Attrs
+-----------------------------------------------------------------------------------------------------------------------------
+io_pad                         N/A                    N/A              0.000e+00              0.000e+00    (  0.0%)         
+memory                         N/A                    N/A              0.000e+00              0.000e+00    (  0.0%)         
+black_box                      N/A                    N/A              1.170e-06              1.170e-06    (  0.0%)         
+clock_network                  N/A                    N/A              1.089e-02              1.089e-02    ( 46.0%)        i
+register                       N/A                    N/A              1.626e-03              1.626e-03    (  6.9%)         
+sequential                     N/A                    N/A              1.309e-04              1.309e-04    (  0.6%)         
+combinational                  N/A                    N/A              1.105e-02              1.105e-02    ( 46.6%)         
+-----------------------------------------------------------------------------------------------------------------------------
+Total                          N/A                    N/A              2.370e-02 mW           2.370e-02 mW
+Mode: func
+Corner: setup_ss0p72v125c
+Scenario: func::setup_ss0p72v125c
+Voltage: 0.720
+Temperature: 125.000
+
+Voltage Unit         : 1V
+Capacitance Unit     : 1pF
+Time Unit            : 1ns
+Temperature Unit     : 1C
+Dynamic Power Unit   : 1mW
+Leakage Power Unit   : 1mW
+
+Switched supply net power scaling:
+scaling for leakage power
+
+Supply nets:
+VDD (power) probability 1.000 (default)
+VSS (ground) probability 1.000 (default)
+
+  Cell Internal Power    = 3.358e-03 mW ( 48.5%)
+  Net Switching Power    = 3.566e-03 mW ( 51.5%)
+Total Dynamic Power      = 6.924e-03 mW (100.0%)
+
+Cell Leakage Power       = 2.296e-03 mW
+
+
+  Attributes
+  ----------
+      u  -  User defined power group
+      i  -  Includes clock pin internal power
+
+Power Group         Internal Power        Switching Power          Leakage Power            Total Power    (   %  )    Attrs
+-----------------------------------------------------------------------------------------------------------------------------
+io_pad                   0.000e+00              0.000e+00              0.000e+00              0.000e+00    (  0.0%)         
+memory                   0.000e+00              0.000e+00              0.000e+00              0.000e+00    (  0.0%)         
+black_box                0.000e+00              0.000e+00              1.144e-07              1.144e-07    (  0.0%)         
+clock_network            1.704e-03              1.098e-03              8.837e-04              3.686e-03    ( 40.0%)        i
+register                 3.172e-04              1.188e-04              7.742e-05              5.134e-04    (  5.6%)         
+sequential               0.000e+00              0.000e+00              1.879e-05              1.879e-05    (  0.2%)         
+combinational            1.337e-03              2.349e-03              1.316e-03              5.002e-03    ( 54.2%)         
+-----------------------------------------------------------------------------------------------------------------------------
+Total                    3.358e-03 mW           3.566e-03 mW           2.296e-03 mW           9.220e-03 mW
+1
+
+INFO: Ejecutando timing constraints ...
+
+Dispatching command : 'report_modes -nosplit' > ${dir_reportes}/${etapa_actual}/${dir_escenarios}/modos.rpt
+Dispatching command : 'report_pvt -nosplit' > ${dir_reportes}/${etapa_actual}/${dir_escenarios}/pvt.rpt
+Dispatching command : 'report_corners [all_corners]' > ${dir_reportes}/${etapa_actual}/${dir_escenarios}/corners.rpt
+Waiting for all dispatched commands to complete ...
+Done.
+
+All command runs are done. Below is the status.
+
+Completed 'report_modes -nosplit' successfully.
+Output is in log '${dir_reportes}/${etapa_actual}/${dir_escenarios}/modos.rpt'
+
+Completed 'report_pvt -nosplit' successfully.
+Output is in log '${dir_reportes}/${etapa_actual}/${dir_escenarios}/pvt.rpt'
+
+Completed 'report_corners [all_corners]' successfully.
+Output is in log '${dir_reportes}/${etapa_actual}/${dir_escenarios}/corners.rpt'
+
+
+INFO: Reportando informacion del diseno ...
+
+****************************************
+Report : report_utilization
+Design : ALU_votegui
+Version: U-2022.12
+Date   : Mon Apr 28 07:59:49 2025
+****************************************
+Utilization Ratio:                      0.1912
+Utilization options:
+ - Area calculation based on:           site_row of block ALU_votegui/route_auto
+ - Categories of objects excluded:      hard_macros macro_keepouts soft_macros io_cells hard_blockages 
+Total Area:                             2258.8944
+Total Capacity Area:                    2251.9680
+Total Area of cells:                    430.5468
+Area of excluded objects:
+ - hard_macros         :                0.0000
+ - macro_keepouts      :                0.0000
+ - soft_macros         :                0.0000
+ - io_cells            :                2.6640
+ - hard_blockages      :                0.0000
+Total Area of excluded objects:         2.6640
+Ratio of excluded objects:              0.0012
+
+Utilization of site-rows with:
+ - Site 'unit':                         0.1912
+
+0.1912
+
+INFO: Chequeando problemas del diseno ...
+
+
+INFO: Reportando unidades ...
+
+
+INFO: Reportando configuraciones que no estan por defecto ...
+
+
+INFO: Reportando informacion de redes ideales ...
+
+****************************************
+Report : Report drc errors
+Design : ALU_votegui
+Data   : zroute.err
+Type   : error_type
+Version: U-2022.12
+Date   : Mon Apr 28 07:59:53 2025
+****************************************
+
+ErrorSet                                    Total   Visible     Fixed   Ignored
+--------------------------------------------------------------------------------
+Design : ALU_votegui                        0       0           0       0
+      Data : zroute.err                     0       0           0       0
+1
+Information: write_qor_data is capturing data for label route_auto to the ./datos_qor directory.  (RPT-180)
+Information: Running write_qor_data for label 'route_auto' and report 'report_area'  (RPT-190)
+Information: Running write_qor_data for label 'route_auto' and report 'report_design'  (RPT-190)
+Information: Running write_qor_data for label 'route_auto' and report 'report_multibit'  (RPT-190)
+Information: Running write_qor_data for label 'route_auto' and report 'report_threshold_voltage_groups'  (RPT-190)
+Information: Running write_qor_data for label 'route_auto' and report 'report_utilization'  (RPT-190)
+Information: Running write_qor_data for label 'route_auto' and report 'report_qor'  (RPT-190)
+Information: Running write_qor_data for label 'route_auto' and report 'report_global_timing'  (RPT-190)
+Information: Running write_qor_data for label 'route_auto' and report 'report_constraints'  (RPT-190)
+Information: Running write_qor_data for label 'route_auto' and report 'report_clock_gating'  (RPT-190)
+Information: Running write_qor_data for label 'route_auto' and report 'report_power'  (RPT-190)
+Information: Using scenario func::setup_ss0p72v125c for dynamic power in summary reports.  (RPT-134)
+Information: Using scenario func::setup_ss0p72v125c for leakage power in summary reports.  (RPT-134)
+Information: Running write_qor_data for label 'route_auto' and report 'report_congestion'  (RPT-190)
+Information: Running write_qor_data for label 'route_auto' and report 'check_routes'  (RPT-190)
+Error: Errors occurred during write_qor_data while running the 'check_routes' report.  (RPT-181)
+Information: compare_qor_data has written the QORsum report.  View it using view_qor_data -location ./comparacion_qor/index.html  (RPT-200)
+Information: 401 out of 411 POW-046 messages were not printed due to limit 10 (after 'source' at fc_shell-be-2.sviBfw:6) (MSG-3913)
+Information: 54 out of 64 SQM-1061 messages were not printed due to limit 10 (after 'source' at fc_shell-be-2.sviBfw:6) (MSG-3913)
+Information: 27 out of 32 SQM-1079 messages were not printed due to limit 5 (after 'source' at fc_shell-be-2.sviBfw:6) (MSG-3913)
+Information: 22 out of 32 SQM-2004 messages were not printed due to limit 10 (after 'source' at fc_shell-be-2.sviBfw:6) (MSG-3913)
+# Finalizacion de la ejecucion
+####################################################################################################
+# Informacion de la ejecucion
+set tiempo_final [clock seconds]
+1745838169
+set runtime [expr $tiempo_final - $tiempo_comienzo]
+366
+set runtime [expr $runtime/60]
+6
+set memKB [get_mem]
+2149708
+set memGB [expr ($memKB * 1.0)/(1024*1024)]
+2.05012130737
+puts "INFO: Informacion de la ejecucion:"
+INFO: Informacion de la ejecucion:
+puts " - Comienzo: [clock format $tiempo_comienzo -format {%H:%M:%S - %d %b %Y}]"
+ - Comienzo: 07:56:43 - 28 Apr 2025
+puts " - Final: [clock format $tiempo_final -format {%H:%M:%S - %d %b %Y}]"
+ - Final: 08:02:49 - 28 Apr 2025
+puts " - Runtime: $runtime min"
+ - Runtime: 6 min
+puts " - Memoria usada: [format "%.3f" $memGB] GB"
+ - Memoria usada: 2.050 GB
+# Reportes de QoR
+write_qor_data -report_list "performance host_machine report_app_options" -label $etapa_actual -output $dir_qor
+Information: write_qor_data is capturing data for label route_auto to the ./datos_qor directory.  (RPT-180)
+Information: Running write_qor_data for label 'route_auto' and report 'report_app_options'  (RPT-190)
+Information: Running write_qor_data for label 'route_auto' and report 'host_machine'  (RPT-190)
+Information: Running write_qor_data for label 'route_auto' and report 'performance'  (RPT-190)
+if {[file exists ${etapa_actual}.log]} {
+    exec gzip ${etapa_actual}.log
+    file rename -force ${etapa_actual}.log.gz $dir_logs
+}
