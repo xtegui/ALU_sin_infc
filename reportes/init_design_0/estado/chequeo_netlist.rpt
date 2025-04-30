@@ -1,0 +1,17 @@
+****************************************
+Report : check_netlist
+        -cells
+        -nets
+        -ports
+        -summary
+Design : ALU_votegui
+Version: U-2022.12
+Date   : Mon Apr 14 06:03:27 2025
+****************************************
+             Name                                                          Total
+--------------------------------------------------------------------------------
+Cell                                                                         155
+             (DCHK-039) Cell is unmapped                                     155
+--------------------------------------------------------------------------------
+Information: Use the related options for more information about warnings. (DCHK-042)
+1

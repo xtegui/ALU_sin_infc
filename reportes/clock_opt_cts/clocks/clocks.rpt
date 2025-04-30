@@ -1,0 +1,33 @@
+****************************************
+Report : clock
+Design : ALU_votegui
+Mode   : func
+Version: U-2022.12
+Date   : Mon Apr 28 07:15:50 2025
+****************************************
+
+
+Attributes:
+    p - Propagated clock
+    G - Generated  clock
+    U - Unexpanded generated clock
+
+Clock          Period   Waveform            Attrs     Sources
+--------------------------------------------------------------------------------
+CLOCK_MAIN     10.000   {0 5}               p         {i_clock}
+gen_clk_div2   20.000   {0 10}              p, G      {q_div_2_reg/Q}
+gen_clk_div4   40.000   {0 20}              p, G      {q_div_4_reg/Q}
+gen_clk_div8   80.000   {0 40}              p, G      {q_div_8_reg/Q}
+vir_CLOCK_MAIN 10.000   {0 5}                         {}
+
+
+
+
+Generated     Master          Generated       Master          Waveform
+Clock         Source          Source          Clock           Modification
+--------------------------------------------------------------------------------
+gen_clk_div2  q_div_2_reg/CK  q_div_2_reg/Q   CLOCK_MAIN      div(2)
+gen_clk_div4  q_div_4_reg/CK  q_div_4_reg/Q   gen_clk_div2    div(2)
+gen_clk_div8  q_div_8_reg/CK  q_div_8_reg/Q   gen_clk_div4    div(2)
+
+1

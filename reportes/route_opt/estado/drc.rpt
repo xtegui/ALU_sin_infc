@@ -1,0 +1,14 @@
+****************************************
+Report : Report drc errors
+Design : ALU_votegui
+Data   : zroute.err
+Type   : error_type
+Version: U-2022.12
+Date   : Mon Apr 28 08:20:15 2025
+****************************************
+
+ErrorSet                                    Total   Visible     Fixed   Ignored
+--------------------------------------------------------------------------------
+Design : ALU_votegui                        0       0           0       0
+      Data : zroute.err                     0       0           0       0
+1

@@ -1,0 +1,20 @@
+****************************************
+Report : report_resources
+Design : ALU_votegui
+Version: U-2022.12
+Date   : Mon Apr 28 05:52:41 2025
+****************************************
+-------------------------------
+ Design : ALU_votegui_sum_op_1 
+-------------------------------
+
+ Cell : u_sum/add_7 
+--------------------
+
+   Module                :  DW01_add_J14_H0_D1 
+   Parameters            :  width=32           
+   Current Implementation:  pparch(area)       
+   Contained Operations  :  add_7(sum_op.v:7)  
+   Has Tree              :  No                 
+
+1

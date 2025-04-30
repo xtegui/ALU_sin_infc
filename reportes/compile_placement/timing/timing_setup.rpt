@@ -1,0 +1,22 @@
+SI analysis is not enabled, so delta delays are unavailable.
+****************************************
+Report : timing
+        -path_type full
+        -delay_type max
+        -max_paths 1
+        -report_by group
+        -nosplit
+        -input_pins
+        -nets
+        -transition_time
+        -capacitance
+        -crosstalk_delta
+        -derate
+        -attributes
+        -physical
+Design : ALU_votegui
+Version: U-2022.12
+Date   : Mon Apr 28 05:52:39 2025
+****************************************
+No paths.
+1

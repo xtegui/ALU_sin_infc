@@ -1,0 +1,83 @@
+****************************************
+Report : reference
+        -hierarchical_info
+Design : ALU_votegui
+Version: U-2022.12
+Date   : Mon Apr 28 07:36:01 2025
+****************************************
+
+Attributes
+    b - black-box (unknown)
+    h - hierarchical
+    n - noncombinational
+    u - contains unmapped logic
+    E - extracted timing model
+    Q - Quick timing model (QTM)
+    s - synthetic operator
+
+
+Reference          Library       Unit Area   Count    Total Area   Attributes
+--------------------------------------------------------------------------------
+SAEDHVT14_ADDF_V1_1 saed14hvt         1.02      27         27.57   
+SAEDHVT14_AN2_1    saed14hvt          0.31      17          5.28   
+SAEDHVT14_AN2_MM_0P5 saed14hvt        0.31      18          5.59   
+SAEDHVT14_AO221_0P5 saed14hvt         0.49       1          0.49   
+SAEDHVT14_AO22_0P5 saed14hvt          0.53       1          0.53   
+SAEDHVT14_AO22_0P75 saed14hvt         0.53       4          2.13   
+SAEDHVT14_AO22_1   saed14hvt          0.53       2          1.07   
+SAEDHVT14_FSDPQ_V2LP_1 saed14hvt      1.11       1          1.11   n
+SAEDHVT14_FSDPRBQ_V2LP_1 saed14hvt      1.29    32         41.20   n
+SAEDHVT14_OR2_1    saed14hvt          0.31       7          2.18   
+SAEDHVT14_TIE0_4   saed14hvt          0.49       7          3.42   
+SAEDLVT14_NR2_MM_1 saed14lvt          0.22       1          0.22   
+SAEDRVT14_ADDF_V1_0P5 saed14rvt       1.02       3          3.06   
+SAEDRVT14_ADDH_0P5 saed14rvt          0.67       1          0.67   
+SAEDRVT14_AN2B_MM_1 saed14rvt         0.40       2          0.80   
+SAEDRVT14_AN2_1    saed14rvt          0.31       1          0.31   
+SAEDRVT14_AN2_ECO_2 saed14rvt         0.75       1          0.75   
+SAEDRVT14_AO221_0P5 saed14rvt         0.49      32         15.63   
+SAEDRVT14_AO22_1   saed14rvt          0.53      26         13.85   
+SAEDRVT14_AOI21_ECO_1 saed14rvt       0.49       1          0.49   
+SAEDRVT14_BUF_ECO_8 saed14rvt         1.42       2          2.84   
+SAEDRVT14_BUF_S_4  saed14rvt          0.40     105         41.96   
+SAEDRVT14_CAPB2    saed14rvt          0.18     138         24.51   
+SAEDRVT14_CAPB3    saed14rvt          0.22       1          0.22   
+SAEDRVT14_CAPBIN13 saed14rvt          0.67       2          1.33   
+SAEDRVT14_CAPBTAP6 saed14rvt          0.36       7          2.49   
+SAEDRVT14_CAPSPACER1 saed14rvt        0.04     154          6.84   
+SAEDRVT14_CAPT2    saed14rvt          0.18     138         24.51   
+SAEDRVT14_CAPT3    saed14rvt          0.22       1          0.22   
+SAEDRVT14_CAPTIN13 saed14rvt          0.67       2          1.33   
+SAEDRVT14_CAPTTAP6 saed14rvt          0.36       7          2.49   
+SAEDRVT14_DCAP_PV1ECO_6 saed14rvt      0.40      1          0.40   
+SAEDRVT14_EO2_V1_0P75 saed14rvt       0.44      34         15.10   
+SAEDRVT14_FDPQ_V2ECO_1 saed14rvt      1.69       2          3.37   n
+SAEDRVT14_INV_0P5  saed14rvt          0.18       3          0.53   
+SAEDRVT14_INV_1P5  saed14rvt          0.18       2          0.36   
+SAEDRVT14_INV_ECO_8 saed14rvt         1.15       2          2.31   
+SAEDRVT14_MUX2_ECO_2 saed14rvt        1.02       1          1.02   
+SAEDRVT14_ND2_ECO_2 saed14rvt         0.62       1          0.62   
+SAEDRVT14_NR2_ECO_2 saed14rvt         0.75       1          0.75   
+SAEDRVT14_NR2_MM_1 saed14rvt          0.22       2          0.44   
+SAEDRVT14_OAI21_2  saed14rvt          0.44       1          0.44   
+SAEDRVT14_OR2_1    saed14rvt          0.31      25          7.77   
+SAEDRVT14_OR2_ECO_2 saed14rvt         0.62       1          0.62   
+SAEDRVT14_TAPDS    saed14rvt          0.53      41         21.84   
+SAEDRVT14_TAPPN    saed14rvt          0.53      40         21.31   
+SAEDSLVT14_BUF_S_8 saed14slvt         0.67       1          0.67   
+SAEDSLVT14_FSDPRBQ_V2_0P5 saed14slvt      1.29   1          1.29   n
+SAEDSLVT14_FSDPRBQ_V2_1 saed14slvt      1.29     2          2.58   n
+SAEDSLVT14_INV_S_0P5 saed14slvt       0.18       2          0.36   
+SAEDSLVT14_INV_S_0P75 saed14slvt      0.18       1          0.18   
+SAEDSLVT14_INV_S_1 saed14slvt         0.18       1          0.18   
+SAEDSLVT14_INV_S_12 saed14slvt        0.67       1          0.67   
+SAEDSLVT14_INV_S_3 saed14slvt         0.31       1          0.31   
+ALU_votegui_and_op_1                  9.95       1          9.95   h
+ALU_votegui_clock_mux_1               2.62       1          2.62   h
+ALU_votegui_op_mux_1                 34.01       1         34.01   h
+ALU_votegui_or_op_1                   9.95       1          9.95   h
+ALU_votegui_sum_op_1                 32.19       1         32.19   h
+ALU_votegui_xor_op_1                 14.21       1         14.21   h
+--------------------------------------------------------------------------------
+Total 60 references                                       421.13
+1

@@ -1,0 +1,43 @@
+****************************************
+Report : activity
+        -driver
+Design : ALU_votegui
+Version: U-2022.12
+Date   : Mon Apr 28 05:52:41 2025
+****************************************
+
+Ignoring unconnected drivers. To include unconnected drivers set 'power.ignore_unconnected_driver' to false.
+
+Scenario 'func::hold_ff0p88v125c' (mode 'func', corner 'hold_ff0p88v125c')
+
+Essential activity is complete
+Information: Activity cache is invalidated for scenario 'func::hold_ff0p88v125c'. Do activity propagation for this scenario to get updated activity. (POW-054)
+Information: Activity cache is invalidated for scenario 'func::hold_ff0p88v125c'. Do activity propagation for this scenario to get updated activity. (POW-054)
+Information: Activity cache is invalidated for scenario 'func::hold_ff0p88v125c'. Do activity propagation for this scenario to get updated activity. (POW-054)
+Information: Activity cache is invalidated for scenario 'func::hold_ff0p88v125c'. Do activity propagation for this scenario to get updated activity. (POW-054)
+Information: Activity cache is invalidated for scenario 'func::hold_ff0p88v125c'. Do activity propagation for this scenario to get updated activity. (POW-054)
+Information: Activity cache is invalidated for scenario 'func::hold_ff0p88v125c'. Do activity propagation for this scenario to get updated activity. (POW-054)
+Information: Activity cache is invalidated for scenario 'func::hold_ff0p88v125c'. Do activity propagation for this scenario to get updated activity. (POW-054)
+Information: Activity cache is invalidated for scenario 'func::hold_ff0p88v125c'. Do activity propagation for this scenario to get updated activity. (POW-054)
+Information: Activity cache is invalidated for scenario 'func::hold_ff0p88v125c'. Do activity propagation for this scenario to get updated activity. (POW-054)
+Information: Activity cache is invalidated for scenario 'func::hold_ff0p88v125c'. Do activity propagation for this scenario to get updated activity. (POW-054)
+Note - message 'POW-054' limit (10) exceeded. Remainder will be suppressed.
+Activity Type    primary-input          seq-pin         comb-pin     total
+--------------------------------------------------------------------------
+simulated           0 (  0.0%)       0 (  0.0%)       0 (  0.0%)         0
+annotated           0 (  0.0%)       0 (  0.0%)       0 (  0.0%)         0
+inferred            0 (  0.0%)       0 (  0.0%)       0 (  0.0%)         0
+derived             3 (  4.1%)       3 (  8.3%)       7 (  2.0%)        13
+calculated          0 (  0.0%)       0 (  0.0%)       0 (  0.0%)         0
+default            71 ( 95.9%)      33 ( 91.7%)     346 ( 98.0%)       450
+--------------------------------------------------------------------------
+total              74 (100.0%)      36 (100.0%)     353 (100.0%)       463
+
+Unlisted columns (all zeros):
+    primary-inout
+    icg-pin
+    tri-pin
+    no-func
+    no-driver
+
+1

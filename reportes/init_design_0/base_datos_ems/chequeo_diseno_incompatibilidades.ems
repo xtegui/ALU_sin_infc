@@ -1,0 +1,31 @@
+<Database>
+versionNumber:2
+Name/home/votegui/proyecto_final/place_and_route/ALU_sin_infc/fusion-compiler/reportes/init_design/base_datos_ems/chequeo_diseno_incompatibilidades.ems
+Creation TimeMon Apr 14 05:24:45 2025
+Modified TimeMon Apr 14 05:24:45 2025
+Design NameALU_votegui
+Library NameALU_votegui_design_planning
+</Database>
+<RuleCount>
+DMM-10516
+</RuleCount>
+<UserDefinedRules>
+</UserDefinedRules>
+<Messages>
+DMM-105Informationmmactionaccept10mmhandlerchange_lib_port_direction10mmobjnamelib_port_direction_saed14rvt/SAEDRVT14_CAPBIN13_VDD10mmtypelib_port_direction10objnameVDD (saed14rvt/SAEDRVT14_CAPBIN13)10objtypelib_pin10repairedstateaccepted10
+DMM-105Informationmmactionaccept10mmhandlerchange_lib_port_direction10mmobjnamelib_port_direction_saed14rvt/SAEDRVT14_CAPBIN13_VSS10mmtypelib_port_direction10objnameVSS (saed14rvt/SAEDRVT14_CAPBIN13)10objtypelib_pin10repairedstateaccepted10
+DMM-105Informationmmactionaccept10mmhandlerchange_lib_port_direction10mmobjnamelib_port_direction_saed14rvt/SAEDRVT14_CAPTIN13_VDD10mmtypelib_port_direction10objnameVDD (saed14rvt/SAEDRVT14_CAPTIN13)10objtypelib_pin10repairedstateaccepted10
+DMM-105Informationmmactionaccept10mmhandlerchange_lib_port_direction10mmobjnamelib_port_direction_saed14rvt/SAEDRVT14_CAPTIN13_VSS10mmtypelib_port_direction10objnameVSS (saed14rvt/SAEDRVT14_CAPTIN13)10objtypelib_pin10repairedstateaccepted10
+DMM-105Informationmmactionaccept10mmhandlerchange_lib_port_direction10mmobjnamelib_port_direction_saed14hvt/SAEDHVT14_CAPBIN13_VDD10mmtypelib_port_direction10objnameVDD (saed14hvt/SAEDHVT14_CAPBIN13)10objtypelib_pin10repairedstateaccepted10
+DMM-105Informationmmactionaccept10mmhandlerchange_lib_port_direction10mmobjnamelib_port_direction_saed14hvt/SAEDHVT14_CAPBIN13_VSS10mmtypelib_port_direction10objnameVSS (saed14hvt/SAEDHVT14_CAPBIN13)10objtypelib_pin10repairedstateaccepted10
+DMM-105Informationmmactionaccept10mmhandlerchange_lib_port_direction10mmobjnamelib_port_direction_saed14hvt/SAEDHVT14_CAPTIN13_VDD10mmtypelib_port_direction10objnameVDD (saed14hvt/SAEDHVT14_CAPTIN13)10objtypelib_pin10repairedstateaccepted10
+DMM-105Informationmmactionaccept10mmhandlerchange_lib_port_direction10mmobjnamelib_port_direction_saed14hvt/SAEDHVT14_CAPTIN13_VSS10mmtypelib_port_direction10objnameVSS (saed14hvt/SAEDHVT14_CAPTIN13)10objtypelib_pin10repairedstateaccepted10
+DMM-105Informationmmactionaccept10mmhandlerchange_lib_port_direction10mmobjnamelib_port_direction_saed14lvt/SAEDLVT14_CAPBIN13_VDD10mmtypelib_port_direction10objnameVDD (saed14lvt/SAEDLVT14_CAPBIN13)10objtypelib_pin10repairedstateaccepted10
+DMM-105Informationmmactionaccept10mmhandlerchange_lib_port_direction10mmobjnamelib_port_direction_saed14lvt/SAEDLVT14_CAPBIN13_VSS10mmtypelib_port_direction10objnameVSS (saed14lvt/SAEDLVT14_CAPBIN13)10objtypelib_pin10repairedstateaccepted10
+DMM-105Informationmmactionaccept10mmhandlerchange_lib_port_direction10mmobjnamelib_port_direction_saed14lvt/SAEDLVT14_CAPTIN13_VDD10mmtypelib_port_direction10objnameVDD (saed14lvt/SAEDLVT14_CAPTIN13)10objtypelib_pin10repairedstateaccepted10
+DMM-105Informationmmactionaccept10mmhandlerchange_lib_port_direction10mmobjnamelib_port_direction_saed14lvt/SAEDLVT14_CAPTIN13_VSS10mmtypelib_port_direction10objnameVSS (saed14lvt/SAEDLVT14_CAPTIN13)10objtypelib_pin10repairedstateaccepted10
+DMM-105Informationmmactionaccept10mmhandlerchange_lib_port_direction10mmobjnamelib_port_direction_saed14slvt/SAEDSLVT14_CAPBIN13_VDD10mmtypelib_port_direction10objnameVDD (saed14slvt/SAEDSLVT14_CAPBIN13)10objtypelib_pin10repairedstateaccepted10
+DMM-105Informationmmactionaccept10mmhandlerchange_lib_port_direction10mmobjnamelib_port_direction_saed14slvt/SAEDSLVT14_CAPBIN13_VSS10mmtypelib_port_direction10objnameVSS (saed14slvt/SAEDSLVT14_CAPBIN13)10objtypelib_pin10repairedstateaccepted10
+DMM-105Informationmmactionaccept10mmhandlerchange_lib_port_direction10mmobjnamelib_port_direction_saed14slvt/SAEDSLVT14_CAPTIN13_VDD10mmtypelib_port_direction10objnameVDD (saed14slvt/SAEDSLVT14_CAPTIN13)10objtypelib_pin10repairedstateaccepted10
+DMM-105Informationmmactionaccept10mmhandlerchange_lib_port_direction10mmobjnamelib_port_direction_saed14slvt/SAEDSLVT14_CAPTIN13_VSS10mmtypelib_port_direction10objnameVSS (saed14slvt/SAEDSLVT14_CAPTIN13)10objtypelib_pin10repairedstateaccepted10
+</Messages>

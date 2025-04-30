@@ -1,0 +1,49 @@
+****************************************
+Report : report_transformed_registers
+Version: U-2022.12
+Date   : Mon Apr 28 05:52:41 2025
+****************************************
+
+Legend:
+C0p - constant 0 register preserved
+C1p - constant 1 register preserved
+C0r - constant 0 register removed
+C1r - constant 1 register removed
+ulp - preserved unloaded register
+ulr - removed unloaded register
+mrg - merged register
+srh - shift register head
+srf - shift register flop
+mb  - multibit
+mbd - multibit debanked
+rep - replicated
+inv - inverted
+rtm - retimed
+
+
+Register                                         Optimization
+--------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+Register                                         Count
+--------------------------------------------------------------------------------
+
+
+Constant Registers Deleted                       0
+Constant Registers Preserved                     0
+Unloaded Registers Deleted                       0
+Unloaded Registers Preserved                     0
+Shift Registers                                  0
+Merged                                           0
+Multibit                                         0
+Inverted                                         0
+Replicated                                       0
+Retimed                                          0

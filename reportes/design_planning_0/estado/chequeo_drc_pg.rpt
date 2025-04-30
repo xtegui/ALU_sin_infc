@@ -1,0 +1,12 @@
+Command check_pg_drc started  at Mon Apr 14 04:57:41 2025
+Command check_pg_drc finished at Mon Apr 14 04:57:41 2025
+CPU usage for check_pg_drc: 0.45 seconds ( 0.00 hours)
+Elapsed time for check_pg_drc: 0.16 seconds ( 0.00 hours)
+Total number of errors found: 10800
+   600 insufficient spacings on VIA1
+   600 insufficient spacings on VIA2
+   7200 error between cuts on different layers on M2
+   2400 error between cuts on different layers on M3
+------------
+Description of the errors can be seen in gui error set "DRC_report_by_check_pg_drc"
+------------

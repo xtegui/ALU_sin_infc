@@ -1,0 +1,10 @@
+INFO: compile_fusion is running in balanced flow mode.
+Information: Starting 'compile_fusion -check_only' (FLW-8000)
+Information: Time: 2025-04-28 05:27:07 / Session: 1.06 hr / Command: 0.00 hr / Memory: 1254 MB (FLW-8100)
+INFO: Start environment monitoring: recipes
+INFO: compile_fusion is running in balanced flow mode.
+INFO: End environment monitoring: recipes
+INFO: Restored 0 timer status, 1 app options, 0 tcl gvars, 0 env vars
+Information: Ending   'compile_fusion -check_only' (FLW-8001)
+Information: Time: 2025-04-28 05:27:12 / Session: 1.06 hr / Command: 0.00 hr / Memory: 1927 MB (FLW-8100)
+1

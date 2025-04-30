@@ -1,0 +1,237 @@
+Information: Setting bounds and VA for block 'ALU_votegui'...
+Information: Setting up voltage area 'DEFAULT_VA'.
+Information: checking lib cells power/ground pins
+Information: Lib cells of site unit have their ground pins at bottom 
+
+Information: Legalizer threading is enabled with high effort (LGL-130)
+
+Information: Setting up cell instances...
+Information: All fillers in the reference libraries will be considered during legalization/check legality
+Information: Initializing site map 'unit' at {1.184 1.2} {48.84 48.6}.
+Information: Init siteMap unit with 644 sites x 79 rows
+Adding rule engine Basic Rules version 1.0.0...
+Adding rule engine VT Implant Rules version 1.0.0...
+Adding rule engine OD Rules version 1.0.0...
+Adding rule engine TPO Rules version 1.0.0...
+Adding rule engine Pin Access Rules version 1.0.0...
+Adding rule engine Span Rules version 1.0.0...
+Adding rule engine Index Rules version 1.0.0...
+Adding rule engine Color Rules version 1.0.0...
+Adding rule engine Inbound Rules version 1.0.0...
+Adding rule engine PG DRC Rules version 1.0.0...
+Adding rule engine Exp Rules version 1.0.0...
+Adding rule engine AON Cell Rules version 1.0.0...
+Adding rule engine Chipfin Rules version 1.0.0...
+Adding rule engine User Rules version 1.0.0...
+Adding rule engine Route-aware Pin Access Rules version 1.0.0...
+Adding rule engine Safety Register Rules version 1.0.0...
+Adding rule engine Soft Rules version 1.0.0...
+2D rule auto detection will enable the following rules:
+spacing_rule
+vt_min_width
+od_length
+pg_drc
+Information: Initializing CTS constraints...
+Information: nwell layer number 3
+Constructing VT legality info...
+Constructing implant ignored layer info...
+Information: The ignored implant layer for vt_min_width (place.legalize.vt_min_width_ignored_implant_layers) is not specified, skipped.
+Information: reference lib cells do not contain VT jogs
+Information: Layer HVTIMP has minArea -0.001 minWidth 0.85 minSpace 0.85
+Information: Layer HVTIMP has no fillers available.
+Information: Layer LVTIMP has minArea -0.001 minWidth 0.85 minSpace 0.85
+Information: Layer LVTIMP has no fillers available.
+Information: Design scale factor is 1000
+Constructing pin color alignment legality info...
+Information: Reading Vertical abutment prohibit pattern from app option (place.legalize.vertical_abutment_forbidden_pairs)...
+Information: App option (place.legalize.vertical_abutment_forbidden_pairs) is empty.
+Information: Reading Vertical abutment prohibit pattern from PRF...
+Information: Is mixed-row flow: no
+Constructing OD legality info...
+Warning: Found a diffusion shape of the filler ref SAEDRVT14_FILL_NNWSPACERY2_7 has no height or is out of cell bbox. Ignored the shape. Please check the diffusion layout.
+Warning: Found a diffusion shape of the filler ref SAEDRVT14_FILL_NNWSPACERY2_7 has no height or is out of cell bbox. Ignored the shape. Please check the diffusion layout.
+Warning: Found a diffusion shape of the filler ref SAEDRVT14_FILL_NNWIV1Y2_2 has no height or is out of cell bbox. Ignored the shape. Please check the diffusion layout.
+Warning: Found a diffusion shape of the filler ref SAEDRVT14_FILL_NNWIV1Y2_3 has no height or is out of cell bbox. Ignored the shape. Please check the diffusion layout.
+Warning: Found a diffusion shape of the filler ref SAEDRVT14_FILL_NNWIY2_2 has no height or is out of cell bbox. Ignored the shape. Please check the diffusion layout.
+Warning: Found a diffusion shape of the filler ref SAEDRVT14_FILL_NNWIY2_3 has no height or is out of cell bbox. Ignored the shape. Please check the diffusion layout.
+Warning: Found a diffusion shape of the filler ref SAEDRVT14_FILL_NNWVDDBRKY2_3 has no height or is out of cell bbox. Ignored the shape. Please check the diffusion layout.
+Warning: Found a diffusion shape of the filler ref SAEDRVT14_FILL_SPACER_7 has no height or is out of cell bbox. Ignored the shape. Please check the diffusion layout.
+Warning: Found a diffusion shape of the filler ref SAEDRVT14_FILL_SPACER_7 has no height or is out of cell bbox. Ignored the shape. Please check the diffusion layout.
+Warning: Found a diffusion shape of the filler ref SAEDRVT14_FILL_Y2_3 has no height or is out of cell bbox. Ignored the shape. Please check the diffusion layout.
+Warning: Found a diffusion shape of the filler ref SAEDRVT14_FILL_Y2_3 has no height or is out of cell bbox. Ignored the shape. Please check the diffusion layout.
+Warning: Found a diffusion shape of the filler ref SAEDHVT14_FILL_NNWIV1Y2_2 has no height or is out of cell bbox. Ignored the shape. Please check the diffusion layout.
+Warning: Found a diffusion shape of the filler ref SAEDHVT14_FILL_NNWIV1Y2_3 has no height or is out of cell bbox. Ignored the shape. Please check the diffusion layout.
+Warning: Found a diffusion shape of the filler ref SAEDHVT14_FILL_NNWIY2_2 has no height or is out of cell bbox. Ignored the shape. Please check the diffusion layout.
+Warning: Found a diffusion shape of the filler ref SAEDHVT14_FILL_NNWIY2_3 has no height or is out of cell bbox. Ignored the shape. Please check the diffusion layout.
+Warning: Found a diffusion shape of the filler ref SAEDHVT14_FILL_NNWSPACERY2_7 has no height or is out of cell bbox. Ignored the shape. Please check the diffusion layout.
+Warning: Found a diffusion shape of the filler ref SAEDHVT14_FILL_NNWSPACERY2_7 has no height or is out of cell bbox. Ignored the shape. Please check the diffusion layout.
+Warning: Found a diffusion shape of the filler ref SAEDHVT14_FILL_NNWVDDBRKY2_3 has no height or is out of cell bbox. Ignored the shape. Please check the diffusion layout.
+Warning: Found a diffusion shape of the filler ref SAEDHVT14_FILL_SPACER_7 has no height or is out of cell bbox. Ignored the shape. Please check the diffusion layout.
+Warning: Found a diffusion shape of the filler ref SAEDHVT14_FILL_SPACER_7 has no height or is out of cell bbox. Ignored the shape. Please check the diffusion layout.
+Warning: Found a diffusion shape of the filler ref SAEDHVT14_FILL_Y2_3 has no height or is out of cell bbox. Ignored the shape. Please check the diffusion layout.
+Warning: Found a diffusion shape of the filler ref SAEDHVT14_FILL_Y2_3 has no height or is out of cell bbox. Ignored the shape. Please check the diffusion layout.
+Warning: Found a diffusion shape of the filler ref SAEDLVT14_FILL_NNWIV1Y2_2 has no height or is out of cell bbox. Ignored the shape. Please check the diffusion layout.
+Warning: Found a diffusion shape of the filler ref SAEDLVT14_FILL_NNWIV1Y2_3 has no height or is out of cell bbox. Ignored the shape. Please check the diffusion layout.
+Warning: Found a diffusion shape of the filler ref SAEDLVT14_FILL_NNWIY2_2 has no height or is out of cell bbox. Ignored the shape. Please check the diffusion layout.
+Warning: Found a diffusion shape of the filler ref SAEDLVT14_FILL_NNWIY2_3 has no height or is out of cell bbox. Ignored the shape. Please check the diffusion layout.
+Warning: Found a diffusion shape of the filler ref SAEDLVT14_FILL_NNWSPACERY2_7 has no height or is out of cell bbox. Ignored the shape. Please check the diffusion layout.
+Warning: Found a diffusion shape of the filler ref SAEDLVT14_FILL_NNWSPACERY2_7 has no height or is out of cell bbox. Ignored the shape. Please check the diffusion layout.
+Warning: Found a diffusion shape of the filler ref SAEDLVT14_FILL_NNWVDDBRKY2_3 has no height or is out of cell bbox. Ignored the shape. Please check the diffusion layout.
+Warning: Found a diffusion shape of the filler ref SAEDLVT14_FILL_SPACER_7 has no height or is out of cell bbox. Ignored the shape. Please check the diffusion layout.
+Warning: Found a diffusion shape of the filler ref SAEDLVT14_FILL_SPACER_7 has no height or is out of cell bbox. Ignored the shape. Please check the diffusion layout.
+Warning: Found a diffusion shape of the filler ref SAEDLVT14_FILL_Y2_3 has no height or is out of cell bbox. Ignored the shape. Please check the diffusion layout.
+Warning: Found a diffusion shape of the filler ref SAEDLVT14_FILL_Y2_3 has no height or is out of cell bbox. Ignored the shape. Please check the diffusion layout.
+Warning: Found a diffusion shape of the filler ref SAEDSLVT14_FILL_NNWIV1Y2_2 has no height or is out of cell bbox. Ignored the shape. Please check the diffusion layout.
+Warning: Found a diffusion shape of the filler ref SAEDSLVT14_FILL_NNWIV1Y2_3 has no height or is out of cell bbox. Ignored the shape. Please check the diffusion layout.
+Warning: Found a diffusion shape of the filler ref SAEDSLVT14_FILL_NNWIY2_2 has no height or is out of cell bbox. Ignored the shape. Please check the diffusion layout.
+Warning: Found a diffusion shape of the filler ref SAEDSLVT14_FILL_NNWIY2_3 has no height or is out of cell bbox. Ignored the shape. Please check the diffusion layout.
+Warning: Found a diffusion shape of the filler ref SAEDSLVT14_FILL_NNWSPACERY2_7 has no height or is out of cell bbox. Ignored the shape. Please check the diffusion layout.
+Warning: Found a diffusion shape of the filler ref SAEDSLVT14_FILL_NNWSPACERY2_7 has no height or is out of cell bbox. Ignored the shape. Please check the diffusion layout.
+Warning: Found a diffusion shape of the filler ref SAEDSLVT14_FILL_NNWVDDBRKY2_3 has no height or is out of cell bbox. Ignored the shape. Please check the diffusion layout.
+Warning: Found a diffusion shape of the filler ref SAEDSLVT14_FILL_SPACER_7 has no height or is out of cell bbox. Ignored the shape. Please check the diffusion layout.
+Warning: Found a diffusion shape of the filler ref SAEDSLVT14_FILL_SPACER_7 has no height or is out of cell bbox. Ignored the shape. Please check the diffusion layout.
+Warning: Found a diffusion shape of the filler ref SAEDSLVT14_FILL_Y2_3 has no height or is out of cell bbox. Ignored the shape. Please check the diffusion layout.
+Warning: Found a diffusion shape of the filler ref SAEDSLVT14_FILL_Y2_3 has no height or is out of cell bbox. Ignored the shape. Please check the diffusion layout.
+Information: Is non-uniform diffusion Y offsets enabled: no
+OD height 0 (0 um) has filler size of 1 
+OD height 100 (0.1 um) has filler size of 4 5 6 7 8 9 10 11 14 17 18 20 34 68 
+OD height 150 (0.15 um) has filler size of 9 
+OD height 200 (0.2 um) has filler size of 4 5 7 8 9 10 11 14 17 18 20 21 34 66 
+OD height 300 (0.3 um) has filler size of 4 5 9 
+Warning: Found new diffusion P/N height pair {200 200} ({0.2 um 0.2 um}), from the right of STDCELL ref (SAEDRVT14_AOI22_1P5) without corresponding fillers having the same diffusion P/N height pair. Might be filler incompleteness. Please check the filler library.
+Warning: Found new diffusion P/N height pair {100 100} ({0.1 um 0.1 um}), from the right of STDCELL ref (SAEDRVT14_NR3B_0P75) without corresponding fillers having the same diffusion P/N height pair. Might be filler incompleteness. Please check the filler library.
+Warning: Found new diffusion P/N height pair {150 200} ({0.15 um 0.2 um}), from the left of STDCELL ref (SAEDRVT14_OR2B_PSECO_8) without corresponding fillers having the same diffusion P/N height pair. Might be filler incompleteness. Please check the filler library.
+Warning: Found new diffusion P/N height pair {100 150} ({0.1 um 0.15 um}), from the left of STDCELL ref (SAEDRVT14_NR2_ISO_1) without corresponding fillers having the same diffusion P/N height pair. Might be filler incompleteness. Please check the filler library.
+Warning: Found new diffusion P/N height pair {150 300} ({0.15 um 0.3 um}), from the right of STDCELL ref (SAEDRVT14_LVLUBUF_IY2V1_12) without corresponding fillers having the same diffusion P/N height pair. Might be filler incompleteness. Please check the filler library.
+Information: Collecting the diffusion height info for each lib cell in NDM...
+... 1-fin OD height extracted at {1.702 1.2} from layout of lib cell (SAEDRVT14_TAPPN): 50 (0.05 um)
+Information: If the 1-fin OD height shown above does not reflect the real 1-fin OD height, please specify the following app option to manually overwrite the 1-fin height: place.legalize.set_one_fin_height
+Information: 1-fin OD inner edge y offset at {1.702 1.2} from layout of lib cell (SAEDRVT14_TAPPN): 300 (0.3 um)
+Information: Found 0 uniform 1-fin non-filler lib cell
+Information: Found 725 uniform n-fin (n > 1) non-filler lib cells including { SAEDRVT14_INV_S_0P5 SAEDRVT14_BUF_S_4 SAEDRVT14_AN2_0P5 SAEDRVT14_INV_S_1P5 SAEDSLVT14_BUF_S_8 SAEDRVT14_FDPQ_V2ECO_1 ... }
+Information: Remaining 3308 non-uniform fin non-filler lib cells including { SAEDHVT14_AN2_1 SAEDSLVT14_FSDPRBQ_V2_0P5 SAEDHVT14_FSDPQ_V2LP_1 SAEDRVT14_NR2_MM_0P5 SAEDHVT14_AO221_0P5 SAEDHVT14_AO22_0P5 ... }
+Information: The number of lib cells printed above, is limited by app option (place.legalize.set_lib_cell_message_limit): 5
+Information: The smallest filler size with OD is 4 site wide
+Warning: Smallest size of filler cells present in the library is 4.00, which is larger than the smallest site width. (LGL-077)
+Information: 1x fillers all no-fin: yes
+Information: No 1-fin filler is found, so rule {thin_od_length} will be automatically ignored during filler insertion.
+Information: All fillers don't have fins.
+Information: Is mixed-row flow: no
+Information: There exists no lib cell with difussion extension.
+Layer DIFF has minWidth 44 (0.044 um) tJog 0 (0 um) lJog 0 (0 um) uJog 0 (0 um) constraints
+Layer DIFF has maxWidth 0 (0 um) tJog 0 (0 um) lJog 0 (0 um) uJog 0 (0 um) max length constraints w/ continuous spacing -1 (-0.001 um) & parLen -1 (-0.001 um)
+Information: Max min OD TLU jog length = 44 (0.044 um), max queryExt range = 2 sites
+Initializing PG drc check engine...
+NPLDRC: Using a 8x8 grid for PG structure analysis
+NPLDRC: Filter  0.00% (0/4096) blocked grids
+Scanning PG objects...
+PG hash cached 2 nets; 8 viaBoxes; 0 viaMatrixRefs; 0 patterns; 0 extensions.
+PG scanned 125 shapes (80 on M1); 4800 vias (600 on M1); 0 under straps (0 on M1); 0 staples; 0 tall vias; 80 base straps.
+PG scan complete.  Hash key = fe371c9528484d
+Information: Reading PG structure for 'ALU_votegui_init_design:ALU_votegui/chip_finish.design'. (NPLDRC-003)
+
+NPLDRC Sector Array Stats:
+Num Sectors: 10455
+Num SecDefs:    42
+
+Place Cache read: 118476 elements -- 111208 drcFail 7268 drcOk
+Place Cache read: 1971 libcells referenced from 7 libs
+Place Cache read: used 10 of 42 total secDefs
+Access Cache read: 7268 elements -- 5412 drcFail 1856 drcOk
+Access Cache read: 1862 libcells referenced from 4 libs
+Access Cache read: used 10 of 42 total secDefs
+NPLDRC: Read 3223 libCell Equivalence info from file
+Connection checks for layer M2: blocked_pin pin_access_default track_none pin_extend0
+Connection checks for layer M3: blocked_pin pin_access_default track_none pin_extend1
+Connection checks for layer M4: blocked_pin pin_access_default track_none pin_extend1
+Connection checks for layer M5: blocked_pin pin_access_default track_none pin_extend1
+
+NPLDRC app_option (user set) values:
+---------------------------------------
+
+
+---------------------------------------
+
+---------------------------------------
+Information: Extracting M1 PG straps
+Information: Constructing cell pin extension data for fast PG check.
+Information: PG-Via/VIB/VINS via layer (V0) not found
+Information: Enabling hard placement rule spacing_rule...
+Information: Enabling hard placement rule vt_min_width...
+Information: Enabling hard placement rule od_length...
+Information: Enabling hard placement rule pg_drc...
+
+Checking rule Overlap rule...
+
+Checking rule Spacing Rule...
+
+Checking rule Cell On Site Rule...
+
+Checking rule Cell On Legal Orientation Rule...
+
+Checking rule VT implant min width...
+Checking 225 of 2255 cells...
+Checking 450 of 2255 cells...
+Checking 675 of 2255 cells...
+Checking 900 of 2255 cells...
+Checking 1125 of 2255 cells...
+Checking 1350 of 2255 cells...
+Checking 1575 of 2255 cells...
+Checking 1800 of 2255 cells...
+Checking 2025 of 2255 cells...
+Checking 2250 of 2255 cells...
+
+Checking rule Check OD length including T/L/U jogs...
+Checking 225 of 2255 cells...
+Checking 450 of 2255 cells...
+Checking 675 of 2255 cells...
+Checking 900 of 2255 cells...
+Checking 1125 of 2255 cells...
+Checking 1350 of 2255 cells...
+Checking 1575 of 2255 cells...
+Checking 1800 of 2255 cells...
+Checking 2025 of 2255 cells...
+Checking 2250 of 2255 cells...
+
+Checking rule Check PG DRC rules...
+Checking 282 of 2255 cells...
+Checking 564 of 2255 cells...
+Checking 846 of 2255 cells...
+Checking 1128 of 2255 cells...
+Checking 1410 of 2255 cells...
+Checking 1692 of 2255 cells...
+Checking 1974 of 2255 cells...
+Checking 2255 of 2255 cells...
+================= 2D Rule Check Legality Report ===================
+                                    Violating  Cells               
+Legality Rules                 Moveable AppFixed UserFixed   Total 
+-------------------------------------------------------------------
+overlap                               0        0        0        0
+spacing_rule                          0        0        0        0
+cell_on_site                          0        0        0        0
+legal_orient                          0        0        0        0
+vt_min_width                          0        0        0        0
+od_length                             0        0        0        0
+pg_drc                                0        0        0        0
+-------------------------------------------------------------------
+Total Violations                      0        0        0        0
+===================================================================
+Place Cache save: 119164 elements -- 111208 drcFail 7956 drcOk
+Place Cache save: 32 special-case elements referenced 1 cases
+Place Cache save: 1983 libcells referenced from 7 libs
+Place Cache save: used 12 of 42 total secDefs
+Access Cache save: 7956 elements -- 5412 drcFail 2544 drcOk
+Access Cache save: 32 special-case elements referenced 1 cases
+Access Cache save: 1876 libcells referenced from 4 libs
+Access Cache save: used 12 of 42 total secDefs
+NPLDRC Wic Cache: unique cache elements 1157
+NPLDRC Wic Cache: hit rate  75.8% (1312 / 5417)
+NPLDRC: Processed 3225 libCells; 1973 unique
+NPLDRC: 3225 LibCell Equivalence info written to file
+NPLDRC Place Cache: unique cache elements 119164
+NPLDRC Place Cache: read cache elements 118476
+NPLDRC Place Cache: hit rate  68.1%  (717 / 2251)
+NPLDRC Access Cache: unique cache elements 7956
+NPLDRC Access Cache: read cache elements 7268
+NPLDRC Access Cache: hit rate  66.2%  (761 / 2251)
+1

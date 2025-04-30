@@ -1,0 +1,16 @@
+****************************************
+Report : timing
+        -path_type end
+        -delay_type max
+        -max_paths 5000
+        -report_by design
+        -nosplit
+Design : ALU_votegui
+Version: U-2022.12
+Date   : Mon Apr 28 07:35:47 2025
+****************************************
+Information: Timer using 'CRPR'. (TIM-050)
+Endpoint                         Path Delay     Path Required       CRP    Slack Scenario
+-------------------------------------------------------------------------------------------------
+No paths.
+1

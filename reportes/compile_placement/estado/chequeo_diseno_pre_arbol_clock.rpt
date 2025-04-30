@@ -1,0 +1,49 @@
+****************************************
+ Report : check_design 
+ Options: { pre_clock_tree_stage }
+ Design : ALU_votegui
+ Version: U-2022.12
+ Date   : Mon Apr 28 05:52:44 2025
+****************************************
+
+Running mega-check 'pre_clock_tree_stage': 
+    Running atomic-check 'design_mismatch'
+    Running atomic-check 'scan_chain'
+    Running atomic-check 'mv_design'
+    Running atomic-check 'legality'
+    Running atomic-check 'timing'
+    Running atomic-check 'clock_trees'
+    Running atomic-check 'hier_pre_clock_tree'
+
+  *** EMS Message summary ***
+  ----------------------------------------------------------------------------------------------------
+  Rule         Type   Count      Message
+  ----------------------------------------------------------------------------------------------------
+  CTS-012      Warn   1          Net %net in the clock network have a dont_touch constraint.
+  CTS-013      Warn   35         Cell %inst in the clock network have a dont_touch constraint as ...
+  CTS-903      Warn   10         Cell %cell instantiated in the clock network with lib cell %libc...
+  CTS-904      Warn   3          Clock reference cell %libcell(cell %cell) have no LEQ cell speci...
+  DFT-011      Info   1          The design has no scan chain defined in the scandef.
+  DMM-105      Info   16         Mismatch type %mmtype is detected on object type %objtype at obj...
+  TCK-001      Warn   113        The reported endpoint '%endpoint' is unconstrained. Reason: '%re...
+  TCK-012      Warn   71         The input port '%port' has no clock_relative delay specified. Mo...
+  ----------------------------------------------------------------------------------------------------
+  Total 250 EMS messages : 0 errors, 233 warnings, 17 info.
+  ----------------------------------------------------------------------------------------------------
+
+  *** Non-EMS message summary ***
+  ----------------------------------------------------------------------------------------------------
+  Rule         Type   Count      Message
+  ----------------------------------------------------------------------------------------------------
+  CTS-101      Info   1          %s will work on the following scenarios.
+  CTS-107      Info   1          %s will work on all clocks in active scenarios, including %d mas...
+  LGL-048      Warn   1          Library cells %s and %s have different supply architectures.
+  LGL-050      Warn   4          Library cell %s is missing supply pins. Its power structure cann...
+  PDC-007      Warn   1          No tracks defined on metal layer %s. Pin access checking disable...
+  ----------------------------------------------------------------------------------------------------
+  Total 8 non-EMS messages : 0 errors, 6 warnings, 2 info.
+  ----------------------------------------------------------------------------------------------------
+
+Information: EMS database is saved to file './reportes/compile_placement/base_datos_ems/chequeo_diseno_pre_arbol_clock.ems'.
+Information: Non-EMS messages are saved into file './reportes/compile_placement/base_datos_ems/chequeo_diseno_pre_arbol_clock.log'.
+1

@@ -1,0 +1,31 @@
+****************************************
+Report : ideal_network
+Design : ALU_votegui
+Version: U-2022.12
+Date   : Mon Apr 28 05:52:45 2025
+****************************************
+
+Ideal network data for scenario 'func::setup_ss0p72v125c':
+
+Source ports                    Latency                        Transition
+and pins                  Rise            Fall            Rise            Fall
+                       min    max      min    max      min    max      min    max
+-------------------------------------------------------------------------------------
+I_0/A                  --     --      --      --       --     --       --     --
+I_0/X                  --     --      --      --       --     --       --     --
+I_1/A                  --     --      --      --       --     --       --     --
+I_1/X                  --     --      --      --       --     --       --     --
+I_2/A                  --     --      --      --       --     --       --     --
+I_2/X                  --     --      --      --       --     --       --     --
+ctmi_43/X              --     --      --      --       --     --       --     --
+i_clock                --     --      --      --       --     --       --     --
+o_clock                --     --      --      --       --     --       --     --
+q_div_2_reg/D          --     --      --      --       --     --       --     --
+q_div_2_reg/Q          --     --      --      --       --     --       --     --
+q_div_4_reg/D          --     --      --      --       --     --       --     --
+q_div_4_reg/Q          --     --      --      --       --     --       --     --
+q_div_8_reg/D          --     --      --      --       --     --       --     --
+q_div_8_reg/Q          --     --      --      --       --     --       --     --
+u_clock_mux/ctmi_20/X  --     --      --      --       --     --       --     --
+
+1

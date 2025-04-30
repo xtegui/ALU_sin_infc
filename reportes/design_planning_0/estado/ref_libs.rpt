@@ -1,0 +1,28 @@
+****************************************
+Report : Reference Library Report
+Library: ALU_votegui
+Version: U-2022.12
+Date   : Mon Apr 14 04:57:31 2025
+****************************************
+
+    Name            Path                                                        Location
+    ------------------------------------------------------------------------------------
+*+  saed14rvt       /home/digitalProjects/tech/saed14nm/ndm/saed14rvt.ndm       /home/digitalProjects/tech/saed14nm/ndm/saed14rvt.ndm
+*+  saed14hvt       /home/digitalProjects/tech/saed14nm/ndm/saed14hvt.ndm       /home/digitalProjects/tech/saed14nm/ndm/saed14hvt.ndm
+*+  saed14lvt       /home/digitalProjects/tech/saed14nm/ndm/saed14lvt.ndm       /home/digitalProjects/tech/saed14nm/ndm/saed14lvt.ndm
+*+  saed14slvt      /home/digitalProjects/tech/saed14nm/ndm/saed14slvt.ndm      /home/digitalProjects/tech/saed14nm/ndm/saed14slvt.ndm
+*+  saed14rvt_dlvl  /home/digitalProjects/tech/saed14nm/ndm/saed14rvt_dlvl.ndm  /home/digitalProjects/tech/saed14nm/ndm/saed14rvt_dlvl.ndm
+*+  saed14hvt_dlvl  /home/digitalProjects/tech/saed14nm/ndm/saed14hvt_dlvl.ndm  /home/digitalProjects/tech/saed14nm/ndm/saed14hvt_dlvl.ndm
+*+  saed14lvt_dlvl  /home/digitalProjects/tech/saed14nm/ndm/saed14lvt_dlvl.ndm  /home/digitalProjects/tech/saed14nm/ndm/saed14lvt_dlvl.ndm
+*+  saed14slvt_dlvl /home/digitalProjects/tech/saed14nm/ndm/saed14slvt_dlvl.ndm /home/digitalProjects/tech/saed14nm/ndm/saed14slvt_dlvl.ndm
+*+  saed14rvt_ulvl  /home/digitalProjects/tech/saed14nm/ndm/saed14rvt_ulvl.ndm  /home/digitalProjects/tech/saed14nm/ndm/saed14rvt_ulvl.ndm
+*+  saed14hvt_ulvl  /home/digitalProjects/tech/saed14nm/ndm/saed14hvt_ulvl.ndm  /home/digitalProjects/tech/saed14nm/ndm/saed14hvt_ulvl.ndm
+*+  saed14lvt_ulvl  /home/digitalProjects/tech/saed14nm/ndm/saed14lvt_ulvl.ndm  /home/digitalProjects/tech/saed14nm/ndm/saed14lvt_ulvl.ndm
+*+  saed14slvt_ulvl /home/digitalProjects/tech/saed14nm/ndm/saed14slvt_ulvl.ndm /home/digitalProjects/tech/saed14nm/ndm/saed14slvt_ulvl.ndm
+*+  saed14rvt_pg    /home/digitalProjects/tech/saed14nm/ndm/saed14rvt_pg.ndm    /home/digitalProjects/tech/saed14nm/ndm/saed14rvt_pg.ndm
+*+  saed14hvt_pg    /home/digitalProjects/tech/saed14nm/ndm/saed14hvt_pg.ndm    /home/digitalProjects/tech/saed14nm/ndm/saed14hvt_pg.ndm
+*+  saed14lvt_pg    /home/digitalProjects/tech/saed14nm/ndm/saed14lvt_pg.ndm    /home/digitalProjects/tech/saed14nm/ndm/saed14lvt_pg.ndm
+*+  saed14slvt_pg   /home/digitalProjects/tech/saed14nm/ndm/saed14slvt_pg.ndm   /home/digitalProjects/tech/saed14nm/ndm/saed14slvt_pg.ndm
+    "*" = Library currently open
+    "+" = Library has technology information
+1

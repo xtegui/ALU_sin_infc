@@ -1,0 +1,31 @@
+****************************************
+Report : constraint
+        -all_violators
+        -max_transition
+        -max_capacitance
+Design : ALU_votegui
+Version: U-2022.12
+Date   : Mon Apr 28 05:52:39 2025
+****************************************
+
+
+
+   Mode: func Corner: setup_ss0p72v125c
+   Scenario: func::setup_ss0p72v125c
+  ---------------------------------------------------------------------------
+   Number of max_transition violation(s): 0
+
+   Mode: func Corner: setup_ss0p72v125c
+   Scenario: func::setup_ss0p72v125c
+   max_capacitance                                                             
+                             Required        Actual                            
+   Net                      Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+   u_mux/ctmn_431              0.018          0.018         -0.001  (VIOLATED) 
+     PIN : u_mux/ctmi_465/X    0.018          0.018         -0.001  (VIOLATED) 
+
+  ---------------------------------------------------------------------------
+   Number of max_capacitance violation(s): 1
+
+   Total number of violation(s): 1
+1

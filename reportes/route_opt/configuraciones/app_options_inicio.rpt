@@ -1,0 +1,68 @@
+Information: option 'dft.scan.connect_clock_gate_test_enables' cannot be set to false by user (DFT-3161)
+****************************************
+Report : app_option
+           -non_default
+Design : ALU_votegui
+Version: U-2022.12
+Date   : Mon Apr 28 08:17:07 2025
+****************************************
+Name                                                            Type       Value             User-value        User-default System-default Scope      Status     Source
+--------------------------------------------------------------- ---------- ----------------- ----------------- ------------ -------------- ---------- ---------- ----------------------------
+ccd.fmax_optimization_effort                                    enum       high              high              --           low            block      normal     /tmp/fc_shell-be-2.pFsidx:15
+ccd.post_route_buffer_removal                                   bool       true              true              --           false          block      normal     --
+ccd.timing_effort                                               enum       high              high              --           medium         block      normal     /tmp/fc_shell-be-2.pFsidx:14
+clock_opt.flow.enable_clock_power_recovery                      string     none              none              --           auto           block      normal     --
+clock_opt.flow.enable_power                                     bool       false             false             --           true           block      normal     --
+clock_opt.place.effort                                          enum       high              high              --           medium         block      normal     --
+compile.clockgate.physically_aware                              bool       true              true              --           false          block      normal     --
+compile.final_place.effort                                      enum       high              high              --           medium         block      normal     --
+compile.flow.autoungroup                                        bool       false             false             --           true           block      normal     --
+compile.flow.enable_multibit                                    bool       true              true              --           false          block      normal     --
+compile.seqmap.enable_register_merging                          bool       false             false             --           true           block      normal     --
+compile.seqmap.enable_register_merging_across_bus               bool       false             false             --           true           block      normal     --
+compile.seqmap.identify_shift_registers                         bool       false             false             --           true           block      normal     --
+cts.common.user_instance_name_prefix                            string     route_opt_cts_    route_opt_cts_    --           --             block      normal     /tmp/fc_shell-be-2.pFsidx:24
+design.uniquify_naming_style                                    string     ALU_votegui_%s_%d ALU_votegui_%s_%d --           %s_%d          block      normal     --
+extract.enable_coupling_cap                                     bool       true              true              --           false          block      normal     --
+gui.graphics_system                                             enum       native            native            native       auto           global     normal     --
+multibit.common.ignore_cell_with_sdc                            bool       true              true              --           false          block      normal     --
+opt.area.effort                                                 enum       high              high              --           low            block      normal     --
+opt.common.user_instance_name_prefix                            string     route_opt_        route_opt_        --           --             block      normal     /tmp/fc_shell-be-2.pFsidx:23
+opt.tie_cell.max_fanout                                         integer    50                50                --           999            block      normal     --
+place.coarse.continue_on_missing_scandef                        bool       true              true              --           false          block      normal     --
+place.coarse.enhanced_low_power_effort                          enum       none              none              --           low            block      normal     --
+place.common.use_placement_model                                bool       true              true              --           false          block      normal     --
+place_opt.final_place.effort                                    enum       high              high              --           medium         block      normal     --
+place_opt.flow.enable_multibit_banking                          bool       true              true              --           false          block      normal     --
+place_opt.flow.enable_multibit_debanking                        bool       true              true              --           false          block      normal     --
+place_opt.flow.enable_power                                     bool       false             false             --           true           block      normal     --
+place_opt.place.congestion_effort                               enum       high              high              --           medium         block      normal     --
+plan.pgroute.honor_signal_route_drc                             bool       true              true              --           false          block      normal     --
+plan.pgroute.honor_std_cell_drc                                 bool       true              true              --           false          block      normal     --
+power.enable_activity_persistency                               enum       on                on                --           lazy           block      normal     --
+power.power_annotation_persistency                              bool       true              true              --           false          block      normal     --
+power.report_user_power_groups                                  enum       inclusive         inclusive         --           exclusive      block      normal     --
+route.common.concurrent_redundant_via_mode                      enum       reserve_space     reserve_space     --           off            block      normal     --
+route.common.eco_route_concurrent_redundant_via_mode            enum       reserve_space     reserve_space     --           off            block      normal     --
+route.common.reshield_modified_nets                             enum       reshield          reshield          --           off            block      normal     /tmp/fc_shell-be-2.pFsidx:20
+route.common.via_array_mode                                     enum       swap              swap              --           all            block      normal     --
+route.detail.eco_max_number_of_iterations                       integer    10                10                --           -1             block      normal     --
+route.detail.eco_route_use_soft_spacing_for_timing_optimization bool       false             false             --           true           block      normal     /tmp/fc_shell-be-2.pFsidx:9
+route.detail.insert_redundant_vias_layer_order_low_to_high      bool       true              true              --           false          block      normal     --
+route.detail.timing_driven                                      bool       true              true              --           false          block      normal     --
+route.global.timing_driven                                      bool       true              true              --           false          block      normal     --
+route.track.crosstalk_driven                                    bool       true              true              --           false          block      normal     --
+route.track.timing_driven                                       bool       true              true              --           false          block      normal     --
+route_opt.flow.enable_ccd                                       bool       true              true              --           false          block      normal     /tmp/fc_shell-be-2.pFsidx:10
+route_opt.flow.enable_clock_power_recovery                      string     none              none              --           auto           block      normal     /tmp/fc_shell-be-2.pFsidx:12
+shell.common.report_default_significant_digits                  integer    3                 3                 3            2              global     normal     /tmp/fc_shell-be-2.FISkYC:24
+time.case_analysis_propagate_through_icg                        bool       true              true              --           false          block      normal     --
+time.delay_calc_waveform_analysis_mode                          enum       full_design       full_design       --           disabled       block      normal     /tmp/fc_shell-be-2.pFsidx:8
+time.enable_ccs_rcv_cap                                         bool       true              true              --           false          block      normal     /tmp/fc_shell-be-2.pFsidx:7
+time.enable_clock_to_data_analysis                              bool       true              true              --           false          block      normal     --
+time.remove_clock_reconvergence_pessimism                       bool       true              true              --           false          block      normal     /tmp/fc_shell-be-2.pFsidx:6
+time.si_enable_analysis                                         bool       true              true              --           false          block      normal     --
+--------------------------------------------------------------- ---------- ----------------- ----------------- ------------ -------------- ---------- ---------- ----------------------------
+
+There are additional internal differences with no available TBC source.
+1

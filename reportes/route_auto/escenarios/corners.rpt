@@ -1,0 +1,116 @@
+****************************************
+Report : corner
+Design : ALU_votegui
+Version: U-2022.12
+Date   : Mon Apr 28 07:59:48 2025
+****************************************
+
+--------------------------------------------------------------------------------
+Corner hold_ff0p88v125c
+--------------------------------------------------------------------------------
+
+Current: true  Default: false  Empty: false
+
+Scenarios associated with this corner:
+
+                                                         Leakage   Dynamic
+Scenario            Mode            Active  Setup  Hold  Power     Power     Max_tran  Max_cap  Min_cap  Cell_em  Signal_em
+-------------------------------------------------------------------------------------------------------------------------
+func::hold_ff0p88v125c func         true    false  true  true      false     true      false    true     false    false
+
+
+Top-Level PVT Settings:
+  early process label             FF
+  early process number            1
+  early voltage                   0.880
+    source                        hierarchical setting
+    file/line                     /home/votegui/proyecto_final/place_and_route/ALU_sin_infc/fusion-compiler/scripts/mcmm_setup.tcl, line 49
+  early temperature               125.000
+    source                        hierarchical setting
+    file/line                     /home/votegui/proyecto_final/place_and_route/ALU_sin_infc/fusion-compiler/scripts/mcmm_setup.tcl, line 49
+
+  late process label              FF
+  late process number             1
+  late voltage                    0.880
+    source                        hierarchical setting
+    file/line                     /home/votegui/proyecto_final/place_and_route/ALU_sin_infc/fusion-compiler/scripts/mcmm_setup.tcl, line 49
+  late temperature                125.000
+    source                        hierarchical setting
+    file/line                     /home/votegui/proyecto_final/place_and_route/ALU_sin_infc/fusion-compiler/scripts/mcmm_setup.tcl, line 49
+
+
+
+
+0 objects with explicit PVT settings.
+
+
+Top-level cell timing derates:
+ data_cell derate early:   rise: 1.000   fall: 1.000 
+ clk_cell derate early:   rise: 1.000   fall: 1.000 
+ cell_check derate early:   rise: 1.000   fall: 1.000 
+ data_cell derate  late:   rise: 1.000   fall: 1.000 
+ clk_cell derate  late:   rise: 1.000   fall: 1.000 
+ cell_check derate  late:   rise: 1.000   fall: 1.000 
+
+Global net timing derates:
+ net_data, early:   rise: 1.000   fall: 1.000 
+ net_data, late:   rise: 1.000   fall: 1.000 
+ net_clock, early:   rise: 1.000   fall: 1.000 
+ net_clock, late:   rise: 1.000   fall: 1.000 
+
+
+--------------------------------------------------------------------------------
+Corner setup_ss0p72v125c
+--------------------------------------------------------------------------------
+
+Current: false  Default: false  Empty: false
+
+Scenarios associated with this corner:
+
+                                                         Leakage   Dynamic
+Scenario            Mode            Active  Setup  Hold  Power     Power     Max_tran  Max_cap  Min_cap  Cell_em  Signal_em
+-------------------------------------------------------------------------------------------------------------------------
+func::setup_ss0p72v125c func        true    true   false true      true      true      true     false    false    false
+
+
+Top-Level PVT Settings:
+  early process label             SS
+  early process number            1
+  early voltage                   0.720
+    source                        hierarchical setting
+    file/line                     /home/votegui/proyecto_final/place_and_route/ALU_sin_infc/fusion-compiler/scripts/mcmm_setup.tcl, line 49
+  early temperature               125.000
+    source                        hierarchical setting
+    file/line                     /home/votegui/proyecto_final/place_and_route/ALU_sin_infc/fusion-compiler/scripts/mcmm_setup.tcl, line 49
+
+  late process label              SS
+  late process number             1
+  late voltage                    0.720
+    source                        hierarchical setting
+    file/line                     /home/votegui/proyecto_final/place_and_route/ALU_sin_infc/fusion-compiler/scripts/mcmm_setup.tcl, line 49
+  late temperature                125.000
+    source                        hierarchical setting
+    file/line                     /home/votegui/proyecto_final/place_and_route/ALU_sin_infc/fusion-compiler/scripts/mcmm_setup.tcl, line 49
+
+
+
+
+0 objects with explicit PVT settings.
+
+
+Top-level cell timing derates:
+ data_cell derate early:   rise: 1.000   fall: 1.000 
+ clk_cell derate early:   rise: 1.000   fall: 1.000 
+ cell_check derate early:   rise: 1.000   fall: 1.000 
+ data_cell derate  late:   rise: 1.000   fall: 1.000 
+ clk_cell derate  late:   rise: 1.000   fall: 1.000 
+ cell_check derate  late:   rise: 1.000   fall: 1.000 
+
+Global net timing derates:
+ net_data, early:   rise: 1.000   fall: 1.000 
+ net_data, late:   rise: 1.000   fall: 1.000 
+ net_clock, early:   rise: 1.000   fall: 1.000 
+ net_clock, late:   rise: 1.000   fall: 1.000 
+
+
+1

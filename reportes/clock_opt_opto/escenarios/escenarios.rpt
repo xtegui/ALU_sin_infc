@@ -1,0 +1,14 @@
+****************************************
+Report : scenario
+Design : ALU_votegui
+Version: U-2022.12
+Date   : Mon Apr 28 07:36:01 2025
+****************************************
+
+                                                                     Leakage  Dynamic                              Cell  Signal
+Name            Mode            Corner          Active  Setup  Hold  Power    Power    Max_tran  Max_cap  Min_cap  EM    EM
+-------------------------------------------------------------------------------------------------------------------------------
+func::hold_ff0p88v125c func     hold_ff0p88v125c true   false  true  true     false    true      false    true     false false
+func::setup_ss0p72v125c func    setup_ss0p72v125c true  true   false true     true     true      true     false    false false
+
+1

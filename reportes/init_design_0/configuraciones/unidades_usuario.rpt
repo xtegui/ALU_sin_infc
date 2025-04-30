@@ -1,0 +1,30 @@
+****************************************
+Report : user_units
+Design : ALU_votegui
+Version: U-2022.12
+Date   : Mon Apr 14 06:03:27 2025
+****************************************
+
+Input Units (set by user)
+----------------------------------------------
+time                         : 1.00ns
+resistance                   : 1.00MOhm
+capacitance                  : 1.00pF
+voltage                      : 1.00V
+current                      : 1.00uA
+power                        : 1.00mW
+length                       : 1.00um
+energy                       : 1.00pj/t
+
+Output Units (set by user)
+----------------------------------------------
+time                         : 1.00ns
+resistance                   : 1.00MOhm
+capacitance                  : 1.00pF
+voltage                      : 1.00V
+current                      : 1.00uA
+power                        : 1.00mW
+length                       : 1.00um
+energy                       : 1.00pj/t
+
+1

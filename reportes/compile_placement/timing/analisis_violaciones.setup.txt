@@ -1,0 +1,7 @@
+****************************************
+Report : Violation analysis
+Design : ALU_votegui
+Block  : ALU_votegui_init_design:ALU_votegui/compile_placement.design
+Version: U-2022.12
+Date   : Mon Apr 28 05:52:41 2025
+****************************************

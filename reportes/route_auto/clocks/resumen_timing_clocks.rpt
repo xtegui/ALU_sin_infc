@@ -1,0 +1,40 @@
+Information: Timer using 1 threads
+****************************************
+Report : clock timing
+        -type summary
+Design : ALU_votegui
+Version: U-2022.12
+Date   : Mon Apr 28 07:59:39 2025
+****************************************
+Information: Timer using 'PrimeTime Delay Calculation, SI, Timing Window Analysis, AWP, CRPR'. (TIM-050)
+
+  Mode: func
+  Clock: CLOCK_MAIN
+                                                                                 Corner
+---------------------------------------------------------------------------------------------------
+  Maximum setup launch latency:
+      data_out_reg_27_/CK                                     0.155       rp-+   setup_ss0p72v125c
+
+  Minimum setup capture latency:
+      o_valid_reg_reg/CK                                      0.036       rp-+   hold_ff0p88v125c
+
+  Minimum hold launch latency:
+      o_valid_reg_reg/CK                                      0.036       rp-+   hold_ff0p88v125c
+
+  Maximum hold capture latency:
+      data_out_reg_27_/CK                                     0.155       rp-+   setup_ss0p72v125c
+
+  Maximum active transition:
+      data_out_reg_30_/CK                                     0.008       rp-+   setup_ss0p72v125c
+
+  Minimum active transition:
+      o_valid_reg_reg/CK                                      0.006       rp-+   hold_ff0p88v125c
+
+  Maximum setup skew:
+      --                                                         --
+
+  Maximum hold skew:
+      --                                                         --
+
+
+1

@@ -1,0 +1,17 @@
+Information: Timer using 'PrimeTime Delay Calculation, SI, Timing Window Analysis, AWP, CRPR'. (TIM-050)
+****************************************
+Report : global timing
+        -format { narrow }
+        -report_by design
+Design : ALU_votegui
+Version: U-2022.12
+Date   : Mon Apr 28 13:45:27 2025
+****************************************
+
+No setup violations found.
+
+
+No hold violations found.
+
+
+1

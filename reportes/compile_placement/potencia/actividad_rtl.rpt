@@ -1,0 +1,22 @@
+****************************************
+Report : activity
+        -rtl
+Design : ALU_votegui
+Version: U-2022.12
+Date   : Mon Apr 28 05:52:41 2025
+****************************************
+
+Scenario 'func::hold_ff0p88v125c' (mode 'func', corner 'hold_ff0p88v125c')
+
+Object Type          derived          default     total
+-------------------------------------------------------
+port              3 (  2.8%)     105 ( 97.2%)       108
+seq-cell          3 (  7.9%)      35 ( 92.1%)        38
+tri-cell          0 (  0.0%)       0 (  0.0%)         0
+
+Unlisted columns (all zeros):
+    simulated
+    annotated
+    inferred
+    calculated
+1

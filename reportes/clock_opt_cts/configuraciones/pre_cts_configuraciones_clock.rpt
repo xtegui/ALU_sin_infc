@@ -1,0 +1,131 @@
+Information: Timer using 8 threads
+Information: Corner setup_ss0p72v125c: no PVT mismatches. (PVT-032)
+Information: Corner hold_ff0p88v125c: no PVT mismatches. (PVT-032)
+INFO: updateGlobalOptions
+INFO: use Native GDC
+****************************************
+ Report : clock settings
+ Design : ALU_votegui
+ Date   : Mon Apr 28 07:09:01 2025
+****************************************
+
+
+======================================
+Configurations 
+======================================
+
+##Global
+  Corner = hold_ff0p88v125c
+    Max transition: 0.300
+    Max capacitance: 0.600 (default)
+    Target skew: 0 (default)
+    Target latency: Not specified
+  Corner = setup_ss0p72v125c
+    Max transition: 0.300
+    Max capacitance: 0.600 (default)
+    Target skew: 0 (default)
+    Target latency: Not specified
+
+##CLOCK_MAIN
+  Corner = hold_ff0p88v125c
+    Max transition: 0.080
+    Max capacitance: 0.600 (default)
+    Target skew: 0 (default)
+    Target latency: Not specified
+  Corner = setup_ss0p72v125c
+    Max transition: 0.080
+    Max capacitance: 0.600 (default)
+    Target skew: 0 (default)
+    Target latency: Not specified
+
+##gen_clk_div2
+  Corner = hold_ff0p88v125c
+    Max transition: 0.080
+    Max capacitance: 0.600 (default)
+  Corner = setup_ss0p72v125c
+    Max transition: 0.080
+    Max capacitance: 0.600 (default)
+
+##gen_clk_div4
+  Corner = hold_ff0p88v125c
+    Max transition: 0.080
+    Max capacitance: 0.600 (default)
+  Corner = setup_ss0p72v125c
+    Max transition: 0.080
+    Max capacitance: 0.600 (default)
+
+##gen_clk_div8
+  Corner = hold_ff0p88v125c
+    Max transition: 0.080
+    Max capacitance: 0.600 (default)
+  Corner = setup_ss0p72v125c
+    Max transition: 0.080
+    Max capacitance: 0.600 (default)
+
+
+======================================
+Routing Rules 
+======================================
+
+##Global
+Routing rule for sink nets: ndr_leaf  Min Layer:M5 Max Layer:M8
+Routing rule for internal nets: ndr_2w2s  Min Layer:M5 Max Layer:M8
+Routing rule for root nets: ndr_2w2s  Min Layer:M5 Max Layer:M8
+Routing rule for all nets: Not specified
+Net-based routing rules (by set_clock_routing_rule): Not specified
+Net-based routing rules (by set_routing_rule): Not specified
+
+##CLOCK_MAIN
+Routing rule for sink nets: Not specified
+Routing rule for internal nets: Not specified
+Routing rule for root nets: Not specified
+Routing rule for all nets: Not specified
+Net-based routing rules (by set_clock_routing_rule): Not specified
+Net-based routing rules (by set_routing_rule): Not specified
+
+
+======================================
+Buffers and Inverters 
+======================================
+
+##Buffers
+Name                                   Area      Max Transition       Max Load
+------------------------------------------------------------------------------
+
+##Inverters
+Name                                   Area      Max Transition       Max Load
+------------------------------------------------------------------------------
+saed14slvt/SAEDSLVT14_INV_S_0P5       0.178                 inf          0.030
+saed14slvt/SAEDSLVT14_INV_S_0P75      0.178                 inf          0.043
+saed14slvt/SAEDSLVT14_INV_S_10        0.577                 inf          0.517
+saed14slvt/SAEDSLVT14_INV_S_12        0.666                 inf          0.623
+saed14slvt/SAEDSLVT14_INV_S_16        0.844                 inf          0.831
+saed14slvt/SAEDSLVT14_INV_S_1P5       0.222                 inf          0.078
+saed14slvt/SAEDSLVT14_INV_S_1         0.178                 inf          0.056
+saed14slvt/SAEDSLVT14_INV_S_20        1.021                 inf          1.000
+saed14slvt/SAEDSLVT14_INV_S_2         0.222                 inf          0.097
+saed14slvt/SAEDSLVT14_INV_S_3         0.311                 inf          0.155
+saed14slvt/SAEDSLVT14_INV_S_4         0.311                 inf          0.197
+saed14slvt/SAEDSLVT14_INV_S_5         0.400                 inf          0.258
+saed14slvt/SAEDSLVT14_INV_S_6         0.400                 inf          0.303
+saed14slvt/SAEDSLVT14_INV_S_7         0.488                 inf          0.365
+saed14slvt/SAEDSLVT14_INV_S_8         0.488                 inf          0.411
+saed14slvt/SAEDSLVT14_INV_S_9         0.577                 inf          0.472
+
+
+======================================
+Spacing Rules 
+======================================
+
+##By design
+No by design spacing rule is specified
+
+##By clock
+No by clock spacing rule is specified
+
+##By libcell
+No by libcell spacing rule is specified
+
+##By clock and libcell
+No by clock and libcell spacing rule is specified
+1

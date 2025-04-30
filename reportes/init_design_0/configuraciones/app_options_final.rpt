@@ -1,0 +1,29 @@
+Information: option 'dft.scan.connect_clock_gate_test_enables' cannot be set to false by user (DFT-3161)
+****************************************
+Report : app_option
+           -non_default
+Design : ALU_votegui
+Version: U-2022.12
+Date   : Mon Apr 14 06:03:27 2025
+****************************************
+Name                                                       Type           Value                User-value        User-default            System-default Scope      Status     Source
+---------------------------------------------------------- -------------- -------------------- ----------------- ----------------------- -------------- ---------- ---------- ----------------------------------------------------------------------------------------------------
+design.uniquify_naming_style                               string         ALU_votegui_%s_%d    ALU_votegui_%s_%d --                      %s_%d          block      normal     /tmp/fc_shell-be-2.ZRvnEf:2
+gui.graphics_system                                        enum           native               native            native                  auto           global     normal     --
+hdlin.elaborate.ff_infer_sync_set_reset                    bool           true                 true              true                    false          global     normal     /tmp/fc_shell-2.LnxtIg:10
+hdlin.elaborate.preserve_sequential                        string         all                  all               all                     none           global     normal     /tmp/fc_shell-2.LnxtIg:6
+hdlin.naming.template_naming_style                         string         %s                   %s                %s                      %s_%p          global     normal     /tmp/fc_shell-2.LnxtIg:12
+hdlin.report.check_no_latch                                bool           true                 true              true                    false          global     normal     /tmp/fc_shell-2.LnxtIg:7
+hdlin.report.sequential_pruning                            bool           true                 true              true                    false          global     normal     /tmp/fc_shell-2.LnxtIg:13
+link.bit_blast_naming_style                                list_of string {%s[%d]} %s(%d) %s_%d -|- --                {{%s[%d]} %s(%d) %s_%d} %s(%d) %s_%d_  block      normal     --
+opt.tie_cell.max_fanout                                    integer        50                   50                --                      999            block      normal     /tmp/fc_shell-be-2.oDbMbO:5
+place.coarse.continue_on_missing_scandef                   bool           true                 true              --                      false          block      normal     /home/votegui/proyecto_final/place_and_route/ALU_sin_infc/fusion-compiler/scripts/design_planning.tcl:272
+plan.pgroute.honor_signal_route_drc                        bool           true                 true              --                      false          block      normal     /tmp/fc_shell-be-2.SIoYfh:3
+plan.pgroute.honor_std_cell_drc                            bool           true                 true              --                      false          block      normal     /tmp/fc_shell-be-2.SIoYfh:3
+route.common.via_array_mode                                enum           swap                 swap              --                      all            block      normal     /tmp/fc_shell-be-2.SIoYfh:3
+route.detail.insert_redundant_vias_layer_order_low_to_high bool           true                 true              --                      false          block      normal     /tmp/fc_shell-be-2.SIoYfh:3
+shell.common.report_default_significant_digits             integer        3                    3                 3                       2              global     normal     /tmp/fc_shell-be-2.jATUOW:6
+---------------------------------------------------------- -------------- -------------------- ----------------- ----------------------- -------------- ---------- ---------- ----------------------------------------------------------------------------------------------------
+
+There are additional internal differences with no available TBC source.
+1

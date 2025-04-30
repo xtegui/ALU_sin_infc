@@ -1,0 +1,272 @@
+<Database>
+versionNumber:2
+Name/home/votegui/proyecto_final/place_and_route/ALU_sin_infc/fusion-compiler/reportes/compile_placement/base_datos_ems/chequeo_diseno_pre_arbol_clock.ems
+Creation TimeMon Apr 28 05:52:44 2025
+Modified TimeMon Apr 28 05:52:45 2025
+Design NameALU_votegui
+Library NameALU_votegui_init_design
+</Database>
+<RuleCount>
+CTS-0121
+CTS-01335
+CTS-90310
+CTS-9043
+DFT-0111
+DMM-10516
+TCK-001113
+TCK-01271
+</RuleCount>
+<UserDefinedRules>
+</UserDefinedRules>
+<Messages>
+DMM-105Informationmmactionaccept10mmhandlerchange_lib_port_direction10mmobjnamelib_port_direction_saed14rvt/SAEDRVT14_CAPBIN13_VDD10mmtypelib_port_direction10objnameVDD (saed14rvt/SAEDRVT14_CAPBIN13)10objtypelib_pin10repairedstateaccepted10
+DMM-105Informationmmactionaccept10mmhandlerchange_lib_port_direction10mmobjnamelib_port_direction_saed14rvt/SAEDRVT14_CAPBIN13_VSS10mmtypelib_port_direction10objnameVSS (saed14rvt/SAEDRVT14_CAPBIN13)10objtypelib_pin10repairedstateaccepted10
+DMM-105Informationmmactionaccept10mmhandlerchange_lib_port_direction10mmobjnamelib_port_direction_saed14rvt/SAEDRVT14_CAPTIN13_VDD10mmtypelib_port_direction10objnameVDD (saed14rvt/SAEDRVT14_CAPTIN13)10objtypelib_pin10repairedstateaccepted10
+DMM-105Informationmmactionaccept10mmhandlerchange_lib_port_direction10mmobjnamelib_port_direction_saed14rvt/SAEDRVT14_CAPTIN13_VSS10mmtypelib_port_direction10objnameVSS (saed14rvt/SAEDRVT14_CAPTIN13)10objtypelib_pin10repairedstateaccepted10
+DMM-105Informationmmactionaccept10mmhandlerchange_lib_port_direction10mmobjnamelib_port_direction_saed14hvt/SAEDHVT14_CAPBIN13_VDD10mmtypelib_port_direction10objnameVDD (saed14hvt/SAEDHVT14_CAPBIN13)10objtypelib_pin10repairedstateaccepted10
+DMM-105Informationmmactionaccept10mmhandlerchange_lib_port_direction10mmobjnamelib_port_direction_saed14hvt/SAEDHVT14_CAPBIN13_VSS10mmtypelib_port_direction10objnameVSS (saed14hvt/SAEDHVT14_CAPBIN13)10objtypelib_pin10repairedstateaccepted10
+DMM-105Informationmmactionaccept10mmhandlerchange_lib_port_direction10mmobjnamelib_port_direction_saed14hvt/SAEDHVT14_CAPTIN13_VDD10mmtypelib_port_direction10objnameVDD (saed14hvt/SAEDHVT14_CAPTIN13)10objtypelib_pin10repairedstateaccepted10
+DMM-105Informationmmactionaccept10mmhandlerchange_lib_port_direction10mmobjnamelib_port_direction_saed14hvt/SAEDHVT14_CAPTIN13_VSS10mmtypelib_port_direction10objnameVSS (saed14hvt/SAEDHVT14_CAPTIN13)10objtypelib_pin10repairedstateaccepted10
+DMM-105Informationmmactionaccept10mmhandlerchange_lib_port_direction10mmobjnamelib_port_direction_saed14lvt/SAEDLVT14_CAPBIN13_VDD10mmtypelib_port_direction10objnameVDD (saed14lvt/SAEDLVT14_CAPBIN13)10objtypelib_pin10repairedstateaccepted10
+DMM-105Informationmmactionaccept10mmhandlerchange_lib_port_direction10mmobjnamelib_port_direction_saed14lvt/SAEDLVT14_CAPBIN13_VSS10mmtypelib_port_direction10objnameVSS (saed14lvt/SAEDLVT14_CAPBIN13)10objtypelib_pin10repairedstateaccepted10
+DMM-105Informationmmactionaccept10mmhandlerchange_lib_port_direction10mmobjnamelib_port_direction_saed14lvt/SAEDLVT14_CAPTIN13_VDD10mmtypelib_port_direction10objnameVDD (saed14lvt/SAEDLVT14_CAPTIN13)10objtypelib_pin10repairedstateaccepted10
+DMM-105Informationmmactionaccept10mmhandlerchange_lib_port_direction10mmobjnamelib_port_direction_saed14lvt/SAEDLVT14_CAPTIN13_VSS10mmtypelib_port_direction10objnameVSS (saed14lvt/SAEDLVT14_CAPTIN13)10objtypelib_pin10repairedstateaccepted10
+DMM-105Informationmmactionaccept10mmhandlerchange_lib_port_direction10mmobjnamelib_port_direction_saed14slvt/SAEDSLVT14_CAPBIN13_VDD10mmtypelib_port_direction10objnameVDD (saed14slvt/SAEDSLVT14_CAPBIN13)10objtypelib_pin10repairedstateaccepted10
+DMM-105Informationmmactionaccept10mmhandlerchange_lib_port_direction10mmobjnamelib_port_direction_saed14slvt/SAEDSLVT14_CAPBIN13_VSS10mmtypelib_port_direction10objnameVSS (saed14slvt/SAEDSLVT14_CAPBIN13)10objtypelib_pin10repairedstateaccepted10
+DMM-105Informationmmactionaccept10mmhandlerchange_lib_port_direction10mmobjnamelib_port_direction_saed14slvt/SAEDSLVT14_CAPTIN13_VDD10mmtypelib_port_direction10objnameVDD (saed14slvt/SAEDSLVT14_CAPTIN13)10objtypelib_pin10repairedstateaccepted10
+DMM-105Informationmmactionaccept10mmhandlerchange_lib_port_direction10mmobjnamelib_port_direction_saed14slvt/SAEDSLVT14_CAPTIN13_VSS10mmtypelib_port_direction10objnameVSS (saed14slvt/SAEDSLVT14_CAPTIN13)10objtypelib_pin10repairedstateaccepted10
+DFT-011Informationreason10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointctmi_43/A21[ get_pin { ctmi_43/A2 } ]6modefunc1[ get_modes { func } ]39reasonfalse path10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointq_div_8_reg/D1[ get_pin { q_div_8_reg/D } ]6modefunc1[ get_modes { func } ]39reasonfalse path10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointq_div_8_reg/SI1[ get_pin { q_div_8_reg/SI } ]6modefunc1[ get_modes { func } ]39reasoncase constant10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointq_div_8_reg/SE1[ get_pin { q_div_8_reg/SE } ]6modefunc1[ get_modes { func } ]39reasoncase constant10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointq_div_8_reg/RD1[ get_pin { q_div_8_reg/RD } ]6modefunc1[ get_modes { func } ]39reasonfalse path10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointo_valid_reg_reg/SI1[ get_pin { o_valid_reg_reg/SI } ]6modefunc1[ get_modes { func } ]39reasoncase constant10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointo_valid_reg_reg/SE1[ get_pin { o_valid_reg_reg/SE } ]6modefunc1[ get_modes { func } ]39reasoncase constant10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointu_clock_mux/ctmi_20/A21[ get_pin { u_clock_mux/ctmi_20/A2 } ]6modefunc1[ get_modes { func } ]39reasonfalse path10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointu_clock_mux/ctmi_20/B21[ get_pin { u_clock_mux/ctmi_20/B2 } ]6modefunc1[ get_modes { func } ]39reasonfalse path10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointdata_out_reg_30_/SI1[ get_pin { data_out_reg_30_/SI } ]6modefunc1[ get_modes { func } ]39reasoncase constant10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointdata_out_reg_30_/SE1[ get_pin { data_out_reg_30_/SE } ]6modefunc1[ get_modes { func } ]39reasoncase constant10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointdata_out_reg_30_/RD1[ get_pin { data_out_reg_30_/RD } ]6modefunc1[ get_modes { func } ]39reasonfalse path10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointdata_out_reg_29_/SI1[ get_pin { data_out_reg_29_/SI } ]6modefunc1[ get_modes { func } ]39reasoncase constant10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointdata_out_reg_29_/SE1[ get_pin { data_out_reg_29_/SE } ]6modefunc1[ get_modes { func } ]39reasoncase constant10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointdata_out_reg_29_/RD1[ get_pin { data_out_reg_29_/RD } ]6modefunc1[ get_modes { func } ]39reasonfalse path10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointdata_out_reg_28_/SI1[ get_pin { data_out_reg_28_/SI } ]6modefunc1[ get_modes { func } ]39reasoncase constant10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointdata_out_reg_28_/SE1[ get_pin { data_out_reg_28_/SE } ]6modefunc1[ get_modes { func } ]39reasoncase constant10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointdata_out_reg_28_/RD1[ get_pin { data_out_reg_28_/RD } ]6modefunc1[ get_modes { func } ]39reasonfalse path10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointdata_out_reg_27_/SI1[ get_pin { data_out_reg_27_/SI } ]6modefunc1[ get_modes { func } ]39reasoncase constant10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointdata_out_reg_27_/SE1[ get_pin { data_out_reg_27_/SE } ]6modefunc1[ get_modes { func } ]39reasoncase constant10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointdata_out_reg_27_/RD1[ get_pin { data_out_reg_27_/RD } ]6modefunc1[ get_modes { func } ]39reasonfalse path10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointdata_out_reg_26_/SI1[ get_pin { data_out_reg_26_/SI } ]6modefunc1[ get_modes { func } ]39reasoncase constant10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointdata_out_reg_26_/SE1[ get_pin { data_out_reg_26_/SE } ]6modefunc1[ get_modes { func } ]39reasoncase constant10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointdata_out_reg_26_/RD1[ get_pin { data_out_reg_26_/RD } ]6modefunc1[ get_modes { func } ]39reasonfalse path10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointdata_out_reg_25_/SI1[ get_pin { data_out_reg_25_/SI } ]6modefunc1[ get_modes { func } ]39reasoncase constant10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointdata_out_reg_25_/SE1[ get_pin { data_out_reg_25_/SE } ]6modefunc1[ get_modes { func } ]39reasoncase constant10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointdata_out_reg_25_/RD1[ get_pin { data_out_reg_25_/RD } ]6modefunc1[ get_modes { func } ]39reasonfalse path10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointdata_out_reg_24_/SI1[ get_pin { data_out_reg_24_/SI } ]6modefunc1[ get_modes { func } ]39reasoncase constant10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointdata_out_reg_24_/SE1[ get_pin { data_out_reg_24_/SE } ]6modefunc1[ get_modes { func } ]39reasoncase constant10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointdata_out_reg_24_/RD1[ get_pin { data_out_reg_24_/RD } ]6modefunc1[ get_modes { func } ]39reasonfalse path10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointdata_out_reg_23_/SI1[ get_pin { data_out_reg_23_/SI } ]6modefunc1[ get_modes { func } ]39reasoncase constant10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointdata_out_reg_23_/SE1[ get_pin { data_out_reg_23_/SE } ]6modefunc1[ get_modes { func } ]39reasoncase constant10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointdata_out_reg_23_/RD1[ get_pin { data_out_reg_23_/RD } ]6modefunc1[ get_modes { func } ]39reasonfalse path10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointdata_out_reg_22_/SI1[ get_pin { data_out_reg_22_/SI } ]6modefunc1[ get_modes { func } ]39reasoncase constant10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointdata_out_reg_22_/SE1[ get_pin { data_out_reg_22_/SE } ]6modefunc1[ get_modes { func } ]39reasoncase constant10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointdata_out_reg_22_/RD1[ get_pin { data_out_reg_22_/RD } ]6modefunc1[ get_modes { func } ]39reasonfalse path10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointdata_out_reg_21_/SI1[ get_pin { data_out_reg_21_/SI } ]6modefunc1[ get_modes { func } ]39reasoncase constant10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointdata_out_reg_21_/SE1[ get_pin { data_out_reg_21_/SE } ]6modefunc1[ get_modes { func } ]39reasoncase constant10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointdata_out_reg_21_/RD1[ get_pin { data_out_reg_21_/RD } ]6modefunc1[ get_modes { func } ]39reasonfalse path10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointdata_out_reg_20_/SI1[ get_pin { data_out_reg_20_/SI } ]6modefunc1[ get_modes { func } ]39reasoncase constant10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointdata_out_reg_20_/SE1[ get_pin { data_out_reg_20_/SE } ]6modefunc1[ get_modes { func } ]39reasoncase constant10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointdata_out_reg_20_/RD1[ get_pin { data_out_reg_20_/RD } ]6modefunc1[ get_modes { func } ]39reasonfalse path10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointdata_out_reg_19_/SI1[ get_pin { data_out_reg_19_/SI } ]6modefunc1[ get_modes { func } ]39reasoncase constant10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointdata_out_reg_19_/SE1[ get_pin { data_out_reg_19_/SE } ]6modefunc1[ get_modes { func } ]39reasoncase constant10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointdata_out_reg_19_/RD1[ get_pin { data_out_reg_19_/RD } ]6modefunc1[ get_modes { func } ]39reasonfalse path10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointdata_out_reg_18_/SI1[ get_pin { data_out_reg_18_/SI } ]6modefunc1[ get_modes { func } ]39reasoncase constant10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointdata_out_reg_18_/SE1[ get_pin { data_out_reg_18_/SE } ]6modefunc1[ get_modes { func } ]39reasoncase constant10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointdata_out_reg_18_/RD1[ get_pin { data_out_reg_18_/RD } ]6modefunc1[ get_modes { func } ]39reasonfalse path10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointdata_out_reg_17_/SI1[ get_pin { data_out_reg_17_/SI } ]6modefunc1[ get_modes { func } ]39reasoncase constant10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointdata_out_reg_17_/SE1[ get_pin { data_out_reg_17_/SE } ]6modefunc1[ get_modes { func } ]39reasoncase constant10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointdata_out_reg_17_/RD1[ get_pin { data_out_reg_17_/RD } ]6modefunc1[ get_modes { func } ]39reasonfalse path10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointdata_out_reg_16_/SI1[ get_pin { data_out_reg_16_/SI } ]6modefunc1[ get_modes { func } ]39reasoncase constant10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointdata_out_reg_16_/SE1[ get_pin { data_out_reg_16_/SE } ]6modefunc1[ get_modes { func } ]39reasoncase constant10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointdata_out_reg_16_/RD1[ get_pin { data_out_reg_16_/RD } ]6modefunc1[ get_modes { func } ]39reasonfalse path10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointdata_out_reg_15_/SI1[ get_pin { data_out_reg_15_/SI } ]6modefunc1[ get_modes { func } ]39reasoncase constant10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointdata_out_reg_15_/SE1[ get_pin { data_out_reg_15_/SE } ]6modefunc1[ get_modes { func } ]39reasoncase constant10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointdata_out_reg_15_/RD1[ get_pin { data_out_reg_15_/RD } ]6modefunc1[ get_modes { func } ]39reasonfalse path10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointdata_out_reg_14_/SI1[ get_pin { data_out_reg_14_/SI } ]6modefunc1[ get_modes { func } ]39reasoncase constant10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointdata_out_reg_14_/SE1[ get_pin { data_out_reg_14_/SE } ]6modefunc1[ get_modes { func } ]39reasoncase constant10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointdata_out_reg_14_/RD1[ get_pin { data_out_reg_14_/RD } ]6modefunc1[ get_modes { func } ]39reasonfalse path10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointdata_out_reg_13_/SI1[ get_pin { data_out_reg_13_/SI } ]6modefunc1[ get_modes { func } ]39reasoncase constant10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointdata_out_reg_13_/SE1[ get_pin { data_out_reg_13_/SE } ]6modefunc1[ get_modes { func } ]39reasoncase constant10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointdata_out_reg_13_/RD1[ get_pin { data_out_reg_13_/RD } ]6modefunc1[ get_modes { func } ]39reasonfalse path10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointdata_out_reg_12_/SI1[ get_pin { data_out_reg_12_/SI } ]6modefunc1[ get_modes { func } ]39reasoncase constant10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointdata_out_reg_12_/SE1[ get_pin { data_out_reg_12_/SE } ]6modefunc1[ get_modes { func } ]39reasoncase constant10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointdata_out_reg_12_/RD1[ get_pin { data_out_reg_12_/RD } ]6modefunc1[ get_modes { func } ]39reasonfalse path10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointdata_out_reg_11_/SI1[ get_pin { data_out_reg_11_/SI } ]6modefunc1[ get_modes { func } ]39reasoncase constant10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointdata_out_reg_11_/SE1[ get_pin { data_out_reg_11_/SE } ]6modefunc1[ get_modes { func } ]39reasoncase constant10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointdata_out_reg_11_/RD1[ get_pin { data_out_reg_11_/RD } ]6modefunc1[ get_modes { func } ]39reasonfalse path10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointdata_out_reg_10_/SI1[ get_pin { data_out_reg_10_/SI } ]6modefunc1[ get_modes { func } ]39reasoncase constant10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointdata_out_reg_10_/SE1[ get_pin { data_out_reg_10_/SE } ]6modefunc1[ get_modes { func } ]39reasoncase constant10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointdata_out_reg_10_/RD1[ get_pin { data_out_reg_10_/RD } ]6modefunc1[ get_modes { func } ]39reasonfalse path10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointdata_out_reg_9_/SI1[ get_pin { data_out_reg_9_/SI } ]6modefunc1[ get_modes { func } ]39reasoncase constant10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointdata_out_reg_9_/SE1[ get_pin { data_out_reg_9_/SE } ]6modefunc1[ get_modes { func } ]39reasoncase constant10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointdata_out_reg_9_/RD1[ get_pin { data_out_reg_9_/RD } ]6modefunc1[ get_modes { func } ]39reasonfalse path10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointdata_out_reg_8_/SI1[ get_pin { data_out_reg_8_/SI } ]6modefunc1[ get_modes { func } ]39reasoncase constant10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointdata_out_reg_8_/SE1[ get_pin { data_out_reg_8_/SE } ]6modefunc1[ get_modes { func } ]39reasoncase constant10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointdata_out_reg_8_/RD1[ get_pin { data_out_reg_8_/RD } ]6modefunc1[ get_modes { func } ]39reasonfalse path10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointdata_out_reg_7_/SI1[ get_pin { data_out_reg_7_/SI } ]6modefunc1[ get_modes { func } ]39reasoncase constant10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointdata_out_reg_7_/SE1[ get_pin { data_out_reg_7_/SE } ]6modefunc1[ get_modes { func } ]39reasoncase constant10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointdata_out_reg_7_/RD1[ get_pin { data_out_reg_7_/RD } ]6modefunc1[ get_modes { func } ]39reasonfalse path10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointdata_out_reg_6_/SI1[ get_pin { data_out_reg_6_/SI } ]6modefunc1[ get_modes { func } ]39reasoncase constant10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointdata_out_reg_6_/SE1[ get_pin { data_out_reg_6_/SE } ]6modefunc1[ get_modes { func } ]39reasoncase constant10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointdata_out_reg_6_/RD1[ get_pin { data_out_reg_6_/RD } ]6modefunc1[ get_modes { func } ]39reasonfalse path10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointdata_out_reg_5_/SI1[ get_pin { data_out_reg_5_/SI } ]6modefunc1[ get_modes { func } ]39reasoncase constant10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointdata_out_reg_5_/SE1[ get_pin { data_out_reg_5_/SE } ]6modefunc1[ get_modes { func } ]39reasoncase constant10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointdata_out_reg_5_/RD1[ get_pin { data_out_reg_5_/RD } ]6modefunc1[ get_modes { func } ]39reasonfalse path10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointdata_out_reg_4_/SI1[ get_pin { data_out_reg_4_/SI } ]6modefunc1[ get_modes { func } ]39reasoncase constant10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointdata_out_reg_4_/SE1[ get_pin { data_out_reg_4_/SE } ]6modefunc1[ get_modes { func } ]39reasoncase constant10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointdata_out_reg_4_/RD1[ get_pin { data_out_reg_4_/RD } ]6modefunc1[ get_modes { func } ]39reasonfalse path10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointdata_out_reg_3_/SI1[ get_pin { data_out_reg_3_/SI } ]6modefunc1[ get_modes { func } ]39reasoncase constant10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointdata_out_reg_3_/SE1[ get_pin { data_out_reg_3_/SE } ]6modefunc1[ get_modes { func } ]39reasoncase constant10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointdata_out_reg_3_/RD1[ get_pin { data_out_reg_3_/RD } ]6modefunc1[ get_modes { func } ]39reasonfalse path10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointdata_out_reg_2_/SI1[ get_pin { data_out_reg_2_/SI } ]6modefunc1[ get_modes { func } ]39reasoncase constant10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointdata_out_reg_2_/SE1[ get_pin { data_out_reg_2_/SE } ]6modefunc1[ get_modes { func } ]39reasoncase constant10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointdata_out_reg_2_/RD1[ get_pin { data_out_reg_2_/RD } ]6modefunc1[ get_modes { func } ]39reasonfalse path10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointdata_out_reg_1_/SI1[ get_pin { data_out_reg_1_/SI } ]6modefunc1[ get_modes { func } ]39reasoncase constant10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointdata_out_reg_1_/SE1[ get_pin { data_out_reg_1_/SE } ]6modefunc1[ get_modes { func } ]39reasoncase constant10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointdata_out_reg_1_/RD1[ get_pin { data_out_reg_1_/RD } ]6modefunc1[ get_modes { func } ]39reasonfalse path10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointdata_out_reg_0_/SI1[ get_pin { data_out_reg_0_/SI } ]6modefunc1[ get_modes { func } ]39reasoncase constant10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointdata_out_reg_0_/SE1[ get_pin { data_out_reg_0_/SE } ]6modefunc1[ get_modes { func } ]39reasoncase constant10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointdata_out_reg_0_/RD1[ get_pin { data_out_reg_0_/RD } ]6modefunc1[ get_modes { func } ]39reasonfalse path10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointq_div_2_reg/D1[ get_pin { q_div_2_reg/D } ]6modefunc1[ get_modes { func } ]39reasonfalse path10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointq_div_2_reg/SI1[ get_pin { q_div_2_reg/SI } ]6modefunc1[ get_modes { func } ]39reasoncase constant10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointq_div_2_reg/SE1[ get_pin { q_div_2_reg/SE } ]6modefunc1[ get_modes { func } ]39reasoncase constant10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointq_div_2_reg/RD1[ get_pin { q_div_2_reg/RD } ]6modefunc1[ get_modes { func } ]39reasonfalse path10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointq_div_4_reg/D1[ get_pin { q_div_4_reg/D } ]6modefunc1[ get_modes { func } ]39reasonfalse path10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointq_div_4_reg/SI1[ get_pin { q_div_4_reg/SI } ]6modefunc1[ get_modes { func } ]39reasoncase constant10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointq_div_4_reg/SE1[ get_pin { q_div_4_reg/SE } ]6modefunc1[ get_modes { func } ]39reasoncase constant10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointq_div_4_reg/RD1[ get_pin { q_div_4_reg/RD } ]6modefunc1[ get_modes { func } ]39reasonfalse path10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointdata_out_reg_31_/SI1[ get_pin { data_out_reg_31_/SI } ]6modefunc1[ get_modes { func } ]39reasoncase constant10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointdata_out_reg_31_/SE1[ get_pin { data_out_reg_31_/SE } ]6modefunc1[ get_modes { func } ]39reasoncase constant10
+TCK-001Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40endpointdata_out_reg_31_/RD1[ get_pin { data_out_reg_31_/RD } ]6modefunc1[ get_modes { func } ]39reasonfalse path10
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_operation[1]1[ get_port { i_operation[1] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_operation[0]1[ get_port { i_operation[0] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_sel_clock[1]1[ get_port { i_sel_clock[1] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_sel_clock[0]1[ get_port { i_sel_clock[0] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_enable1[ get_port { i_enable } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_a[31]1[ get_port { i_data_a[31] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_a[30]1[ get_port { i_data_a[30] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_a[29]1[ get_port { i_data_a[29] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_a[28]1[ get_port { i_data_a[28] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_a[27]1[ get_port { i_data_a[27] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_a[26]1[ get_port { i_data_a[26] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_a[25]1[ get_port { i_data_a[25] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_a[24]1[ get_port { i_data_a[24] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_a[23]1[ get_port { i_data_a[23] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_a[22]1[ get_port { i_data_a[22] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_a[21]1[ get_port { i_data_a[21] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_a[20]1[ get_port { i_data_a[20] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_a[19]1[ get_port { i_data_a[19] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_a[18]1[ get_port { i_data_a[18] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_a[17]1[ get_port { i_data_a[17] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_a[16]1[ get_port { i_data_a[16] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_a[15]1[ get_port { i_data_a[15] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_a[14]1[ get_port { i_data_a[14] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_a[13]1[ get_port { i_data_a[13] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_a[12]1[ get_port { i_data_a[12] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_a[11]1[ get_port { i_data_a[11] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_a[10]1[ get_port { i_data_a[10] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_a[9]1[ get_port { i_data_a[9] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_a[8]1[ get_port { i_data_a[8] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_a[7]1[ get_port { i_data_a[7] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_a[6]1[ get_port { i_data_a[6] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_a[5]1[ get_port { i_data_a[5] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_a[4]1[ get_port { i_data_a[4] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_a[3]1[ get_port { i_data_a[3] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_a[2]1[ get_port { i_data_a[2] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_a[1]1[ get_port { i_data_a[1] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_a[0]1[ get_port { i_data_a[0] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_b[31]1[ get_port { i_data_b[31] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_b[30]1[ get_port { i_data_b[30] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_b[29]1[ get_port { i_data_b[29] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_b[28]1[ get_port { i_data_b[28] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_b[27]1[ get_port { i_data_b[27] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_b[26]1[ get_port { i_data_b[26] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_b[25]1[ get_port { i_data_b[25] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_b[24]1[ get_port { i_data_b[24] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_b[23]1[ get_port { i_data_b[23] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_b[22]1[ get_port { i_data_b[22] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_b[21]1[ get_port { i_data_b[21] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_b[20]1[ get_port { i_data_b[20] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_b[19]1[ get_port { i_data_b[19] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_b[18]1[ get_port { i_data_b[18] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_b[17]1[ get_port { i_data_b[17] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_b[16]1[ get_port { i_data_b[16] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_b[15]1[ get_port { i_data_b[15] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_b[14]1[ get_port { i_data_b[14] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_b[13]1[ get_port { i_data_b[13] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_b[12]1[ get_port { i_data_b[12] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_b[11]1[ get_port { i_data_b[11] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_b[10]1[ get_port { i_data_b[10] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_b[9]1[ get_port { i_data_b[9] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_b[8]1[ get_port { i_data_b[8] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_b[7]1[ get_port { i_data_b[7] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_b[6]1[ get_port { i_data_b[6] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_b[5]1[ get_port { i_data_b[5] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_b[4]1[ get_port { i_data_b[4] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_b[3]1[ get_port { i_data_b[3] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_b[2]1[ get_port { i_data_b[2] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_b[1]1[ get_port { i_data_b[1] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_data_b[0]1[ get_port { i_data_b[0] } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_valid1[ get_port { i_valid } ]7
+TCK-012Warningcornersetup_ss0p72v125c1[ get_corners { setup_ss0p72v125c } ]40modefunc1[ get_modes { func } ]39porti_reset1[ get_port { i_reset } ]7
+CTS-012Warningfanout210neti_clock10reasonuser 10
+CTS-013Warninginstctmi_4310reasonuser 10
+CTS-013Warninginsto_valid_reg_reg10reasonuser 10
+CTS-013Warninginstdata_out_reg_30_10reasonuser 10
+CTS-013Warninginstdata_out_reg_29_10reasonuser 10
+CTS-013Warninginstdata_out_reg_28_10reasonuser 10
+CTS-013Warninginstdata_out_reg_27_10reasonuser 10
+CTS-013Warninginstdata_out_reg_26_10reasonuser 10
+CTS-013Warninginstdata_out_reg_25_10reasonuser 10
+CTS-013Warninginstdata_out_reg_24_10reasonuser 10
+CTS-013Warninginstdata_out_reg_23_10reasonuser 10
+CTS-013Warninginstdata_out_reg_22_10reasonuser 10
+CTS-013Warninginstdata_out_reg_21_10reasonuser 10
+CTS-013Warninginstdata_out_reg_20_10reasonuser 10
+CTS-013Warninginstdata_out_reg_19_10reasonuser 10
+CTS-013Warninginstdata_out_reg_18_10reasonuser 10
+CTS-013Warninginstdata_out_reg_17_10reasonuser 10
+CTS-013Warninginstdata_out_reg_16_10reasonuser 10
+CTS-013Warninginstdata_out_reg_15_10reasonuser 10
+CTS-013Warninginstdata_out_reg_14_10reasonuser 10
+CTS-013Warninginstdata_out_reg_13_10reasonuser 10
+CTS-013Warninginstdata_out_reg_12_10reasonuser 10
+CTS-013Warninginstdata_out_reg_11_10reasonuser 10
+CTS-013Warninginstdata_out_reg_10_10reasonuser 10
+CTS-013Warninginstdata_out_reg_9_10reasonuser 10
+CTS-013Warninginstdata_out_reg_8_10reasonuser 10
+CTS-013Warninginstdata_out_reg_7_10reasonuser 10
+CTS-013Warninginstdata_out_reg_6_10reasonuser 10
+CTS-013Warninginstdata_out_reg_5_10reasonuser 10
+CTS-013Warninginstdata_out_reg_4_10reasonuser 10
+CTS-013Warninginstdata_out_reg_3_10reasonuser 10
+CTS-013Warninginstdata_out_reg_2_10reasonuser 10
+CTS-013Warninginstdata_out_reg_1_10reasonuser 10
+CTS-013Warninginstdata_out_reg_0_10reasonuser 10
+CTS-013Warninginstdata_out_reg_31_10reasonuser 10
+CTS-013Warninginstbuf_int_i_clock10reasonuser 10
+CTS-903Warningcellbuf_int_i_clock10libcellSAEDSLVT14_BUF_S_810
+CTS-903Warningcellu_clock_mux/ctmi_2010libcellSAEDHVT14_AO221_0P510
+CTS-903Warningcellctmi_4310libcellSAEDHVT14_AN2_110
+CTS-903Warningcellq_div_2_reg10libcellSAEDHVT14_FSDPRBQ_V2LP_110
+CTS-903Warningcellq_div_4_reg10libcellSAEDHVT14_FSDPRBQ_V2LP_110
+CTS-903Warningcellu_clock_mux/ctmi_2110libcellSAEDHVT14_AO22_0P510
+CTS-903Warningcellq_div_8_reg10libcellSAEDHVT14_FSDPRBQ_V2LP_110
+CTS-903WarningcellI_210libcellSAEDHVT14_INV_S_0P7510
+CTS-903WarningcellI_110libcellSAEDHVT14_INV_S_0P7510
+CTS-903WarningcellI_010libcellSAEDHVT14_INV_S_0P7510
+CTS-904Warningcellu_clock_mux/ctmi_2110libcellsaed14hvt/SAEDHVT14_AO22_0P510
+CTS-904Warningcellu_clock_mux/ctmi_2010libcellsaed14hvt/SAEDHVT14_AO221_0P510
+CTS-904Warningcellbuf_int_i_clock10libcellsaed14slvt/SAEDSLVT14_BUF_S_810
+</Messages>

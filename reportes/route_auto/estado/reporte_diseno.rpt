@@ -1,0 +1,727 @@
+****************************************
+Report : design
+        -library
+        -netlist
+        -floorplan
+        -routing
+        -nosplit
+Design : ALU_votegui
+Version: U-2022.12
+Date   : Mon Apr 28 07:59:49 2025
+****************************************
+--------------------------------------------------------------------------------
+                              LIBRARY INFORMATION
+--------------------------------------------------------------------------------
+
+Search path : . scripts
+
+Units : 
+    time                : 1.000ns
+    resistance          : 1.000MOhm
+    capacitance         : 1.000fF
+    voltage             : 1.000V
+    current             : 1.000uA
+    power               : 1.000pW
+
+Tech file : /home/digitalProjects/tech/saed14nm/tf/saed14nm_1p9m_mw.tf
+
+Total number of standard cells 	= 3977
+
+Total number of dont_use lib cells 	= 84
+Total number of dont_touch lib cells 	= 84
+
+Total number of buffers 	= 364
+Total number of inverters 	= 204
+Total number of flip-flops 	= 700
+Total number of latches 	= 180
+Total number of ICGs 		= 120
+
+
+Library : saed14rvt
+  File path : /home/digitalProjects/tech/saed14nm/ndm/saed14rvt.ndm
+  Source .db libs :
+    saed14rvt_ss0p72v125c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_rvt/db_ccs/saed14rvt_ss0p72v125c.db
+    saed14rvt_ss0p72v25c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_rvt/db_ccs/saed14rvt_ss0p72v25c.db
+    saed14rvt_ss0p72vm40c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_rvt/db_ccs/saed14rvt_ss0p72vm40c.db
+    saed14rvt_ff0p88v125c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_rvt/db_ccs/saed14rvt_ff0p88v125c.db
+    saed14rvt_ff0p88v25c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_rvt/db_ccs/saed14rvt_ff0p88v25c.db
+    saed14rvt_ff0p88vm40c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_rvt/db_ccs/saed14rvt_ff0p88vm40c.db
+    saed14rvt_tt0p8v125c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_rvt/db_ccs/saed14rvt_tt0p8v125c.db
+    saed14rvt_tt0p8v25c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_rvt/db_ccs/saed14rvt_tt0p8v25c.db
+    saed14rvt_tt0p8vm40c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_rvt/db_ccs/saed14rvt_tt0p8vm40c.db
+
+Library : saed14hvt
+  File path : /home/digitalProjects/tech/saed14nm/ndm/saed14hvt.ndm
+  Source .db libs :
+    saed14hvt_ss0p72v125c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_hvt/db_ccs/saed14hvt_ss0p72v125c.db
+    saed14hvt_ss0p72v25c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_hvt/db_ccs/saed14hvt_ss0p72v25c.db
+    saed14hvt_ss0p72vm40c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_hvt/db_ccs/saed14hvt_ss0p72vm40c.db
+    saed14hvt_ff0p88v125c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_hvt/db_ccs/saed14hvt_ff0p88v125c.db
+    saed14hvt_ff0p88v25c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_hvt/db_ccs/saed14hvt_ff0p88v25c.db
+    saed14hvt_ff0p88vm40c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_hvt/db_ccs/saed14hvt_ff0p88vm40c.db
+    saed14hvt_tt0p8v125c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_hvt/db_ccs/saed14hvt_tt0p8v125c.db
+    saed14hvt_tt0p8v25c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_hvt/db_ccs/saed14hvt_tt0p8v25c.db
+    saed14hvt_tt0p8vm40c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_hvt/db_ccs/saed14hvt_tt0p8vm40c.db
+
+Library : saed14lvt
+  File path : /home/digitalProjects/tech/saed14nm/ndm/saed14lvt.ndm
+  Source .db libs :
+    saed14lvt_ss0p72v125c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_lvt/db_ccs/saed14lvt_ss0p72v125c.db
+    saed14lvt_ss0p72v25c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_lvt/db_ccs/saed14lvt_ss0p72v25c.db
+    saed14lvt_ss0p72vm40c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_lvt/db_ccs/saed14lvt_ss0p72vm40c.db
+    saed14lvt_ff0p88v125c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_lvt/db_ccs/saed14lvt_ff0p88v125c.db
+    saed14lvt_ff0p88v25c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_lvt/db_ccs/saed14lvt_ff0p88v25c.db
+    saed14lvt_ff0p88vm40c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_lvt/db_ccs/saed14lvt_ff0p88vm40c.db
+    saed14lvt_tt0p8v125c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_lvt/db_ccs/saed14lvt_tt0p8v125c.db
+    saed14lvt_tt0p8v25c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_lvt/db_ccs/saed14lvt_tt0p8v25c.db
+    saed14lvt_tt0p8vm40c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_lvt/db_ccs/saed14lvt_tt0p8vm40c.db
+
+Library : saed14slvt
+  File path : /home/digitalProjects/tech/saed14nm/ndm/saed14slvt.ndm
+  Source .db libs :
+    saed14slvt_ss0p72v125c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_slvt/db_ccs/saed14slvt_ss0p72v125c.db
+    saed14slvt_ss0p72v25c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_slvt/db_ccs/saed14slvt_ss0p72v25c.db
+    saed14slvt_ss0p72vm40c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_slvt/db_ccs/saed14slvt_ss0p72vm40c.db
+    saed14slvt_ff0p88v125c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_slvt/db_ccs/saed14slvt_ff0p88v125c.db
+    saed14slvt_ff0p88v25c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_slvt/db_ccs/saed14slvt_ff0p88v25c.db
+    saed14slvt_ff0p88vm40c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_slvt/db_ccs/saed14slvt_ff0p88vm40c.db
+    saed14slvt_tt0p8v125c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_slvt/db_ccs/saed14slvt_tt0p8v125c.db
+    saed14slvt_tt0p8v25c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_slvt/db_ccs/saed14slvt_tt0p8v25c.db
+    saed14slvt_tt0p8vm40c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_slvt/db_ccs/saed14slvt_tt0p8vm40c.db
+
+Library : saed14rvt_dlvl
+  File path : /home/digitalProjects/tech/saed14nm/ndm/saed14rvt_dlvl.ndm
+  Source .db libs :
+    saed14rvt_dlvl_ss0p72v125c_i0p6v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_rvt/db_ccs/saed14rvt_dlvl_ss0p72v125c_i0p6v.db
+    saed14rvt_dlvl_ss0p72v25c_i0p6v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_rvt/db_ccs/saed14rvt_dlvl_ss0p72v25c_i0p6v.db
+    saed14rvt_dlvl_ss0p72vm40c_i0p6v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_rvt/db_ccs/saed14rvt_dlvl_ss0p72vm40c_i0p6v.db
+    saed14rvt_dlvl_ff0p88v125c_i0p7v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_rvt/db_ccs/saed14rvt_dlvl_ff0p88v125c_i0p7v.db
+    saed14rvt_dlvl_ff0p88v25c_i0p7v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_rvt/db_ccs/saed14rvt_dlvl_ff0p88v25c_i0p7v.db
+    saed14rvt_dlvl_ff0p88vm40c_i0p7v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_rvt/db_ccs/saed14rvt_dlvl_ff0p88vm40c_i0p7v.db
+    saed14rvt_dlvl_tt0p8v125c_i0p65v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_rvt/db_ccs/saed14rvt_dlvl_tt0p8v125c_i0p65v.db
+    saed14rvt_dlvl_tt0p8v25c_i0p65v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_rvt/db_ccs/saed14rvt_dlvl_tt0p8v25c_i0p65v.db
+    saed14rvt_dlvl_tt0p8vm40c_i0p65v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_rvt/db_ccs/saed14rvt_dlvl_tt0p8vm40c_i0p65v.db
+
+Library : saed14hvt_dlvl
+  File path : /home/digitalProjects/tech/saed14nm/ndm/saed14hvt_dlvl.ndm
+  Source .db libs :
+    saed14hvt_dlvl_ss0p72v125c_i0p6v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_hvt/db_ccs/saed14hvt_dlvl_ss0p72v125c_i0p6v.db
+    saed14hvt_dlvl_ss0p72v25c_i0p6v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_hvt/db_ccs/saed14hvt_dlvl_ss0p72v25c_i0p6v.db
+    saed14hvt_dlvl_ss0p72vm40c_i0p6v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_hvt/db_ccs/saed14hvt_dlvl_ss0p72vm40c_i0p6v.db
+    saed14hvt_dlvl_ff0p88v125c_i0p7v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_hvt/db_ccs/saed14hvt_dlvl_ff0p88v125c_i0p7v.db
+    saed14hvt_dlvl_ff0p88v25c_i0p7v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_hvt/db_ccs/saed14hvt_dlvl_ff0p88v25c_i0p7v.db
+    saed14hvt_dlvl_ff0p88vm40c_i0p7v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_hvt/db_ccs/saed14hvt_dlvl_ff0p88vm40c_i0p7v.db
+    saed14hvt_dlvl_tt0p8v125c_i0p65v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_hvt/db_ccs/saed14hvt_dlvl_tt0p8v125c_i0p65v.db
+    saed14hvt_dlvl_tt0p8v25c_i0p65v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_hvt/db_ccs/saed14hvt_dlvl_tt0p8v25c_i0p65v.db
+    saed14hvt_dlvl_tt0p8vm40c_i0p65v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_hvt/db_ccs/saed14hvt_dlvl_tt0p8vm40c_i0p65v.db
+
+Library : saed14lvt_dlvl
+  File path : /home/digitalProjects/tech/saed14nm/ndm/saed14lvt_dlvl.ndm
+  Source .db libs :
+    saed14lvt_dlvl_ss0p72v125c_i0p6v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_lvt/db_ccs/saed14lvt_dlvl_ss0p72v125c_i0p6v.db
+    saed14lvt_dlvl_ss0p72v25c_i0p6v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_lvt/db_ccs/saed14lvt_dlvl_ss0p72v25c_i0p6v.db
+    saed14lvt_dlvl_ss0p72vm40c_i0p6v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_lvt/db_ccs/saed14lvt_dlvl_ss0p72vm40c_i0p6v.db
+    saed14lvt_dlvl_ff0p88v125c_i0p7v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_lvt/db_ccs/saed14lvt_dlvl_ff0p88v125c_i0p7v.db
+    saed14lvt_dlvl_ff0p88v25c_i0p7v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_lvt/db_ccs/saed14lvt_dlvl_ff0p88v25c_i0p7v.db
+    saed14lvt_dlvl_ff0p88vm40c_i0p7v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_lvt/db_ccs/saed14lvt_dlvl_ff0p88vm40c_i0p7v.db
+    saed14lvt_dlvl_tt0p8v125c_i0p65v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_lvt/db_ccs/saed14lvt_dlvl_tt0p8v125c_i0p65v.db
+    saed14lvt_dlvl_tt0p8v25c_i0p65v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_lvt/db_ccs/saed14lvt_dlvl_tt0p8v25c_i0p65v.db
+    saed14lvt_dlvl_tt0p8vm40c_i0p65v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_lvt/db_ccs/saed14lvt_dlvl_tt0p8vm40c_i0p65v.db
+
+Library : saed14slvt_dlvl
+  File path : /home/digitalProjects/tech/saed14nm/ndm/saed14slvt_dlvl.ndm
+  Source .db libs :
+    saed14slvt_dlvl_ss0p72v125c_i0p6v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_slvt/db_ccs/saed14slvt_dlvl_ss0p72v125c_i0p6v.db
+    saed14slvt_dlvl_ss0p72v25c_i0p6v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_slvt/db_ccs/saed14slvt_dlvl_ss0p72v25c_i0p6v.db
+    saed14slvt_dlvl_ss0p72vm40c_i0p6v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_slvt/db_ccs/saed14slvt_dlvl_ss0p72vm40c_i0p6v.db
+    saed14slvt_dlvl_ff0p88v125c_i0p7v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_slvt/db_ccs/saed14slvt_dlvl_ff0p88v125c_i0p7v.db
+    saed14slvt_dlvl_ff0p88v25c_i0p7v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_slvt/db_ccs/saed14slvt_dlvl_ff0p88v25c_i0p7v.db
+    saed14slvt_dlvl_ff0p88vm40c_i0p7v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_slvt/db_ccs/saed14slvt_dlvl_ff0p88vm40c_i0p7v.db
+    saed14slvt_dlvl_tt0p8v125c_i0p65v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_slvt/db_ccs/saed14slvt_dlvl_tt0p8v125c_i0p65v.db
+    saed14slvt_dlvl_tt0p8v25c_i0p65v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_slvt/db_ccs/saed14slvt_dlvl_tt0p8v25c_i0p65v.db
+    saed14slvt_dlvl_tt0p8vm40c_i0p65v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_slvt/db_ccs/saed14slvt_dlvl_tt0p8vm40c_i0p65v.db
+
+Library : saed14rvt_ulvl
+  File path : /home/digitalProjects/tech/saed14nm/ndm/saed14rvt_ulvl.ndm
+  Source .db libs :
+    saed14rvt_ulvl_ss0p72v125c_i0p6v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_rvt/db_ccs/saed14rvt_ulvl_ss0p72v125c_i0p6v.db
+    saed14rvt_ulvl_ss0p72v25c_i0p6v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_rvt/db_ccs/saed14rvt_ulvl_ss0p72v25c_i0p6v.db
+    saed14rvt_ulvl_ss0p72vm40c_i0p6v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_rvt/db_ccs/saed14rvt_ulvl_ss0p72vm40c_i0p6v.db
+    saed14rvt_ulvl_ff0p88v125c_i0p7v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_rvt/db_ccs/saed14rvt_ulvl_ff0p88v125c_i0p7v.db
+    saed14rvt_ulvl_ff0p88v25c_i0p7v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_rvt/db_ccs/saed14rvt_ulvl_ff0p88v25c_i0p7v.db
+    saed14rvt_ulvl_ff0p88vm40c_i0p7v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_rvt/db_ccs/saed14rvt_ulvl_ff0p88vm40c_i0p7v.db
+    saed14rvt_ulvl_tt0p8v125c_i0p65v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_rvt/db_ccs/saed14rvt_ulvl_tt0p8v125c_i0p65v.db
+    saed14rvt_ulvl_tt0p8v25c_i0p65v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_rvt/db_ccs/saed14rvt_ulvl_tt0p8v25c_i0p65v.db
+    saed14rvt_ulvl_tt0p8vm40c_i0p65v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_rvt/db_ccs/saed14rvt_ulvl_tt0p8vm40c_i0p65v.db
+
+Library : saed14hvt_ulvl
+  File path : /home/digitalProjects/tech/saed14nm/ndm/saed14hvt_ulvl.ndm
+  Source .db libs :
+    saed14hvt_ulvl_ss0p72v125c_i0p6v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_hvt/db_ccs/saed14hvt_ulvl_ss0p72v125c_i0p6v.db
+    saed14hvt_ulvl_ss0p72v25c_i0p6v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_hvt/db_ccs/saed14hvt_ulvl_ss0p72v25c_i0p6v.db
+    saed14hvt_ulvl_ss0p72vm40c_i0p6v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_hvt/db_ccs/saed14hvt_ulvl_ss0p72vm40c_i0p6v.db
+    saed14hvt_ulvl_ff0p88v125c_i0p7v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_hvt/db_ccs/saed14hvt_ulvl_ff0p88v125c_i0p7v.db
+    saed14hvt_ulvl_ff0p88v25c_i0p7v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_hvt/db_ccs/saed14hvt_ulvl_ff0p88v25c_i0p7v.db
+    saed14hvt_ulvl_ff0p88vm40c_i0p7v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_hvt/db_ccs/saed14hvt_ulvl_ff0p88vm40c_i0p7v.db
+    saed14hvt_ulvl_tt0p8v125c_i0p65v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_hvt/db_ccs/saed14hvt_ulvl_tt0p8v125c_i0p65v.db
+    saed14hvt_ulvl_tt0p8v25c_i0p65v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_hvt/db_ccs/saed14hvt_ulvl_tt0p8v25c_i0p65v.db
+    saed14hvt_ulvl_tt0p8vm40c_i0p65v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_hvt/db_ccs/saed14hvt_ulvl_tt0p8vm40c_i0p65v.db
+
+Library : saed14lvt_ulvl
+  File path : /home/digitalProjects/tech/saed14nm/ndm/saed14lvt_ulvl.ndm
+  Source .db libs :
+    saed14lvt_ulvl_ss0p72v125c_i0p6v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_lvt/db_ccs/saed14lvt_ulvl_ss0p72v125c_i0p6v.db
+    saed14lvt_ulvl_ss0p72v25c_i0p6v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_lvt/db_ccs/saed14lvt_ulvl_ss0p72v25c_i0p6v.db
+    saed14lvt_ulvl_ss0p72vm40c_i0p6v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_lvt/db_ccs/saed14lvt_ulvl_ss0p72vm40c_i0p6v.db
+    saed14lvt_ulvl_ff0p88v125c_i0p7v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_lvt/db_ccs/saed14lvt_ulvl_ff0p88v125c_i0p7v.db
+    saed14lvt_ulvl_ff0p88v25c_i0p7v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_lvt/db_ccs/saed14lvt_ulvl_ff0p88v25c_i0p7v.db
+    saed14lvt_ulvl_ff0p88vm40c_i0p7v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_lvt/db_ccs/saed14lvt_ulvl_ff0p88vm40c_i0p7v.db
+    saed14lvt_ulvl_tt0p8v125c_i0p65v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_lvt/db_ccs/saed14lvt_ulvl_tt0p8v125c_i0p65v.db
+    saed14lvt_ulvl_tt0p8v25c_i0p65v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_lvt/db_ccs/saed14lvt_ulvl_tt0p8v25c_i0p65v.db
+    saed14lvt_ulvl_tt0p8vm40c_i0p65v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_lvt/db_ccs/saed14lvt_ulvl_tt0p8vm40c_i0p65v.db
+
+Library : saed14slvt_ulvl
+  File path : /home/digitalProjects/tech/saed14nm/ndm/saed14slvt_ulvl.ndm
+  Source .db libs :
+    saed14slvt_ulvl_ss0p72v125c_i0p6v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_slvt/db_ccs/saed14slvt_ulvl_ss0p72v125c_i0p6v.db
+    saed14slvt_ulvl_ss0p72v25c_i0p6v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_slvt/db_ccs/saed14slvt_ulvl_ss0p72v25c_i0p6v.db
+    saed14slvt_ulvl_ss0p72vm40c_i0p6v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_slvt/db_ccs/saed14slvt_ulvl_ss0p72vm40c_i0p6v.db
+    saed14slvt_ulvl_ff0p88v125c_i0p7v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_slvt/db_ccs/saed14slvt_ulvl_ff0p88v125c_i0p7v.db
+    saed14slvt_ulvl_ff0p88v25c_i0p7v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_slvt/db_ccs/saed14slvt_ulvl_ff0p88v25c_i0p7v.db
+    saed14slvt_ulvl_ff0p88vm40c_i0p7v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_slvt/db_ccs/saed14slvt_ulvl_ff0p88vm40c_i0p7v.db
+    saed14slvt_ulvl_tt0p8v125c_i0p65v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_slvt/db_ccs/saed14slvt_ulvl_tt0p8v125c_i0p65v.db
+    saed14slvt_ulvl_tt0p8v25c_i0p65v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_slvt/db_ccs/saed14slvt_ulvl_tt0p8v25c_i0p65v.db
+    saed14slvt_ulvl_tt0p8vm40c_i0p65v : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_slvt/db_ccs/saed14slvt_ulvl_tt0p8vm40c_i0p65v.db
+
+Library : saed14rvt_pg
+  File path : /home/digitalProjects/tech/saed14nm/ndm/saed14rvt_pg.ndm
+  Source .db libs :
+    saed14rvt_pg_ss0p72v125c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_rvt/db_ccs/saed14rvt_pg_ss0p72v125c.db
+    saed14rvt_pg_ss0p72v25c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_rvt/db_ccs/saed14rvt_pg_ss0p72v25c.db
+    saed14rvt_pg_ss0p72vm40c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_rvt/db_ccs/saed14rvt_pg_ss0p72vm40c.db
+    saed14rvt_pg_ff0p88v125c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_rvt/db_ccs/saed14rvt_pg_ff0p88v125c.db
+    saed14rvt_pg_ff0p88v25c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_rvt/db_ccs/saed14rvt_pg_ff0p88v25c.db
+    saed14rvt_pg_ff0p88vm40c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_rvt/db_ccs/saed14rvt_pg_ff0p88vm40c.db
+    saed14rvt_pg_tt0p8v125c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_rvt/db_ccs/saed14rvt_pg_tt0p8v125c.db
+    saed14rvt_pg_tt0p8v25c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_rvt/db_ccs/saed14rvt_pg_tt0p8v25c.db
+    saed14rvt_pg_tt0p8vm40c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_rvt/db_ccs/saed14rvt_pg_tt0p8vm40c.db
+
+Library : saed14hvt_pg
+  File path : /home/digitalProjects/tech/saed14nm/ndm/saed14hvt_pg.ndm
+  Source .db libs :
+    saed14hvt_pg_ss0p72v125c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_hvt/db_ccs/saed14hvt_pg_ss0p72v125c.db
+    saed14hvt_pg_ss0p72v25c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_hvt/db_ccs/saed14hvt_pg_ss0p72v25c.db
+    saed14hvt_pg_ss0p72vm40c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_hvt/db_ccs/saed14hvt_pg_ss0p72vm40c.db
+    saed14hvt_pg_ff0p88v125c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_hvt/db_ccs/saed14hvt_pg_ff0p88v125c.db
+    saed14hvt_pg_ff0p88v25c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_hvt/db_ccs/saed14hvt_pg_ff0p88v25c.db
+    saed14hvt_pg_ff0p88vm40c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_hvt/db_ccs/saed14hvt_pg_ff0p88vm40c.db
+    saed14hvt_pg_tt0p8v125c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_hvt/db_ccs/saed14hvt_pg_tt0p8v125c.db
+    saed14hvt_pg_tt0p8v25c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_hvt/db_ccs/saed14hvt_pg_tt0p8v25c.db
+    saed14hvt_pg_tt0p8vm40c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_hvt/db_ccs/saed14hvt_pg_tt0p8vm40c.db
+
+Library : saed14lvt_pg
+  File path : /home/digitalProjects/tech/saed14nm/ndm/saed14lvt_pg.ndm
+  Source .db libs :
+    saed14lvt_pg_ss0p72v125c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_lvt/db_ccs/saed14lvt_pg_ss0p72v125c.db
+    saed14lvt_pg_ss0p72v25c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_lvt/db_ccs/saed14lvt_pg_ss0p72v25c.db
+    saed14lvt_pg_ss0p72vm40c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_lvt/db_ccs/saed14lvt_pg_ss0p72vm40c.db
+    saed14lvt_pg_ff0p88v125c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_lvt/db_ccs/saed14lvt_pg_ff0p88v125c.db
+    saed14lvt_pg_ff0p88v25c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_lvt/db_ccs/saed14lvt_pg_ff0p88v25c.db
+    saed14lvt_pg_ff0p88vm40c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_lvt/db_ccs/saed14lvt_pg_ff0p88vm40c.db
+    saed14lvt_pg_tt0p8v125c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_lvt/db_ccs/saed14lvt_pg_tt0p8v125c.db
+    saed14lvt_pg_tt0p8v25c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_lvt/db_ccs/saed14lvt_pg_tt0p8v25c.db
+    saed14lvt_pg_tt0p8vm40c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_lvt/db_ccs/saed14lvt_pg_tt0p8vm40c.db
+
+Library : saed14slvt_pg
+  File path : /home/digitalProjects/tech/saed14nm/ndm/saed14slvt_pg.ndm
+  Source .db libs :
+    saed14slvt_pg_ss0p72v125c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_slvt/db_ccs/saed14slvt_pg_ss0p72v125c.db
+    saed14slvt_pg_ss0p72v25c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_slvt/db_ccs/saed14slvt_pg_ss0p72v25c.db
+    saed14slvt_pg_ss0p72vm40c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_slvt/db_ccs/saed14slvt_pg_ss0p72vm40c.db
+    saed14slvt_pg_ff0p88v125c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_slvt/db_ccs/saed14slvt_pg_ff0p88v125c.db
+    saed14slvt_pg_ff0p88v25c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_slvt/db_ccs/saed14slvt_pg_ff0p88v25c.db
+    saed14slvt_pg_ff0p88vm40c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_slvt/db_ccs/saed14slvt_pg_ff0p88vm40c.db
+    saed14slvt_pg_tt0p8v125c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_slvt/db_ccs/saed14slvt_pg_tt0p8v125c.db
+    saed14slvt_pg_tt0p8v25c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_slvt/db_ccs/saed14slvt_pg_tt0p8v25c.db
+    saed14slvt_pg_tt0p8vm40c : /home/tools/synopsys/tech_kits/SAED14nm_EDK/stdcell_slvt/db_ccs/saed14slvt_pg_tt0p8vm40c.db
+
+--------------------------------------------------------------------------------
+                              NETLIST INFORMATION
+--------------------------------------------------------------------------------
+
+CELL INSTANCE INFORMATION
+-----------------------------------------------------------------------------
+Cell Instance Type          Count % of         Area  % of siteAreaPerSite
+                                  total             total
+-----------------------------------------------------------------------------
+TOTAL LEAF CELLS              909  100      318.215   100 unit:7167  
+
+  Standard cells              377   41      210.722    66 unit:4746  
+  Filler cells                  1    0        0.400     0 unit:9  
+  Diode cells                   0    0        0.000     0 
+  Hard macro cells              0    0        0.000     0 
+  Soft macro cells              0    0        0.000     0 
+    Black box cells             0    0        0.000     0 
+  Analog block cells            0    0        0.000     0 
+  Pad cells                     0    0        0.000     0 
+    Flip-chip pad cells         0    0        0.000     0 
+  Cover cells                   0    0        0.000     0 
+  Flip-chip driver cells        0    0        0.000     0 
+  Corner pad cells              4    0        2.664     0 unit:60  
+  Pad spacer cells              0    0        0.000     0 
+  Others                      527   57      104.429    32 unit:2352  
+
+Special cells                   7    0        3.419     1 unit:77  
+  Level shifter                 0    0        0.000     0 
+  Isolation                     0    0        0.000     0 
+  Switch                        0    0        0.000     0 
+  Always on                     0    0        0.000     0 
+  Retention                     0    0        0.000     0 
+  Tie off                       7    0        3.419     1 unit:77  
+
+LVT                             1    0        0.222     0 unit:5  
+HVT                           117   12       90.576    28 unit:2040  
+Normal VT                     781   85      221.201    69 unit:4982  
+Others                         10    1        6.216     1 unit:140  
+
+Netlist cells                 377   41      210.722    66 unit:4746  
+Physical only                 532   58      107.492    33 unit:2421  
+
+Fixed cells                   670   73      192.030    60 unit:4325  
+Moveable cells                239   26      126.185    39 unit:2842  
+
+Combinational                 871   95      268.664    84 unit:6051  
+Sequential                     38    4       49.550    15 unit:1116  
+Others                          0    0        0.000     0 
+
+Buffer                        108   11       45.466    14 unit:1024  
+Inverter                       13    1        4.884     1 unit:110  
+Buffer/inverter               121   13       50.350    15 unit:1134  
+
+Spare cells                    14    1       13.631     4 unit:307  
+ICG cells                       0    0        0.000     0 
+Flip-flop cells                38    4       49.550    15 unit:1116  
+Latch cells                     0    0        0.000     0 
+Antenna cells                   0    0        0.000     0 
+
+Mux logic                       1    0        1.021     0 unit:23  
+Double height                   0    0        0.000     0 
+Triple height                   0    0        0.000     0 
+More than triple height         0    0        0.000     0 
+
+Logic Hierarchies          6
+
+REFERENCE DESIGN INFORMATION
+----------------------------------------------------------------------------------------------
+Number of reference designs used:54   
+----------------------------------------------------------------------------------------------
+Name           Type          Count     Width    Height        Area   PinDens SiteName siteArea
+----------------------------------------------------------------------------------------------
+SAEDRVT14_CAPSPACER1 end_cap   154     0.074     0.600       0.044    45.045 unit            1
+SAEDRVT14_CAPB2 end_cap        138     0.296     0.600       0.178    11.261 unit            4
+SAEDRVT14_CAPT2 end_cap        138     0.296     0.600       0.178    11.261 unit            4
+SAEDRVT14_BUF_S_4 lib_cell     105     0.666     0.600       0.400    10.010 unit            9
+SAEDRVT14_TAPDS well_tap        41     0.888     0.600       0.533     3.754 unit           12
+SAEDRVT14_TAPPN well_tap        40     0.888     0.600       0.533     3.754 unit           12
+SAEDRVT14_EO2_V1_0P75 lib_cell  34     0.740     0.600       0.444    11.261 unit           10
+SAEDRVT14_AO221_0P5 lib_cell    32     0.814     0.600       0.488    16.380 unit           11
+SAEDHVT14_FSDPRBQ_V2LP_1 lib_cell 32     2.146     0.600       1.288     6.213 unit         29
+SAEDHVT14_ADDF_V1_1 lib_cell    27     1.702     0.600       1.021     6.855 unit           23
+SAEDRVT14_AO22_1 lib_cell       26     0.888     0.600       0.533    13.138 unit           12
+SAEDRVT14_OR2_1 lib_cell        25     0.518     0.600       0.311    16.088 unit            7
+SAEDHVT14_AN2_MM_0P5 lib_cell   18     0.518     0.600       0.311    16.088 unit            7
+SAEDHVT14_AN2_1 lib_cell        17     0.518     0.600       0.311    16.088 unit            7
+SAEDRVT14_CAPTTAP6 well_tap      7     0.592     0.600       0.355     5.631 unit            8
+SAEDRVT14_CAPBTAP6 well_tap      7     0.592     0.600       0.355     5.631 unit            8
+SAEDHVT14_TIE0_4 lib_cell        7     0.814     0.600       0.488     6.143 unit           11
+SAEDHVT14_OR2_1 lib_cell         7     0.518     0.600       0.311    16.088 unit            7
+SAEDHVT14_AO22_0P75 lib_cell     4     0.888     0.600       0.533    13.138 unit           12
+SAEDRVT14_ADDF_V1_0P5 lib_cell   3     1.702     0.600       1.021     6.855 unit           23
+SAEDRVT14_INV_0P5 lib_cell       3     0.296     0.600       0.178    22.523 unit            4
+SAEDRVT14_NR2_MM_1 lib_cell      2     0.370     0.600       0.222    22.523 unit            5
+SAEDRVT14_CAPTIN13 corner        2     1.110     0.600       0.666     3.003 unit           15
+SAEDRVT14_BUF_ECO_8 lib_cell     2     2.368     0.600       1.421     2.815 unit           32
+SAEDRVT14_INV_ECO_8 lib_cell     2     1.924     0.600       1.154     3.465 unit           26
+SAEDSLVT14_INV_S_0P5 lib_cell    2     0.296     0.600       0.178    22.523 unit            4
+SAEDHVT14_AO22_1 lib_cell        2     0.888     0.600       0.533    13.138 unit           12
+SAEDRVT14_INV_1P5 lib_cell       2     0.296     0.600       0.178    22.523 unit            4
+SAEDSLVT14_FSDPRBQ_V2_1 lib_cell 2     2.146     0.600       1.288     6.213 unit           29
+SAEDRVT14_AN2B_MM_1 lib_cell     2     0.666     0.600       0.400    12.513 unit            9
+SAEDRVT14_FDPQ_V2ECO_1 lib_cell  2     2.812     0.600       1.687     2.963 unit           38
+SAEDRVT14_CAPBIN13 corner        2     1.110     0.600       0.666     3.003 unit           15
+SAEDSLVT14_INV_S_12 lib_cell     1     1.110     0.600       0.666     6.006 unit           15
+SAEDSLVT14_FSDPRBQ_V2_0P5 lib_cell 1     2.146     0.600       1.288     6.213 unit         29
+SAEDSLVT14_INV_S_0P75 lib_cell   1     0.296     0.600       0.178    22.523 unit            4
+SAEDRVT14_AN2_ECO_2 lib_cell     1     1.258     0.600       0.755     6.624 unit           17
+SAEDSLVT14_INV_S_3 lib_cell      1     0.518     0.600       0.311    12.870 unit            7
+SAEDSLVT14_INV_S_1 lib_cell      1     0.296     0.600       0.178    22.523 unit            4
+SAEDRVT14_ND2_ECO_2 lib_cell     1     1.036     0.600       0.622     8.044 unit           14
+SAEDRVT14_OR2_ECO_2 lib_cell     1     1.036     0.600       0.622     8.044 unit           14
+SAEDLVT14_NR2_MM_1 lib_cell      1     0.370     0.600       0.222    22.523 unit            5
+SAEDRVT14_ADDH_0P5 lib_cell      1     1.110     0.600       0.666     9.009 unit           15
+SAEDRVT14_OAI21_2 lib_cell       1     0.740     0.600       0.444    13.514 unit           10
+SAEDRVT14_NR2_ECO_2 lib_cell     1     1.258     0.600       0.755     6.624 unit           17
+SAEDRVT14_MUX2_ECO_2 lib_cell    1     1.702     0.600       1.021     5.875 unit           23
+SAEDRVT14_DCAP_PV1ECO_6 filler   1     0.666     0.600       0.400     7.508 unit            9
+SAEDRVT14_AOI21_ECO_1 lib_cell   1     0.814     0.600       0.488    12.285 unit           11
+SAEDRVT14_AN2_1 lib_cell         1     0.518     0.600       0.311    16.088 unit            7
+SAEDHVT14_FSDPQ_V2LP_1 lib_cell  1     1.850     0.600       1.110     6.306 unit           25
+SAEDRVT14_CAPT3 end_cap          1     0.370     0.600       0.222     9.009 unit            5
+SAEDRVT14_CAPB3 end_cap          1     0.370     0.600       0.222     9.009 unit            5
+SAEDSLVT14_BUF_S_8 lib_cell      1     1.110     0.600       0.666     6.006 unit           15
+SAEDHVT14_AO22_0P5 lib_cell      1     0.888     0.600       0.533    13.138 unit           12
+SAEDHVT14_AO221_0P5 lib_cell     1     0.814     0.600       0.488    16.380 unit           11
+
+NET INFORMATION
+------------------------------------------------------------------
+NetType                 Count FloatingNets         Vias Nets/Cells
+------------------------------------------------------------------
+Total                     469            0         7498      0.516
+Signal                    454            0         2427      0.499
+Power                       1            0         2240      0.001
+Ground                      1            0         2580      0.001
+Analog Signal               0            0            0      0.000
+Analog Ground               0            0            0      0.000
+Analog Power                0            0            0      0.000
+Clock                      13            0          251      0.014
+Tie Low                     0            0            0      0.000
+Tie High                    0            0            0      0.000
+Others                      0            0            0      0.000
+
+NET FANOUT AND PIN COUNT INFORMATION
+---------------------------------------------------
+Fanout        Netcount     netPinCount     NetCount
+---------------------------------------------------
+<2                 380     <2                     0
+2                    5     2                    380
+3                    3     3                      5
+4                   67     4                      3
+5                    0     5                     67
+6-10                 4     6-10                   3
+11-20                1     11-20                  2
+21-30                1     21-30                  1
+31-50                6     31-50                  6
+51-100               0     51-100                 0
+101-500              0     101-500                0
+501-1000             2     501-1000               2
+>1000                0     >1000                  0
+
+PORT AND PIN INFORMATION
+------------------------------------------------------------------------------
+Type         Total     Input    Output     Inout      3-st     Power    Ground
+------------------------------------------------------------------------------
+Total         3151      2743       408         0         0       910       909
+Macro            0         0         0         0         0         0         0
+Ports          108        74        34         0         0         1         1
+------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+                              FLOORPLAN INFORMATION
+--------------------------------------------------------------------------------
+
+CORE AND CHIP AREA INFORMATION
+---------------------------
+Core Area is :     2258.894
+Chip Area is :     2491.195
+---------------------------
+
+SITE ROW INFORMATION
+-----------------------------------------------------------------------
+Site Name    Width    Height   Total Rows     Total Tiles          Area
+-----------------------------------------------------------------------
+unit         0.074     0.600           79           50876      2258.894
+-----------------------------------------------------------------------
+
+BLOCKAGE INFORMATION
+------------------------------------------------
+Blockage Type                Count          Area
+------------------------------------------------
+Hard placement                   0         0.000
+Soft placement                   0         0.000
+Hard macro                       0         0.000
+Partial placement                0         0.000
+Register                         0         0.000
+Placement allow Buffer Only      0         0.000
+Placement allow RP Group Only    0         0.000
+RP Group                         0         0.000
+Category                         0         0.000
+Routing                          0         0.000
+Routing for Top                  0         0.000
+Routing For Design Rule          0         0.000
+Shaping                          0         0.000
+------------------------------------------------
+
+POWER DOMAIN INFORMATION
+--------------------------------------------------------------------
+Power Domain Name    VA Name         Primary Power Net Primary Ground Net
+--------------------------------------------------------------------
+DEFAULT_POWER_DOMAIN DEFAULT_VA      VDD               VSS
+--------------------------------------------------------------------
+
+VOLTAGE AREA INFORMATION
+-------------------------------------------------------------------------------------
+VA Name          Number             Area       Target    bbox    bbox    bbox    bbox
+              of shapes                   Utilization     llx     lly     urx     ury
+-------------------------------------------------------------------------------------
+DEFAULT_VA            1         2258.894         1.000   1.184   1.200  48.840  48.600
+-------------------------------------------------------------------------------------
+
+GROUP BOUND INFORMATION
+----------------------------------------
+No Group Bound exists
+
+EXCLUSIVE MOVEBOUND INFORMATION
+----------------------------------------
+No Exclusive MoveBound exists.
+
+HARD AND SOFT MOVEBOUND INFORMATION
+----------------------------------------
+No Hard Or Soft MoveBound exists.
+
+ROUTE GUIDE INFORMATION
+------------------------------------------------
+Route Guide Type             Count          Area
+------------------------------------------------
+Extra Detour Region              0         0.000
+Over icovl CellLayers            0         0.000
+River Routing                    0         0.000
+Area Double Via                  0         0.000
+Access Preference                0         0.000
+Default                          0         0.000
+Switched Direction Only          0         0.000
+Max Patterns                     0         0.000
+Others                           0         0.000
+------------------------------------------------
+
+MULTIBIT REGISTER INFORMATION
+-----------------------------------------------
+No Multibit cells exist
+
+MULTIBIT LS/ISO CELLS INFORMATION
+-----------------------------------------------
+No Multibit cells exist
+
+RP GROUP INFORMATION
+----------------------------------------
+No RP Group exists
+
+LAYER INFORMATION
+--------------------------------------------------------------------------
+Layer Name Direction Ignored Pitch  default minWidth minSpacing    sameNet
+                                      Width                     MinSpacing
+--------------------------------------------------------------------------
+PO         Ver       YES     0.000    0.030    0.030      0.122      0.000
+M1         Ver       YES     0.074    0.034    0.034      0.026      0.000
+M2         Hor       NO      0.060    0.034    0.034      0.026      0.026
+M3         Ver       NO      0.074    0.034    0.034      0.026      0.026
+M4         Hor       NO      0.120    0.060    0.060      0.040      0.034
+M5         Ver       NO      0.120    0.060    0.060      0.040      0.034
+M6         Hor       NO      0.120    0.060    0.060      0.040      0.034
+M7         Ver       NO      0.120    0.060    0.060      0.040      0.034
+M8         Hor       NO      0.120    0.060    0.060      0.040      0.034
+M9         Ver       YES     0.120    0.060    0.060      0.040      0.000
+MRDL       Hor       YES     4.000    2.000    2.000      2.000      0.000
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+                              ROUTING INFORMATION
+--------------------------------------------------------------------------------
+
+Total wire length = 4274.769 micron
+Total number of wires = 2973
+Total number of contacts = 7498
+
+FINAL WIRING STATISTICS
+
+Signal Wiring Statistics
+
+Metal layer     Num wires  % of total#  Wire length % of total length
+PO                      0       0.000%        0.000            0.000%
+M1                     10       0.379%        0.596            0.015%
+M2                   1410      53.450%      841.870           20.746%
+M3                    751      28.469%     1186.290           29.233%
+M4                    230       8.719%      976.445           24.062%
+M5                    128       4.852%      586.965           14.464%
+M6                    106       4.018%      423.288           10.431%
+M7                      3       0.114%       42.585            1.049%
+M8                      0       0.000%        0.000            0.000%
+M9                      0       0.000%        0.000            0.000%
+MRDL                    0       0.000%        0.000            0.000%
+
+Clock Wiring Statistics
+
+Metal layer     Num wires  % of total#  Wire length % of total length
+PO                      0       0.000%        0.000            0.000%
+M1                      0       0.000%        0.000            0.000%
+M2                     22       6.567%        3.553            1.639%
+M3                     14       4.179%        1.337            0.617%
+M4                     67      20.000%        8.026            3.703%
+M5                    127      37.910%       97.924           45.182%
+M6                     66      19.701%       83.738           38.637%
+M7                     27       8.060%       11.752            5.422%
+M8                     12       3.582%       10.400            4.799%
+M9                      0       0.000%        0.000            0.000%
+MRDL                    0       0.000%        0.000            0.000%
+
+P/G Wiring Statistics
+
+Metal layer     Num wires  % of total#  Wire length % of total length
+PO                      0       0.000%        0.000            0.000%
+M1                     86      66.154%     3812.950           83.544%
+M2                     27      20.769%        3.718            0.081%
+M3                      2       1.538%        0.360            0.008%
+M4                      0       0.000%        0.000            0.000%
+M5                      0       0.000%        0.000            0.000%
+M6                      0       0.000%        0.000            0.000%
+M7                      0       0.000%        0.000            0.000%
+M8                      0       0.000%        0.000            0.000%
+M9                     15      11.538%      747.000           16.367%
+MRDL                    0       0.000%        0.000            0.000%
+
+Shape Pattern Wiring Statistics
+
+Metal layer     Num shapePatterns % of total# Wire length % of total length
+PO                      0       0.000%        0.000            0.000%
+M1                      0       0.000%        0.000            0.000%
+M2                      0       0.000%        0.000            0.000%
+M3                      0       0.000%        0.000            0.000%
+M4                      0       0.000%        0.000            0.000%
+M5                      0       0.000%        0.000            0.000%
+M6                      0       0.000%        0.000            0.000%
+M7                      0       0.000%        0.000            0.000%
+M8                      0       0.000%        0.000            0.000%
+M9                      0       0.000%        0.000            0.000%
+MRDL                    0       0.000%        0.000            0.000%
+
+All the PG shape patterns stand for 0 shapes.
+
+Horizontal/Vertical Wire Distribution
+
+Metal layer  Hor. length  % of hor.    Ver. length  % of ver.
+PO                  0.000       0.000%        0.000       0.000%
+M1                  0.148       0.007%        0.448       0.024%
+M2                777.544      35.606%       64.326       3.432%
+M3                  8.659       0.397%     1177.631      62.830%
+M4                974.326      44.618%        2.119       0.113%
+M5                  0.480       0.022%      586.485      31.291%
+M6                422.568      19.351%        0.720       0.038%
+M7                  0.000       0.000%       42.585       2.272%
+M8                  0.000       0.000%        0.000       0.000%
+M9                  0.000       0.000%        0.000       0.000%
+MRDL                0.000       0.000%        0.000       0.000%
+
+FINAL VIA STATISTICS
+
+Via layer    Via def name                Count        % of layer vias
+VIA1         VIA12SQ_C(rot)                       698      48.948%
+VIA1         VIA1_32SQ_C(rot)                      12       0.842%
+VIA1         VIA12SQ(rot)                           9       0.631%
+VIA1         VIA12BAR2_C(rot)                       2       0.140%
+VIA1         VIA12SQ                                1       0.070%
+VIA1         VIA12BAR2                              1       0.070%
+VIA1         VIA12SQ_C(1X8)                       600      42.076%
+VIA1         VIA12BAR1_C(1X2)                       7       0.491%
+VIA1         VIA12SQ(1X2)                          30       2.104%
+VIA1         VIA12SQ_C(1X2)                         4       0.281%
+VIA1         VIA12BAR1_C(2X1)                      35       2.454%
+VIA1         VIA12SQ(2X1)                          17       1.192%
+VIA1         VIA12LG_C(2X1)                         7       0.491%
+VIA1         VIA12SQ_C(2X1)                         1       0.070%
+VIA1         VIA12BAR2_C(1X2)                       1       0.070%
+VIA1         VIA12BAR2_C(2X1)                       1       0.070%
+  Double via conversion rate for layer VIA1 = 49.299% (703 / 1426 vias)
+    Among them, double via conversion rate of detail route vias for layer VIA1 = 12.470% (103 / 826 vias)
+
+VIA2         VIA23SQ_C                            104       5.926%
+VIA2         VIA2_33SQ_C                            2       0.114%
+VIA2         VIA23SQ_C(1X7)                       600      34.188%
+VIA2         VIA23SQ_C(2X1)                        96       5.470%
+VIA2         VIA23SQ_C(1X2)                       383      21.823%
+VIA2         VIA23BAR2_C(rot)(1X2)                  3       0.171%
+VIA2         VIA23SQ(2X1)                           1       0.057%
+VIA2         VIA23BAR1_C(2X1)                      87       4.957%
+VIA2         VIA23SQ(1X2)                         122       6.952%
+VIA2         VIA23BAR2_C(1X2)                     238      13.561%
+VIA2         VIA23SQ(rot)(1X2)                     85       4.843%
+VIA2         VIA23SQ_C(rot)(1X2)                   10       0.570%
+VIA2         VIA23LG_C(1X2)                         2       0.114%
+VIA2         VIA23BAR1_C(1X2)                       2       0.114%
+VIA2         VIA23BAR1_C(rot)(1X2)                  2       0.114%
+VIA2         VIA23SQ(rot)(2X1)                      5       0.285%
+VIA2         VIA23BAR1_C(rot)(2X1)                  2       0.114%
+VIA2         VIA23BAR2_C(2X1)                       2       0.114%
+VIA2         VIA23BAR2_C(rot)(2X1)                  7       0.399%
+VIA2         VIA23SQ_C(rot)(2X1)                    2       0.114%
+  Double via conversion rate for layer VIA2 = 93.960% (1649 / 1755 vias)
+    Among them, double via conversion rate of detail route vias for layer VIA2 = 90.823% (1049 / 1155 vias)
+
+VIA3         VIA34SQ_C(rot)                         2       0.226%
+VIA3         VIA34SQ_C(1X3)                       600      67.873%
+VIA3         VIA34SQ_C(rot)(1X2)                  201      22.738%
+VIA3         VIA34SQ_C(rot)(2X1)                   73       8.258%
+VIA3         VIA34SQ(rot)(1X2)                      3       0.339%
+VIA3         VIA34SQ(1X2)                           1       0.113%
+VIA3         VIA34SQ_C(2X1)                         1       0.113%
+VIA3         VIA34SQ(rot)(2X1)                      1       0.113%
+VIA3         VIA34SQ(2X1)                           2       0.226%
+  Double via conversion rate for layer VIA3 = 99.774% (882 / 884 vias)
+    Among them, double via conversion rate of detail route vias for layer VIA3 = 99.296% (282 / 284 vias)
+
+VIA4         VIA45SQ(rot)                           5       0.595%
+VIA4         VIA45BAR1_C(1X2)                     600      71.429%
+VIA4         VIA45SQ(1X2)                         156      18.571%
+VIA4         VIA45SQ(rot)(1X2)                     29       3.452%
+VIA4         VIA45SQ(rot)(2X1)                     21       2.500%
+VIA4         VIA45SQ(2X1)                          29       3.452%
+  Double via conversion rate for layer VIA4 = 99.405% (835 / 840 vias)
+    Among them, double via conversion rate of detail route vias for layer VIA4 = 97.917% (235 / 240 vias)
+
+VIA5         VIA56SQ                                6       0.778%
+VIA5         VIA56SQ_C(1X3)                       600      77.821%
+VIA5         VIA56SQ(1X2)                         140      18.158%
+VIA5         VIA56SQ(2X1)                          25       3.243%
+  Double via conversion rate for layer VIA5 = 99.222% (765 / 771 vias)
+    Among them, double via conversion rate of detail route vias for layer VIA5 = 96.491% (165 / 171 vias)
+
+VIA6         VIA67SQ_C                              1       0.163%
+VIA6         VIA67SQ_C(1X3)                       600      97.720%
+VIA6         VIA67SQ_C(2X1)                         2       0.326%
+VIA6         VIA67SQ(rot)(2X1)                      1       0.163%
+VIA6         VIA67SQ_C(1X2)                         9       1.466%
+VIA6         VIA67SQ(1X2)                           1       0.163%
+  Double via conversion rate for layer VIA6 = 99.837% (613 / 614 vias)
+    Among them, double via conversion rate of detail route vias for layer VIA6 = 92.857% (13 / 14 vias)
+
+VIA7         VIA78SQ_C(1X3)                       600      98.684%
+VIA7         VIA78SQ_C(rot)(1X2)                    1       0.164%
+VIA7         VIA78SQ_C(rot)(2X1)                    7       1.151%
+  Double via conversion rate for layer VIA7 = 100.000% (608 / 608 vias)
+    Among them, double via conversion rate of detail route vias for layer VIA7 = 100.000% (8 / 8 vias)
+
+VIA8         VIA89_C(1X2)                         600     100.000%
+  Double via conversion rate for layer VIA8 = 100.000% (600 / 600 vias)
+    Among them, double via conversion rate of detail route vias for layer VIA8 = 0.000% (0 / 0 vias)
+
+
+Custom Via Statistics
+
+No custom vias found in the design.
+Overall double via conversion rate = 88.757%
+  Among them, overall double via conversion rate of detail route vias = 68.755% (1855 / 2698 vias)
+  *Detail route vias are vias whose shape_use is detail_route.
+
+Via Matrix Statistics
+
+No via matrices found in the design.
+
+FINAL DRC STATISTICS
+
+DRC-SUMMARY:
+Total number of nets = 469, of which 0 are not extracted
+Total number of open nets = 0, of which 0 are frozen
+Total number of excluded ports = 0 ports of 0 unplaced cells connected to 0 nets
+                                 0 ports without pins of 0 cells connected to 0 nets
+                                 0 ports of 0 cover cells connected to 0 non-pg nets
+Total number of DRCs = 0
+Total number of antenna violations = no antenna rules defined
+Total number of tie to rail violations = not checked
+1

@@ -1,0 +1,96 @@
+****************************************
+Report : power
+        -significant_digits 3
+Design : ALU_votegui
+Version: U-2022.12
+Date   : Mon Apr 28 07:59:45 2025
+****************************************
+Information: Activity for scenario func::setup_ss0p72v125c was cached, no propagation required. (POW-005)
+Information: Activity for scenario func::hold_ff0p88v125c was cached, no propagation required. (POW-005)
+Mode: func
+Corner: hold_ff0p88v125c
+Scenario: func::hold_ff0p88v125c
+Voltage: 0.880
+Temperature: 125.000
+
+Voltage Unit         : 1V
+Capacitance Unit     : 1pF
+Time Unit            : 1ns
+Temperature Unit     : 1C
+Dynamic Power Unit   : 1mW
+Leakage Power Unit   : 1mW
+
+Switched supply net power scaling:
+scaling for leakage power
+
+Supply nets:
+VDD (power) probability 1.000 (default)
+VSS (ground) probability 1.000 (default)
+
+  Cell Internal Power    = N/A ( N/A )
+  Net Switching Power    = N/A ( N/A )
+Total Dynamic Power      = N/A (  0.0%)
+
+Cell Leakage Power       = 2.370e-02 mW
+
+
+  Attributes
+  ----------
+      u  -  User defined power group
+      i  -  Includes clock pin internal power
+
+Power Group         Internal Power        Switching Power          Leakage Power            Total Power    (   %  )    Attrs
+-----------------------------------------------------------------------------------------------------------------------------
+io_pad                         N/A                    N/A              0.000e+00              0.000e+00    (  0.0%)         
+memory                         N/A                    N/A              0.000e+00              0.000e+00    (  0.0%)         
+black_box                      N/A                    N/A              1.170e-06              1.170e-06    (  0.0%)         
+clock_network                  N/A                    N/A              1.089e-02              1.089e-02    ( 46.0%)        i
+register                       N/A                    N/A              1.626e-03              1.626e-03    (  6.9%)         
+sequential                     N/A                    N/A              1.309e-04              1.309e-04    (  0.6%)         
+combinational                  N/A                    N/A              1.105e-02              1.105e-02    ( 46.6%)         
+-----------------------------------------------------------------------------------------------------------------------------
+Total                          N/A                    N/A              2.370e-02 mW           2.370e-02 mW
+Mode: func
+Corner: setup_ss0p72v125c
+Scenario: func::setup_ss0p72v125c
+Voltage: 0.720
+Temperature: 125.000
+
+Voltage Unit         : 1V
+Capacitance Unit     : 1pF
+Time Unit            : 1ns
+Temperature Unit     : 1C
+Dynamic Power Unit   : 1mW
+Leakage Power Unit   : 1mW
+
+Switched supply net power scaling:
+scaling for leakage power
+
+Supply nets:
+VDD (power) probability 1.000 (default)
+VSS (ground) probability 1.000 (default)
+
+  Cell Internal Power    = 3.358e-03 mW ( 48.5%)
+  Net Switching Power    = 3.566e-03 mW ( 51.5%)
+Total Dynamic Power      = 6.924e-03 mW (100.0%)
+
+Cell Leakage Power       = 2.296e-03 mW
+
+
+  Attributes
+  ----------
+      u  -  User defined power group
+      i  -  Includes clock pin internal power
+
+Power Group         Internal Power        Switching Power          Leakage Power            Total Power    (   %  )    Attrs
+-----------------------------------------------------------------------------------------------------------------------------
+io_pad                   0.000e+00              0.000e+00              0.000e+00              0.000e+00    (  0.0%)         
+memory                   0.000e+00              0.000e+00              0.000e+00              0.000e+00    (  0.0%)         
+black_box                0.000e+00              0.000e+00              1.144e-07              1.144e-07    (  0.0%)         
+clock_network            1.704e-03              1.098e-03              8.837e-04              3.686e-03    ( 40.0%)        i
+register                 3.172e-04              1.188e-04              7.742e-05              5.134e-04    (  5.6%)         
+sequential               0.000e+00              0.000e+00              1.879e-05              1.879e-05    (  0.2%)         
+combinational            1.337e-03              2.349e-03              1.316e-03              5.002e-03    ( 54.2%)         
+-----------------------------------------------------------------------------------------------------------------------------
+Total                    3.358e-03 mW           3.566e-03 mW           2.296e-03 mW           9.220e-03 mW
+1

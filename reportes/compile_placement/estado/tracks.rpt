@@ -1,0 +1,29 @@
+****************************************
+Report : report_tracks
+Design : ALU_votegui
+Version: U-2022.12
+Date   : Mon Apr 28 05:52:44 2025
+****************************************
+Layer          Direction     Start         Tracks    Pitch       Attr
+---------------------------------------------------------------------------
+M1             X             0.037         676       0.074       default
+M1             Y             0.053         673       0.074       default
+M2             X             0.044         834       0.060       default
+M2             Y             0.000         831       0.060       default
+M3             X             0.000         677       0.074       default
+M3             Y             0.016         673       0.074       default
+M4             X             0.104         417       0.120       default
+M4             Y             0.000         416       0.120       default
+M5             X             0.104         417       0.120       default
+M5             Y             0.000         416       0.120       default
+M6             X             0.104         417       0.120       default
+M6             Y             0.000         416       0.120       default
+M7             X             0.104         417       0.120       default
+M7             Y             0.000         416       0.120       default
+M8             X             0.104         417       0.120       default
+M8             Y             0.000         416       0.120       default
+M9             X             0.104         417       0.120       default
+M9             Y             0.000         416       0.120       default
+MRDL           X             1.184         13        4.000       default
+MRDL           Y             1.200         13        4.000       default
+1

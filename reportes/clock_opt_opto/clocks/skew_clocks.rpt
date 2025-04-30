@@ -1,0 +1,18 @@
+Information: Timer using 1 threads
+****************************************
+Report : clock timing
+        -type skew
+        -nworst 1
+        -setup
+Design : ALU_votegui
+Version: U-2022.12
+Date   : Mon Apr 28 07:35:54 2025
+****************************************
+Information: Timer using 'CRPR'. (TIM-050)
+
+  Mode: func
+  Clock: CLOCK_MAIN
+
+  No local skews.
+
+1

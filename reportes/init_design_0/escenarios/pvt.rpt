@@ -1,0 +1,25 @@
+Information: Timer using 1 threads
+Information: Corner hold_ff0p88v125c: no PVT mismatches. (PVT-032)
+Information: Corner setup_ss0p72v125c: no PVT mismatches. (PVT-032)
+INFO: updateGlobalOptions
+INFO: use Native GDC
+****************************************
+Report : pvt
+Design : ALU_votegui
+Version: U-2022.12
+Date   : Mon Apr 14 06:03:26 2025
+****************************************
+
+--------------------------------------------------------------------------------
+Information: Corner setup_ss0p72v125c: no PVT mismatches. (PVT-032)
+--------------------------------------------------------------------------------
+
+
+
+--------------------------------------------------------------------------------
+Information: Corner hold_ff0p88v125c: no PVT mismatches. (PVT-032)
+--------------------------------------------------------------------------------
+
+
+
+1

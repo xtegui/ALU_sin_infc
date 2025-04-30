@@ -1,0 +1,17 @@
+Information: Timer using 'SI, Timing Window Analysis, CRPR'. (TIM-050)
+****************************************
+Report : global timing
+        -format { narrow }
+        -report_by design
+Design : ALU_votegui
+Version: U-2022.12
+Date   : Mon Apr 28 07:57:49 2025
+****************************************
+
+No setup violations found.
+
+
+No hold violations found.
+
+
+1

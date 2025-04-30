@@ -1,0 +1,160 @@
+Information: CTS will work on the following scenarios. (CTS-101)
+   func::hold_ff0p88v125c	(Mode: func; Corner: hold_ff0p88v125c)
+   func::setup_ss0p72v125c	(Mode: func; Corner: setup_ss0p72v125c)
+Information: CTS will work on all clocks in active scenarios, including 1 master clocks and 3 generated clocks. (CTS-107)
+Output units used in this log:
+   Time        : 1.00ns
+   Resistance  : 1.00MOhm
+   Capacitance : 1.00pF
+   Power       : 1.00mW
+   Length      : 1.00um
+Information: Clock derating is disabled
+
+CTS related app options set by user:
+   cts.common.user_instance_name_prefix = clock_opt_cts_
+
+****************************************
+Report : check_clock_tree
+Design : ALU_votegui
+Version: U-2022.12
+Date   : Mon Apr 28 07:09:03 2025
+****************************************
+
+=================================================
+Summary
+=================================================
+
+Tag           Count     Solution  Description
+--------------------------------------------------------------------------------
+
+---------------------------------------------
+       Clock Definitions & Propagation
+---------------------------------------------
+CTS-002       0         None      There are active CTS scenarios with no clock definition.
+CTS-004       0         None      There are generated clocks that cannot be reached by their master clock.
+CTS-005       0         None      Generated clocks defined on bidirectional pins
+CTS-019       0         None      Clocks propagate to output ports
+CTS-905       0         None      There are clocks with no sinks
+CTS-906       0         None      There are sinks with no clock
+CTS-907       0         None      There are disabled timing arcs in the clock network
+
+---------------------------------------------
+               Reference Cells
+---------------------------------------------
+CTS-007       0         None      Failed to specify any clock buffers or inverters for CTS
+CTS-008       0         None      Clock reference cells have dont_touch or dont_use
+CTS-903       10        None      Cells instantiated in the clock network are not in the clock reference list
+CTS-904       3         None      Some clock reference cells have no LEQ cell specified for resizing
+
+---------------------------------------------
+               Skew Balancing
+---------------------------------------------
+CTS-006       0         None      Balancing conflicts exist between different clocks
+CTS-009       0         None      Cell instances in the clock tree have multiple conditional delay arcs between the same pins
+CTS-908       0         None      Large phase delay in abstracted sub-blocks
+CTS-910       0         None      Balance point constraints are defined downstream of another balance point or ignore point constraint
+CTS-911       0         None      Clock pins downstream of a balance point or ignore point have been added to a skew group
+CTS-913       0         None      Explicit ignore points have been added to a skew group, and will not be balanced
+CTS-917       0         None      Implicit ignore points have been added to a skew group, and will be balanced
+CTS-967       0         None      %s is sink for generated clock %s but pass through for master clock.
+
+---------------------------------------------
+                Multi-Voltage
+---------------------------------------------
+CTS-901       0         None      Clock nets have MV violations
+CTS-902       0         None      No AON (always-on) buffers or inverters available for CTS
+CTS-918       0         None      Voltage area blocked for buffering.
+
+---------------------------------------------
+    Capacitance & Transition Constraints
+---------------------------------------------
+CTS-909       0         None      set_load constraints detected in the clock tree
+CTS-912       0         None      set_load constraints on output clock ports exceed the max capacitance limit
+CTS-914       0         None      set_input_transition on clock ports exceeds the max transition limit
+CTS-915       0         None      Excessively small max capacitance constraints in the clock network
+CTS-916       0         None      Excessively small max transition constraints in the clock network
+
+---------------------------------------------
+                Other issues
+---------------------------------------------
+CTS-012       1         None      Nets in the clock network have a dont_touch constraint
+CTS-013       35        None      Cells in the clock network have a dont_touch constraint
+CTS-015       0         None      set_max_delay or set_min_delay constraints are defined in the clock network
+CTS-900       0         None      Clock routing rules are outside of allowable layers
+=================================================
+                     Details
+=================================================
+
+---------------------------------------------------------------------------------------
+Warning: Nets in the clock network have a dont_touch constraint (CTS-012)
+---------------------------------------------------------------------------------------
+Check         Fanout             Reason                         Net name
+---------------------------------------------------------------------------------------
+CTS-012       2                  user                           i_clock
+
+---------------------------------------------------------------------------------------
+Warning: Cells in the clock network have a dont_touch constraint (CTS-013)
+---------------------------------------------------------------------------------------
+Check         Reason             Cell name
+---------------------------------------------------------------------------------------
+CTS-013       user               ctmi_43
+CTS-013       user               o_valid_reg_reg
+CTS-013       user               data_out_reg_30_
+CTS-013       user               data_out_reg_29_
+CTS-013       user               data_out_reg_28_
+CTS-013       user               data_out_reg_27_
+CTS-013       user               data_out_reg_26_
+CTS-013       user               data_out_reg_25_
+CTS-013       user               data_out_reg_24_
+CTS-013       user               data_out_reg_23_
+CTS-013       user               data_out_reg_22_
+CTS-013       user               data_out_reg_21_
+CTS-013       user               data_out_reg_20_
+CTS-013       user               data_out_reg_19_
+CTS-013       user               data_out_reg_18_
+CTS-013       user               data_out_reg_17_
+CTS-013       user               data_out_reg_16_
+CTS-013       user               data_out_reg_15_
+CTS-013       user               data_out_reg_14_
+CTS-013       user               data_out_reg_13_
+CTS-013       user               data_out_reg_12_
+CTS-013       user               data_out_reg_11_
+CTS-013       user               data_out_reg_10_
+CTS-013       user               data_out_reg_9_
+CTS-013       user               data_out_reg_8_
+CTS-013       user               data_out_reg_7_
+CTS-013       user               data_out_reg_6_
+CTS-013       user               data_out_reg_5_
+CTS-013       user               data_out_reg_4_
+CTS-013       user               data_out_reg_3_
+CTS-013       user               data_out_reg_2_
+CTS-013       user               data_out_reg_1_
+CTS-013       user               data_out_reg_0_
+CTS-013       user               data_out_reg_31_
+CTS-013       user               buf_int_i_clock
+
+---------------------------------------------------------------------------------------
+Warning: Cells instantiated in the clock network are not in the clock reference list (CTS-903)
+---------------------------------------------------------------------------------------
+Check         Lib cell           Example Instance
+---------------------------------------------------------------------------------------
+CTS-903       SAEDSLVT14_BUF_S_8 buf_int_i_clock
+CTS-903       SAEDHVT14_AO221_0P5 u_clock_mux/ctmi_20
+CTS-903       SAEDHVT14_AN2_1    ctmi_43
+CTS-903       SAEDHVT14_FSDPRBQ_V2LP_1 q_div_2_reg
+CTS-903       SAEDHVT14_FSDPRBQ_V2LP_1 q_div_4_reg
+CTS-903       SAEDHVT14_AO22_0P5 u_clock_mux/ctmi_21
+CTS-903       SAEDHVT14_FSDPRBQ_V2LP_1 q_div_8_reg
+CTS-903       SAEDHVT14_INV_S_0P75 I_2
+CTS-903       SAEDHVT14_INV_S_0P75 I_1
+CTS-903       SAEDHVT14_INV_S_0P75 I_0
+
+---------------------------------------------------------------------------------------
+Warning: Some clock reference cells have no LEQ cell specified for resizing (CTS-904)
+---------------------------------------------------------------------------------------
+Check         Lib cell                                                 Example Instance
+---------------------------------------------------------------------------------------
+CTS-904       saed14hvt/SAEDHVT14_AO22_0P5                             u_clock_mux/ctmi_21
+CTS-904       saed14hvt/SAEDHVT14_AO221_0P5                            u_clock_mux/ctmi_20
+CTS-904       saed14slvt/SAEDSLVT14_BUF_S_8                            buf_int_i_clock
+1

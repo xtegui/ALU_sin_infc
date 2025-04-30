@@ -1,0 +1,61 @@
+ Info: Initializing timer in CLOCK_SYN_REPORT_MODE
+Information: The value of option cts.compile.enable_cell_relocation has been overridden to "leaf_only" to support latency-driven placement. (CTS-973)
+Warning: time.si_enable_analysis is on, it could increase the runtime and memory usage. 
+Warning: The scenario func::hold_ff0p88v125c has max capacitance DRC fixing disabled using the set_scenario_status command.  High DRC count may be expected.
+****************************************
+Report : clock qor
+        -type summary
+        -nosplit
+Design : ALU_votegui
+Version: U-2022.12
+Date   : Mon Apr 28 08:20:04 2025
+****************************************
+
+Attributes
+===========
+M Master Clock
+G Generated Clock
+& Internal Generated Clock
+U User Defined Skew Group
+D Default Skew Group
+* Generated Clock Balanced Separately
+
+=======================================================
+==== Summary Reporting for Corner hold_ff0p88v125c ====
+=======================================================
+
+====================================================== Summary Table for Corner hold_ff0p88v125c =======================================================
+Clock /                               Attrs     Sinks Levels    Clock     Clock     Clock       Max    Global  Trans DRC  Cap DRC      Wire
+Skew Group                                                   Repeater  Repeater   Stdcell   Latency      Skew     Count     Count    Length
+                                                                Count      Area      Area
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+### Mode: func, Scenario: func::hold_ff0p88v125c
+CLOCK_MAIN                              M,D        33     11        9     2.220     8.081     0.092     0.056         0         0   217.884
+ gen_clk_div2                             G        33      9        9     2.220     6.127     0.074     0.039         0         0   180.208
+  gen_clk_div4                            G        33      8        8     2.042     4.662     0.061     0.020         0         0   167.050
+   gen_clk_div8                           G        33      7        7     1.865     3.197     0.048     0.006         0         0   159.091
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+All Clocks                                         33     11        9     2.220     8.081     0.092     0.056         0         0   217.884
+
+
+Warning: Please use -largest / -smallest / -all switches with -show_verbose_paths / -show_paths to report the clock paths. (CTS-956)
+========================================================
+==== Summary Reporting for Corner setup_ss0p72v125c ====
+========================================================
+
+====================================================== Summary Table for Corner setup_ss0p72v125c ======================================================
+Clock /                               Attrs     Sinks Levels    Clock     Clock     Clock       Max    Global  Trans DRC  Cap DRC      Wire
+Skew Group                                                   Repeater  Repeater   Stdcell   Latency      Skew     Count     Count    Length
+                                                                Count      Area      Area
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+### Mode: func, Scenario: func::setup_ss0p72v125c
+CLOCK_MAIN                              M,D        33     11        9     2.220     8.081     0.154     0.092         0         0   217.884
+ gen_clk_div2                             G        33      9        9     2.220     6.127     0.129     0.064         0         0   180.208
+  gen_clk_div4                            G        33      8        8     2.042     4.662     0.108     0.034         0         0   167.050
+   gen_clk_div8                           G        33      7        7     1.865     3.197     0.088     0.012         0         0   159.091
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+All Clocks                                         33     11        9     2.220     8.081     0.154     0.092         0         0   217.884
+
+
+Warning: Please use -largest / -smallest / -all switches with -show_verbose_paths / -show_paths to report the clock paths. (CTS-956)
+1

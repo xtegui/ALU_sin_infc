@@ -1,0 +1,42 @@
+Information: option 'dft.scan.connect_clock_gate_test_enables' cannot be set to false by user (DFT-3161)
+****************************************
+Report : app_option
+           -non_default
+Design : ALU_votegui
+Version: U-2022.12
+Date   : Mon Apr 28 05:52:45 2025
+****************************************
+Name                                                       Type       Value             User-value        User-default System-default Scope      Status     Source
+---------------------------------------------------------- ---------- ----------------- ----------------- ------------ -------------- ---------- ---------- ----------------------------
+compile.clockgate.physically_aware                         bool       true              true              --           false          block      normal     /tmp/fc_shell-be-2.XBHRBm:3
+compile.final_place.effort                                 enum       high              high              --           medium         block      normal     /tmp/fc_shell-be-2.HVtbcq:7
+compile.flow.autoungroup                                   bool       false             false             --           true           block      normal     /tmp/fc_shell-be-2.Mbfqlm:2
+compile.flow.enable_multibit                               bool       true              true              --           false          block      normal     /tmp/fc_shell-be-2.pUhPet:2
+compile.seqmap.enable_register_merging                     bool       false             false             --           true           block      normal     /tmp/fc_shell-be-2.tgpWbv:5
+compile.seqmap.enable_register_merging_across_bus          bool       false             false             --           true           block      normal     /tmp/fc_shell-be-2.pUhPet:5
+compile.seqmap.identify_shift_registers                    bool       false             false             --           true           block      normal     /tmp/fc_shell-be-2.tgpWbv:6
+cts.common.user_instance_name_prefix                       string     compile_cts_      compile_cts_      --           --             block      normal     /tmp/fc_shell-be-2.aUiBEA:3
+design.uniquify_naming_style                               string     ALU_votegui_%s_%d ALU_votegui_%s_%d --           %s_%d          block      normal     --
+gui.graphics_system                                        enum       native            native            native       auto           global     normal     --
+multibit.common.ignore_cell_with_sdc                       bool       true              true              --           false          block      normal     /tmp/fc_shell-be-2.pUhPet:6
+opt.common.user_instance_name_prefix                       string     compile_          compile_          --           --             block      normal     /tmp/fc_shell-be-2.aUiBEA:2
+opt.tie_cell.max_fanout                                    integer    50                50                --           999            block      normal     --
+place.coarse.continue_on_missing_scandef                   bool       true              true              --           false          block      normal     --
+place.coarse.enhanced_low_power_effort                     enum       none              none              --           low            block      normal     /tmp/fc_shell-be-2.HVtbcq:7
+place.common.use_placement_model                           bool       true              true              --           false          block      normal     /tmp/fc_shell-be-2.HVtbcq:7
+place_opt.flow.enable_multibit_banking                     bool       true              true              --           false          block      normal     /tmp/fc_shell-be-2.pUhPet:3
+place_opt.flow.enable_multibit_debanking                   bool       true              true              --           false          block      normal     /tmp/fc_shell-be-2.pUhPet:4
+plan.pgroute.honor_signal_route_drc                        bool       true              true              --           false          block      normal     --
+plan.pgroute.honor_std_cell_drc                            bool       true              true              --           false          block      normal     --
+power.enable_activity_persistency                          enum       on                on                --           lazy           block      normal     /tmp/fc_shell-be-2.zOPgNP:4
+power.power_annotation_persistency                         bool       true              true              --           false          block      normal     /tmp/fc_shell-be-2.zOPgNP:5
+power.report_user_power_groups                             enum       inclusive         inclusive         --           exclusive      block      normal     /tmp/fc_shell-be-2.zOPgNP:7
+route.common.via_array_mode                                enum       swap              swap              --           all            block      normal     --
+route.detail.insert_redundant_vias_layer_order_low_to_high bool       true              true              --           false          block      normal     --
+shell.common.report_default_significant_digits             integer    3                 3                 3            2              global     normal     /tmp/fc_shell-be-2.jlLgtv:18
+time.case_analysis_propagate_through_icg                   bool       true              true              --           false          block      normal     /tmp/fc_shell-be-2.XBHRBm:2
+time.enable_clock_to_data_analysis                         bool       true              true              --           false          block      normal     /tmp/fc_shell-be-2.HVtbcq:7
+---------------------------------------------------------- ---------- ----------------- ----------------- ------------ -------------- ---------- ---------- ----------------------------
+
+There are additional internal differences with no available TBC source.
+1

@@ -1,0 +1,100 @@
+****************************************
+Report : qor
+Design : ALU_votegui
+Version: U-2022.12
+Date   : Mon Apr 28 07:15:37 2025
+****************************************
+Information: The stitching and editing of coupling caps is turned OFF for design 'ALU_votegui_init_design:ALU_votegui/clock_opt_cts.design'. (TIM-125)
+Information: Design ALU_votegui has 475 nets, 0 global routed, 13 detail routed. (NEX-024)
+Information: The RC mode used is CTO for design 'ALU_votegui'. (NEX-022)
+Information: Design Average RC for design ALU_votegui  (NEX-011)
+Information: r = 2.192811 ohm/um, via_r = 0.637081 ohm/cut, c = 0.100154 ff/um, cc = 0.000000 ff/um (X dir) (NEX-017)
+Information: r = 2.437384 ohm/um, via_r = 0.662179 ohm/cut, c = 0.091588 ff/um, cc = 0.000000 ff/um (Y dir) (NEX-017)
+Information: Update timing completed net estimation for all the timing graph nets (TIM-111)
+Information: Net estimation statistics: timing graph nets = 473, routed nets = 13, across physical hierarchy nets = 0, parasitics cached nets = 473, delay annotated nets = 0, parasitics annotated nets = 0, multi-voltage nets = 0. (TIM-112)
+Information: Timer using 'CRPR'. (TIM-050)
+
+
+
+Cell Count
+----------------------------------------
+Hierarchical Cell Count:              6
+Hierarchical Port Count:            565
+Leaf Cell Count:                    383
+Buf/Inv Cell Count:                 127
+Buf Cell Count:                     108
+Inv Cell Count:                      19
+CT Buf/Inv Cell Count:                0
+Combinational Cell Count:           345
+   Single-bit Isolation Cell Count:                        0
+   Multi-bit Isolation Cell Count:                         0
+   Isolation Cell Banking Ratio:                           0.00%
+   Single-bit Level Shifter Cell Count:                    0
+   Multi-bit Level Shifter Cell Count:                     0
+   Level Shifter Cell Banking Ratio:                       0.00%
+   Single-bit ELS Cell Count:                              0
+   Multi-bit ELS Cell Count:                               0
+   ELS Cell Banking Ratio:                                 0.00%
+Sequential Cell Count:               38
+   Integrated Clock-Gating Cell Count:                     0
+   Sequential Macro Cell Count:                            0
+   Single-bit Sequential Cell Count:                       38
+   Multi-bit Sequential Cell Count:                        0
+   Sequential Cell Banking Ratio:                          0.00%
+   BitsPerflop:                                            1.00
+Macro Count:                          0
+----------------------------------------
+
+
+Area
+----------------------------------------
+Combinational Area:             163.570
+Noncombinational Area:           49.550
+Buf/Inv Area:                    52.747
+Total Buffer Area:               45.466
+Total Inverter Area:              7.282
+Macro/Black Box Area:             0.000
+Net Area:                             0
+Net XLength:                   2410.065
+Net YLength:                   2043.396
+----------------------------------------
+Cell Area (netlist):                           213.120
+Cell Area (netlist and physical only):         320.612
+Net Length:                    4453.461
+
+
+Design Rules
+----------------------------------------
+Total Number of Nets:               475
+Nets with Violations:                 0
+Max Trans Violations:                 0
+Max Cap Violations:                   0
+----------------------------------------
+
+1
+****************************************
+Report : qor
+        -summary
+Design : ALU_votegui
+Version: U-2022.12
+Date   : Mon Apr 28 07:15:37 2025
+****************************************
+Information: Timer using 'CRPR'. (TIM-050)
+
+Timing
+---------------------------------------------------------------------------
+Context                                 WNS            TNS            NVE
+---------------------------------------------------------------------------
+func::setup_ss0p72v125c (Setup)             --          0.000              0
+Design             (Setup)               --          0.000              0
+
+func::hold_ff0p88v125c (Hold)             --          0.000              0
+Design             (Hold)                --          0.000              0
+---------------------------------------------------------------------------
+
+Miscellaneous
+---------------------------------------------------------------------------
+Cell Area (netlist):                           213.120
+Cell Area (netlist and physical only):         320.612
+Nets with DRC Violations:        0
+1

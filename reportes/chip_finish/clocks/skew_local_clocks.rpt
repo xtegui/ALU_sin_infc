@@ -1,0 +1,80 @@
+ Info: Initializing timer in CLOCK_SYN_REPORT_MODE
+Information: The value of option cts.compile.enable_cell_relocation has been overridden to "leaf_only" to support latency-driven placement. (CTS-973)
+Warning: time.si_enable_analysis is on, it could increase the runtime and memory usage. 
+****************************************
+Report : clock qor
+        -type local_skew
+        -nosplit
+Design : ALU_votegui
+Version: U-2022.12
+Date   : Mon Apr 28 13:46:02 2025
+****************************************
+
+Attributes
+===========
+M Master Clock
+G Generated Clock
+& Internal Generated Clock
+U User Defined Skew Group
+D Default Skew Group
+* Generated Clock Balanced Separately
+
+==========================================================
+==== Local Skew Reporting for Corner hold_ff0p88v125c ====
+==========================================================
+
+=================================== Summary Table for Corner hold_ff0p88v125c ====================================
+Clock /                               Attrs     Sinks    Global       Max    Local Skew   Max Setup    Max Hold
+Skew Group                                                 Skew   Latency    Pair Count  Local Skew  Local Skew
+------------------------------------------------------------------------------------------------------------------
+### Mode: func, Scenario: func::hold_ff0p88v125c
+CLOCK_MAIN                              M,D        33     0.058     0.093            --          --          --
+ gen_clk_div2                             G        33     0.041     0.075            --          --          --
+  gen_clk_div4                            G        33     0.022     0.062            --          --          --
+   gen_clk_div8                           G        33     0.008     0.049            --          --          --
+------------------------------------------------------------------------------------------------------------------
+All Clocks                                         33     0.058     0.093                        --          --
+
+
+  r = latency reported is for a rising edge triggered event at the sink
+  f = latency reported is for a falling edge triggered event at the sink
+
+
+Showing 5 largest and 5 smallest datapoints per clock / skew group (L=largest, S=smallest)
+========================================== Details Table for Corner hold_ff0p88v125c ===========================================
+Clock /                                Launch Sink    Capture Sink      Launch     Capture        Late       Early       Local
+Skew Group                             Name           Name             Latency     Latency      Offset      Offset        Skew
+--------------------------------------------------------------------------------------------------------------------------------
+### Mode: func, Scenario: func::hold_ff0p88v125c
+
+
+===========================================================
+==== Local Skew Reporting for Corner setup_ss0p72v125c ====
+===========================================================
+
+=================================== Summary Table for Corner setup_ss0p72v125c ===================================
+Clock /                               Attrs     Sinks    Global       Max    Local Skew   Max Setup    Max Hold
+Skew Group                                                 Skew   Latency    Pair Count  Local Skew  Local Skew
+------------------------------------------------------------------------------------------------------------------
+### Mode: func, Scenario: func::setup_ss0p72v125c
+CLOCK_MAIN                              M,D        33     0.092     0.154            --          --          --
+ gen_clk_div2                             G        33     0.065     0.129            --          --          --
+  gen_clk_div4                            G        33     0.035     0.108            --          --          --
+   gen_clk_div8                           G        33     0.012     0.088            --          --          --
+------------------------------------------------------------------------------------------------------------------
+All Clocks                                         33     0.092     0.154                        --          --
+
+
+  r = latency reported is for a rising edge triggered event at the sink
+  f = latency reported is for a falling edge triggered event at the sink
+
+
+Showing 5 largest and 5 smallest datapoints per clock / skew group (L=largest, S=smallest)
+========================================== Details Table for Corner setup_ss0p72v125c ==========================================
+Clock /                                Launch Sink    Capture Sink      Launch     Capture        Late       Early       Local
+Skew Group                             Name           Name             Latency     Latency      Offset      Offset        Skew
+--------------------------------------------------------------------------------------------------------------------------------
+### Mode: func, Scenario: func::setup_ss0p72v125c
+
+
+1

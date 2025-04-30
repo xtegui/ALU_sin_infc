@@ -1,0 +1,25 @@
+
+
+ ########## Compare SET_TECHNOLOGY SETTINGS #########
+
+Information: No difference found between current and recommended set_technology settings.
+
+ ########## Compare SQS SETTINGS #########
+Information: Evaluating single metric strategy for timing metric_target
+Information: Auto-detected closest technology node s14.
+Information: Diffing set_qor_strategy settings for technology node s14.
+
+Metric(s) : timing
+Information: No differences found between current and recommended set_qor_strategy settings.  
+
+
+ ########## Compare SET_STAGE cts SETTINGS #########
+
+Information: No difference found between current and recommended set_stage settings.
+
+
+ ########## Compare RECOMMENDED SETTINGS for select app options#########
+
+Warning: The application option <route.common.voltage_area_aware> is deprecated and scheduled for removal in a future release. (NDMUI-443)
+Warning: The application option <route.common.voltage_area_aware> is deprecated and scheduled for removal in a future release. (NDMUI-443)
+Information: No difference found between current and recommended settings for select app options.
