@@ -1,0 +1,9 @@
+[
+  ["Clock", "Attrs", "BalancedSinks", "ClockCells", "ClockArea", "BufCount", "BufArea", "PhysicalSinks", "PhysSinkArea", "MacroArea"],
+  ["Total", ".", "33", "16", "9", "9", "3", "33", "42", "0"], 
+  ["Total/func", "Mode", ".", ".", ".", ".", ".", ".", ".", "."], 
+  ["Total/func/CLOCK_MAIN", "M,D", "33", "16", "9", "9", "3", "33", "42", "0"], 
+  ["Total/func/CLOCK_MAIN/gen_clk_div2", "G", "33", "14", "7", "9", "3", "33", "42", "0"], 
+  ["Total/func/CLOCK_MAIN/gen_clk_div2/gen_clk_div4", "G", "33", "12", "5", "8", "2", "33", "42", "0"], 
+  ["Total/func/CLOCK_MAIN/gen_clk_div2/gen_clk_div4/gen_clk_div8", "G", "33", "10", "3", "7", "2", "33", "42", "0"]
+]

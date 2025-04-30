@@ -1,0 +1,279 @@
+****************************************
+Report : report clock qor
+        -type_list {area}
+        -nosplit
+Design : ALU_votegui
+Version: U-2022.12
+Date   : Mon Apr 28 07:15:52 2025
+****************************************
+
+
+==========================
+==== Area (per clock) ====
+==========================
+
+Clock                                 Sinks          Clock          Clock          Clock          Clock          Sinks           Sink
+                                 (balanced)     Cell Count        Stdcell       Repeater       Repeater     (physical)        Stdcell          Macro
+                                                (non sink)           Area          Count           Area                          Area           Area
+------------------------------------------------------------------------------------------------------------------------------------------------------
+CLOCK_MAIN                               33             16          8.747              9          2.886             33         42.313          0.000
+ gen_clk_div2                            33             14          6.793              9          2.886             33         42.313          0.000
+  gen_clk_div4                           33             12          5.106              8          2.486             33         42.313          0.000
+   gen_clk_div8                          33             10          3.419              7          2.087             33         42.313          0.000
+------------------------------------------------------------------------------------------------------------------------------------------------------
+Total                                    33             16          8.747              9          2.886             33         42.313          0.000
+
+Type                               Instance           Unit          Total           Cell             Vt             Vt
+                                      Count           Area           Area           Type          Group           Type
+
+
+=================================
+==== Area (per library cell) ====
+=================================
+
+===== Summary =====
+Type                               Instance           Unit          Total           Cell             Vt             Vt
+                                      Count           Area           Area           Type          Group           Type
+------------------------------------------------------------------------------------------------------------------------
+Clock Repeaters                           9              -          2.886              -              -              -
+Other Network Cells                       7              -          5.861              -              -              -
+Standard Cell Sinks                      33              -         42.313              -              -              -
+Macro Cells                               0              -          0.000              -              -              -
+
+===== Clock Repeaters =====
+Type                               Instance           Unit          Total           Cell             Vt             Vt
+                                      Count           Area           Area           Type          Group           Type
+------------------------------------------------------------------------------------------------------------------------
+SAEDSLVT14_INV_S_0P5                      2          0.178          0.355       Inverter           slvt              -
+SAEDSLVT14_INV_S_0P75                     1          0.178          0.178       Inverter           slvt              -
+SAEDSLVT14_INV_S_1                        1          0.178          0.178       Inverter           slvt              -
+SAEDSLVT14_INV_S_3                        1          0.311          0.311       Inverter           slvt              -
+SAEDSLVT14_INV_S_6                        3          0.400          1.199       Inverter           slvt              -
+SAEDSLVT14_INV_S_12                       1          0.666          0.666       Inverter           slvt              -
+------------------------------------------------------------------------------------------------------------------------
+Total                                     9              -          2.886              -              -              -
+
+===== Other Network Cells =====
+Type                               Instance           Unit          Total           Cell             Vt             Vt
+                                      Count           Area           Area           Type          Group           Type
+------------------------------------------------------------------------------------------------------------------------
+SAEDHVT14_AN2_1                           1          0.311          0.311  Combinational            hvt        high_vt
+SAEDHVT14_AO22_0P5                        1          0.533          0.533  Combinational            hvt        high_vt
+SAEDHVT14_AO221_0P5                       1          0.488          0.488  Combinational            hvt        high_vt
+SAEDSLVT14_BUF_S_8                        1          0.666          0.666         Buffer           slvt              -
+SAEDSLVT14_FSDPRBQ_V2_0P5                 1          1.288          1.288           Flop           slvt              -
+SAEDSLVT14_FSDPRBQ_V2_1                   2          1.288          2.575           Flop           slvt              -
+------------------------------------------------------------------------------------------------------------------------
+Total                                     7              -          5.861              -              -              -
+
+===== Standard Cell Sinks =====
+Type                               Instance           Unit          Total           Cell             Vt             Vt
+                                      Count           Area           Area           Type          Group           Type
+------------------------------------------------------------------------------------------------------------------------
+SAEDHVT14_FSDPQ_V2LP_1                    1          1.110          1.110           Flop            hvt        high_vt
+SAEDHVT14_FSDPRBQ_V2LP_1                 32          1.288         41.203           Flop            hvt        high_vt
+------------------------------------------------------------------------------------------------------------------------
+Total                                    33              -         42.313              -              -              -
+
+===== Macro Cells =====
+Type                               Instance           Unit          Total           Cell             Vt             Vt
+                                      Count           Area           Area           Type          Group           Type
+------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------
+Total                                     0              -          0.000              -              -              -
+
+
+
+==============================
+==== Area (per hierarchy) ====
+==============================
+
+Hierarchy                             Sinks          Clock          Clock          Clock          Clock          Sinks           Sink
+                                 (balanced)     Cell Count        Stdcell       Repeater       Repeater     (physical)        Stdcell          Macro
+                                                (non sink)           Area          Count           Area                          Area           Area
+------------------------------------------------------------------------------------------------------------------------------------------------------
+ALU_votegui                              33             16          8.747              9          2.886             33         42.313          0.000
+------------------------------------------------------------------------------------------------------------------------------------------------------
+Total                                    33             16          8.747              9          2.886             33         42.313          0.000
+
+
+****************************************
+Report : report clock qor
+        -type_list {power}
+        -nosplit
+Design : ALU_votegui
+Version: U-2022.12
+Date   : Mon Apr 28 07:15:52 2025
+****************************************
+Information: Activity for scenario func::hold_ff0p88v125c was cached, no propagation required. (POW-005)
+Information: Activity for scenario func::setup_ss0p72v125c was cached, no propagation required. (POW-005)
+
+
+==============================
+==== Power (per scenario) ====
+==============================
+
+Clock                               ClkTree        ClkTree           Sink            Net          Total
+                                    Leakage       Internal       Internal      Switching        Dynamic          Total
+                                  (stdcell)      (stdcell)      (stdcell)         (nets)          Power          Power
+                                       (mW)           (mW)           (mW)           (mW)           (mW)           (mW)
+------------------------------------------------------------------------------------------------------------------------
+### Mode: func, Corner: hold_ff0p88v125c, Scenario: func::hold_ff0p88v125c
+CLOCK_MAIN                            0.011            N/A            N/A            N/A            N/A            N/A
+ gen_clk_div2                         0.008            N/A            N/A            N/A            N/A            N/A
+  gen_clk_div4                        0.007            N/A            N/A            N/A            N/A            N/A
+   gen_clk_div8                       0.005            N/A            N/A            N/A            N/A            N/A
+------------------------------------------------------------------------------------------------------------------------
+Total                                 0.011            N/A            N/A            N/A            N/A            N/A
+
+### Mode: func, Corner: setup_ss0p72v125c, Scenario: func::setup_ss0p72v125c
+CLOCK_MAIN                            0.001          0.000          0.001          0.001          0.003          0.004
+ gen_clk_div2                         0.001          0.000          0.001          0.001          0.002          0.003
+  gen_clk_div4                        0.001          0.000          0.001          0.001          0.002          0.003
+   gen_clk_div8                       0.000          0.000          0.001          0.001          0.002          0.003
+------------------------------------------------------------------------------------------------------------------------
+Total                                 0.001          0.000          0.001          0.001          0.003          0.004
+
+ Info: Initializing timer in CLOCK_SYN_REPORT_MODE
+Warning: The scenario func::hold_ff0p88v125c has max capacitance DRC fixing disabled using the set_scenario_status command.  High DRC count may be expected.
+
+
+****************************************
+Report : clock qor
+        -type_list {latency summary drc_violators}
+        -largest 0
+        -smallest 0
+        -nosplit
+Design : ALU_votegui
+Version: U-2022.12
+Date   : Mon Apr 28 07:15:52 2025
+****************************************
+
+Attributes
+===========
+M Master Clock
+G Generated Clock
+& Internal Generated Clock
+U User Defined Skew Group
+D Default Skew Group
+* Generated Clock Balanced Separately
+
+Started generating latency information...
+Completed latency information generation.
+Started generating DRC information...
+Completed DRC information generation.
+=======================================================
+==== Summary Reporting for Corner hold_ff0p88v125c ====
+=======================================================
+
+====================================================== Summary Table for Corner hold_ff0p88v125c =======================================================
+Clock /                               Attrs     Sinks Levels    Clock     Clock     Clock       Max    Global  Trans DRC  Cap DRC      Wire
+Skew Group                                                   Repeater  Repeater   Stdcell   Latency      Skew     Count     Count    Length
+                                                                Count      Area      Area
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+### Mode: func, Scenario: func::hold_ff0p88v125c
+CLOCK_MAIN                              M,D        33     11        9     2.886     8.747     0.104     0.067         0         0   213.142
+ gen_clk_div2                             G        33      9        9     2.886     6.793     0.084     0.046         0         0   175.701
+  gen_clk_div4                            G        33      8        8     2.486     5.106     0.067     0.024         0         0   163.120
+   gen_clk_div8                           G        33      7        7     2.087     3.419     0.049     0.004         0         0   156.677
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+All Clocks                                         33     11        9     2.886     8.747     0.104     0.067         0         0   213.142
+
+
+Warning: Please use -largest / -smallest / -all switches with -show_verbose_paths / -show_paths to report the clock paths. (CTS-956)
+=======================================================
+==== Latency Reporting for Corner hold_ff0p88v125c ====
+=======================================================
+
+============================================== Summary Table for Corner hold_ff0p88v125c ===============================================
+Clock /                               Attrs     Sinks    Target    Global    Target       Max       Min    Median   Latency  Boundary
+Skew Group                                                 Skew      Skew   Latency   Latency   Latency   Latency   Std Dev      Skew
+----------------------------------------------------------------------------------------------------------------------------------------
+### Mode: func, Scenario: func::hold_ff0p88v125c
+CLOCK_MAIN                              M,D        33     1.500     0.067        --     0.104     0.037     0.071     0.033        --
+ gen_clk_div2                             G        33        --     0.046        --     0.084     0.037     0.061     0.023        --
+  gen_clk_div4                            G        33        --     0.024        --     0.067     0.043     0.055     0.012        --
+   gen_clk_div8                           G        33        --     0.004        --     0.049     0.045     0.047     0.002        --
+----------------------------------------------------------------------------------------------------------------------------------------
+All Clocks                                         33        --     0.067        --     0.104     0.037        --        --        --
+
+
+Warning: Please use -largest / -smallest / -all switches with -show_verbose_paths / -show_paths to report the clock paths. (CTS-956)
+===================================================
+==== DRC Reporting for Corner hold_ff0p88v125c ====
+===================================================
+
+================================================================== Summary Table for Corner hold_ff0p88v125c ===================================================================
+Clock /                               Attrs      Sink  DRC Count Max Slack Tot Slack DRC Count Max Slack Tot Slack DRC Count Max Slack Tot Slack DRC Count Max Slack Tot Slack
+Skew Group                                      Count     Trans     Trans     Trans       Cap       Cap       Cap    Fanout    Fanout    Fanout  Netlength Netlength Netlength
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### Mode: func, Scenario: func::hold_ff0p88v125c
+CLOCK_MAIN                                M        33         0        --        --         0        --        --         0        --        --         0        --        --
+ gen_clk_div2                             G        33         0        --        --         0        --        --         0        --        --         0        --        --
+  gen_clk_div4                            G        33         0        --        --         0        --        --         0        --        --         0        --        --
+   gen_clk_div8                           G        33         0        --        --         0        --        --         0        --        --         0        --        --
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+All Clocks                                         33         0        --     0.000         0        --     0.000         0        --     0.000         0        --     0.000
+
+
+Warning: Please use -largest / -smallest / -all switches with -show_verbose_paths / -show_paths to report the clock paths. (CTS-956)
+Started generating latency information...
+Completed latency information generation.
+Started generating DRC information...
+Completed DRC information generation.
+========================================================
+==== Summary Reporting for Corner setup_ss0p72v125c ====
+========================================================
+
+====================================================== Summary Table for Corner setup_ss0p72v125c ======================================================
+Clock /                               Attrs     Sinks Levels    Clock     Clock     Clock       Max    Global  Trans DRC  Cap DRC      Wire
+Skew Group                                                   Repeater  Repeater   Stdcell   Latency      Skew     Count     Count    Length
+                                                                Count      Area      Area
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+### Mode: func, Scenario: func::setup_ss0p72v125c
+CLOCK_MAIN                              M,D        33     11        9     2.886     8.747     0.169     0.103         0         0   213.142
+ gen_clk_div2                             G        33      9        9     2.886     6.793     0.140     0.071         0         0   175.701
+  gen_clk_div4                            G        33      8        8     2.486     5.106     0.115     0.037         0         0   163.120
+   gen_clk_div8                           G        33      7        7     2.087     3.419     0.088     0.006         0         0   156.677
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+All Clocks                                         33     11        9     2.886     8.747     0.169     0.103         0         0   213.142
+
+
+Warning: Please use -largest / -smallest / -all switches with -show_verbose_paths / -show_paths to report the clock paths. (CTS-956)
+========================================================
+==== Latency Reporting for Corner setup_ss0p72v125c ====
+========================================================
+
+============================================== Summary Table for Corner setup_ss0p72v125c ==============================================
+Clock /                               Attrs     Sinks    Target    Global    Target       Max       Min    Median   Latency  Boundary
+Skew Group                                                 Skew      Skew   Latency   Latency   Latency   Latency   Std Dev      Skew
+----------------------------------------------------------------------------------------------------------------------------------------
+### Mode: func, Scenario: func::setup_ss0p72v125c
+CLOCK_MAIN                              M,D        33     1.500     0.103        --     0.169     0.066     0.117     0.051        --
+ gen_clk_div2                             G        33        --     0.071        --     0.140     0.069     0.104     0.036        --
+  gen_clk_div4                            G        33        --     0.037        --     0.115     0.078     0.096     0.018        --
+   gen_clk_div8                           G        33        --     0.006        --     0.088     0.082     0.085     0.003        --
+----------------------------------------------------------------------------------------------------------------------------------------
+All Clocks                                         33        --     0.103        --     0.169     0.066        --        --        --
+
+
+Warning: Please use -largest / -smallest / -all switches with -show_verbose_paths / -show_paths to report the clock paths. (CTS-956)
+====================================================
+==== DRC Reporting for Corner setup_ss0p72v125c ====
+====================================================
+
+================================================================== Summary Table for Corner setup_ss0p72v125c ==================================================================
+Clock /                               Attrs      Sink  DRC Count Max Slack Tot Slack DRC Count Max Slack Tot Slack DRC Count Max Slack Tot Slack DRC Count Max Slack Tot Slack
+Skew Group                                      Count     Trans     Trans     Trans       Cap       Cap       Cap    Fanout    Fanout    Fanout  Netlength Netlength Netlength
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### Mode: func, Scenario: func::setup_ss0p72v125c
+CLOCK_MAIN                                M        33         0        --        --         0        --        --         0        --        --         0        --        --
+ gen_clk_div2                             G        33         0        --        --         0        --        --         0        --        --         0        --        --
+  gen_clk_div4                            G        33         0        --        --         0        --        --         0        --        --         0        --        --
+   gen_clk_div8                           G        33         0        --        --         0        --        --         0        --        --         0        --        --
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+All Clocks                                         33         0        --     0.000         0        --     0.000         0        --     0.000         0        --     0.000
+
+
+Warning: Please use -largest / -smallest / -all switches with -show_verbose_paths / -show_paths to report the clock paths. (CTS-956)
+1

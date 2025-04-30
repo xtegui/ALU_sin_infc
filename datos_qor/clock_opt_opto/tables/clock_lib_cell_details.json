@@ -1,0 +1,20 @@
+[
+  ["LibCell", "Usage", "Instances", "UnitArea", "TotalArea", "Function", "VtGroup", "VtGroupType"],
+  ["SAEDSLVT14_INV_S_0P5", "Clock Repeaters", "2", "0", "0.4", "Inverter", "slvt", "."], 
+  ["SAEDSLVT14_INV_S_0P75", "Clock Repeaters", "1", "0", "0.2", "Inverter", "slvt", "."], 
+  ["SAEDSLVT14_INV_S_1", "Clock Repeaters", "1", "0", "0.2", "Inverter", "slvt", "."], 
+  ["SAEDSLVT14_INV_S_3", "Clock Repeaters", "1", "0", "0.3", "Inverter", "slvt", "."], 
+  ["SAEDSLVT14_INV_S_6", "Clock Repeaters", "3", "0", "1.2", "Inverter", "slvt", "."], 
+  ["SAEDSLVT14_INV_S_12", "Clock Repeaters", "1", "1", "0.7", "Inverter", "slvt", "."], 
+  ["Total", "Clock Repeaters", "9", ".", "2.9", ".", ".", "."], 
+  ["SAEDHVT14_AN2_1", "Other Network Cells", "1", "0", "0.3", "Combinational", "hvt", "high_vt"], 
+  ["SAEDHVT14_AO22_0P5", "Other Network Cells", "1", "1", "0.5", "Combinational", "hvt", "high_vt"], 
+  ["SAEDHVT14_AO221_0P5", "Other Network Cells", "1", "0", "0.5", "Combinational", "hvt", "high_vt"], 
+  ["SAEDSLVT14_BUF_S_8", "Other Network Cells", "1", "1", "0.7", "Buffer", "slvt", "."], 
+  ["SAEDSLVT14_FSDPRBQ_V2_0P5", "Other Network Cells", "1", "1", "1.3", "Flop", "slvt", "."], 
+  ["SAEDSLVT14_FSDPRBQ_V2_1", "Other Network Cells", "2", "1", "2.6", "Flop", "slvt", "."], 
+  ["Total", "Other Network Cells", "7", ".", "5.9", ".", ".", "."], 
+  ["SAEDHVT14_FSDPQ_V2LP_1", "Standard Cell Sinks", "1", "1", "1.1", "Flop", "hvt", "high_vt"], 
+  ["SAEDHVT14_FSDPRBQ_V2LP_1", "Standard Cell Sinks", "32", "1", "41.2", "Flop", "hvt", "high_vt"], 
+  ["Total", "Standard Cell Sinks", "33", ".", "42.3", ".", ".", "."]
+]

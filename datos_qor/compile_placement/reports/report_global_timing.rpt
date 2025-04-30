@@ -1,0 +1,16 @@
+****************************************
+Report : global timing
+        -format { narrow }
+        -report_by design
+Design : ALU_votegui
+Version: U-2022.12
+Date   : Mon Apr 28 05:52:47 2025
+****************************************
+
+No setup violations found.
+
+
+No hold violations found.
+
+
+1

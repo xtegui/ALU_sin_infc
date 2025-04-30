@@ -1,0 +1,38 @@
+==== Latency Reporting for Corner hold_ff0p88v125c ====
+=======================================================
+
+============================================== Summary Table for Corner hold_ff0p88v125c ===============================================
+Clock /                               Attrs     Sinks    Target    Global    Target       Max       Min    Median   Latency  Boundary
+Skew Group                                                 Skew      Skew   Latency   Latency   Latency   Latency   Std Dev      Skew
+----------------------------------------------------------------------------------------------------------------------------------------
+### Mode: func, Scenario: func::hold_ff0p88v125c
+CLOCK_MAIN                              M,D        33     1.500     0.067        --     0.104     0.037     0.071     0.033        --
+ gen_clk_div2                             G        33        --     0.046        --     0.084     0.037     0.061     0.023        --
+  gen_clk_div4                            G        33        --     0.024        --     0.067     0.043     0.055     0.012        --
+   gen_clk_div8                           G        33        --     0.004        --     0.049     0.045     0.047     0.002        --
+----------------------------------------------------------------------------------------------------------------------------------------
+All Clocks                                         33        --     0.067        --     0.104     0.037        --        --        --
+
+
+Warning: Please use -largest / -smallest / -all switches with -show_verbose_paths / -show_paths to report the clock paths. (CTS-956)
+===================================================
+==== DRC Reporting for Corner hold_ff0p88v125c ====
+==== Latency Reporting for Corner setup_ss0p72v125c ====
+========================================================
+
+============================================== Summary Table for Corner setup_ss0p72v125c ==============================================
+Clock /                               Attrs     Sinks    Target    Global    Target       Max       Min    Median   Latency  Boundary
+Skew Group                                                 Skew      Skew   Latency   Latency   Latency   Latency   Std Dev      Skew
+----------------------------------------------------------------------------------------------------------------------------------------
+### Mode: func, Scenario: func::setup_ss0p72v125c
+CLOCK_MAIN                              M,D        33     1.500     0.103        --     0.169     0.066     0.117     0.051        --
+ gen_clk_div2                             G        33        --     0.071        --     0.140     0.069     0.104     0.036        --
+  gen_clk_div4                            G        33        --     0.037        --     0.115     0.078     0.096     0.018        --
+   gen_clk_div8                           G        33        --     0.006        --     0.088     0.082     0.085     0.003        --
+----------------------------------------------------------------------------------------------------------------------------------------
+All Clocks                                         33        --     0.103        --     0.169     0.066        --        --        --
+
+
+Warning: Please use -largest / -smallest / -all switches with -show_verbose_paths / -show_paths to report the clock paths. (CTS-956)
+====================================================
+==== DRC Reporting for Corner setup_ss0p72v125c ====

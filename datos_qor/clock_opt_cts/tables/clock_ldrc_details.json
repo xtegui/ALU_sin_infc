@@ -1,0 +1,17 @@
+[
+  ["Clock", "Attrs", "Sinks", "TranDRCs", "TranWNS", "TranCost", "CapDRCs", "CapWNS", "CapCost", "FanoutDRCs", "FanoutWNS", "FanoutCost", "LengthDRCs", "LengthWNS", "LengthCost"],
+  ["hold_ff0p88v125c", "Corner", "33", "0", ".", "0.000", "0", ".", "0", "0", ".", "0", "0", ".", "0"], 
+  ["hold_ff0p88v125c/func", "Mode", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", "."], 
+  ["hold_ff0p88v125c/func/func::hold_ff0p88v125c", "Scenario", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", "."], 
+  ["hold_ff0p88v125c/func/func::hold_ff0p88v125c/CLOCK_MAIN", "M", "33", "0", ".", ".", "0", ".", ".", "0", ".", ".", "0", ".", "."], 
+  ["hold_ff0p88v125c/func/func::hold_ff0p88v125c/CLOCK_MAIN/gen_clk_div2", "G", "33", "0", ".", ".", "0", ".", ".", "0", ".", ".", "0", ".", "."], 
+  ["hold_ff0p88v125c/func/func::hold_ff0p88v125c/CLOCK_MAIN/gen_clk_div2/gen_clk_div4", "G", "33", "0", ".", ".", "0", ".", ".", "0", ".", ".", "0", ".", "."], 
+  ["hold_ff0p88v125c/func/func::hold_ff0p88v125c/CLOCK_MAIN/gen_clk_div2/gen_clk_div4/gen_clk_div8", "G", "33", "0", ".", ".", "0", ".", ".", "0", ".", ".", "0", ".", "."], 
+  ["setup_ss0p72v125c", "Corner", "33", "0", ".", "0.000", "0", ".", "0", "0", ".", "0", "0", ".", "0"], 
+  ["setup_ss0p72v125c/func", "Mode", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", "."], 
+  ["setup_ss0p72v125c/func/func::setup_ss0p72v125c", "Scenario", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", "."], 
+  ["setup_ss0p72v125c/func/func::setup_ss0p72v125c/CLOCK_MAIN", "M", "33", "0", ".", ".", "0", ".", ".", "0", ".", ".", "0", ".", "."], 
+  ["setup_ss0p72v125c/func/func::setup_ss0p72v125c/CLOCK_MAIN/gen_clk_div2", "G", "33", "0", ".", ".", "0", ".", ".", "0", ".", ".", "0", ".", "."], 
+  ["setup_ss0p72v125c/func/func::setup_ss0p72v125c/CLOCK_MAIN/gen_clk_div2/gen_clk_div4", "G", "33", "0", ".", ".", "0", ".", ".", "0", ".", ".", "0", ".", "."], 
+  ["setup_ss0p72v125c/func/func::setup_ss0p72v125c/CLOCK_MAIN/gen_clk_div2/gen_clk_div4/gen_clk_div8", "G", "33", "0", ".", ".", "0", ".", ".", "0", ".", ".", "0", ".", "."]
+]

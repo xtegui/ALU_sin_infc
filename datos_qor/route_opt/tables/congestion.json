@@ -1,0 +1,4 @@
+{
+  "columns": ["Overflow", "MaxOver", "GRCsMax", "GRCs", "GRC%", "HOverflow", "HMaxOver", "HGRCsMax", "HGRCs", "HGRC%", "VOverflow", "VMaxOver", "VGRCsMax", "VGRCs", "VGRC%"],
+  "values": ["20", "4", "1", "17", "0.123", "14", "4", "1", "11", "0.160", "6", "3", "1", "6", "0.087"]
+}

@@ -1,0 +1,1 @@
+labels {design_planning init_design compile_placement clock_opt_cts clock_opt_opto route_auto route_opt chip_finish}

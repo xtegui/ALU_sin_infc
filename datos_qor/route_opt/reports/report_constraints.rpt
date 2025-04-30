@@ -1,0 +1,30 @@
+****************************************
+Report : constraint
+        -verbose
+        -all_violators
+        -max_transition
+        -max_capacitance
+Design : ALU_votegui
+Version: U-2022.12
+Date   : Mon Apr 28 08:20:15 2025
+****************************************
+
+
+
+   Mode: func Corner: hold_ff0p88v125c
+   Scenario: func::hold_ff0p88v125c
+  ---------------------------------------------------------------------------
+   Number of max_transition violation(s): 0
+
+   Mode: func Corner: setup_ss0p72v125c
+   Scenario: func::setup_ss0p72v125c
+  ---------------------------------------------------------------------------
+   Number of max_transition violation(s): 0
+
+   Mode: func Corner: setup_ss0p72v125c
+   Scenario: func::setup_ss0p72v125c
+  ---------------------------------------------------------------------------
+   Number of max_capacitance violation(s): 0
+
+   Total number of violation(s): 0
+1

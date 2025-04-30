@@ -1,0 +1,14 @@
+****************************************
+Report : constraint
+        -max_transition
+        -max_capacitance
+Design : ALU_votegui
+Version: U-2022.12
+Date   : Mon Apr 28 07:59:53 2025
+****************************************
+
+    Constraint                                       Cost
+    -----------------------------------------------------
+    max_transition                                  0.000  (MET)
+    max_capacitance                                 0.004  (VIOLATED)
+1

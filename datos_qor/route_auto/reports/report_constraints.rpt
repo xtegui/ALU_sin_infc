@@ -1,0 +1,56 @@
+****************************************
+Report : constraint
+        -verbose
+        -all_violators
+        -max_transition
+        -max_capacitance
+Design : ALU_votegui
+Version: U-2022.12
+Date   : Mon Apr 28 07:59:53 2025
+****************************************
+
+
+
+   Mode: func Corner: hold_ff0p88v125c
+   Scenario: func::hold_ff0p88v125c
+  ---------------------------------------------------------------------------
+   Number of max_transition violation(s): 0
+
+   Mode: func Corner: setup_ss0p72v125c
+   Scenario: func::setup_ss0p72v125c
+  ---------------------------------------------------------------------------
+   Number of max_transition violation(s): 0
+
+   Mode: func Corner: setup_ss0p72v125c
+   Scenario: func::setup_ss0p72v125c
+    Net: SEQMAP_NET_0
+    max_capacitance       0.032
+  - Capacitance           0.036
+  --------------------------------
+    Slack                -0.004 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : ctmi_42/X           0.032          0.036         -0.004  (VIOLATED) 
+
+    Net: u_mux/ctmn_431
+    max_capacitance       0.023
+  - Capacitance           0.023
+  --------------------------------
+    Slack                -0.001 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_mux/ctmi_465/X    0.023          0.023         -0.001  (VIOLATED) 
+
+  ---------------------------------------------------------------------------
+   Number of max_capacitance violation(s): 2
+
+   Total number of violation(s): 2
+1

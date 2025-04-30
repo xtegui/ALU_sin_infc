@@ -1,0 +1,57 @@
+
+****************************************
+Report : report_multibit
+Design : ALU_votegui
+Version: U-2022.12
+Date   : Mon Apr 28 05:52:46 2025
+
+****************************************
+
+Total number of sequential cells                           36
+   Number of single-bit flip-flops:                        36
+   Number of single-bit latches:                           0
+   Number of multi-bit flip-flops:                         0
+   Number of multi-bit latches:                            0
+
+Total number of single-bit equivalent cells:                         36
+   (A)   Single-bit flip-flops:                                      36
+   (B)   Single-bit latches:                                         0
+   (C)   Multi-bit flip-flops:                                       0
+   (D)   Multi-bit latches:                                          0
+
+Sequential cells banking ratio ((C+D)/(A+B+C+D)):                    0.00%
+Flip-flop cells banking ratio ((C)/(A+C)):                           0.00%
+BitsPerflop:                                                         1.00
+BitsPerSequentialCell:                                               1.00
+
+Total number of isolation cells                            0
+   Number of single-bit cells:                             0
+   Number of multi-bit cells:                              0
+
+Total number of single-bit equivalent cells:                         0
+   (A)   Single-bit cells:                                           0
+   (B)   Multi-bit cells:                                            0
+
+Isolation cells banking ratio (B/(A+B)):                             0.00%
+
+Total number of level shifter cells                        0
+   Number of single-bit cells:                             0
+   Number of multi-bit cells:                              0
+
+Total number of single-bit equivalent cells:                         0
+   (A)   Single-bit cells:                                           0
+   (B)   Multi-bit cells:                                            0
+
+Level shifter cells banking ratio (B/(A+B)):                         0.00%
+
+Total number of ELS cells                                  0
+   Number of single-bit cells:                             0
+   Number of multi-bit cells:                              0
+
+Total number of single-bit equivalent cells:                         0
+   (A)   Single-bit cells:                                           0
+   (B)   Multi-bit cells:                                            0
+
+ELS cells banking ratio (B/(A+B)):                                   0.00%
+
+1

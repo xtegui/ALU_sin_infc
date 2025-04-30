@@ -1,0 +1,4 @@
+{
+  "columns": ["FlopBank%", "Bits/Flop", "Bits/Seq", "LVt%", "SVt%", "HVt%", "GateCount", "Gated%", "io_pad", "memory", "black_box", "clock_network", "register", "sequential", "combinational", "Total", "Leakage", "Internal", "Switching"],
+  "values": ["0.0", "1.00", "1.00", "0", "75.1", "22.1", "0", "0.0", "0.000000", "0.000000", "0.000000", "0.003685", "0.000495", "0.000019", "0.004776", "0.008975", "0.002334", "0.003141", "0.0035"]
+}

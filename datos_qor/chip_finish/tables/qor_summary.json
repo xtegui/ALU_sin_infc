@@ -1,0 +1,4 @@
+{
+  "columns": ["Bits/Flop", "LVt%", "Util", "WNS", "TNS", "NVE", "HWNS", "HTNS", "HNVE", "TranDRCs", "CapDRCs", "StdCellArea", "StdCells", "HBufs", "r2rWNS", "r2rTNS", "r2rNVE", "Gated%", "TotalPwr", "LeakPwr", "Overflow%", "StageRun"],
+  "values": ["1.00", "0", "8.8", ".", "0.0", "0", ".", "0.0", "0", "0", "0", "213", "377", "0", "0.000", "0.0", "0", "0.0", "0.00933", "0.002686", "0.109", "51.18"]
+}

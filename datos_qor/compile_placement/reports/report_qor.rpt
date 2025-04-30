@@ -1,0 +1,110 @@
+****************************************
+Report : qor
+Design : ALU_votegui
+Version: U-2022.12
+Date   : Mon Apr 28 05:52:47 2025
+****************************************
+Information: Corner setup_ss0p72v125c: no PVT mismatches. (PVT-032)
+Information: Corner hold_ff0p88v125c: no PVT mismatches. (PVT-032)
+Information: The stitching and editing of coupling caps is turned OFF for design 'ALU_votegui_init_design:ALU_votegui/init_design.design'. (TIM-125)
+Information: Design Average RC for design ALU_votegui  (NEX-011)
+Information: r = 2.194050 ohm/um, via_r = 0.637920 ohm/cut, c = 0.096018 ff/um, cc = 0.000000 ff/um (X dir) (NEX-017)
+Information: r = 2.437384 ohm/um, via_r = 0.662179 ohm/cut, c = 0.088140 ff/um, cc = 0.000000 ff/um (Y dir) (NEX-017)
+Information: The RC mode used is VR for design 'ALU_votegui'. (NEX-022)
+Information: Update timing completed net estimation for all the timing graph nets (TIM-111)
+Information: Net estimation statistics: timing graph nets = 370, routed nets = 0, across physical hierarchy nets = 0, parasitics cached nets = 0, delay annotated nets = 0, parasitics annotated nets = 0, multi-voltage nets = 138. (TIM-112)
+************************************************************
+Timer Settings:
+Delay Calculation Style:                   auto
+Signal Integrity Analysis:                 disabled
+Timing Window Analysis:                    disabled
+Advanced Waveform Propagation:             disabled
+Variation Type:                            fixed_derate
+Clock Reconvergence Pessimism Removal:     disabled
+Advanced Receiver Model:                   disabled
+ML Acceleration:                           off
+************************************************************
+
+
+
+Cell Count
+----------------------------------------
+Hierarchical Cell Count:              8
+Hierarchical Port Count:            747
+Leaf Cell Count:                    237
+Buf/Inv Cell Count:                  31
+Buf Cell Count:                       0
+Inv Cell Count:                      31
+CT Buf/Inv Cell Count:                0
+Combinational Cell Count:           201
+   Single-bit Isolation Cell Count:                        0
+   Multi-bit Isolation Cell Count:                         0
+   Isolation Cell Banking Ratio:                           0.00%
+   Single-bit Level Shifter Cell Count:                    0
+   Multi-bit Level Shifter Cell Count:                     0
+   Level Shifter Cell Banking Ratio:                       0.00%
+   Single-bit ELS Cell Count:                              0
+   Multi-bit ELS Cell Count:                               0
+   ELS Cell Banking Ratio:                                 0.00%
+Sequential Cell Count:               36
+   Integrated Clock-Gating Cell Count:                     0
+   Sequential Macro Cell Count:                            0
+   Single-bit Sequential Cell Count:                       36
+   Multi-bit Sequential Cell Count:                        0
+   Sequential Cell Banking Ratio:                          0.00%
+   BitsPerflop:                                            1.00
+Macro Count:                          0
+----------------------------------------
+
+
+Area
+----------------------------------------
+Combinational Area:              42.935
+Noncombinational Area:            0.000
+Buf/Inv Area:                     3.374
+Total Buffer Area:                0.000
+Total Inverter Area:              3.374
+Macro/Black Box Area:             0.000
+Net Area:                             0
+Net XLength:                   1871.935
+Net YLength:                   2426.256
+----------------------------------------
+Cell Area (netlist):                            42.935
+Cell Area (netlist and physical only):         150.028
+Net Length:                    4298.191
+
+
+Design Rules
+----------------------------------------
+Total Number of Nets:               379
+Nets with Violations:               136
+Max Trans Violations:               103
+Max Cap Violations:                  33
+----------------------------------------
+
+1
+****************************************
+Report : qor
+        -summary
+Design : ALU_votegui
+Version: U-2022.12
+Date   : Mon Apr 28 05:52:47 2025
+****************************************
+
+Timing
+---------------------------------------------------------------------------
+Context                                 WNS            TNS            NVE
+---------------------------------------------------------------------------
+func::setup_ss0p72v125c (Setup)             --          0.000              0
+Design             (Setup)               --          0.000              0
+
+func::hold_ff0p88v125c (Hold)             --          0.000              0
+Design             (Hold)                --          0.000              0
+---------------------------------------------------------------------------
+
+Miscellaneous
+---------------------------------------------------------------------------
+Cell Area (netlist):                            42.935
+Cell Area (netlist and physical only):         150.028
+Nets with DRC Violations:      136
+1

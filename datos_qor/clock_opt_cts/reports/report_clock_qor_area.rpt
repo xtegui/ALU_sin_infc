@@ -1,0 +1,101 @@
+****************************************
+Report : report clock qor
+        -type_list {area}
+        -nosplit
+Design : ALU_votegui
+Version: U-2022.12
+Date   : Mon Apr 28 07:15:52 2025
+****************************************
+
+
+==========================
+==== Area (per clock) ====
+==========================
+
+Clock                                 Sinks          Clock          Clock          Clock          Clock          Sinks           Sink
+                                 (balanced)     Cell Count        Stdcell       Repeater       Repeater     (physical)        Stdcell          Macro
+                                                (non sink)           Area          Count           Area                          Area           Area
+------------------------------------------------------------------------------------------------------------------------------------------------------
+CLOCK_MAIN                               33             16          8.747              9          2.886             33         42.313          0.000
+ gen_clk_div2                            33             14          6.793              9          2.886             33         42.313          0.000
+  gen_clk_div4                           33             12          5.106              8          2.486             33         42.313          0.000
+   gen_clk_div8                          33             10          3.419              7          2.087             33         42.313          0.000
+------------------------------------------------------------------------------------------------------------------------------------------------------
+Total                                    33             16          8.747              9          2.886             33         42.313          0.000
+
+Type                               Instance           Unit          Total           Cell             Vt             Vt
+                                      Count           Area           Area           Type          Group           Type
+
+
+=================================
+==== Area (per library cell) ====
+=================================
+
+===== Summary =====
+Type                               Instance           Unit          Total           Cell             Vt             Vt
+                                      Count           Area           Area           Type          Group           Type
+------------------------------------------------------------------------------------------------------------------------
+Clock Repeaters                           9              -          2.886              -              -              -
+Other Network Cells                       7              -          5.861              -              -              -
+Standard Cell Sinks                      33              -         42.313              -              -              -
+Macro Cells                               0              -          0.000              -              -              -
+
+===== Clock Repeaters =====
+Type                               Instance           Unit          Total           Cell             Vt             Vt
+                                      Count           Area           Area           Type          Group           Type
+------------------------------------------------------------------------------------------------------------------------
+SAEDSLVT14_INV_S_0P5                      2          0.178          0.355       Inverter           slvt              -
+SAEDSLVT14_INV_S_0P75                     1          0.178          0.178       Inverter           slvt              -
+SAEDSLVT14_INV_S_1                        1          0.178          0.178       Inverter           slvt              -
+SAEDSLVT14_INV_S_3                        1          0.311          0.311       Inverter           slvt              -
+SAEDSLVT14_INV_S_6                        3          0.400          1.199       Inverter           slvt              -
+SAEDSLVT14_INV_S_12                       1          0.666          0.666       Inverter           slvt              -
+------------------------------------------------------------------------------------------------------------------------
+Total                                     9              -          2.886              -              -              -
+
+===== Other Network Cells =====
+Type                               Instance           Unit          Total           Cell             Vt             Vt
+                                      Count           Area           Area           Type          Group           Type
+------------------------------------------------------------------------------------------------------------------------
+SAEDHVT14_AN2_1                           1          0.311          0.311  Combinational            hvt        high_vt
+SAEDHVT14_AO22_0P5                        1          0.533          0.533  Combinational            hvt        high_vt
+SAEDHVT14_AO221_0P5                       1          0.488          0.488  Combinational            hvt        high_vt
+SAEDSLVT14_BUF_S_8                        1          0.666          0.666         Buffer           slvt              -
+SAEDSLVT14_FSDPRBQ_V2_0P5                 1          1.288          1.288           Flop           slvt              -
+SAEDSLVT14_FSDPRBQ_V2_1                   2          1.288          2.575           Flop           slvt              -
+------------------------------------------------------------------------------------------------------------------------
+Total                                     7              -          5.861              -              -              -
+
+===== Standard Cell Sinks =====
+Type                               Instance           Unit          Total           Cell             Vt             Vt
+                                      Count           Area           Area           Type          Group           Type
+------------------------------------------------------------------------------------------------------------------------
+SAEDHVT14_FSDPQ_V2LP_1                    1          1.110          1.110           Flop            hvt        high_vt
+SAEDHVT14_FSDPRBQ_V2LP_1                 32          1.288         41.203           Flop            hvt        high_vt
+------------------------------------------------------------------------------------------------------------------------
+Total                                    33              -         42.313              -              -              -
+
+===== Macro Cells =====
+Type                               Instance           Unit          Total           Cell             Vt             Vt
+                                      Count           Area           Area           Type          Group           Type
+------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------
+Total                                     0              -          0.000              -              -              -
+
+
+
+==============================
+==== Area (per hierarchy) ====
+==============================
+
+Hierarchy                             Sinks          Clock          Clock          Clock          Clock          Sinks           Sink
+                                 (balanced)     Cell Count        Stdcell       Repeater       Repeater     (physical)        Stdcell          Macro
+                                                (non sink)           Area          Count           Area                          Area           Area
+------------------------------------------------------------------------------------------------------------------------------------------------------
+ALU_votegui                              33             16          8.747              9          2.886             33         42.313          0.000
+------------------------------------------------------------------------------------------------------------------------------------------------------
+Total                                    33             16          8.747              9          2.886             33         42.313          0.000
+
+
+****************************************
+Report : report clock qor

@@ -1,0 +1,42 @@
+==== DRC Reporting for Corner hold_ff0p88v125c ====
+===================================================
+
+================================================================== Summary Table for Corner hold_ff0p88v125c ===================================================================
+Clock /                               Attrs      Sink  DRC Count Max Slack Tot Slack DRC Count Max Slack Tot Slack DRC Count Max Slack Tot Slack DRC Count Max Slack Tot Slack
+Skew Group                                      Count     Trans     Trans     Trans       Cap       Cap       Cap    Fanout    Fanout    Fanout  Netlength Netlength Netlength
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### Mode: func, Scenario: func::hold_ff0p88v125c
+CLOCK_MAIN                                M        33         0        --        --         0        --        --         0        --        --         0        --        --
+ gen_clk_div2                             G        33         0        --        --         0        --        --         0        --        --         0        --        --
+  gen_clk_div4                            G        33         0        --        --         0        --        --         0        --        --         0        --        --
+   gen_clk_div8                           G        33         0        --        --         0        --        --         0        --        --         0        --        --
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+All Clocks                                         33         0        --     0.000         0        --     0.000         0        --     0.000         0        --     0.000
+
+
+Warning: Please use -largest / -smallest / -all switches with -show_verbose_paths / -show_paths to report the clock paths. (CTS-956)
+Started generating latency information...
+Completed latency information generation.
+Started generating DRC information...
+Completed DRC information generation.
+========================================================
+==== Summary Reporting for Corner setup_ss0p72v125c ====
+==== DRC Reporting for Corner setup_ss0p72v125c ====
+====================================================
+
+================================================================== Summary Table for Corner setup_ss0p72v125c ==================================================================
+Clock /                               Attrs      Sink  DRC Count Max Slack Tot Slack DRC Count Max Slack Tot Slack DRC Count Max Slack Tot Slack DRC Count Max Slack Tot Slack
+Skew Group                                      Count     Trans     Trans     Trans       Cap       Cap       Cap    Fanout    Fanout    Fanout  Netlength Netlength Netlength
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### Mode: func, Scenario: func::setup_ss0p72v125c
+CLOCK_MAIN                                M        33         0        --        --         0        --        --         0        --        --         0        --        --
+ gen_clk_div2                             G        33         0        --        --         0        --        --         0        --        --         0        --        --
+  gen_clk_div4                            G        33         0        --        --         0        --        --         0        --        --         0        --        --
+   gen_clk_div8                           G        33         0        --        --         0        --        --         0        --        --         0        --        --
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+All Clocks                                         33         0        --     0.000         0        --     0.000         0        --     0.000         0        --     0.000
+
+
+Warning: Please use -largest / -smallest / -all switches with -show_verbose_paths / -show_paths to report the clock paths. (CTS-956)
+1
+

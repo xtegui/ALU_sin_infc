@@ -1,0 +1,4 @@
+{
+  "columns": ["CritName", "CritScenario", "CritSinks", "CritLtncy", "CritSkew", "AvgLtncy", "AvgSkew", "TotalArea", "CellCount", "BufArea", "BufCount", "TranDRCs", "CapDRCs"],
+  "values": ["CLOCK_MAIN", "func::setup_ss0p72v125c", "33", "0.169", "0.103", "0.137", "0.085", "8.7", "16", "2.9", "9", "0", "0"]
+}

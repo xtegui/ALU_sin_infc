@@ -1,0 +1,100 @@
+****************************************
+Report : area
+Design : ALU_votegui
+Version: U-2022.12
+Date   : Mon Apr 28 13:46:09 2025
+****************************************
+Information: Base Cell (com): cell SAEDHVT14_AN2B_MM_8, w=148, h=60 (npin=3) Information: Base Cell (seq): cell SAEDRVT14_FDPRBSBQ_V2_0P5, w=199, h=60 (npin=5)
+
+
+Number of ports:                          673
+Number of nets:                          1034
+Number of cells:                          377
+Number of combinational cells:            339
+Number of sequential cells:                38
+Number of macros/black boxes:               0
+Number of buf/inv:                        121
+Number of references:                      77
+
+Combinational area:                   163.214
+Buf/Inv area:                          50.394
+Noncombinational area:                 49.550
+Macro/Black Box area:                   0.000
+
+Total cell area:                      212.765
+
+Core Area:                           2258
+Aspect Ratio:                      0.9946
+Utilization Ratio:                 1.0009
+
+The above information was reported from the logical library. The following are from the physical library:
+
+Total moveable cell area:           212.8
+Total fixed cell area:                0.0
+Total physical cell area:           212.8
+Core area:                          1.184, 1.200, 48.840, 48.600
+
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area                  Local cell area
+                                  -------------------------------------------------------------
+Hierarchical cell                 Absolute      Percent  Combi-       Noncombi-    Black-
+                                  Total         Total    national     national     boxes         Design
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ALU_votegui                            212.765    100.0       58.297       49.550         0.000  ALU_votegui
+u_and                                   11.544      5.4       11.544        0.000         0.000  ALU_votegui_and_op_1
+u_clock_mux                              2.620      1.2        2.620        0.000         0.000  ALU_votegui_clock_mux_1
+u_mux                                   34.410     16.2       34.410        0.000         0.000  ALU_votegui_op_mux_1
+u_or                                     9.946      4.7        9.946        0.000         0.000  ALU_votegui_or_op_1
+u_sum                                   32.190     15.1       32.190        0.000         0.000  ALU_votegui_sum_op_1
+u_xor                                   14.208      6.7       14.208        0.000         0.000  ALU_votegui_xor_op_1
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+Total                                                        163.214       49.550         0.000
+
+Area distribution across function class IDs
+-------------------------------------------
+
+                                                Function      Cell          Cell    Average   Most used
+                                                class id     count          area      drive   lib_cell
+--------------------------------------------------------------------------------------------------------
+                                                   Ia0.0         7           3.419     0.00  SAEDHVT14_TIE0_4
+                                                   Ia1.0        13           4.928     0.00  SAEDRVT14_INV_0P5
+                                                   Ia2.0         1           0.622     0.00  SAEDRVT14_ND2_ECO_2
+                                               Ia2.0b2.0         1           0.444     0.00  SAEDRVT14_OAI21_2
+                                           Ia2.0b2.2b2.2        33          17.582     0.00  SAEDRVT14_AO22_1
+                                                   Ia2.2        33          10.567     0.00  SAEDHVT14_OR2_0P5
+                                           Ia3.1b2.2b2.2        33          16.117     0.00  SAEDRVT14_AO221_0P5
+                                                    a1.0       108          45.466     0.00  SAEDRVT14_BUF_S_4
+                                  a1.0(0)_a1.0(1)____:1_         2           3.374     0.00  SAEDRVT14_FDPQ_V2ECO_1
+                                                    a2.0        37          13.542     0.00  SAEDRVT14_AN2_0P5
+                                               a2.0_xor2         1           0.666     0.00  SAEDRVT14_ADDH_0P5
+                                                    a2.1         2           0.799     0.00  SAEDRVT14_AN2B_MM_1
+                                                a2.1b2.2         1           0.488     0.00  SAEDRVT14_AOI21_ECO_1
+                                                    a2.2         4           1.820     0.00  SAEDRVT14_NR2_MM_0P5
+                                              maj23_xor3        30          30.636     0.00  SAEDRVT14_ADDF_V1_0P5
+                                                   mux21         1           1.021     0.00  SAEDRVT14_MUX2_ECO_2
+                     mux21(0,1,2)_a1.0(3)__Ia1.0(4)__:1_        35          45.066     0.00  SAEDHVT14_FSDPRBQ_V2LP_1
+                             mux21(0,1,2)_a1.0(3)____:1_         1           1.110     0.00  SAEDHVT14_FSDPQ_V2LP_1
+                                                 unknown         0           0.000     0.00  SAEDRVT14_TAPDS
+                                                    xor2        34          15.096     0.00  SAEDRVT14_EO2_V1_0P75
+--------------------------------------------------------------------------------------------------------
+                                                   total       377         212.765
+
+Area of detected synthetic parts
+--------------------------------
+  No DW parts to report!
+
+Estimated area of ungrouped synthetic parts
+-------------------------------------------
+                           Estimated   Perc. of 
+ Module    Implem.  Count       Area  cell area 
+------------------------------------------------
+ DW01_add  pparch       1     32.190      15.1% 
+------------------------------------------------
+ Total:                 1     32.190      15.1% 
+
+Total synthetic cell area:      32.190  15.1%  (estimated)
+
+1

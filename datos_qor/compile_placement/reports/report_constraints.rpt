@@ -1,0 +1,3479 @@
+****************************************
+Report : constraint
+        -verbose
+        -all_violators
+        -max_transition
+        -max_capacitance
+Design : ALU_votegui
+Version: U-2022.12
+Date   : Mon Apr 28 05:52:47 2025
+****************************************
+
+
+
+   Mode: func Corner: hold_ff0p88v125c
+   Scenario: func::hold_ff0p88v125c
+    Net: i_reset
+    max_transition        0.000
+  - Transition Time       0.010
+  --------------------------------
+    Slack                -0.010 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : data_out_reg_9_/clear    0.000     0.010         -0.010  (VIOLATED) 
+     PIN : data_out_reg_17_/clear    0.000    0.010         -0.010  (VIOLATED) 
+     PIN : data_out_reg_16_/clear    0.000    0.010         -0.010  (VIOLATED) 
+     PIN : data_out_reg_15_/clear    0.000    0.010         -0.010  (VIOLATED) 
+     PIN : data_out_reg_14_/clear    0.000    0.010         -0.010  (VIOLATED) 
+     PIN : data_out_reg_13_/clear    0.000    0.010         -0.010  (VIOLATED) 
+     PIN : data_out_reg_12_/clear    0.000    0.010         -0.010  (VIOLATED) 
+     PIN : data_out_reg_11_/clear    0.000    0.010         -0.010  (VIOLATED) 
+     PIN : data_out_reg_10_/clear    0.000    0.010         -0.010  (VIOLATED) 
+     PIN : data_out_reg_18_/clear    0.000    0.010         -0.010  (VIOLATED) 
+     PIN : data_out_reg_8_/clear    0.000     0.010         -0.010  (VIOLATED) 
+     PIN : data_out_reg_7_/clear    0.000     0.010         -0.010  (VIOLATED) 
+     PIN : data_out_reg_6_/clear    0.000     0.010         -0.010  (VIOLATED) 
+     PIN : data_out_reg_5_/clear    0.000     0.010         -0.010  (VIOLATED) 
+     PIN : data_out_reg_4_/clear    0.000     0.010         -0.010  (VIOLATED) 
+     PIN : data_out_reg_3_/clear    0.000     0.010         -0.010  (VIOLATED) 
+     PIN : data_out_reg_2_/clear    0.000     0.010         -0.010  (VIOLATED) 
+     PIN : data_out_reg_1_/clear    0.000     0.010         -0.010  (VIOLATED) 
+     PIN : data_out_reg_26_/clear    0.000    0.010         -0.010  (VIOLATED) 
+     PIN : q_div_2_reg/clear    0.000         0.010         -0.010  (VIOLATED) 
+     PIN : q_div_4_reg/clear    0.000         0.010         -0.010  (VIOLATED) 
+     PIN : q_div_8_reg/clear    0.000         0.010         -0.010  (VIOLATED) 
+     PIN : data_out_reg_31_/clear    0.000    0.010         -0.010  (VIOLATED) 
+     PIN : data_out_reg_30_/clear    0.000    0.010         -0.010  (VIOLATED) 
+     PIN : data_out_reg_29_/clear    0.000    0.010         -0.010  (VIOLATED) 
+     PIN : data_out_reg_28_/clear    0.000    0.010         -0.010  (VIOLATED) 
+     PIN : data_out_reg_27_/clear    0.000    0.010         -0.010  (VIOLATED) 
+     PIN : data_out_reg_0_/clear    0.000     0.010         -0.010  (VIOLATED) 
+     PIN : data_out_reg_25_/clear    0.000    0.010         -0.010  (VIOLATED) 
+     PIN : data_out_reg_24_/clear    0.000    0.010         -0.010  (VIOLATED) 
+     PIN : data_out_reg_23_/clear    0.000    0.010         -0.010  (VIOLATED) 
+     PIN : data_out_reg_22_/clear    0.000    0.010         -0.010  (VIOLATED) 
+     PIN : data_out_reg_21_/clear    0.000    0.010         -0.010  (VIOLATED) 
+     PIN : data_out_reg_20_/clear    0.000    0.010         -0.010  (VIOLATED) 
+     PIN : data_out_reg_19_/clear    0.000    0.010         -0.010  (VIOLATED) 
+
+    Net: i_data_b[31]
+    max_transition        0.000
+  - Transition Time       0.009
+  --------------------------------
+    Slack                -0.009 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C36/I1         0.000          0.009         -0.009  (VIOLATED) 
+     PIN : u_xor/C36/I1        0.000          0.009         -0.009  (VIOLATED) 
+     PIN : u_and/C36/I1        0.000          0.009         -0.009  (VIOLATED) 
+
+    Net: i_data_b[29]
+    max_transition        0.000
+  - Transition Time       0.009
+  --------------------------------
+    Slack                -0.009 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C38/I1         0.000          0.009         -0.009  (VIOLATED) 
+     PIN : u_xor/C38/I1        0.000          0.009         -0.009  (VIOLATED) 
+     PIN : u_and/C38/I1        0.000          0.009         -0.009  (VIOLATED) 
+
+    Net: i_data_b[28]
+    max_transition        0.000
+  - Transition Time       0.009
+  --------------------------------
+    Slack                -0.009 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C39/I1         0.000          0.009         -0.009  (VIOLATED) 
+     PIN : u_xor/C39/I1        0.000          0.009         -0.009  (VIOLATED) 
+     PIN : u_and/C39/I1        0.000          0.009         -0.009  (VIOLATED) 
+
+    Net: i_data_b[30]
+    max_transition        0.000
+  - Transition Time       0.009
+  --------------------------------
+    Slack                -0.009 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C37/I1         0.000          0.009         -0.009  (VIOLATED) 
+     PIN : u_xor/C37/I1        0.000          0.009         -0.009  (VIOLATED) 
+     PIN : u_and/C37/I1        0.000          0.009         -0.009  (VIOLATED) 
+
+    Net: i_data_b[27]
+    max_transition        0.000
+  - Transition Time       0.009
+  --------------------------------
+    Slack                -0.009 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C40/I1         0.000          0.009         -0.009  (VIOLATED) 
+     PIN : u_xor/C40/I1        0.000          0.009         -0.009  (VIOLATED) 
+     PIN : u_and/C40/I1        0.000          0.009         -0.009  (VIOLATED) 
+
+    Net: i_data_b[26]
+    max_transition        0.000
+  - Transition Time       0.009
+  --------------------------------
+    Slack                -0.009 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C41/I1         0.000          0.009         -0.009  (VIOLATED) 
+     PIN : u_xor/C41/I1        0.000          0.009         -0.009  (VIOLATED) 
+     PIN : u_and/C41/I1        0.000          0.009         -0.009  (VIOLATED) 
+
+    Net: i_data_b[25]
+    max_transition        0.000
+  - Transition Time       0.009
+  --------------------------------
+    Slack                -0.009 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C42/I1         0.000          0.009         -0.009  (VIOLATED) 
+     PIN : u_xor/C42/I1        0.000          0.009         -0.009  (VIOLATED) 
+     PIN : u_and/C42/I1        0.000          0.009         -0.009  (VIOLATED) 
+
+    Net: i_data_b[24]
+    max_transition        0.000
+  - Transition Time       0.009
+  --------------------------------
+    Slack                -0.009 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C43/I1         0.000          0.009         -0.009  (VIOLATED) 
+     PIN : u_xor/C43/I1        0.000          0.009         -0.009  (VIOLATED) 
+     PIN : u_and/C43/I1        0.000          0.009         -0.009  (VIOLATED) 
+
+    Net: i_data_b[23]
+    max_transition        0.000
+  - Transition Time       0.009
+  --------------------------------
+    Slack                -0.009 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C44/I1         0.000          0.009         -0.009  (VIOLATED) 
+     PIN : u_xor/C44/I1        0.000          0.009         -0.009  (VIOLATED) 
+     PIN : u_and/C44/I1        0.000          0.009         -0.009  (VIOLATED) 
+
+    Net: i_data_b[21]
+    max_transition        0.000
+  - Transition Time       0.009
+  --------------------------------
+    Slack                -0.009 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C46/I1         0.000          0.009         -0.009  (VIOLATED) 
+     PIN : u_xor/C46/I1        0.000          0.009         -0.009  (VIOLATED) 
+     PIN : u_and/C46/I1        0.000          0.009         -0.009  (VIOLATED) 
+
+    Net: i_data_b[22]
+    max_transition        0.000
+  - Transition Time       0.009
+  --------------------------------
+    Slack                -0.009 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C45/I1         0.000          0.009         -0.009  (VIOLATED) 
+     PIN : u_xor/C45/I1        0.000          0.009         -0.009  (VIOLATED) 
+     PIN : u_and/C45/I1        0.000          0.009         -0.009  (VIOLATED) 
+
+    Net: i_data_b[19]
+    max_transition        0.000
+  - Transition Time       0.009
+  --------------------------------
+    Slack                -0.009 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C48/I1         0.000          0.009         -0.009  (VIOLATED) 
+     PIN : u_xor/C48/I1        0.000          0.009         -0.009  (VIOLATED) 
+     PIN : u_and/C48/I1        0.000          0.009         -0.009  (VIOLATED) 
+
+    Net: i_data_b[20]
+    max_transition        0.000
+  - Transition Time       0.009
+  --------------------------------
+    Slack                -0.009 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C47/I1         0.000          0.009         -0.009  (VIOLATED) 
+     PIN : u_xor/C47/I1        0.000          0.009         -0.009  (VIOLATED) 
+     PIN : u_and/C47/I1        0.000          0.009         -0.009  (VIOLATED) 
+
+    Net: i_data_b[17]
+    max_transition        0.000
+  - Transition Time       0.009
+  --------------------------------
+    Slack                -0.009 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C50/I1         0.000          0.009         -0.009  (VIOLATED) 
+     PIN : u_xor/C50/I1        0.000          0.009         -0.009  (VIOLATED) 
+     PIN : u_and/C50/I1        0.000          0.009         -0.009  (VIOLATED) 
+
+    Net: i_data_b[18]
+    max_transition        0.000
+  - Transition Time       0.009
+  --------------------------------
+    Slack                -0.009 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C49/I1         0.000          0.009         -0.009  (VIOLATED) 
+     PIN : u_xor/C49/I1        0.000          0.009         -0.009  (VIOLATED) 
+     PIN : u_and/C49/I1        0.000          0.009         -0.009  (VIOLATED) 
+
+    Net: i_data_b[16]
+    max_transition        0.000
+  - Transition Time       0.009
+  --------------------------------
+    Slack                -0.009 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C51/I1         0.000          0.009         -0.009  (VIOLATED) 
+     PIN : u_xor/C51/I1        0.000          0.009         -0.009  (VIOLATED) 
+     PIN : u_and/C51/I1        0.000          0.009         -0.009  (VIOLATED) 
+
+    Net: i_data_b[14]
+    max_transition        0.000
+  - Transition Time       0.009
+  --------------------------------
+    Slack                -0.009 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C53/I1         0.000          0.009         -0.009  (VIOLATED) 
+     PIN : u_xor/C53/I1        0.000          0.009         -0.009  (VIOLATED) 
+     PIN : u_and/C53/I1        0.000          0.009         -0.009  (VIOLATED) 
+
+    Net: i_data_b[15]
+    max_transition        0.000
+  - Transition Time       0.009
+  --------------------------------
+    Slack                -0.009 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C52/I1         0.000          0.009         -0.009  (VIOLATED) 
+     PIN : u_xor/C52/I1        0.000          0.009         -0.009  (VIOLATED) 
+     PIN : u_and/C52/I1        0.000          0.009         -0.009  (VIOLATED) 
+
+    Net: i_data_b[13]
+    max_transition        0.000
+  - Transition Time       0.009
+  --------------------------------
+    Slack                -0.009 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C54/I1         0.000          0.009         -0.009  (VIOLATED) 
+     PIN : u_xor/C54/I1        0.000          0.009         -0.009  (VIOLATED) 
+     PIN : u_and/C54/I1        0.000          0.009         -0.009  (VIOLATED) 
+
+    Net: i_data_b[11]
+    max_transition        0.000
+  - Transition Time       0.009
+  --------------------------------
+    Slack                -0.009 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C56/I1         0.000          0.009         -0.009  (VIOLATED) 
+     PIN : u_xor/C56/I1        0.000          0.009         -0.009  (VIOLATED) 
+     PIN : u_and/C56/I1        0.000          0.009         -0.009  (VIOLATED) 
+
+    Net: i_data_b[12]
+    max_transition        0.000
+  - Transition Time       0.009
+  --------------------------------
+    Slack                -0.009 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C55/I1         0.000          0.009         -0.009  (VIOLATED) 
+     PIN : u_xor/C55/I1        0.000          0.009         -0.009  (VIOLATED) 
+     PIN : u_and/C55/I1        0.000          0.009         -0.009  (VIOLATED) 
+
+    Net: i_data_b[10]
+    max_transition        0.000
+  - Transition Time       0.009
+  --------------------------------
+    Slack                -0.009 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C57/I1         0.000          0.009         -0.009  (VIOLATED) 
+     PIN : u_xor/C57/I1        0.000          0.009         -0.009  (VIOLATED) 
+     PIN : u_and/C57/I1        0.000          0.009         -0.009  (VIOLATED) 
+
+    Net: i_data_b[9]
+    max_transition        0.000
+  - Transition Time       0.009
+  --------------------------------
+    Slack                -0.009 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C58/I1         0.000          0.009         -0.009  (VIOLATED) 
+     PIN : u_xor/C58/I1        0.000          0.009         -0.009  (VIOLATED) 
+     PIN : u_and/C58/I1        0.000          0.009         -0.009  (VIOLATED) 
+
+    Net: i_data_b[8]
+    max_transition        0.000
+  - Transition Time       0.009
+  --------------------------------
+    Slack                -0.009 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C59/I1         0.000          0.009         -0.009  (VIOLATED) 
+     PIN : u_xor/C59/I1        0.000          0.009         -0.009  (VIOLATED) 
+     PIN : u_and/C59/I1        0.000          0.009         -0.009  (VIOLATED) 
+
+    Net: i_data_b[7]
+    max_transition        0.000
+  - Transition Time       0.009
+  --------------------------------
+    Slack                -0.009 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C60/I1         0.000          0.009         -0.009  (VIOLATED) 
+     PIN : u_xor/C60/I1        0.000          0.009         -0.009  (VIOLATED) 
+     PIN : u_and/C60/I1        0.000          0.009         -0.009  (VIOLATED) 
+
+    Net: i_data_b[6]
+    max_transition        0.000
+  - Transition Time       0.009
+  --------------------------------
+    Slack                -0.009 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C61/I1         0.000          0.009         -0.009  (VIOLATED) 
+     PIN : u_xor/C61/I1        0.000          0.009         -0.009  (VIOLATED) 
+     PIN : u_and/C61/I1        0.000          0.009         -0.009  (VIOLATED) 
+
+    Net: i_data_b[5]
+    max_transition        0.000
+  - Transition Time       0.009
+  --------------------------------
+    Slack                -0.009 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C62/I1         0.000          0.009         -0.009  (VIOLATED) 
+     PIN : u_xor/C62/I1        0.000          0.009         -0.009  (VIOLATED) 
+     PIN : u_and/C62/I1        0.000          0.009         -0.009  (VIOLATED) 
+
+    Net: i_data_b[4]
+    max_transition        0.000
+  - Transition Time       0.009
+  --------------------------------
+    Slack                -0.009 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C63/I1         0.000          0.009         -0.009  (VIOLATED) 
+     PIN : u_xor/C63/I1        0.000          0.009         -0.009  (VIOLATED) 
+     PIN : u_and/C63/I1        0.000          0.009         -0.009  (VIOLATED) 
+
+    Net: i_data_b[3]
+    max_transition        0.000
+  - Transition Time       0.009
+  --------------------------------
+    Slack                -0.009 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C64/I1         0.000          0.009         -0.009  (VIOLATED) 
+     PIN : u_xor/C64/I1        0.000          0.009         -0.009  (VIOLATED) 
+     PIN : u_and/C64/I1        0.000          0.009         -0.009  (VIOLATED) 
+
+    Net: i_data_b[1]
+    max_transition        0.000
+  - Transition Time       0.009
+  --------------------------------
+    Slack                -0.009 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C66/I1         0.000          0.009         -0.009  (VIOLATED) 
+     PIN : u_xor/C66/I1        0.000          0.009         -0.009  (VIOLATED) 
+     PIN : u_and/C66/I1        0.000          0.009         -0.009  (VIOLATED) 
+
+    Net: i_data_b[2]
+    max_transition        0.000
+  - Transition Time       0.009
+  --------------------------------
+    Slack                -0.009 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C65/I1         0.000          0.009         -0.009  (VIOLATED) 
+     PIN : u_xor/C65/I1        0.000          0.009         -0.009  (VIOLATED) 
+     PIN : u_and/C65/I1        0.000          0.009         -0.009  (VIOLATED) 
+
+    Net: i_data_b[0]
+    max_transition        0.000
+  - Transition Time       0.009
+  --------------------------------
+    Slack                -0.009 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C67/I1         0.000          0.009         -0.009  (VIOLATED) 
+     PIN : u_xor/C67/I1        0.000          0.009         -0.009  (VIOLATED) 
+     PIN : u_and/C67/I1        0.000          0.009         -0.009  (VIOLATED) 
+
+    Net: i_enable
+    max_transition        0.000
+  - Transition Time       0.009
+  --------------------------------
+    Slack                -0.009 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : I_3/I               0.000          0.009         -0.009  (VIOLATED) 
+     PIN : C103/CONTROL1[0]    0.000          0.009         -0.009  (VIOLATED) 
+
+    Net: i_valid
+    max_transition        0.000
+  - Transition Time       0.009
+  --------------------------------
+    Slack                -0.009 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : o_valid_reg_reg/next_state    0.000    0.009     -0.009  (VIOLATED) 
+
+    Net: i_data_a[31]
+    max_transition        0.000
+  - Transition Time       0.008
+  --------------------------------
+    Slack                -0.008 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C36/I0         0.000          0.008         -0.008  (VIOLATED) 
+     PIN : u_xor/C36/I0        0.000          0.008         -0.008  (VIOLATED) 
+     PIN : u_and/C36/I0        0.000          0.008         -0.008  (VIOLATED) 
+
+    Net: i_data_a[30]
+    max_transition        0.000
+  - Transition Time       0.008
+  --------------------------------
+    Slack                -0.008 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C37/I0         0.000          0.008         -0.008  (VIOLATED) 
+     PIN : u_xor/C37/I0        0.000          0.008         -0.008  (VIOLATED) 
+     PIN : u_and/C37/I0        0.000          0.008         -0.008  (VIOLATED) 
+
+    Net: i_sel_clock[0]
+    max_transition        0.000
+  - Transition Time       0.008
+  --------------------------------
+    Slack                -0.008 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_clock_mux/I_1/I    0.000         0.008         -0.008  (VIOLATED) 
+     PIN : u_clock_mux/C10/I1    0.000        0.008         -0.008  (VIOLATED) 
+     PIN : u_clock_mux/C12/I1    0.000        0.008         -0.008  (VIOLATED) 
+
+    Net: i_data_a[29]
+    max_transition        0.000
+  - Transition Time       0.008
+  --------------------------------
+    Slack                -0.008 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C38/I0         0.000          0.008         -0.008  (VIOLATED) 
+     PIN : u_xor/C38/I0        0.000          0.008         -0.008  (VIOLATED) 
+     PIN : u_and/C38/I0        0.000          0.008         -0.008  (VIOLATED) 
+
+    Net: i_data_a[28]
+    max_transition        0.000
+  - Transition Time       0.008
+  --------------------------------
+    Slack                -0.008 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C39/I0         0.000          0.008         -0.008  (VIOLATED) 
+     PIN : u_xor/C39/I0        0.000          0.008         -0.008  (VIOLATED) 
+     PIN : u_and/C39/I0        0.000          0.008         -0.008  (VIOLATED) 
+
+    Net: i_data_a[27]
+    max_transition        0.000
+  - Transition Time       0.008
+  --------------------------------
+    Slack                -0.008 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C40/I0         0.000          0.008         -0.008  (VIOLATED) 
+     PIN : u_xor/C40/I0        0.000          0.008         -0.008  (VIOLATED) 
+     PIN : u_and/C40/I0        0.000          0.008         -0.008  (VIOLATED) 
+
+    Net: i_sel_clock[1]
+    max_transition        0.000
+  - Transition Time       0.008
+  --------------------------------
+    Slack                -0.008 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_clock_mux/I_0/I    0.000         0.008         -0.008  (VIOLATED) 
+     PIN : u_clock_mux/C7/I0    0.000         0.008         -0.008  (VIOLATED) 
+     PIN : u_clock_mux/C12/I0    0.000        0.008         -0.008  (VIOLATED) 
+
+    Net: i_data_a[26]
+    max_transition        0.000
+  - Transition Time       0.008
+  --------------------------------
+    Slack                -0.008 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C41/I0         0.000          0.008         -0.008  (VIOLATED) 
+     PIN : u_xor/C41/I0        0.000          0.008         -0.008  (VIOLATED) 
+     PIN : u_and/C41/I0        0.000          0.008         -0.008  (VIOLATED) 
+
+    Net: i_data_a[25]
+    max_transition        0.000
+  - Transition Time       0.008
+  --------------------------------
+    Slack                -0.008 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C42/I0         0.000          0.008         -0.008  (VIOLATED) 
+     PIN : u_xor/C42/I0        0.000          0.008         -0.008  (VIOLATED) 
+     PIN : u_and/C42/I0        0.000          0.008         -0.008  (VIOLATED) 
+
+    Net: i_data_a[24]
+    max_transition        0.000
+  - Transition Time       0.008
+  --------------------------------
+    Slack                -0.008 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C43/I0         0.000          0.008         -0.008  (VIOLATED) 
+     PIN : u_xor/C43/I0        0.000          0.008         -0.008  (VIOLATED) 
+     PIN : u_and/C43/I0        0.000          0.008         -0.008  (VIOLATED) 
+
+    Net: i_data_a[23]
+    max_transition        0.000
+  - Transition Time       0.008
+  --------------------------------
+    Slack                -0.008 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C44/I0         0.000          0.008         -0.008  (VIOLATED) 
+     PIN : u_xor/C44/I0        0.000          0.008         -0.008  (VIOLATED) 
+     PIN : u_and/C44/I0        0.000          0.008         -0.008  (VIOLATED) 
+
+    Net: i_data_a[22]
+    max_transition        0.000
+  - Transition Time       0.008
+  --------------------------------
+    Slack                -0.008 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C45/I0         0.000          0.008         -0.008  (VIOLATED) 
+     PIN : u_xor/C45/I0        0.000          0.008         -0.008  (VIOLATED) 
+     PIN : u_and/C45/I0        0.000          0.008         -0.008  (VIOLATED) 
+
+    Net: i_data_a[21]
+    max_transition        0.000
+  - Transition Time       0.008
+  --------------------------------
+    Slack                -0.008 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C46/I0         0.000          0.008         -0.008  (VIOLATED) 
+     PIN : u_xor/C46/I0        0.000          0.008         -0.008  (VIOLATED) 
+     PIN : u_and/C46/I0        0.000          0.008         -0.008  (VIOLATED) 
+
+    Net: i_data_a[19]
+    max_transition        0.000
+  - Transition Time       0.008
+  --------------------------------
+    Slack                -0.008 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C48/I0         0.000          0.008         -0.008  (VIOLATED) 
+     PIN : u_xor/C48/I0        0.000          0.008         -0.008  (VIOLATED) 
+     PIN : u_and/C48/I0        0.000          0.008         -0.008  (VIOLATED) 
+
+    Net: i_data_a[20]
+    max_transition        0.000
+  - Transition Time       0.008
+  --------------------------------
+    Slack                -0.008 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C47/I0         0.000          0.008         -0.008  (VIOLATED) 
+     PIN : u_xor/C47/I0        0.000          0.008         -0.008  (VIOLATED) 
+     PIN : u_and/C47/I0        0.000          0.008         -0.008  (VIOLATED) 
+
+    Net: i_data_a[18]
+    max_transition        0.000
+  - Transition Time       0.008
+  --------------------------------
+    Slack                -0.008 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C49/I0         0.000          0.008         -0.008  (VIOLATED) 
+     PIN : u_xor/C49/I0        0.000          0.008         -0.008  (VIOLATED) 
+     PIN : u_and/C49/I0        0.000          0.008         -0.008  (VIOLATED) 
+
+    Net: i_data_a[17]
+    max_transition        0.000
+  - Transition Time       0.008
+  --------------------------------
+    Slack                -0.008 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C50/I0         0.000          0.008         -0.008  (VIOLATED) 
+     PIN : u_xor/C50/I0        0.000          0.008         -0.008  (VIOLATED) 
+     PIN : u_and/C50/I0        0.000          0.008         -0.008  (VIOLATED) 
+
+    Net: i_data_a[16]
+    max_transition        0.000
+  - Transition Time       0.008
+  --------------------------------
+    Slack                -0.008 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C51/I0         0.000          0.008         -0.008  (VIOLATED) 
+     PIN : u_xor/C51/I0        0.000          0.008         -0.008  (VIOLATED) 
+     PIN : u_and/C51/I0        0.000          0.008         -0.008  (VIOLATED) 
+
+    Net: i_data_a[15]
+    max_transition        0.000
+  - Transition Time       0.008
+  --------------------------------
+    Slack                -0.008 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C52/I0         0.000          0.008         -0.008  (VIOLATED) 
+     PIN : u_xor/C52/I0        0.000          0.008         -0.008  (VIOLATED) 
+     PIN : u_and/C52/I0        0.000          0.008         -0.008  (VIOLATED) 
+
+    Net: i_data_a[13]
+    max_transition        0.000
+  - Transition Time       0.008
+  --------------------------------
+    Slack                -0.008 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C54/I0         0.000          0.008         -0.008  (VIOLATED) 
+     PIN : u_xor/C54/I0        0.000          0.008         -0.008  (VIOLATED) 
+     PIN : u_and/C54/I0        0.000          0.008         -0.008  (VIOLATED) 
+
+    Net: i_data_a[14]
+    max_transition        0.000
+  - Transition Time       0.008
+  --------------------------------
+    Slack                -0.008 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C53/I0         0.000          0.008         -0.008  (VIOLATED) 
+     PIN : u_xor/C53/I0        0.000          0.008         -0.008  (VIOLATED) 
+     PIN : u_and/C53/I0        0.000          0.008         -0.008  (VIOLATED) 
+
+    Net: i_data_a[12]
+    max_transition        0.000
+  - Transition Time       0.008
+  --------------------------------
+    Slack                -0.008 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C55/I0         0.000          0.008         -0.008  (VIOLATED) 
+     PIN : u_xor/C55/I0        0.000          0.008         -0.008  (VIOLATED) 
+     PIN : u_and/C55/I0        0.000          0.008         -0.008  (VIOLATED) 
+
+    Net: i_data_a[11]
+    max_transition        0.000
+  - Transition Time       0.007
+  --------------------------------
+    Slack                -0.007 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C56/I0         0.000          0.007         -0.007  (VIOLATED) 
+     PIN : u_xor/C56/I0        0.000          0.007         -0.007  (VIOLATED) 
+     PIN : u_and/C56/I0        0.000          0.007         -0.007  (VIOLATED) 
+
+    Net: i_data_a[10]
+    max_transition        0.000
+  - Transition Time       0.007
+  --------------------------------
+    Slack                -0.007 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C57/I0         0.000          0.007         -0.007  (VIOLATED) 
+     PIN : u_xor/C57/I0        0.000          0.007         -0.007  (VIOLATED) 
+     PIN : u_and/C57/I0        0.000          0.007         -0.007  (VIOLATED) 
+
+    Net: i_data_a[9]
+    max_transition        0.000
+  - Transition Time       0.007
+  --------------------------------
+    Slack                -0.007 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C58/I0         0.000          0.007         -0.007  (VIOLATED) 
+     PIN : u_xor/C58/I0        0.000          0.007         -0.007  (VIOLATED) 
+     PIN : u_and/C58/I0        0.000          0.007         -0.007  (VIOLATED) 
+
+    Net: i_data_a[8]
+    max_transition        0.000
+  - Transition Time       0.007
+  --------------------------------
+    Slack                -0.007 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C59/I0         0.000          0.007         -0.007  (VIOLATED) 
+     PIN : u_xor/C59/I0        0.000          0.007         -0.007  (VIOLATED) 
+     PIN : u_and/C59/I0        0.000          0.007         -0.007  (VIOLATED) 
+
+    Net: i_data_a[7]
+    max_transition        0.000
+  - Transition Time       0.007
+  --------------------------------
+    Slack                -0.007 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C60/I0         0.000          0.007         -0.007  (VIOLATED) 
+     PIN : u_xor/C60/I0        0.000          0.007         -0.007  (VIOLATED) 
+     PIN : u_and/C60/I0        0.000          0.007         -0.007  (VIOLATED) 
+
+    Net: i_data_a[6]
+    max_transition        0.000
+  - Transition Time       0.007
+  --------------------------------
+    Slack                -0.007 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C61/I0         0.000          0.007         -0.007  (VIOLATED) 
+     PIN : u_xor/C61/I0        0.000          0.007         -0.007  (VIOLATED) 
+     PIN : u_and/C61/I0        0.000          0.007         -0.007  (VIOLATED) 
+
+    Net: i_data_a[5]
+    max_transition        0.000
+  - Transition Time       0.007
+  --------------------------------
+    Slack                -0.007 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C62/I0         0.000          0.007         -0.007  (VIOLATED) 
+     PIN : u_xor/C62/I0        0.000          0.007         -0.007  (VIOLATED) 
+     PIN : u_and/C62/I0        0.000          0.007         -0.007  (VIOLATED) 
+
+    Net: i_data_a[4]
+    max_transition        0.000
+  - Transition Time       0.007
+  --------------------------------
+    Slack                -0.007 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C63/I0         0.000          0.007         -0.007  (VIOLATED) 
+     PIN : u_xor/C63/I0        0.000          0.007         -0.007  (VIOLATED) 
+     PIN : u_and/C63/I0        0.000          0.007         -0.007  (VIOLATED) 
+
+    Net: i_data_a[3]
+    max_transition        0.000
+  - Transition Time       0.007
+  --------------------------------
+    Slack                -0.007 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C64/I0         0.000          0.007         -0.007  (VIOLATED) 
+     PIN : u_xor/C64/I0        0.000          0.007         -0.007  (VIOLATED) 
+     PIN : u_and/C64/I0        0.000          0.007         -0.007  (VIOLATED) 
+
+    Net: i_data_a[2]
+    max_transition        0.000
+  - Transition Time       0.007
+  --------------------------------
+    Slack                -0.007 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C65/I0         0.000          0.007         -0.007  (VIOLATED) 
+     PIN : u_xor/C65/I0        0.000          0.007         -0.007  (VIOLATED) 
+     PIN : u_and/C65/I0        0.000          0.007         -0.007  (VIOLATED) 
+
+    Net: i_data_a[1]
+    max_transition        0.000
+  - Transition Time       0.007
+  --------------------------------
+    Slack                -0.007 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C66/I0         0.000          0.007         -0.007  (VIOLATED) 
+     PIN : u_xor/C66/I0        0.000          0.007         -0.007  (VIOLATED) 
+     PIN : u_and/C66/I0        0.000          0.007         -0.007  (VIOLATED) 
+
+    Net: i_operation[1]
+    max_transition        0.000
+  - Transition Time       0.007
+  --------------------------------
+    Slack                -0.007 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_mux/I_0/I         0.000          0.007         -0.007  (VIOLATED) 
+     PIN : u_mux/C7/I0         0.000          0.007         -0.007  (VIOLATED) 
+     PIN : u_mux/C12/I0        0.000          0.007         -0.007  (VIOLATED) 
+
+    Net: i_operation[0]
+    max_transition        0.000
+  - Transition Time       0.007
+  --------------------------------
+    Slack                -0.007 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_mux/I_1/I         0.000          0.007         -0.007  (VIOLATED) 
+     PIN : u_mux/C10/I1        0.000          0.007         -0.007  (VIOLATED) 
+     PIN : u_mux/C12/I1        0.000          0.007         -0.007  (VIOLATED) 
+
+    Net: i_data_a[0]
+    max_transition        0.000
+  - Transition Time       0.007
+  --------------------------------
+    Slack                -0.007 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C67/I0         0.000          0.007         -0.007  (VIOLATED) 
+     PIN : u_xor/C67/I0        0.000          0.007         -0.007  (VIOLATED) 
+     PIN : u_and/C67/I0        0.000          0.007         -0.007  (VIOLATED) 
+
+    Net: sum_result[15]
+    max_transition        0.000
+  - Transition Time       0.003
+  --------------------------------
+    Slack                -0.003 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_mux/C54/DATA2[15]    0.000       0.003         -0.003  (VIOLATED) 
+
+    Net: sum_result[31]
+    max_transition        0.000
+  - Transition Time       0.003
+  --------------------------------
+    Slack                -0.003 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_mux/C54/DATA2[31]    0.000       0.003         -0.003  (VIOLATED) 
+
+    Net: sum_result[29]
+    max_transition        0.000
+  - Transition Time       0.003
+  --------------------------------
+    Slack                -0.003 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_mux/C54/DATA2[29]    0.000       0.003         -0.003  (VIOLATED) 
+
+    Net: sum_result[27]
+    max_transition        0.000
+  - Transition Time       0.003
+  --------------------------------
+    Slack                -0.003 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_mux/C54/DATA2[27]    0.000       0.003         -0.003  (VIOLATED) 
+
+    Net: sum_result[25]
+    max_transition        0.000
+  - Transition Time       0.003
+  --------------------------------
+    Slack                -0.003 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_mux/C54/DATA2[25]    0.000       0.003         -0.003  (VIOLATED) 
+
+    Net: sum_result[23]
+    max_transition        0.000
+  - Transition Time       0.003
+  --------------------------------
+    Slack                -0.003 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_mux/C54/DATA2[23]    0.000       0.003         -0.003  (VIOLATED) 
+
+    Net: sum_result[21]
+    max_transition        0.000
+  - Transition Time       0.003
+  --------------------------------
+    Slack                -0.003 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_mux/C54/DATA2[21]    0.000       0.003         -0.003  (VIOLATED) 
+
+    Net: sum_result[19]
+    max_transition        0.000
+  - Transition Time       0.003
+  --------------------------------
+    Slack                -0.003 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_mux/C54/DATA2[19]    0.000       0.003         -0.003  (VIOLATED) 
+
+    Net: sum_result[17]
+    max_transition        0.000
+  - Transition Time       0.003
+  --------------------------------
+    Slack                -0.003 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_mux/C54/DATA2[17]    0.000       0.003         -0.003  (VIOLATED) 
+
+    Net: sum_result[13]
+    max_transition        0.000
+  - Transition Time       0.003
+  --------------------------------
+    Slack                -0.003 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_mux/C54/DATA2[13]    0.000       0.003         -0.003  (VIOLATED) 
+
+    Net: sum_result[11]
+    max_transition        0.000
+  - Transition Time       0.003
+  --------------------------------
+    Slack                -0.003 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_mux/C54/DATA2[11]    0.000       0.003         -0.003  (VIOLATED) 
+
+    Net: sum_result[5]
+    max_transition        0.000
+  - Transition Time       0.003
+  --------------------------------
+    Slack                -0.003 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_mux/C54/DATA2[5]    0.000        0.003         -0.003  (VIOLATED) 
+
+    Net: sum_result[0]
+    max_transition        0.000
+  - Transition Time       0.003
+  --------------------------------
+    Slack                -0.003 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_mux/C54/DATA2[0]    0.000        0.003         -0.003  (VIOLATED) 
+
+    Net: sum_result[1]
+    max_transition        0.000
+  - Transition Time       0.003
+  --------------------------------
+    Slack                -0.003 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_mux/C54/DATA2[1]    0.000        0.003         -0.003  (VIOLATED) 
+
+    Net: sum_result[3]
+    max_transition        0.000
+  - Transition Time       0.003
+  --------------------------------
+    Slack                -0.003 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_mux/C54/DATA2[3]    0.000        0.003         -0.003  (VIOLATED) 
+
+    Net: sum_result[7]
+    max_transition        0.000
+  - Transition Time       0.003
+  --------------------------------
+    Slack                -0.003 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_mux/C54/DATA2[7]    0.000        0.003         -0.003  (VIOLATED) 
+
+    Net: sum_result[9]
+    max_transition        0.000
+  - Transition Time       0.003
+  --------------------------------
+    Slack                -0.003 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_mux/C54/DATA2[9]    0.000        0.003         -0.003  (VIOLATED) 
+
+    Net: sum_result[16]
+    max_transition        0.000
+  - Transition Time       0.003
+  --------------------------------
+    Slack                -0.003 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_mux/C54/DATA2[16]    0.000       0.003         -0.003  (VIOLATED) 
+
+    Net: sum_result[8]
+    max_transition        0.000
+  - Transition Time       0.003
+  --------------------------------
+    Slack                -0.003 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_mux/C54/DATA2[8]    0.000        0.003         -0.003  (VIOLATED) 
+
+    Net: sum_result[18]
+    max_transition        0.000
+  - Transition Time       0.003
+  --------------------------------
+    Slack                -0.003 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_mux/C54/DATA2[18]    0.000       0.003         -0.003  (VIOLATED) 
+
+    Net: sum_result[6]
+    max_transition        0.000
+  - Transition Time       0.003
+  --------------------------------
+    Slack                -0.003 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_mux/C54/DATA2[6]    0.000        0.003         -0.003  (VIOLATED) 
+
+    Net: sum_result[20]
+    max_transition        0.000
+  - Transition Time       0.003
+  --------------------------------
+    Slack                -0.003 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_mux/C54/DATA2[20]    0.000       0.003         -0.003  (VIOLATED) 
+
+    Net: sum_result[10]
+    max_transition        0.000
+  - Transition Time       0.003
+  --------------------------------
+    Slack                -0.003 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_mux/C54/DATA2[10]    0.000       0.003         -0.003  (VIOLATED) 
+
+    Net: sum_result[22]
+    max_transition        0.000
+  - Transition Time       0.003
+  --------------------------------
+    Slack                -0.003 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_mux/C54/DATA2[22]    0.000       0.003         -0.003  (VIOLATED) 
+
+    Net: sum_result[4]
+    max_transition        0.000
+  - Transition Time       0.003
+  --------------------------------
+    Slack                -0.003 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_mux/C54/DATA2[4]    0.000        0.003         -0.003  (VIOLATED) 
+
+    Net: sum_result[24]
+    max_transition        0.000
+  - Transition Time       0.003
+  --------------------------------
+    Slack                -0.003 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_mux/C54/DATA2[24]    0.000       0.003         -0.003  (VIOLATED) 
+
+    Net: sum_result[14]
+    max_transition        0.000
+  - Transition Time       0.003
+  --------------------------------
+    Slack                -0.003 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_mux/C54/DATA2[14]    0.000       0.003         -0.003  (VIOLATED) 
+
+    Net: sum_result[26]
+    max_transition        0.000
+  - Transition Time       0.003
+  --------------------------------
+    Slack                -0.003 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_mux/C54/DATA2[26]    0.000       0.003         -0.003  (VIOLATED) 
+
+    Net: sum_result[2]
+    max_transition        0.000
+  - Transition Time       0.003
+  --------------------------------
+    Slack                -0.003 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_mux/C54/DATA2[2]    0.000        0.003         -0.003  (VIOLATED) 
+
+    Net: sum_result[28]
+    max_transition        0.000
+  - Transition Time       0.003
+  --------------------------------
+    Slack                -0.003 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_mux/C54/DATA2[28]    0.000       0.003         -0.003  (VIOLATED) 
+
+    Net: sum_result[30]
+    max_transition        0.000
+  - Transition Time       0.003
+  --------------------------------
+    Slack                -0.003 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_mux/C54/DATA2[30]    0.000       0.003         -0.003  (VIOLATED) 
+
+    Net: sum_result[12]
+    max_transition        0.000
+  - Transition Time       0.003
+  --------------------------------
+    Slack                -0.003 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_mux/C54/DATA2[12]    0.000       0.003         -0.003  (VIOLATED) 
+
+  ---------------------------------------------------------------------------
+   Number of max_transition violation(s): 103
+
+   Mode: func Corner: setup_ss0p72v125c
+   Scenario: func::setup_ss0p72v125c
+    Net: sum_result[5]
+    max_transition        0.000
+  - Transition Time       0.004
+  --------------------------------
+    Slack                -0.004 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_mux/C54/DATA2[5]    0.000        0.004         -0.004  (VIOLATED) 
+
+    Net: sum_result[11]
+    max_transition        0.000
+  - Transition Time       0.004
+  --------------------------------
+    Slack                -0.004 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_mux/C54/DATA2[11]    0.000       0.004         -0.004  (VIOLATED) 
+
+    Net: sum_result[13]
+    max_transition        0.000
+  - Transition Time       0.004
+  --------------------------------
+    Slack                -0.004 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_mux/C54/DATA2[13]    0.000       0.004         -0.004  (VIOLATED) 
+
+    Net: sum_result[15]
+    max_transition        0.000
+  - Transition Time       0.004
+  --------------------------------
+    Slack                -0.004 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_mux/C54/DATA2[15]    0.000       0.004         -0.004  (VIOLATED) 
+
+    Net: sum_result[9]
+    max_transition        0.000
+  - Transition Time       0.004
+  --------------------------------
+    Slack                -0.004 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_mux/C54/DATA2[9]    0.000        0.004         -0.004  (VIOLATED) 
+
+    Net: sum_result[17]
+    max_transition        0.000
+  - Transition Time       0.004
+  --------------------------------
+    Slack                -0.004 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_mux/C54/DATA2[17]    0.000       0.004         -0.004  (VIOLATED) 
+
+    Net: sum_result[7]
+    max_transition        0.000
+  - Transition Time       0.004
+  --------------------------------
+    Slack                -0.004 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_mux/C54/DATA2[7]    0.000        0.004         -0.004  (VIOLATED) 
+
+    Net: sum_result[19]
+    max_transition        0.000
+  - Transition Time       0.004
+  --------------------------------
+    Slack                -0.004 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_mux/C54/DATA2[19]    0.000       0.004         -0.004  (VIOLATED) 
+
+    Net: sum_result[21]
+    max_transition        0.000
+  - Transition Time       0.004
+  --------------------------------
+    Slack                -0.004 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_mux/C54/DATA2[21]    0.000       0.004         -0.004  (VIOLATED) 
+
+    Net: sum_result[23]
+    max_transition        0.000
+  - Transition Time       0.004
+  --------------------------------
+    Slack                -0.004 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_mux/C54/DATA2[23]    0.000       0.004         -0.004  (VIOLATED) 
+
+    Net: sum_result[25]
+    max_transition        0.000
+  - Transition Time       0.004
+  --------------------------------
+    Slack                -0.004 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_mux/C54/DATA2[25]    0.000       0.004         -0.004  (VIOLATED) 
+
+    Net: sum_result[3]
+    max_transition        0.000
+  - Transition Time       0.004
+  --------------------------------
+    Slack                -0.004 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_mux/C54/DATA2[3]    0.000        0.004         -0.004  (VIOLATED) 
+
+    Net: sum_result[27]
+    max_transition        0.000
+  - Transition Time       0.004
+  --------------------------------
+    Slack                -0.004 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_mux/C54/DATA2[27]    0.000       0.004         -0.004  (VIOLATED) 
+
+    Net: sum_result[1]
+    max_transition        0.000
+  - Transition Time       0.004
+  --------------------------------
+    Slack                -0.004 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_mux/C54/DATA2[1]    0.000        0.004         -0.004  (VIOLATED) 
+
+    Net: sum_result[29]
+    max_transition        0.000
+  - Transition Time       0.004
+  --------------------------------
+    Slack                -0.004 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_mux/C54/DATA2[29]    0.000       0.004         -0.004  (VIOLATED) 
+
+    Net: sum_result[31]
+    max_transition        0.000
+  - Transition Time       0.004
+  --------------------------------
+    Slack                -0.004 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_mux/C54/DATA2[31]    0.000       0.004         -0.004  (VIOLATED) 
+
+    Net: sum_result[0]
+    max_transition        0.000
+  - Transition Time       0.004
+  --------------------------------
+    Slack                -0.004 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_mux/C54/DATA2[0]    0.000        0.004         -0.004  (VIOLATED) 
+
+    Net: sum_result[4]
+    max_transition        0.000
+  - Transition Time       0.004
+  --------------------------------
+    Slack                -0.004 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_mux/C54/DATA2[4]    0.000        0.004         -0.004  (VIOLATED) 
+
+    Net: sum_result[8]
+    max_transition        0.000
+  - Transition Time       0.004
+  --------------------------------
+    Slack                -0.004 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_mux/C54/DATA2[8]    0.000        0.004         -0.004  (VIOLATED) 
+
+    Net: sum_result[6]
+    max_transition        0.000
+  - Transition Time       0.004
+  --------------------------------
+    Slack                -0.004 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_mux/C54/DATA2[6]    0.000        0.004         -0.004  (VIOLATED) 
+
+    Net: sum_result[2]
+    max_transition        0.000
+  - Transition Time       0.004
+  --------------------------------
+    Slack                -0.004 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_mux/C54/DATA2[2]    0.000        0.004         -0.004  (VIOLATED) 
+
+    Net: sum_result[10]
+    max_transition        0.000
+  - Transition Time       0.004
+  --------------------------------
+    Slack                -0.004 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_mux/C54/DATA2[10]    0.000       0.004         -0.004  (VIOLATED) 
+
+    Net: sum_result[14]
+    max_transition        0.000
+  - Transition Time       0.004
+  --------------------------------
+    Slack                -0.004 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_mux/C54/DATA2[14]    0.000       0.004         -0.004  (VIOLATED) 
+
+    Net: sum_result[16]
+    max_transition        0.000
+  - Transition Time       0.004
+  --------------------------------
+    Slack                -0.004 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_mux/C54/DATA2[16]    0.000       0.004         -0.004  (VIOLATED) 
+
+    Net: sum_result[12]
+    max_transition        0.000
+  - Transition Time       0.004
+  --------------------------------
+    Slack                -0.004 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_mux/C54/DATA2[12]    0.000       0.004         -0.004  (VIOLATED) 
+
+    Net: sum_result[18]
+    max_transition        0.000
+  - Transition Time       0.004
+  --------------------------------
+    Slack                -0.004 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_mux/C54/DATA2[18]    0.000       0.004         -0.004  (VIOLATED) 
+
+    Net: sum_result[20]
+    max_transition        0.000
+  - Transition Time       0.004
+  --------------------------------
+    Slack                -0.004 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_mux/C54/DATA2[20]    0.000       0.004         -0.004  (VIOLATED) 
+
+    Net: sum_result[22]
+    max_transition        0.000
+  - Transition Time       0.004
+  --------------------------------
+    Slack                -0.004 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_mux/C54/DATA2[22]    0.000       0.004         -0.004  (VIOLATED) 
+
+    Net: sum_result[24]
+    max_transition        0.000
+  - Transition Time       0.004
+  --------------------------------
+    Slack                -0.004 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_mux/C54/DATA2[24]    0.000       0.004         -0.004  (VIOLATED) 
+
+    Net: sum_result[26]
+    max_transition        0.000
+  - Transition Time       0.004
+  --------------------------------
+    Slack                -0.004 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_mux/C54/DATA2[26]    0.000       0.004         -0.004  (VIOLATED) 
+
+    Net: sum_result[28]
+    max_transition        0.000
+  - Transition Time       0.004
+  --------------------------------
+    Slack                -0.004 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_mux/C54/DATA2[28]    0.000       0.004         -0.004  (VIOLATED) 
+
+    Net: sum_result[30]
+    max_transition        0.000
+  - Transition Time       0.004
+  --------------------------------
+    Slack                -0.004 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_mux/C54/DATA2[30]    0.000       0.004         -0.004  (VIOLATED) 
+
+    Net: i_reset
+    max_transition        0.000
+  - Transition Time       0.004
+  --------------------------------
+    Slack                -0.004 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : data_out_reg_9_/clear    0.000     0.004         -0.004  (VIOLATED) 
+     PIN : data_out_reg_17_/clear    0.000    0.004         -0.004  (VIOLATED) 
+     PIN : data_out_reg_16_/clear    0.000    0.004         -0.004  (VIOLATED) 
+     PIN : data_out_reg_15_/clear    0.000    0.004         -0.004  (VIOLATED) 
+     PIN : data_out_reg_14_/clear    0.000    0.004         -0.004  (VIOLATED) 
+     PIN : data_out_reg_13_/clear    0.000    0.004         -0.004  (VIOLATED) 
+     PIN : data_out_reg_12_/clear    0.000    0.004         -0.004  (VIOLATED) 
+     PIN : data_out_reg_11_/clear    0.000    0.004         -0.004  (VIOLATED) 
+     PIN : data_out_reg_10_/clear    0.000    0.004         -0.004  (VIOLATED) 
+     PIN : data_out_reg_18_/clear    0.000    0.004         -0.004  (VIOLATED) 
+     PIN : data_out_reg_8_/clear    0.000     0.004         -0.004  (VIOLATED) 
+     PIN : data_out_reg_7_/clear    0.000     0.004         -0.004  (VIOLATED) 
+     PIN : data_out_reg_6_/clear    0.000     0.004         -0.004  (VIOLATED) 
+     PIN : data_out_reg_5_/clear    0.000     0.004         -0.004  (VIOLATED) 
+     PIN : data_out_reg_4_/clear    0.000     0.004         -0.004  (VIOLATED) 
+     PIN : data_out_reg_3_/clear    0.000     0.004         -0.004  (VIOLATED) 
+     PIN : data_out_reg_2_/clear    0.000     0.004         -0.004  (VIOLATED) 
+     PIN : data_out_reg_1_/clear    0.000     0.004         -0.004  (VIOLATED) 
+     PIN : data_out_reg_26_/clear    0.000    0.004         -0.004  (VIOLATED) 
+     PIN : q_div_2_reg/clear    0.000         0.004         -0.004  (VIOLATED) 
+     PIN : q_div_4_reg/clear    0.000         0.004         -0.004  (VIOLATED) 
+     PIN : q_div_8_reg/clear    0.000         0.004         -0.004  (VIOLATED) 
+     PIN : data_out_reg_31_/clear    0.000    0.004         -0.004  (VIOLATED) 
+     PIN : data_out_reg_30_/clear    0.000    0.004         -0.004  (VIOLATED) 
+     PIN : data_out_reg_29_/clear    0.000    0.004         -0.004  (VIOLATED) 
+     PIN : data_out_reg_28_/clear    0.000    0.004         -0.004  (VIOLATED) 
+     PIN : data_out_reg_27_/clear    0.000    0.004         -0.004  (VIOLATED) 
+     PIN : data_out_reg_0_/clear    0.000     0.004         -0.004  (VIOLATED) 
+     PIN : data_out_reg_25_/clear    0.000    0.004         -0.004  (VIOLATED) 
+     PIN : data_out_reg_24_/clear    0.000    0.004         -0.004  (VIOLATED) 
+     PIN : data_out_reg_23_/clear    0.000    0.004         -0.004  (VIOLATED) 
+     PIN : data_out_reg_22_/clear    0.000    0.004         -0.004  (VIOLATED) 
+     PIN : data_out_reg_21_/clear    0.000    0.004         -0.004  (VIOLATED) 
+     PIN : data_out_reg_20_/clear    0.000    0.004         -0.004  (VIOLATED) 
+     PIN : data_out_reg_19_/clear    0.000    0.004         -0.004  (VIOLATED) 
+
+    Net: i_enable
+    max_transition        0.000
+  - Transition Time       0.003
+  --------------------------------
+    Slack                -0.003 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : I_3/I               0.000          0.003         -0.003  (VIOLATED) 
+     PIN : C103/CONTROL1[0]    0.000          0.003         -0.003  (VIOLATED) 
+
+    Net: i_valid
+    max_transition        0.000
+  - Transition Time       0.003
+  --------------------------------
+    Slack                -0.003 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : o_valid_reg_reg/next_state    0.000    0.003     -0.003  (VIOLATED) 
+
+    Net: i_data_b[31]
+    max_transition        0.000
+  - Transition Time       0.002
+  --------------------------------
+    Slack                -0.002 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C36/I1         0.000          0.002         -0.002  (VIOLATED) 
+     PIN : u_xor/C36/I1        0.000          0.002         -0.002  (VIOLATED) 
+     PIN : u_and/C36/I1        0.000          0.002         -0.002  (VIOLATED) 
+
+    Net: i_data_b[30]
+    max_transition        0.000
+  - Transition Time       0.002
+  --------------------------------
+    Slack                -0.002 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C37/I1         0.000          0.002         -0.002  (VIOLATED) 
+     PIN : u_xor/C37/I1        0.000          0.002         -0.002  (VIOLATED) 
+     PIN : u_and/C37/I1        0.000          0.002         -0.002  (VIOLATED) 
+
+    Net: i_data_b[29]
+    max_transition        0.000
+  - Transition Time       0.002
+  --------------------------------
+    Slack                -0.002 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C38/I1         0.000          0.002         -0.002  (VIOLATED) 
+     PIN : u_xor/C38/I1        0.000          0.002         -0.002  (VIOLATED) 
+     PIN : u_and/C38/I1        0.000          0.002         -0.002  (VIOLATED) 
+
+    Net: i_data_b[28]
+    max_transition        0.000
+  - Transition Time       0.002
+  --------------------------------
+    Slack                -0.002 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C39/I1         0.000          0.002         -0.002  (VIOLATED) 
+     PIN : u_xor/C39/I1        0.000          0.002         -0.002  (VIOLATED) 
+     PIN : u_and/C39/I1        0.000          0.002         -0.002  (VIOLATED) 
+
+    Net: i_data_b[27]
+    max_transition        0.000
+  - Transition Time       0.002
+  --------------------------------
+    Slack                -0.002 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C40/I1         0.000          0.002         -0.002  (VIOLATED) 
+     PIN : u_xor/C40/I1        0.000          0.002         -0.002  (VIOLATED) 
+     PIN : u_and/C40/I1        0.000          0.002         -0.002  (VIOLATED) 
+
+    Net: i_data_b[26]
+    max_transition        0.000
+  - Transition Time       0.002
+  --------------------------------
+    Slack                -0.002 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C41/I1         0.000          0.002         -0.002  (VIOLATED) 
+     PIN : u_xor/C41/I1        0.000          0.002         -0.002  (VIOLATED) 
+     PIN : u_and/C41/I1        0.000          0.002         -0.002  (VIOLATED) 
+
+    Net: i_data_b[25]
+    max_transition        0.000
+  - Transition Time       0.002
+  --------------------------------
+    Slack                -0.002 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C42/I1         0.000          0.002         -0.002  (VIOLATED) 
+     PIN : u_xor/C42/I1        0.000          0.002         -0.002  (VIOLATED) 
+     PIN : u_and/C42/I1        0.000          0.002         -0.002  (VIOLATED) 
+
+    Net: i_data_b[24]
+    max_transition        0.000
+  - Transition Time       0.002
+  --------------------------------
+    Slack                -0.002 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C43/I1         0.000          0.002         -0.002  (VIOLATED) 
+     PIN : u_xor/C43/I1        0.000          0.002         -0.002  (VIOLATED) 
+     PIN : u_and/C43/I1        0.000          0.002         -0.002  (VIOLATED) 
+
+    Net: i_data_b[23]
+    max_transition        0.000
+  - Transition Time       0.002
+  --------------------------------
+    Slack                -0.002 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C44/I1         0.000          0.002         -0.002  (VIOLATED) 
+     PIN : u_xor/C44/I1        0.000          0.002         -0.002  (VIOLATED) 
+     PIN : u_and/C44/I1        0.000          0.002         -0.002  (VIOLATED) 
+
+    Net: i_data_b[22]
+    max_transition        0.000
+  - Transition Time       0.002
+  --------------------------------
+    Slack                -0.002 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C45/I1         0.000          0.002         -0.002  (VIOLATED) 
+     PIN : u_xor/C45/I1        0.000          0.002         -0.002  (VIOLATED) 
+     PIN : u_and/C45/I1        0.000          0.002         -0.002  (VIOLATED) 
+
+    Net: i_data_b[21]
+    max_transition        0.000
+  - Transition Time       0.002
+  --------------------------------
+    Slack                -0.002 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C46/I1         0.000          0.002         -0.002  (VIOLATED) 
+     PIN : u_xor/C46/I1        0.000          0.002         -0.002  (VIOLATED) 
+     PIN : u_and/C46/I1        0.000          0.002         -0.002  (VIOLATED) 
+
+    Net: i_data_b[20]
+    max_transition        0.000
+  - Transition Time       0.002
+  --------------------------------
+    Slack                -0.002 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C47/I1         0.000          0.002         -0.002  (VIOLATED) 
+     PIN : u_xor/C47/I1        0.000          0.002         -0.002  (VIOLATED) 
+     PIN : u_and/C47/I1        0.000          0.002         -0.002  (VIOLATED) 
+
+    Net: i_data_b[19]
+    max_transition        0.000
+  - Transition Time       0.002
+  --------------------------------
+    Slack                -0.002 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C48/I1         0.000          0.002         -0.002  (VIOLATED) 
+     PIN : u_xor/C48/I1        0.000          0.002         -0.002  (VIOLATED) 
+     PIN : u_and/C48/I1        0.000          0.002         -0.002  (VIOLATED) 
+
+    Net: i_data_b[18]
+    max_transition        0.000
+  - Transition Time       0.002
+  --------------------------------
+    Slack                -0.002 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C49/I1         0.000          0.002         -0.002  (VIOLATED) 
+     PIN : u_xor/C49/I1        0.000          0.002         -0.002  (VIOLATED) 
+     PIN : u_and/C49/I1        0.000          0.002         -0.002  (VIOLATED) 
+
+    Net: i_data_b[17]
+    max_transition        0.000
+  - Transition Time       0.002
+  --------------------------------
+    Slack                -0.002 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C50/I1         0.000          0.002         -0.002  (VIOLATED) 
+     PIN : u_xor/C50/I1        0.000          0.002         -0.002  (VIOLATED) 
+     PIN : u_and/C50/I1        0.000          0.002         -0.002  (VIOLATED) 
+
+    Net: i_data_b[16]
+    max_transition        0.000
+  - Transition Time       0.002
+  --------------------------------
+    Slack                -0.002 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C51/I1         0.000          0.002         -0.002  (VIOLATED) 
+     PIN : u_xor/C51/I1        0.000          0.002         -0.002  (VIOLATED) 
+     PIN : u_and/C51/I1        0.000          0.002         -0.002  (VIOLATED) 
+
+    Net: i_data_b[15]
+    max_transition        0.000
+  - Transition Time       0.002
+  --------------------------------
+    Slack                -0.002 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C52/I1         0.000          0.002         -0.002  (VIOLATED) 
+     PIN : u_xor/C52/I1        0.000          0.002         -0.002  (VIOLATED) 
+     PIN : u_and/C52/I1        0.000          0.002         -0.002  (VIOLATED) 
+
+    Net: i_data_b[14]
+    max_transition        0.000
+  - Transition Time       0.002
+  --------------------------------
+    Slack                -0.002 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C53/I1         0.000          0.002         -0.002  (VIOLATED) 
+     PIN : u_xor/C53/I1        0.000          0.002         -0.002  (VIOLATED) 
+     PIN : u_and/C53/I1        0.000          0.002         -0.002  (VIOLATED) 
+
+    Net: i_data_b[13]
+    max_transition        0.000
+  - Transition Time       0.002
+  --------------------------------
+    Slack                -0.002 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C54/I1         0.000          0.002         -0.002  (VIOLATED) 
+     PIN : u_xor/C54/I1        0.000          0.002         -0.002  (VIOLATED) 
+     PIN : u_and/C54/I1        0.000          0.002         -0.002  (VIOLATED) 
+
+    Net: i_data_b[12]
+    max_transition        0.000
+  - Transition Time       0.002
+  --------------------------------
+    Slack                -0.002 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C55/I1         0.000          0.002         -0.002  (VIOLATED) 
+     PIN : u_xor/C55/I1        0.000          0.002         -0.002  (VIOLATED) 
+     PIN : u_and/C55/I1        0.000          0.002         -0.002  (VIOLATED) 
+
+    Net: i_data_b[11]
+    max_transition        0.000
+  - Transition Time       0.002
+  --------------------------------
+    Slack                -0.002 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C56/I1         0.000          0.002         -0.002  (VIOLATED) 
+     PIN : u_xor/C56/I1        0.000          0.002         -0.002  (VIOLATED) 
+     PIN : u_and/C56/I1        0.000          0.002         -0.002  (VIOLATED) 
+
+    Net: i_data_b[10]
+    max_transition        0.000
+  - Transition Time       0.002
+  --------------------------------
+    Slack                -0.002 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C57/I1         0.000          0.002         -0.002  (VIOLATED) 
+     PIN : u_xor/C57/I1        0.000          0.002         -0.002  (VIOLATED) 
+     PIN : u_and/C57/I1        0.000          0.002         -0.002  (VIOLATED) 
+
+    Net: i_data_b[9]
+    max_transition        0.000
+  - Transition Time       0.002
+  --------------------------------
+    Slack                -0.002 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C58/I1         0.000          0.002         -0.002  (VIOLATED) 
+     PIN : u_xor/C58/I1        0.000          0.002         -0.002  (VIOLATED) 
+     PIN : u_and/C58/I1        0.000          0.002         -0.002  (VIOLATED) 
+
+    Net: i_data_b[8]
+    max_transition        0.000
+  - Transition Time       0.002
+  --------------------------------
+    Slack                -0.002 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C59/I1         0.000          0.002         -0.002  (VIOLATED) 
+     PIN : u_xor/C59/I1        0.000          0.002         -0.002  (VIOLATED) 
+     PIN : u_and/C59/I1        0.000          0.002         -0.002  (VIOLATED) 
+
+    Net: i_data_b[7]
+    max_transition        0.000
+  - Transition Time       0.002
+  --------------------------------
+    Slack                -0.002 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C60/I1         0.000          0.002         -0.002  (VIOLATED) 
+     PIN : u_xor/C60/I1        0.000          0.002         -0.002  (VIOLATED) 
+     PIN : u_and/C60/I1        0.000          0.002         -0.002  (VIOLATED) 
+
+    Net: i_data_b[6]
+    max_transition        0.000
+  - Transition Time       0.002
+  --------------------------------
+    Slack                -0.002 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C61/I1         0.000          0.002         -0.002  (VIOLATED) 
+     PIN : u_xor/C61/I1        0.000          0.002         -0.002  (VIOLATED) 
+     PIN : u_and/C61/I1        0.000          0.002         -0.002  (VIOLATED) 
+
+    Net: i_data_b[5]
+    max_transition        0.000
+  - Transition Time       0.002
+  --------------------------------
+    Slack                -0.002 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C62/I1         0.000          0.002         -0.002  (VIOLATED) 
+     PIN : u_xor/C62/I1        0.000          0.002         -0.002  (VIOLATED) 
+     PIN : u_and/C62/I1        0.000          0.002         -0.002  (VIOLATED) 
+
+    Net: i_data_b[4]
+    max_transition        0.000
+  - Transition Time       0.002
+  --------------------------------
+    Slack                -0.002 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C63/I1         0.000          0.002         -0.002  (VIOLATED) 
+     PIN : u_xor/C63/I1        0.000          0.002         -0.002  (VIOLATED) 
+     PIN : u_and/C63/I1        0.000          0.002         -0.002  (VIOLATED) 
+
+    Net: i_data_b[3]
+    max_transition        0.000
+  - Transition Time       0.002
+  --------------------------------
+    Slack                -0.002 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C64/I1         0.000          0.002         -0.002  (VIOLATED) 
+     PIN : u_xor/C64/I1        0.000          0.002         -0.002  (VIOLATED) 
+     PIN : u_and/C64/I1        0.000          0.002         -0.002  (VIOLATED) 
+
+    Net: i_data_b[2]
+    max_transition        0.000
+  - Transition Time       0.002
+  --------------------------------
+    Slack                -0.002 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C65/I1         0.000          0.002         -0.002  (VIOLATED) 
+     PIN : u_xor/C65/I1        0.000          0.002         -0.002  (VIOLATED) 
+     PIN : u_and/C65/I1        0.000          0.002         -0.002  (VIOLATED) 
+
+    Net: i_data_b[1]
+    max_transition        0.000
+  - Transition Time       0.002
+  --------------------------------
+    Slack                -0.002 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C66/I1         0.000          0.002         -0.002  (VIOLATED) 
+     PIN : u_xor/C66/I1        0.000          0.002         -0.002  (VIOLATED) 
+     PIN : u_and/C66/I1        0.000          0.002         -0.002  (VIOLATED) 
+
+    Net: i_data_b[0]
+    max_transition        0.000
+  - Transition Time       0.002
+  --------------------------------
+    Slack                -0.002 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C67/I1         0.000          0.002         -0.002  (VIOLATED) 
+     PIN : u_xor/C67/I1        0.000          0.002         -0.002  (VIOLATED) 
+     PIN : u_and/C67/I1        0.000          0.002         -0.002  (VIOLATED) 
+
+    Net: i_sel_clock[0]
+    max_transition        0.000
+  - Transition Time       0.001
+  --------------------------------
+    Slack                -0.001 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_clock_mux/I_1/I    0.000         0.001         -0.001  (VIOLATED) 
+     PIN : u_clock_mux/C10/I1    0.000        0.001         -0.001  (VIOLATED) 
+     PIN : u_clock_mux/C12/I1    0.000        0.001         -0.001  (VIOLATED) 
+
+    Net: i_sel_clock[1]
+    max_transition        0.000
+  - Transition Time       0.001
+  --------------------------------
+    Slack                -0.001 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_clock_mux/I_0/I    0.000         0.001         -0.001  (VIOLATED) 
+     PIN : u_clock_mux/C7/I0    0.000         0.001         -0.001  (VIOLATED) 
+     PIN : u_clock_mux/C12/I0    0.000        0.001         -0.001  (VIOLATED) 
+
+    Net: i_data_a[31]
+    max_transition        0.000
+  - Transition Time       0.000
+  --------------------------------
+    Slack                -0.000 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C36/I0         0.000          0.000         -0.000  (VIOLATED) 
+     PIN : u_xor/C36/I0        0.000          0.000         -0.000  (VIOLATED) 
+     PIN : u_and/C36/I0        0.000          0.000         -0.000  (VIOLATED) 
+
+    Net: i_data_a[30]
+    max_transition        0.000
+  - Transition Time       0.000
+  --------------------------------
+    Slack                -0.000 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C37/I0         0.000          0.000         -0.000  (VIOLATED) 
+     PIN : u_xor/C37/I0        0.000          0.000         -0.000  (VIOLATED) 
+     PIN : u_and/C37/I0        0.000          0.000         -0.000  (VIOLATED) 
+
+    Net: i_data_a[29]
+    max_transition        0.000
+  - Transition Time       0.000
+  --------------------------------
+    Slack                -0.000 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C38/I0         0.000          0.000         -0.000  (VIOLATED) 
+     PIN : u_xor/C38/I0        0.000          0.000         -0.000  (VIOLATED) 
+     PIN : u_and/C38/I0        0.000          0.000         -0.000  (VIOLATED) 
+
+    Net: i_data_a[28]
+    max_transition        0.000
+  - Transition Time       0.000
+  --------------------------------
+    Slack                -0.000 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C39/I0         0.000          0.000         -0.000  (VIOLATED) 
+     PIN : u_xor/C39/I0        0.000          0.000         -0.000  (VIOLATED) 
+     PIN : u_and/C39/I0        0.000          0.000         -0.000  (VIOLATED) 
+
+    Net: i_data_a[27]
+    max_transition        0.000
+  - Transition Time       0.000
+  --------------------------------
+    Slack                -0.000 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C40/I0         0.000          0.000         -0.000  (VIOLATED) 
+     PIN : u_xor/C40/I0        0.000          0.000         -0.000  (VIOLATED) 
+     PIN : u_and/C40/I0        0.000          0.000         -0.000  (VIOLATED) 
+
+    Net: i_data_a[26]
+    max_transition        0.000
+  - Transition Time       0.000
+  --------------------------------
+    Slack                -0.000 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C41/I0         0.000          0.000         -0.000  (VIOLATED) 
+     PIN : u_xor/C41/I0        0.000          0.000         -0.000  (VIOLATED) 
+     PIN : u_and/C41/I0        0.000          0.000         -0.000  (VIOLATED) 
+
+    Net: i_data_a[25]
+    max_transition        0.000
+  - Transition Time       0.000
+  --------------------------------
+    Slack                -0.000 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C42/I0         0.000          0.000         -0.000  (VIOLATED) 
+     PIN : u_xor/C42/I0        0.000          0.000         -0.000  (VIOLATED) 
+     PIN : u_and/C42/I0        0.000          0.000         -0.000  (VIOLATED) 
+
+    Net: i_data_a[24]
+    max_transition        0.000
+  - Transition Time       0.000
+  --------------------------------
+    Slack                -0.000 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C43/I0         0.000          0.000         -0.000  (VIOLATED) 
+     PIN : u_xor/C43/I0        0.000          0.000         -0.000  (VIOLATED) 
+     PIN : u_and/C43/I0        0.000          0.000         -0.000  (VIOLATED) 
+
+    Net: i_data_a[23]
+    max_transition        0.000
+  - Transition Time       0.000
+  --------------------------------
+    Slack                -0.000 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C44/I0         0.000          0.000         -0.000  (VIOLATED) 
+     PIN : u_xor/C44/I0        0.000          0.000         -0.000  (VIOLATED) 
+     PIN : u_and/C44/I0        0.000          0.000         -0.000  (VIOLATED) 
+
+    Net: i_data_a[22]
+    max_transition        0.000
+  - Transition Time       0.000
+  --------------------------------
+    Slack                -0.000 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C45/I0         0.000          0.000         -0.000  (VIOLATED) 
+     PIN : u_xor/C45/I0        0.000          0.000         -0.000  (VIOLATED) 
+     PIN : u_and/C45/I0        0.000          0.000         -0.000  (VIOLATED) 
+
+    Net: i_data_a[20]
+    max_transition        0.000
+  - Transition Time       0.000
+  --------------------------------
+    Slack                -0.000 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C47/I0         0.000          0.000         -0.000  (VIOLATED) 
+     PIN : u_xor/C47/I0        0.000          0.000         -0.000  (VIOLATED) 
+     PIN : u_and/C47/I0        0.000          0.000         -0.000  (VIOLATED) 
+
+    Net: i_data_a[19]
+    max_transition        0.000
+  - Transition Time       0.000
+  --------------------------------
+    Slack                -0.000 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C48/I0         0.000          0.000         -0.000  (VIOLATED) 
+     PIN : u_xor/C48/I0        0.000          0.000         -0.000  (VIOLATED) 
+     PIN : u_and/C48/I0        0.000          0.000         -0.000  (VIOLATED) 
+
+    Net: i_data_a[21]
+    max_transition        0.000
+  - Transition Time       0.000
+  --------------------------------
+    Slack                -0.000 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C46/I0         0.000          0.000         -0.000  (VIOLATED) 
+     PIN : u_xor/C46/I0        0.000          0.000         -0.000  (VIOLATED) 
+     PIN : u_and/C46/I0        0.000          0.000         -0.000  (VIOLATED) 
+
+    Net: i_operation[1]
+    max_transition        0.000
+  - Transition Time       0.000
+  --------------------------------
+    Slack                -0.000 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_mux/I_0/I         0.000          0.000         -0.000  (VIOLATED) 
+     PIN : u_mux/C7/I0         0.000          0.000         -0.000  (VIOLATED) 
+     PIN : u_mux/C12/I0        0.000          0.000         -0.000  (VIOLATED) 
+
+    Net: i_data_a[18]
+    max_transition        0.000
+  - Transition Time       0.000
+  --------------------------------
+    Slack                -0.000 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C49/I0         0.000          0.000         -0.000  (VIOLATED) 
+     PIN : u_xor/C49/I0        0.000          0.000         -0.000  (VIOLATED) 
+     PIN : u_and/C49/I0        0.000          0.000         -0.000  (VIOLATED) 
+
+    Net: i_operation[0]
+    max_transition        0.000
+  - Transition Time       0.000
+  --------------------------------
+    Slack                -0.000 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_mux/I_1/I         0.000          0.000         -0.000  (VIOLATED) 
+     PIN : u_mux/C10/I1        0.000          0.000         -0.000  (VIOLATED) 
+     PIN : u_mux/C12/I1        0.000          0.000         -0.000  (VIOLATED) 
+
+    Net: i_data_a[17]
+    max_transition        0.000
+  - Transition Time       0.000
+  --------------------------------
+    Slack                -0.000 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C50/I0         0.000          0.000         -0.000  (VIOLATED) 
+     PIN : u_xor/C50/I0        0.000          0.000         -0.000  (VIOLATED) 
+     PIN : u_and/C50/I0        0.000          0.000         -0.000  (VIOLATED) 
+
+    Net: i_data_a[16]
+    max_transition        0.000
+  - Transition Time       0.000
+  --------------------------------
+    Slack                -0.000 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C51/I0         0.000          0.000         -0.000  (VIOLATED) 
+     PIN : u_xor/C51/I0        0.000          0.000         -0.000  (VIOLATED) 
+     PIN : u_and/C51/I0        0.000          0.000         -0.000  (VIOLATED) 
+
+    Net: i_data_a[15]
+    max_transition        0.000
+  - Transition Time       0.000
+  --------------------------------
+    Slack                -0.000 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C52/I0         0.000          0.000         -0.000  (VIOLATED) 
+     PIN : u_xor/C52/I0        0.000          0.000         -0.000  (VIOLATED) 
+     PIN : u_and/C52/I0        0.000          0.000         -0.000  (VIOLATED) 
+
+    Net: i_data_a[14]
+    max_transition        0.000
+  - Transition Time       0.000
+  --------------------------------
+    Slack                -0.000 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C53/I0         0.000          0.000         -0.000  (VIOLATED) 
+     PIN : u_xor/C53/I0        0.000          0.000         -0.000  (VIOLATED) 
+     PIN : u_and/C53/I0        0.000          0.000         -0.000  (VIOLATED) 
+
+    Net: i_data_a[13]
+    max_transition        0.000
+  - Transition Time       0.000
+  --------------------------------
+    Slack                -0.000 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C54/I0         0.000          0.000         -0.000  (VIOLATED) 
+     PIN : u_xor/C54/I0        0.000          0.000         -0.000  (VIOLATED) 
+     PIN : u_and/C54/I0        0.000          0.000         -0.000  (VIOLATED) 
+
+    Net: i_data_a[12]
+    max_transition        0.000
+  - Transition Time       0.000
+  --------------------------------
+    Slack                -0.000 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C55/I0         0.000          0.000         -0.000  (VIOLATED) 
+     PIN : u_xor/C55/I0        0.000          0.000         -0.000  (VIOLATED) 
+     PIN : u_and/C55/I0        0.000          0.000         -0.000  (VIOLATED) 
+
+    Net: i_data_a[11]
+    max_transition        0.000
+  - Transition Time       0.000
+  --------------------------------
+    Slack                -0.000 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C56/I0         0.000          0.000         -0.000  (VIOLATED) 
+     PIN : u_xor/C56/I0        0.000          0.000         -0.000  (VIOLATED) 
+     PIN : u_and/C56/I0        0.000          0.000         -0.000  (VIOLATED) 
+
+    Net: i_data_a[10]
+    max_transition        0.000
+  - Transition Time       0.000
+  --------------------------------
+    Slack                -0.000 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C57/I0         0.000          0.000         -0.000  (VIOLATED) 
+     PIN : u_xor/C57/I0        0.000          0.000         -0.000  (VIOLATED) 
+     PIN : u_and/C57/I0        0.000          0.000         -0.000  (VIOLATED) 
+
+    Net: i_data_a[8]
+    max_transition        0.000
+  - Transition Time       0.000
+  --------------------------------
+    Slack                -0.000 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C59/I0         0.000          0.000         -0.000  (VIOLATED) 
+     PIN : u_xor/C59/I0        0.000          0.000         -0.000  (VIOLATED) 
+     PIN : u_and/C59/I0        0.000          0.000         -0.000  (VIOLATED) 
+
+    Net: i_data_a[9]
+    max_transition        0.000
+  - Transition Time       0.000
+  --------------------------------
+    Slack                -0.000 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C58/I0         0.000          0.000         -0.000  (VIOLATED) 
+     PIN : u_xor/C58/I0        0.000          0.000         -0.000  (VIOLATED) 
+     PIN : u_and/C58/I0        0.000          0.000         -0.000  (VIOLATED) 
+
+    Net: i_data_a[7]
+    max_transition        0.000
+  - Transition Time       0.000
+  --------------------------------
+    Slack                -0.000 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C60/I0         0.000          0.000         -0.000  (VIOLATED) 
+     PIN : u_xor/C60/I0        0.000          0.000         -0.000  (VIOLATED) 
+     PIN : u_and/C60/I0        0.000          0.000         -0.000  (VIOLATED) 
+
+    Net: i_data_a[6]
+    max_transition        0.000
+  - Transition Time       0.000
+  --------------------------------
+    Slack                -0.000 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C61/I0         0.000          0.000         -0.000  (VIOLATED) 
+     PIN : u_xor/C61/I0        0.000          0.000         -0.000  (VIOLATED) 
+     PIN : u_and/C61/I0        0.000          0.000         -0.000  (VIOLATED) 
+
+    Net: i_data_a[5]
+    max_transition        0.000
+  - Transition Time       0.000
+  --------------------------------
+    Slack                -0.000 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C62/I0         0.000          0.000         -0.000  (VIOLATED) 
+     PIN : u_xor/C62/I0        0.000          0.000         -0.000  (VIOLATED) 
+     PIN : u_and/C62/I0        0.000          0.000         -0.000  (VIOLATED) 
+
+    Net: i_data_a[4]
+    max_transition        0.000
+  - Transition Time       0.000
+  --------------------------------
+    Slack                -0.000 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C63/I0         0.000          0.000         -0.000  (VIOLATED) 
+     PIN : u_xor/C63/I0        0.000          0.000         -0.000  (VIOLATED) 
+     PIN : u_and/C63/I0        0.000          0.000         -0.000  (VIOLATED) 
+
+    Net: i_data_a[3]
+    max_transition        0.000
+  - Transition Time       0.000
+  --------------------------------
+    Slack                -0.000 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C64/I0         0.000          0.000         -0.000  (VIOLATED) 
+     PIN : u_xor/C64/I0        0.000          0.000         -0.000  (VIOLATED) 
+     PIN : u_and/C64/I0        0.000          0.000         -0.000  (VIOLATED) 
+
+    Net: i_data_a[2]
+    max_transition        0.000
+  - Transition Time       0.000
+  --------------------------------
+    Slack                -0.000 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C65/I0         0.000          0.000         -0.000  (VIOLATED) 
+     PIN : u_xor/C65/I0        0.000          0.000         -0.000  (VIOLATED) 
+     PIN : u_and/C65/I0        0.000          0.000         -0.000  (VIOLATED) 
+
+    Net: i_data_a[1]
+    max_transition        0.000
+  - Transition Time       0.000
+  --------------------------------
+    Slack                -0.000 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C66/I0         0.000          0.000         -0.000  (VIOLATED) 
+     PIN : u_xor/C66/I0        0.000          0.000         -0.000  (VIOLATED) 
+     PIN : u_and/C66/I0        0.000          0.000         -0.000  (VIOLATED) 
+
+    Net: i_data_a[0]
+    max_transition        0.000
+  - Transition Time       0.000
+  --------------------------------
+    Slack                -0.000 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : u_or/C67/I0         0.000          0.000         -0.000  (VIOLATED) 
+     PIN : u_xor/C67/I0        0.000          0.000         -0.000  (VIOLATED) 
+     PIN : u_and/C67/I0        0.000          0.000         -0.000  (VIOLATED) 
+
+  ---------------------------------------------------------------------------
+   Number of max_transition violation(s): 103
+
+   Mode: func Corner: setup_ss0p72v125c
+   Scenario: func::setup_ss0p72v125c
+    Net: o_data[8]
+    max_capacitance       0.000
+  - Capacitance           0.008
+  --------------------------------
+    Slack                -0.008 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : data_out_reg_8_/Q    0.000         0.008         -0.008  (VIOLATED) 
+
+    Net: o_data[0]
+    max_capacitance       0.000
+  - Capacitance           0.008
+  --------------------------------
+    Slack                -0.008 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : data_out_reg_0_/Q    0.000         0.008         -0.008  (VIOLATED) 
+
+    Net: o_data[9]
+    max_capacitance       0.000
+  - Capacitance           0.008
+  --------------------------------
+    Slack                -0.008 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : data_out_reg_9_/Q    0.000         0.008         -0.008  (VIOLATED) 
+
+    Net: o_data[1]
+    max_capacitance       0.000
+  - Capacitance           0.008
+  --------------------------------
+    Slack                -0.008 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : data_out_reg_1_/Q    0.000         0.008         -0.008  (VIOLATED) 
+
+    Net: o_data[19]
+    max_capacitance       0.000
+  - Capacitance           0.008
+  --------------------------------
+    Slack                -0.008 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : data_out_reg_19_/Q    0.000        0.008         -0.008  (VIOLATED) 
+
+    Net: o_data[10]
+    max_capacitance       0.000
+  - Capacitance           0.007
+  --------------------------------
+    Slack                -0.007 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : data_out_reg_10_/Q    0.000        0.007         -0.007  (VIOLATED) 
+
+    Net: o_data[2]
+    max_capacitance       0.000
+  - Capacitance           0.007
+  --------------------------------
+    Slack                -0.007 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : data_out_reg_2_/Q    0.000         0.007         -0.007  (VIOLATED) 
+
+    Net: o_data[20]
+    max_capacitance       0.000
+  - Capacitance           0.007
+  --------------------------------
+    Slack                -0.007 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : data_out_reg_20_/Q    0.000        0.007         -0.007  (VIOLATED) 
+
+    Net: o_data[11]
+    max_capacitance       0.000
+  - Capacitance           0.007
+  --------------------------------
+    Slack                -0.007 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : data_out_reg_11_/Q    0.000        0.007         -0.007  (VIOLATED) 
+
+    Net: o_data[3]
+    max_capacitance       0.000
+  - Capacitance           0.007
+  --------------------------------
+    Slack                -0.007 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : data_out_reg_3_/Q    0.000         0.007         -0.007  (VIOLATED) 
+
+    Net: o_data[21]
+    max_capacitance       0.000
+  - Capacitance           0.007
+  --------------------------------
+    Slack                -0.007 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : data_out_reg_21_/Q    0.000        0.007         -0.007  (VIOLATED) 
+
+    Net: o_data[12]
+    max_capacitance       0.000
+  - Capacitance           0.007
+  --------------------------------
+    Slack                -0.007 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : data_out_reg_12_/Q    0.000        0.007         -0.007  (VIOLATED) 
+
+    Net: o_data[4]
+    max_capacitance       0.000
+  - Capacitance           0.007
+  --------------------------------
+    Slack                -0.007 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : data_out_reg_4_/Q    0.000         0.007         -0.007  (VIOLATED) 
+
+    Net: o_data[22]
+    max_capacitance       0.000
+  - Capacitance           0.007
+  --------------------------------
+    Slack                -0.007 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : data_out_reg_22_/Q    0.000        0.007         -0.007  (VIOLATED) 
+
+    Net: o_data[5]
+    max_capacitance       0.000
+  - Capacitance           0.007
+  --------------------------------
+    Slack                -0.007 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : data_out_reg_5_/Q    0.000         0.007         -0.007  (VIOLATED) 
+
+    Net: o_data[13]
+    max_capacitance       0.000
+  - Capacitance           0.007
+  --------------------------------
+    Slack                -0.007 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : data_out_reg_13_/Q    0.000        0.007         -0.007  (VIOLATED) 
+
+    Net: o_data[23]
+    max_capacitance       0.000
+  - Capacitance           0.007
+  --------------------------------
+    Slack                -0.007 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : data_out_reg_23_/Q    0.000        0.007         -0.007  (VIOLATED) 
+
+    Net: o_data[6]
+    max_capacitance       0.000
+  - Capacitance           0.007
+  --------------------------------
+    Slack                -0.007 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : data_out_reg_6_/Q    0.000         0.007         -0.007  (VIOLATED) 
+
+    Net: o_data[14]
+    max_capacitance       0.000
+  - Capacitance           0.007
+  --------------------------------
+    Slack                -0.007 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : data_out_reg_14_/Q    0.000        0.007         -0.007  (VIOLATED) 
+
+    Net: o_data[24]
+    max_capacitance       0.000
+  - Capacitance           0.007
+  --------------------------------
+    Slack                -0.007 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : data_out_reg_24_/Q    0.000        0.007         -0.007  (VIOLATED) 
+
+    Net: o_data[30]
+    max_capacitance       0.000
+  - Capacitance           0.007
+  --------------------------------
+    Slack                -0.007 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : data_out_reg_30_/Q    0.000        0.007         -0.007  (VIOLATED) 
+
+    Net: o_data[7]
+    max_capacitance       0.000
+  - Capacitance           0.007
+  --------------------------------
+    Slack                -0.007 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : data_out_reg_7_/Q    0.000         0.007         -0.007  (VIOLATED) 
+
+    Net: o_data[15]
+    max_capacitance       0.000
+  - Capacitance           0.007
+  --------------------------------
+    Slack                -0.007 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : data_out_reg_15_/Q    0.000        0.007         -0.007  (VIOLATED) 
+
+    Net: o_data[25]
+    max_capacitance       0.000
+  - Capacitance           0.007
+  --------------------------------
+    Slack                -0.007 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : data_out_reg_25_/Q    0.000        0.007         -0.007  (VIOLATED) 
+
+    Net: o_data[31]
+    max_capacitance       0.000
+  - Capacitance           0.007
+  --------------------------------
+    Slack                -0.007 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : data_out_reg_31_/Q    0.000        0.007         -0.007  (VIOLATED) 
+
+    Net: o_data[16]
+    max_capacitance       0.000
+  - Capacitance           0.007
+  --------------------------------
+    Slack                -0.007 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : data_out_reg_16_/Q    0.000        0.007         -0.007  (VIOLATED) 
+
+    Net: o_data[26]
+    max_capacitance       0.000
+  - Capacitance           0.007
+  --------------------------------
+    Slack                -0.007 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : data_out_reg_26_/Q    0.000        0.007         -0.007  (VIOLATED) 
+
+    Net: o_data[17]
+    max_capacitance       0.000
+  - Capacitance           0.007
+  --------------------------------
+    Slack                -0.007 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : data_out_reg_17_/Q    0.000        0.007         -0.007  (VIOLATED) 
+
+    Net: o_data[27]
+    max_capacitance       0.000
+  - Capacitance           0.007
+  --------------------------------
+    Slack                -0.007 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : data_out_reg_27_/Q    0.000        0.007         -0.007  (VIOLATED) 
+
+    Net: o_data[18]
+    max_capacitance       0.000
+  - Capacitance           0.007
+  --------------------------------
+    Slack                -0.007 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : data_out_reg_18_/Q    0.000        0.007         -0.007  (VIOLATED) 
+
+    Net: o_data[28]
+    max_capacitance       0.000
+  - Capacitance           0.007
+  --------------------------------
+    Slack                -0.007 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : data_out_reg_28_/Q    0.000        0.007         -0.007  (VIOLATED) 
+
+    Net: o_data[29]
+    max_capacitance       0.000
+  - Capacitance           0.007
+  --------------------------------
+    Slack                -0.007 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : data_out_reg_29_/Q    0.000        0.007         -0.007  (VIOLATED) 
+
+    Net: o_valid
+    max_capacitance       0.000
+  - Capacitance           0.005
+  --------------------------------
+    Slack                -0.005 (VIOLATED)
+
+  List of violating pins on net:
+  ---------------------------------------------------------------------------
+                             Required        Actual                            
+     Pin/Port               Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+     PIN : o_valid_reg_reg/Q    0.000         0.005         -0.005  (VIOLATED) 
+
+  ---------------------------------------------------------------------------
+   Number of max_capacitance violation(s): 33
+
+   Total number of violation(s): 239
+1

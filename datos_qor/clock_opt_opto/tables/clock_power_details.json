@@ -1,0 +1,17 @@
+[
+  ["Clock", "Attrs", "Leakage", "ClkInternal", "SinkInternal", "Switching", "Dynamic", "Total"],
+  ["hold_ff0p88v125c", "Corner", "0.011", ".", ".", ".", ".", "."], 
+  ["hold_ff0p88v125c/func", "Mode", ".", ".", ".", ".", ".", "."], 
+  ["hold_ff0p88v125c/func/func::hold_ff0p88v125c", "Scenario", ".", ".", ".", ".", ".", "."], 
+  ["hold_ff0p88v125c/func/func::hold_ff0p88v125c/CLOCK_MAIN", "M,D", "0.011", ".", ".", ".", ".", "."], 
+  ["hold_ff0p88v125c/func/func::hold_ff0p88v125c/CLOCK_MAIN/gen_clk_div2", "G", "0.008", ".", ".", ".", ".", "."], 
+  ["hold_ff0p88v125c/func/func::hold_ff0p88v125c/CLOCK_MAIN/gen_clk_div2/gen_clk_div4", "G", "0.007", ".", ".", ".", ".", "."], 
+  ["hold_ff0p88v125c/func/func::hold_ff0p88v125c/CLOCK_MAIN/gen_clk_div2/gen_clk_div4/gen_clk_div8", "G", "0.005", ".", ".", ".", ".", "."], 
+  ["setup_ss0p72v125c", "Corner", "0.001", "0.000", "0.001", "0.001", "0.003", "0.004"], 
+  ["setup_ss0p72v125c/func", "Mode", ".", ".", ".", ".", ".", "."], 
+  ["setup_ss0p72v125c/func/func::setup_ss0p72v125c", "Scenario", ".", ".", ".", ".", ".", "."], 
+  ["setup_ss0p72v125c/func/func::setup_ss0p72v125c/CLOCK_MAIN", "M,D", "0.001", "0.000", "0.001", "0.001", "0.003", "0.004"], 
+  ["setup_ss0p72v125c/func/func::setup_ss0p72v125c/CLOCK_MAIN/gen_clk_div2", "G", "0.001", "0.000", "0.001", "0.001", "0.002", "0.003"], 
+  ["setup_ss0p72v125c/func/func::setup_ss0p72v125c/CLOCK_MAIN/gen_clk_div2/gen_clk_div4", "G", "0.001", "0.000", "0.001", "0.001", "0.002", "0.003"], 
+  ["setup_ss0p72v125c/func/func::setup_ss0p72v125c/CLOCK_MAIN/gen_clk_div2/gen_clk_div4/gen_clk_div8", "G", "0.000", "0.000", "0.001", "0.001", "0.002", "0.003"]
+]

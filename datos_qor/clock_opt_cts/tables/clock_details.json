@@ -1,0 +1,17 @@
+[
+  ["Clock", "Attrs", "Sinks", "Levels", "BufCount", "BufArea", "StdCellArea", "MaxLatency", "GlobalSkew", "TranDRCs", "CapDRCs", "WireLength"],
+  ["hold_ff0p88v125c", "Corner", "33", "11", "9", "3", "9", "0.104", "0.067", "0", "0", "213"], 
+  ["hold_ff0p88v125c/func", "Mode", ".", ".", ".", ".", ".", ".", ".", ".", ".", "."], 
+  ["hold_ff0p88v125c/func/func::hold_ff0p88v125c", "Scenario", ".", ".", ".", ".", ".", ".", ".", ".", ".", "."], 
+  ["hold_ff0p88v125c/func/func::hold_ff0p88v125c/CLOCK_MAIN", "M,D", "33", "11", "9", "3", "9", "0.104", "0.067", "0", "0", "213"], 
+  ["hold_ff0p88v125c/func/func::hold_ff0p88v125c/CLOCK_MAIN/gen_clk_div2", "G", "33", "9", "9", "3", "7", "0.084", "0.046", "0", "0", "176"], 
+  ["hold_ff0p88v125c/func/func::hold_ff0p88v125c/CLOCK_MAIN/gen_clk_div2/gen_clk_div4", "G", "33", "8", "8", "2", "5", "0.067", "0.024", "0", "0", "163"], 
+  ["hold_ff0p88v125c/func/func::hold_ff0p88v125c/CLOCK_MAIN/gen_clk_div2/gen_clk_div4/gen_clk_div8", "G", "33", "7", "7", "2", "3", "0.049", "0.004", "0", "0", "157"], 
+  ["setup_ss0p72v125c", "Corner", "33", "11", "9", "3", "9", "0.169", "0.103", "0", "0", "213"], 
+  ["setup_ss0p72v125c/func", "Mode", ".", ".", ".", ".", ".", ".", ".", ".", ".", "."], 
+  ["setup_ss0p72v125c/func/func::setup_ss0p72v125c", "Scenario", ".", ".", ".", ".", ".", ".", ".", ".", ".", "."], 
+  ["setup_ss0p72v125c/func/func::setup_ss0p72v125c/CLOCK_MAIN", "M,D", "33", "11", "9", "3", "9", "0.169", "0.103", "0", "0", "213"], 
+  ["setup_ss0p72v125c/func/func::setup_ss0p72v125c/CLOCK_MAIN/gen_clk_div2", "G", "33", "9", "9", "3", "7", "0.140", "0.071", "0", "0", "176"], 
+  ["setup_ss0p72v125c/func/func::setup_ss0p72v125c/CLOCK_MAIN/gen_clk_div2/gen_clk_div4", "G", "33", "8", "8", "2", "5", "0.115", "0.037", "0", "0", "163"], 
+  ["setup_ss0p72v125c/func/func::setup_ss0p72v125c/CLOCK_MAIN/gen_clk_div2/gen_clk_div4/gen_clk_div8", "G", "33", "7", "7", "2", "3", "0.088", "0.006", "0", "0", "157"]
+]

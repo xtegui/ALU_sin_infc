@@ -1,0 +1,4 @@
+{
+  "columns": ["Hostname", "CpuInfo", "CPUs", "Threads", "Cores", "Sockets", "TotalMem", "FreeMem", "TotalSwap", "FreeSwap", "StageRun", "PreRun", "RptRun", "PeakMem", "PeakMemAll", "MaxCores", "PostRun"],
+  "values": ["laurenz", "Intel(R) Core(TM) i7-6700 CPU @ 3.40GHz", "8", "2", "4", "1", "15", "7", "8", "8", "1.26", "0.91", "0.00", "1.1", "1.1", "8", "0.34"]
+}

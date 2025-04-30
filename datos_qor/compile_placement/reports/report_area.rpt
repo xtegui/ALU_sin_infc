@@ -1,0 +1,85 @@
+****************************************
+Report : area
+Design : ALU_votegui
+Version: U-2022.12
+Date   : Mon Apr 28 05:52:46 2025
+****************************************
+Information: Base Cell (com): cell SAEDHVT14_AN2B_MM_8, w=148, h=60 (npin=3) Information: Base Cell (seq): cell SAEDRVT14_FDPRBSBQ_V2_0P5, w=199, h=60 (npin=5)
+
+
+Number of ports:                          855
+Number of nets:                          1126
+Number of cells:                          237
+Number of combinational cells:            201
+Number of sequential cells:                36
+Number of macros/black boxes:               0
+Number of buf/inv:                         31
+Number of references:                      24
+
+Combinational area:                    42.935
+Buf/Inv area:                           3.374
+Noncombinational area:                  0.000
+Macro/Black Box area:                   0.000
+
+Total cell area:                       42.935
+
+Core Area:                           2258
+Aspect Ratio:                      0.9946
+Utilization Ratio:                 0.0653
+
+The above information was reported from the logical library. The following are from the physical library:
+
+Total moveable cell area:            42.9
+Total fixed cell area:                0.0
+Total physical cell area:            42.9
+Core area:                          1.184, 1.200, 48.840, 48.600
+
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area                  Local cell area
+                                  -------------------------------------------------------------
+Hierarchical cell                 Absolute      Percent  Combi-       Noncombi-    Black-
+                                  Total         Total    national     national     boxes         Design
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ALU_votegui                             42.935    100.0        0.000        0.000         0.000  ALU_votegui
+u_and                                    0.000      0.0        0.000        0.000         0.000  ALU_votegui_and_op_1
+u_clock_mux                              0.000      0.0        0.000        0.000         0.000  ALU_votegui_clock_mux_1
+u_mux                                    0.000      0.0        0.000        0.000         0.000  ALU_votegui_op_mux_1
+u_or                                     0.000      0.0        0.000        0.000         0.000  ALU_votegui_or_op_1
+u_sum                                   42.935    100.0        0.000        0.000         0.000  ALU_votegui_sum_op_1
+u_sum/add_7                             42.935    100.0        0.000        0.000         0.000  ADD_UNS_OP_J0_D1
+u_sum/add_7/U0                          42.935    100.0       42.935        0.000         0.000  DW01_add_J0_D1
+u_xor                                    0.000      0.0        0.000        0.000         0.000  ALU_votegui_xor_op_1
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+Total                                                         42.935        0.000         0.000
+
+Area distribution across function class IDs
+-------------------------------------------
+
+                                                Function      Cell          Cell    Average   Most used
+                                                class id     count          area      drive   lib_cell
+--------------------------------------------------------------------------------------------------------
+                                                   Ia1.0        31           3.374     0.00  SAEDSLVT14_INV_S_1
+                                                   Ia2.0        15           3.330     0.00  SAEDSLVT14_ND2_CDC_1
+                                                   Ia2.2        36           0.000     0.00  WVGTECH_OR2
+                                                    a2.0        36           0.000     0.00  WVGTECH_AND2
+                                                    a2.2        16           3.552     0.00  SAEDSLVT14_NR2_MM_1
+                                              maj23_xor3        32          32.678     0.00  SAEDSLVT14_ADDF_V1_1
+                                                 unknown        39           0.000     0.00  *SEQGEN.1839103_120_2
+                                                    xor2        32           0.000     0.00  WVGTECH_XOR2
+--------------------------------------------------------------------------------------------------------
+                                                   total       237          42.935
+Warning: Area information not found for cell u_sum/add_7/U0 (DWS-0215)
+
+Area of detected synthetic parts
+--------------------------------
+  No DW parts to report!
+
+Estimated area of ungrouped synthetic parts
+-------------------------------------------
+  No DW parts to report!
+
+
+1

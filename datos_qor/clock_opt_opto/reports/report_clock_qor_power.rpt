@@ -1,0 +1,46 @@
+3         42.313          0.000
+
+
+****************************************
+Report : report clock qor
+        -type_list {power}
+        -nosplit
+Design : ALU_votegui
+Version: U-2022.12
+Date   : Mon Apr 28 07:36:03 2025
+****************************************
+Information: Activity for scenario func::setup_ss0p72v125c was cached, no propagation required. (POW-005)
+Information: Activity for scenario func::hold_ff0p88v125c was cached, no propagation required. (POW-005)
+
+
+==============================
+==== Power (per scenario) ====
+==============================
+
+Clock                               ClkTree        ClkTree           Sink            Net          Total
+                                    Leakage       Internal       Internal      Switching        Dynamic          Total
+                                  (stdcell)      (stdcell)      (stdcell)         (nets)          Power          Power
+                                       (mW)           (mW)           (mW)           (mW)           (mW)           (mW)
+------------------------------------------------------------------------------------------------------------------------
+### Mode: func, Corner: hold_ff0p88v125c, Scenario: func::hold_ff0p88v125c
+CLOCK_MAIN                            0.011            N/A            N/A            N/A            N/A            N/A
+ gen_clk_div2                         0.008            N/A            N/A            N/A            N/A            N/A
+  gen_clk_div4                        0.007            N/A            N/A            N/A            N/A            N/A
+   gen_clk_div8                       0.005            N/A            N/A            N/A            N/A            N/A
+------------------------------------------------------------------------------------------------------------------------
+Total                                 0.011            N/A            N/A            N/A            N/A            N/A
+
+### Mode: func, Corner: setup_ss0p72v125c, Scenario: func::setup_ss0p72v125c
+CLOCK_MAIN                            0.001          0.000          0.001          0.001          0.003          0.004
+ gen_clk_div2                         0.001          0.000          0.001          0.001          0.002          0.003
+  gen_clk_div4                        0.001          0.000          0.001          0.001          0.002          0.003
+   gen_clk_div8                       0.000          0.000          0.001          0.001          0.002          0.003
+------------------------------------------------------------------------------------------------------------------------
+Total                                 0.001          0.000          0.001          0.001          0.003          0.004
+
+ Info: Initializing timer in CLOCK_SYN_REPORT_MODE
+Warning: The scenario func::hold_ff0p88v125c has max capacitance DRC fixing disabled using the set_scenario_status command.  High DRC count may be expected.
+
+
+****************************************
+Report : clock qor

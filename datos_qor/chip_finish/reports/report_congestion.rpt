@@ -1,0 +1,15 @@
+****************************************
+Report : congestion
+Design : ALU_votegui
+Version: U-2022.12
+Date   : Mon Apr 28 13:46:09 2025
+****************************************
+
+Layer     |    overflow     |               # GRCs has
+Name      |  total  |  max  | overflow (%)       | max overflow
+---------------------------------------------------------------
+Both Dirs |      21 |     3 |      15  ( 0.109%) |       3
+H routing |      15 |     3 |      11  ( 0.160%) |       2
+V routing |       6 |     3 |       4  ( 0.058%) |       1
+
+1

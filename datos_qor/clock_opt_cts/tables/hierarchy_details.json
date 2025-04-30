@@ -1,0 +1,10 @@
+[
+  ["Cell", "HierTotArea", "HierPctArea", "StdCellArea", "CombArea", "SeqArea", "MacroBBArea", "Design"],
+  [".", "213", "100", "110", "61", "50", "0", "ALU_votegui"], 
+  ["./u_and", "10", "5", "10", "10", "0", "0", "ALU_votegui_and_op_1"], 
+  ["./u_clock_mux", "3", "1", "3", "3", "0", "0", "ALU_votegui_clock_mux_1"], 
+  ["./u_mux", "34", "16", "34", "34", "0", "0", "ALU_votegui_op_mux_1"], 
+  ["./u_or", "10", "5", "10", "10", "0", "0", "ALU_votegui_or_op_1"], 
+  ["./u_sum", "32", "15", "32", "32", "0", "0", "ALU_votegui_sum_op_1"], 
+  ["./u_xor", "14", "7", "14", "14", "0", "0", "ALU_votegui_xor_op_1"]
+]

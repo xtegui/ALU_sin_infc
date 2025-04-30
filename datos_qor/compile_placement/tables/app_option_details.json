@@ -1,0 +1,12 @@
+[
+  ["Name", "Value", "UserValue", "UserDefault", "SystemDefault", "Datatype", "Scope", "Status", "SourceFile"],
+  ["design.uniquify_naming_style", "ALU_votegui_%s_%d", "ALU_votegui_%s_%d", "", "%s_%d", "string", "block", "normal", "/tmp/fc_shell-be-2.ZRvnEf:2"], 
+  ["gui.graphics_system", "native", "native", "native", "auto", "enum", "global", "normal", "."], 
+  ["opt.tie_cell.max_fanout", "50", "50", "", "999", "integer", "block", "normal", "/tmp/fc_shell-be-2.oDbMbO:5"], 
+  ["place.coarse.continue_on_missing_scandef", "true", "true", "", "false", "bool", "block", "normal", "/home/votegui/proyecto_final/place_and_route/ALU_sin_infc/fusion-compiler/scripts/design_planning.tcl:272"], 
+  ["plan.pgroute.honor_signal_route_drc", "true", "true", "", "false", "bool", "block", "normal", "/tmp/fc_shell-be-2.SIoYfh:3"], 
+  ["plan.pgroute.honor_std_cell_drc", "true", "true", "", "false", "bool", "block", "normal", "/tmp/fc_shell-be-2.SIoYfh:3"], 
+  ["route.common.via_array_mode", "swap", "swap", "", "all", "enum", "block", "normal", "/tmp/fc_shell-be-2.SIoYfh:3"], 
+  ["route.detail.insert_redundant_vias_layer_order_low_to_high", "true", "true", "", "false", "bool", "block", "normal", "/tmp/fc_shell-be-2.SIoYfh:3"], 
+  ["shell.common.report_default_significant_digits", "3", "3", "3", "2", "integer", "global", "normal", "/tmp/fc_shell-be-2.jlLgtv:18"]
+]

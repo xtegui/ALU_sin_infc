@@ -1,0 +1,4 @@
+{
+  "columns": ["TranDRCs", "CapDRCs", "TranWNS", "TranCost", "CapWNS", "CapCost"],
+  "values": ["103", "33", "-0.010", "0.73", "-0.008", "0.24"]
+}

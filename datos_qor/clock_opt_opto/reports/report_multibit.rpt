@@ -1,0 +1,77 @@
+
+****************************************
+Report : report_multibit
+Design : ALU_votegui
+Version: U-2022.12
+Date   : Mon Apr 28 07:36:02 2025
+
+****************************************
+
+Total number of sequential cells                           38
+   Number of single-bit flip-flops:                        38
+   Number of single-bit latches:                           0
+   Number of multi-bit flip-flops:                         0
+   Number of multi-bit latches:                            0
+
+Total number of single-bit equivalent cells:                         38
+   (A)   Single-bit flip-flops:                                      38
+   (B)   Single-bit latches:                                         0
+   (C)   Multi-bit flip-flops:                                       0
+   (D)   Multi-bit latches:                                          0
+
+Sequential cells banking ratio ((C+D)/(A+B+C+D)):                    0.00%
+Flip-flop cells banking ratio ((C)/(A+C)):                           0.00%
+BitsPerflop:                                                         1.00
+BitsPerSequentialCell:                                               1.00
+
+Total number of isolation cells                            0
+   Number of single-bit cells:                             0
+   Number of multi-bit cells:                              0
+
+Total number of single-bit equivalent cells:                         0
+   (A)   Single-bit cells:                                           0
+   (B)   Multi-bit cells:                                            0
+
+Isolation cells banking ratio (B/(A+B)):                             0.00%
+
+Total number of level shifter cells                        0
+   Number of single-bit cells:                             0
+   Number of multi-bit cells:                              0
+
+Total number of single-bit equivalent cells:                         0
+   (A)   Single-bit cells:                                           0
+   (B)   Multi-bit cells:                                            0
+
+Level shifter cells banking ratio (B/(A+B)):                         0.00%
+
+Total number of ELS cells                                  0
+   Number of single-bit cells:                             0
+   Number of multi-bit cells:                              0
+
+Total number of single-bit equivalent cells:                         0
+   (A)   Single-bit cells:                                           0
+   (B)   Multi-bit cells:                                            0
+
+ELS cells banking ratio (B/(A+B)):                                   0.00%
+
+Reasons for sequential cells not mapping to multibit during RTL banking:
+--------------------------------------------------------------------------------
+
+Explanations: r31a: Cell cannot be banked to multibit because it needs smaller bit width multibit cells which are not available. (Number of cells: 32)
+--------------------------------------------------------------------------------
+   r4: Cell cannot be banked to multibit because it does not have multibit equivalent in the library. (Number of cells: 32)
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+
+Reasons for sequential cells not mapping to multibit during Physical Banking:
+--------------------------------------------------------------------------------
+Explanations: pb6: Cell cannot be banked to multibit because of don’t_touch restriction on it.(Number of cells: 33)
+--------------------------------------------------------------------------------
+   pb19: Cell does not have multibit equivalent in the library.(Number of cells: 3)
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+1
